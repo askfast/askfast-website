@@ -9,6 +9,11 @@ define(
         '$rootScope', '$location',
         function($rootScope, $location)
         {
+
+
+          /**
+           * TODO: Add this event listeners to a directive
+           */
           $rootScope.$on('$routeChangeStart', function (event, next, current)
           {
             // Remove this lines on production, eye-candy purple background for the home/splash page

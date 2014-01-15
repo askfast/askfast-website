@@ -72,7 +72,7 @@ require (
 
     domReady(function ()
       {
-        angular.bootstrap(document, ['MyApp']);
+        angular.bootstrap(document, ['DevCen']);
       }
     );
 
