@@ -1,5 +1,38 @@
 extends layout
 
+
+block nav
+  ul
+    li
+      a(href='#/home') Home
+    li
+      a(href='#/developers') Developers
+    li
+      a(href='#/business') Business
+    li
+      a(href='#/dialogs') Dialogs
+    li
+      a(href='#/prices') Prices
+    li
+      a(href='#/about') About Us
+
+  ul
+    li
+      a(href='#/register') Register
+    li
+      a(href='#/login') Login
+
+  ul
+    li
+      a(href='#/jobs') Jobs
+    li
+      a(href='#/legal') Legal
+    li
+      a(href='#/contact') Contact
+
+
+
+
 block navbar
   .navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav
     .container
@@ -15,6 +48,8 @@ block navbar
           li
             a(href='#/partial2') Partial2
 
+
+
 block footer
   footer
     .container
@@ -24,12 +59,16 @@ block footer
       p.text-muted.pull-right(style='margin-top:20px')
         | {{ 'Current version is v%VERSION%. Released: %RELEASED%' | interpolate }}
 
+
+
 block icons
   link(rel='apple-touch-icon-precomposed', sizes='144x144', href='icons/apple-touch-icon-144-precomposed.png')
   link(rel='apple-touch-icon-precomposed', sizes='114x114', href='icons/apple-touch-icon-114-precomposed.png')
   link(rel='apple-touch-icon-precomposed', sizes='72x72', href='icons/apple-touch-icon-72-precomposed.png')
   link(rel='apple-touch-icon-precomposed', href='icons/apple-touch-icon-57-precomposed.png')
   link(rel='shortcut icon', href='icons/favicon.png')
+
+
 
 block iestuff
   //if lt IE 7
@@ -42,6 +81,8 @@ block iestuff
   //if lt IE 9
     script(src='vendors/es5-shim/es5-shim.js')
     script(src='vendors/json3/lib/json3.min.js')
+
+
 
 block analytics
   // Google Analytics: change UA-XXXXX-X to be your site's ID.

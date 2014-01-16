@@ -38,9 +38,10 @@ require (
     //'modals/user',
     //'modals/core',
 
-    'controllers/home',
     'controllers/promotional',
-    'controllers/partial2',
+    'controllers/register',
+    'controllers/login',
+    'controllers/logout',
 
     'directives/appVersion',
 
