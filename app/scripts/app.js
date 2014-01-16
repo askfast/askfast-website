@@ -7,7 +7,9 @@ define(
     'controllers/controllers',
     'services/services',
     'filters/filters',
-    'directives/directives'
+    'directives/directives',
+    'angular-resource',
+    'angular-route'
   ],
   function (angular)
   {
@@ -16,7 +18,9 @@ define(
         'controllers',
         'services',
         'filters',
-        'directives'
+        'directives',
+        'ngResource',
+        'ngRoute'
       ]);
   }
 );

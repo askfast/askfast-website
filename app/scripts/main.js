@@ -8,13 +8,16 @@ require.config (
     paths: {
       angular:  '../vendors/angular/angular',
       jquery:   '../vendors/jquery/jquery.min',
-      domReady: '../vendors/requirejs-domready/domReady'
+      domReady: '../vendors/requirejs-domready/domReady',
+      bootstrap:          '../vendors/bootstrap-sass/dist/js/bootstrap.min',
+      'angular-resource': '../vendors/angular-resource/angular-resource.min',
+      'angular-route':    '../vendors/angular-route/angular-route.min'
     },
     shim: {
-      angular: {
-        deps:     ['jquery'],
-        exports:  'angular'
-      }
+      angular:            { deps: ['jquery'], exports:  'angular' },
+      'angular-resource': { deps: ['angular'] },
+      'angular-route':    { deps: ['angular'] },
+      bootstrap:          { deps: ['jquery'], exports:  'bootstrap' }
     }
   }
 );
@@ -22,53 +25,42 @@ require.config (
 require (
   [
     'angular',
-    'app',
     'domReady',
-    'run',
+
+    'angular-resource',
+    'angular-route',
+
     'config',
+    'app',
+    'routes',
+    'run',
+
+    //'modals/user',
+    //'modals/core',
+
     'controllers/home',
-    'controllers/partial1',
+    'controllers/promotional',
     'controllers/partial2',
+
     'directives/appVersion',
+
     'filters/interpolate',
+    // 'filters/all',
+
     'services/version',
-    'services/user'
-    // Any individual controller, service, directive or filter file
-    // that you add will need to be pulled in here.
+    'services/user',
+
+    //'services/session',
+    //'services/md5',
+    //'services/storage',
+    //'services/strings',
+    //'services/generators'
+
+    'bootstrap'
   ],
-  function (angular, app, domReady)
+  function (angular, domReady)
   {
     'use strict';
-
-    // $('html').removeAttr('ng-app');
-
-    app.config(
-      [
-        '$routeProvider',
-        function ($routeProvider)
-        {
-          $routeProvider
-            .when('/home',
-            {
-              templateUrl:  'views/home.html',
-              controller:   'home'
-            })
-            .when('/partial1',
-            {
-              templateUrl:  'views/partial1.html',
-              controller:   'partial1'
-            })
-            .when('/partial2',
-            {
-              templateUrl:  'views/partial2.html',
-              controller:   'partial2'
-            })
-            .otherwise({
-              redirectTo: '/home'
-            });
-        }
-      ]
-    );
 
     domReady(function ()
       {

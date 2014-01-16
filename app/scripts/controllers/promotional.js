@@ -4,7 +4,7 @@ define(
   {
     'use strict';
 
-    controllers.controller ('partial1',
+    controllers.controller ('promotional',
       [
         '$scope', 'User',
         function ($scope, User)
