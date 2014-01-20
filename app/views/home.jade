@@ -1,1 +1,25 @@
-h2 Home
+#sub-header
+  .row
+    .col-md-11
+      p tweets
+    .col-md-1.text-right
+      p languages
+
+#carousel
+  .row
+    .col-md-12
+      ul.bxslider
+        li(style='background-color: gray;')
+          | Slide 1
+        li(style='background-color: green;')
+          | Slide 2
+        li(style='background-color: red;')
+          | Slide 3
+
+script.
+  $(document).ready(function ()
+  {
+    $('.bxslider').bxSlider({
+      pager: false
+    });
+  });

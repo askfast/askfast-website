@@ -31,7 +31,6 @@ module.exports = (grunt) ->
           pretty: true
         files:
           '.tmp/index.html': ['<%= paths.app %>/index.jade']
-
       views:
         options:
           pretty: true
@@ -190,7 +189,7 @@ module.exports = (grunt) ->
             '.htaccess'
             'vendors/**/*'
             'images/{,*/}*.{gif,webp}'
-            'styles/fonts/*'
+            'fonts/*'
           ]
         ,
           expand: true

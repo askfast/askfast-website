@@ -1,8 +1,14 @@
 define(
-  ['controllers/controllers', 'config'],
-  function (controllers, config)
+  ['controllers/controllers', 'jquery', 'config'],
+  function (controllers, $, config)
   {
     'use strict';
+
+    console.log('$ ->', $);
+
+    //$(document).ready(function(){
+      $('.bxslider').bxSlider();
+    //});
 
     controllers.controller ('home',
       [

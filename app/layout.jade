@@ -11,32 +11,24 @@ html.no-js(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-
     title AskFast Development Center
-
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
-
+    meta(name='signet:authors', content='Cengiz Ulusoy')
+    meta(name='signet:links', content='http://github.com/Cengizism, http://twitter.com/Cengizism')
     block icons
-
     // build:css({.tmp,app}) styles/main.css
     link(rel='stylesheet', href='styles/main.css')
     // endbuild
-
   body
-
     block iestuff
-
     #wrap
-
-      // block navbar
-
-      block nav
-
-      .container(ng-view='')
-
+      .container-fluid
+        header
+          .row
+            block logo
+            block nav
+            block user-nav
+        div(ng-view='')
     block footer
-
-    // block analytics
-
     script(data-main='scripts/main', src='vendors/requirejs/require.js')

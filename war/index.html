@@ -14,15 +14,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>WebPaige Foundation</title>
+    <title>AskFast Development Center</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <meta name="signet:authors" content="Cengiz Ulusoy">
+    <meta name="signet:links" content="http://github.com/Cengizism, http://twitter.com/Cengizism">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icons/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="icons/favicon.png">
-    <link rel="stylesheet" href="styles/c3b67b29.main.css">
+    <link rel="stylesheet" href="styles/dcd1b450.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -33,18 +35,26 @@
     <script src="vendors/json3/lib/json3.min.js"></script>
     <![endif]-->
     <div id="wrap">
-      <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
-        <div class="container">
-          <button type="button" data-toggle="collapse" data-target=".bs-navbar-collapse" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#/home" class="navbar-brand">Home</a>
-          <div class="nav-collapse collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#/partial1">Partial1</a></li>
-              <li><a href="#/partial2">Partial2</a></li>
-            </ul>
-          </div>
-        </div>
+      <div class="container-fluid">
+        <ul>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/developers">Developers</a></li>
+          <li><a href="#/business">Business</a></li>
+          <li><a href="#/dialogs">Dialogs</a></li>
+          <li><a href="#/prices">Prices</a></li>
+          <li><a href="#/about">About Us</a></li>
+        </ul>
+        <ul>
+          <li><a href="#/register">Register</a></li>
+          <li><a href="#/login">Login</a></li>
+        </ul>
+        <ul>
+          <li><a href="#/jobs">Jobs</a></li>
+          <li><a href="#/legal">Legal</a></li>
+          <li><a href="#/contact">Contact</a></li>
+        </ul>
+        <div ng-view="" class="container"></div>
       </div>
-      <div ng-view="" class="container"></div>
     </div>
     <footer>
       <div class="container">
@@ -53,6 +63,6 @@
       </div>
     </footer>
     <!-- block analytics-->
-    <script data-main="scripts/55e6b8af.main" src="vendors/requirejs/require.js"></script>
+    <script data-main="scripts/0039a67e.main" src="vendors/requirejs/require.js"></script>
   </body>
 </html>
