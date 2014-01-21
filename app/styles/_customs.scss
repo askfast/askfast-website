@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Lato|Titillium+Web);
 
 
 
@@ -45,7 +45,8 @@ body {
   font-size: 12px;
 
   h1, h2, h3 {
-    font-family: 'Open Sans Condensed', sans-serif;
+    // font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
   }
 
   h1 {
@@ -258,7 +259,7 @@ header {
 
     h1 {
       font-size: 3em;
-      margin-top: 70px;
+      margin-top: 30px;
     }
 
     img {
