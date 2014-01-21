@@ -13,19 +13,19 @@ block nav
       li
         a(href='#developers') DEVELOPERS
       li
-        span.bullet &#183
+        span &#183
       li
         a(href='#business') BUSINESS
       li
-        span.bullet &#183
+        span &#183
       li
         a(href='#dialogs') DIALOGS
       li
-        span.bullet &#183
+        span &#183
       li
         a(href='#prices') PRICE
       li
-        span.bullet &#183
+        span &#183
       li
         a(href='#about') ABOUT US
 
@@ -41,44 +41,33 @@ block user-nav
         a(href='#login') LOGIN
 
 
-block tweets
-  #tweets Twitter stuff
-
-
-block languages
-  p langs
-
-
 block footer
   footer
-    .container-fluid
+    .container
       .row
-        .col-md-10
+        .col-md-8.col-md-offset-1
           ul#footer-nav.list-inline
             li
               a(href='#about') ABOUT US
             li
-              span.bullet &nbsp;
+              span &nbsp;
             li
               a(href='#jobs') JOBS
             li
-              span.bullet &nbsp;
+              span &nbsp;
             li
               a(href='#legal') LEGAL
             li
-              span.bullet &nbsp;
+              span &nbsp;
             li
               a(href='#contact') CONTACT US
             li
-              span.bullet &nbsp;
+              span &nbsp;
             li
               a(href='#about') ABOUT US
         .col-md-2
           a.pull-right(href='#home')
             img(src='images/askfast-logo.png', alt='AskFast')
-
-
-
 
 
 block icons
@@ -88,6 +77,29 @@ block icons
   link(rel='apple-touch-icon-precomposed', href='icons/apple-touch-icon-57-precomposed.png')
   link(rel='shortcut icon', href='icons/favicon.png')
 
+
+
+
+block tweets
+  .col-md-10
+    #tweets
+      ul
+        li
+          a(href='#') Virtual Phone numbers are available in Jordan
+        li
+          a(href='#') Say Hi to our new office in Berlin
+        li
+          a(href='#') Register for our webinar
+
+
+block languages
+  .col-md-2
+    #languages.pull-right
+      ul
+        li
+          a(href='') EN
+        li.active
+          a(href='') NL
 
 
 
@@ -103,9 +115,6 @@ block iestuff
   //if lt IE 9
     script(src='vendors/es5-shim/es5-shim.js')
     script(src='vendors/json3/lib/json3.min.js')
-
-
-
 
 
 //block analytics

@@ -29,6 +29,10 @@ html.no-js(lang='en')
             block logo
             block nav
             block user-nav
+        #sub-header
+          .row
+            block tweets
+            block languages
         div(ng-view='')
     block footer
     script(data-main='scripts/main', src='vendors/requirejs/require.js')

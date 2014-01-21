@@ -1,20 +1,107 @@
-#sub-header
-  .row
-    .col-md-11
-      p tweets
-    .col-md-1.text-right
-      p languages
-
 #carousel
   .row
-    .col-md-12
+    .col-md-10.col-md-offset-1
       ul.bxslider
-        li(style='background-color: gray;')
-          | Slide 1
-        li(style='background-color: green;')
-          | Slide 2
-        li(style='background-color: red;')
-          | Slide 3
+        li#who-wants-pink
+          .row
+            .col-md-6
+              h1.text-pink Who pants some pink?
+              p
+                | ASK- Fast is a cloud communication solution that
+                | is designed and developed for developers and businesses.
+              p
+                | You can simply develop an automated communication
+                | for your application or your customer service.
+              p
+                a.btn.btn-primary(href='#') Join Now
+            .col-md-6
+              img.img-responsive.pull-right(src='../images/illustration-hands-cloud.png',
+                  alt='Illustration Hands Cloud')
+        li
+          .row
+            .col-md-12
+              br
+              br
+              h1 Slide 2
+
+
+
+#bridge
+  .row
+    .col-md-5.col-md-offset-1
+      img.img-responsive(src='../images/illustration-askfast-engine.png', alt='Illustration AskFast engine')
+    .col-md-5
+      h1.text-white We bridge software and telecom industry.
+      p
+        | ASK- Fast is a cloud communication solution that
+        | is designed and developed for developers and businesses.
+      p
+        | You can simply develop an automated communication
+        | for your application or your customer service. It will work
+        | with common communication channel and almost with every device.
+      p
+        a.btn.btn-primary(href='#') Case Study
+
+
+
+#channels
+  .row
+    .col-md-5.col-md-offset-1
+      h1.text-pink Communication channels
+      img.img-responsive(src='../images/channel-icons.png', alt='Channel icons')
+      br
+      p
+        | ASK- Fast is a cloud communication solution that
+        | is designed and developed for developers and businesses.
+      ul
+        li Inbound Call
+        li Outbound Call
+        li Text to Speech
+        li Call forwarding and many more feautures.
+    .col-md-6
+      img.img-responsive(src='../images/stock-communication-channel.png', alt='Stock communication channels')
+
+
+
+#promises
+  .row
+    .col-md-4.col-md-offset-1
+      img.img-responsive(src='../images/icons-cost-reduction.png', alt='Cost reduction icons')
+    .col-md-7
+      h1
+        span.text-white We promise
+        | &nbsp;
+        span.text-pink Cost Reduction
+      p
+        | ASK-Fast reduces the cost of communication while creating
+        | added value to your business context through automated agents.
+        | Our rates are among the cheapest in Europe.
+      p
+        a.btn.btn-primary(href='#') Create an account
+
+
+
+#references
+  .row
+    .col-md-10.col-md-offset-1
+      h1.text-pink Our references
+      ul.bxslider
+        li
+          .row
+            .col-md-12
+              img.img-responsive(src='../images/clients-1.png', alt='Clients group 1')
+        li
+          .row
+            .col-md-12
+              img.img-responsive(src='../images/clients-2.png', alt='Clients group 2')
+  .row
+    .col-md-8.col-md-offset-2
+      blockquote
+        p “We are using ASK-Fast cloud communication for our alarming system.”
+        footer
+          h3 Johnny Billie, CEO
+
+
 
 script.
   $(document).ready(function ()
