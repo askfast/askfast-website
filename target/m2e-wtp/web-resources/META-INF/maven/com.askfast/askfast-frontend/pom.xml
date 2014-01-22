@@ -1,13 +1,51 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <artifactId>askfast-frontend</artifactId>
+  <packaging>war</packaging>
+  <name>AskFast Frontend</name>
+  
   <parent>
     <groupId>com.askfast</groupId>
     <artifactId>askfast</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.askfast</groupId>
-  <artifactId>askfast-frontend</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>AskFast Frontend</name>
+  
+  <build>
+	<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.version}</version>
+				<configuration>
+					<!-- TODO: http://blog.max.berger.name/2010/02/jetty-7-maven-plugin-authentication.html 
+						http://theholyjava.wordpress.com/2010/09/10/jetty-maven-plugin-running-a-webapp-with-a-datasource-and-security/ 
+						http://docs.oracle.com/cd/E19798-01/821-1841/bncck/index.html -->
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<httpConnector>
+						<port>8085</port>
+					</httpConnector>
+					<stopKey>testKey</stopKey>
+					<stopPort>9995</stopPort>
+					<daemon>false</daemon>
+					<reload>manual</reload>
+					<scanTargets>
+						<scanTarget>src/main/webapp</scanTarget>
+					</scanTargets>
+					<webAppSourceDirectory>${basedir}/src/main/webapp</webAppSourceDirectory>
+					<webApp>
+						<contextPath>/</contextPath>
+						<descriptor>src/main/webapp/WEB-INF/web.xml</descriptor>
+					</webApp>
+					<systemProperties>
+						<systemProperty>
+							<name>com.almende.eve.runtime.environment</name>
+							<value>Development</value>
+						</systemProperty>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
+</build>
 </project>

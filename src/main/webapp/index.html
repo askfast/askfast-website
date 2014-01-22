@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="icons/favicon.png">
-    <link rel="stylesheet" href="styles/dcd1b450.main.css">
+    <link rel="stylesheet" href="styles/e1707f6c.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -36,33 +36,75 @@
     <![endif]-->
     <div id="wrap">
       <div class="container-fluid">
-        <ul>
-          <li><a href="#/home">Home</a></li>
-          <li><a href="#/developers">Developers</a></li>
-          <li><a href="#/business">Business</a></li>
-          <li><a href="#/dialogs">Dialogs</a></li>
-          <li><a href="#/prices">Prices</a></li>
-          <li><a href="#/about">About Us</a></li>
-        </ul>
-        <ul>
-          <li><a href="#/register">Register</a></li>
-          <li><a href="#/login">Login</a></li>
-        </ul>
-        <ul>
-          <li><a href="#/jobs">Jobs</a></li>
-          <li><a href="#/legal">Legal</a></li>
-          <li><a href="#/contact">Contact</a></li>
-        </ul>
-        <div ng-view="" class="container"></div>
+        <header>
+          <div class="row">
+            <div class="col-md-2"><a href="#home"><img src="images/e973109b.askfast-logo.png" alt="AskFast"></a></div>
+            <div class="col-md-8">
+              <ul id="nav" class="list-inline">
+                <li><a href="#developers">DEVELOPERS</a></li>
+                <li><span>&#183</span></li>
+                <li><a href="#business">BUSINESS</a></li>
+                <li><span>&#183</span></li>
+                <li><a href="#dialogs">DIALOGS</a></li>
+                <li><span>&#183</span></li>
+                <li><a href="#prices">PRICE</a></li>
+                <li><span>&#183</span></li>
+                <li><a href="#about">ABOUT US</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2 text-right">
+              <ul id="user-nav" class="list-inline">
+                <li><a href="#register">REGISTER</a></li>
+                <li><span>|</span></li>
+                <li><a href="#login">LOGIN</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div id="sub-header">
+          <div class="row">
+            <div class="col-md-10">
+              <div id="tweets">
+                <ul>
+                  <li><a href="#">Virtual Phone numbers are available in Jordan</a></li>
+                  <li><a href="#">Say Hi to our new office in Berlin</a></li>
+                  <li><a href="#">Register for our webinar</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div id="languages" class="pull-right">
+                <ul>
+                  <li><a href="">EN</a></li>
+                  <li class="active"><a href="">NL</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-view=""></div>
       </div>
     </div>
     <footer>
       <div class="container">
-        <p class="text-muted credit pull-left">Some footer text<a href="#"> and a link</a></p>
-        <p style="margin-top:20px" class="text-muted pull-right">{{ 'Current version is v%VERSION%. Released: %RELEASED%' | interpolate }}</p>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-1">
+            <ul id="footer-nav" class="list-inline">
+              <li><a href="#about">ABOUT US</a></li>
+              <li><span>&nbsp;</span></li>
+              <li><a href="#jobs">JOBS</a></li>
+              <li><span>&nbsp;</span></li>
+              <li><a href="#legal">LEGAL</a></li>
+              <li><span>&nbsp;</span></li>
+              <li><a href="#contact">CONTACT US</a></li>
+              <li><span>&nbsp;</span></li>
+              <li><a href="#about">ABOUT US</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2"><a href="#home" class="pull-right"><img src="images/e973109b.askfast-logo.png" alt="AskFast"></a></div>
+        </div>
       </div>
     </footer>
-    <!-- block analytics-->
-    <script data-main="scripts/0039a67e.main" src="vendors/requirejs/require.js"></script>
+    <script data-main="scripts/821d1383.main" src="vendors/requirejs/require.js"></script>
   </body>
 </html>
