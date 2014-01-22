@@ -9,3 +9,5 @@ src/META-INF/
 src/log4j.properties
 war/WEB-INF/classes/
 libpeerconnection.log
+.classpath
+.project
