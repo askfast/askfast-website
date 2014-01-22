@@ -1,7 +1,697 @@
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-@import "bootstrap-sass/lib/bootstrap";
-@import "docs";
-@import "sticky";
-@import "customs";
+// Core variables and mixins
+@import "../vendors/bootstrap-sass/lib/variables";
+@import "../vendors/bootstrap-sass/lib/mixins";
+
+// Reset
+@import "../vendors/bootstrap-sass/lib/normalize";
+@import "../vendors/bootstrap-sass/lib/print";
+
+// Core CSS
+@import "../vendors/bootstrap-sass/lib/scaffolding";
+@import "../vendors/bootstrap-sass/lib/type";
+@import "../vendors/bootstrap-sass/lib/code";
+@import "../vendors/bootstrap-sass/lib/grid";
+@import "../vendors/bootstrap-sass/lib/tables";
+@import "../vendors/bootstrap-sass/lib/forms";
+@import "../vendors/bootstrap-sass/lib/buttons";
+
+// Components
+@import "../vendors/bootstrap-sass/lib/component-animations";
+// @import "../vendors/bootstrap-sass/lib/glyphicons";
+// @import "../vendors/bootstrap-sass/lib/dropdowns";
+// @import "../vendors/bootstrap-sass/lib/button-groups";
+@import "../vendors/bootstrap-sass/lib/input-groups";
+// @import "../vendors/bootstrap-sass/lib/navs";
+// @import "../vendors/bootstrap-sass/lib/navbar";
+// @import "../vendors/bootstrap-sass/lib/breadcrumbs";
+// @import "../vendors/bootstrap-sass/lib/pagination";
+// @import "../vendors/bootstrap-sass/lib/pager";
+@import "../vendors/bootstrap-sass/lib/labels";
+@import "../vendors/bootstrap-sass/lib/badges";
+// @import "../vendors/bootstrap-sass/lib/jumbotron";
+// @import "../vendors/bootstrap-sass/lib/thumbnails";
+// @import "../vendors/bootstrap-sass/lib/alerts";
+// @import "../vendors/bootstrap-sass/lib/progress-bars";
+// @import "../vendors/bootstrap-sass/lib/media";
+// @import "../vendors/bootstrap-sass/lib/list-group";
+// @import "../vendors/bootstrap-sass/lib/panels";
+// @import "../vendors/bootstrap-sass/lib/wells";
+// @import "../vendors/bootstrap-sass/lib/close";
+
+// Components w/ JavaScript
+// @import "../vendors/bootstrap-sass/lib/modals";
+// @import "../vendors/bootstrap-sass/lib/tooltip";
+// @import "../vendors/bootstrap-sass/lib/popovers";
+// @import "../vendors/bootstrap-sass/lib/carousel";
+
+// Utility classes
+@import "../vendors/bootstrap-sass/lib/utilities";
+@import "../vendors/bootstrap-sass/lib/responsive-utilities";
+
+
+@import url(http://fonts.googleapis.com/css?family=Lato|Titillium+Web);
+
+
+$white:     #ffffff !default;
+$pink:      #e21f8d !default;
+$light-pink:#f8c8e2 !default;
+$gray:      #454545 !default;
+$dark-gray: #313338 !default;
+$blue:      #15cdef !default;
+
+
+$font-color: $gray;
+$button-color: #2a2c30 !default;
+
+
+$sprite: '../images/askfast-sprite.png' !default;
+
+
+.text-pink  { color: $pink }
+.text-white { color: $white }
+
+
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+  -khtml-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+
+
+@mixin channel-icon($x1, $x2, $y1, $y2) {
+  a {
+    background: url($sprite) $x1 $x2;
+
+    &:hover {
+      background: url($sprite) $y1 $y2;
+    }
+  }
+
+  .active {
+    background: url($sprite) $y1 $y2;
+    cursor: default;
+  }
+}
+
+
+@mixin middle-row() {
+  .row {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+
+@mixin front-widget() {
+  @include middle-row;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    line-height: 1.4em;
+
+    .btn {
+      margin-top: 30px;
+    }
+  }
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $font-color;
+  font-size: 12px;
+
+  h1, h2, h3 {
+    font-family: 'Titillium Web', sans-serif;
+  }
+
+  a {
+    &:hover {
+    }
+  }
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  // Not needed probably!
+  // height: 100%;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.btn-primary {
+  @include border-radius(0);
+
+  border: none;
+  min-width: 147px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $blue;
+  color: $button-color;
+
+  &:hover {
+    background-color: $blue;
+    color: $button-color;
+  }
+}
+
+
+
+footer {
+  border-top: 3px solid $pink;
+
+  .container-fluid {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  #footer-nav {
+    padding: 17px 15px 0 15px;
+
+    li {
+      padding: 0;
+      margin-right: 5px;
+
+      a {
+        color: $gray;
+        font-size: 1.15em;
+      }
+    }
+  }
+
+}
+
+
+
+header {
+  height: 60px;
+
+  @include middle-row;
+
+  #nav {
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1em;
+
+    li {
+      padding: 0;
+      display: inline-block;
+      vertical-align: middle;
+
+      a {
+        color: $gray;
+        font-size: 1.15em;
+      }
+
+      span {
+        display: block;
+        font-size: 2em;
+        color: $pink;
+        text-indent: -9999px;
+        width: 4px;
+        height: 4px;
+        background-color: $pink;
+        margin: 0 2px;
+
+        @include border-radius(2px);
+      }
+    }
+  }
+
+  #user-nav {
+    margin-top: 20px;
+
+    li {
+      padding: 0;
+
+      a {
+        color: $gray;
+        font-size: 1.15em;
+      }
+    }
+  }
+}
+
+
+
+#sub-header {
+  height: 40px;
+  background-color: $pink;
+  color: $white;
+
+  @include middle-row;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      float: left;
+    }
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+    }
+  }
+
+  #tweets {
+    margin-top: 10px;
+    margin-left: -40px;
+
+    ul {
+      li {
+        a {
+          display: block;
+          overflow: hidden;
+          height: 20px;
+          padding-left: 20px;
+          margin-right: 15px;
+          line-height: 1.6em;
+          background: url(../images/subheader-bullet.png) no-repeat;
+        }
+      }
+    }
+  }
+
+  #languages {
+    ul {
+      margin-top: 10px;
+
+      li {
+        margin-left: 3px;
+        background-color: $pink;
+        padding: 1px 3px;
+
+        @include border-radius(4px);
+
+        a {
+          display: block;
+        }
+      }
+
+      li.active {
+        background-color: $light-pink;
+
+        a {
+          color: $font-color;
+
+          &:hover {
+            text-decoration: none;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+#carousel {
+  // display: none;
+
+  @include middle-row;
+
+  ul {
+    li {
+      height: 320px;
+    }
+  }
+
+  #who-wants-pink {
+    font-size: 1.2em;
+    position: relative;
+
+    .row {
+      position: absolute;
+      bottom: -1px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 30px;
+    }
+  }
+}
+
+
+
+#bridge {
+  // display: none;
+
+  min-height: 420px;
+  background-color: $dark-gray;
+  color: $white;
+  font-size: 1.2em;
+
+  @include front-widget;
+
+  h1 {
+    margin: 50px 0;
+  }
+
+  img {
+    margin-top: -60px;
+  }
+}
+
+
+
+
+#channels {
+  min-height: 370px;
+  background: url(../images/section-shadow.png) repeat-x;
+  font-size: 1.2em;
+
+  @include front-widget;
+
+  h1 {
+    margin: 30px 0 20px 0;
+  }
+
+  ul#icons {
+    li {
+      a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        text-indent: -9999px;
+      }
+    }
+
+    #tel     { @include channel-icon(0, 0, 0, -36px) }
+    #mail    { @include channel-icon(-36px, 0, -36px, -36px) }
+    #twitter { @include channel-icon(-72px, 0, -72px, -36px) }
+    #email   { @include channel-icon(-108px, 0, -108px, -36px) }
+    #gmail   { @include channel-icon(-144px, 0, -144px, -36px) }
+  }
+
+  ul.bullets {
+    list-style-image: none;
+    font-size: 1.25em;
+    margin-top: 15px;
+    font-weight: normal;
+
+    li {
+      display: block;
+      min-height: 23px;
+      background: url(../images/red-bullet.png) no-repeat;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      line-height: 1.25em;
+    }
+  }
+
+  .col-md-6 {
+    img {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+
+#promises {
+  min-height: 350px;
+  background: url(../images/section-shadow.png) repeat-x;
+  background-color: $dark-gray;
+  color: $white;
+
+  @include front-widget;
+
+  h1 {
+    margin: 30px 0 20px 0;
+  }
+
+  p {
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+
+  .col-md-4 {
+    margin-top: 50px;
+  }
+
+  .col-md-7 {
+    margin-top: 30px;
+  }
+
+}
+
+
+
+#references {
+  @include middle-row;
+
+  blockquote {
+    border: none;
+
+    p {
+      font-size: 1.87em;
+      font-style: italic;
+      text-align: center;
+    }
+
+    footer {
+      color: $pink;
+      border: none;
+      font-size: 1.5em;
+      float: right;
+
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+
+
+#quotes {
+  @include middle-row;
+}
+
+
+
+.bx-wrapper {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  *zoom: 1;
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .bx-viewport {
+    left: -5px;
+    background: #fff;
+  }
+
+  .bx-pager, .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+  }
+
+  .bx-loading {
+    min-height: 50px;
+    background: url(../images/bx_loader.gif) center center no-repeat white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+
+  .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: Arial;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+
+    .bx-pager-item {
+      display: inline-block;
+      *zoom: 1;
+      *display: inline;
+    }
+  }
+
+  .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+  }
+
+  .bx-pager.bx-default-pager a {
+    background: #666;
+    text-indent: -9999px;
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    &:hover, &.active {
+      background: #000;
+    }
+  }
+
+  .bx-prev {
+    left: -100px;
+    background: url(../images/carousel-controls.png) no-repeat 0 0px;
+  }
+
+  .bx-next {
+    right: -100px;
+    background: url(../images/carousel-controls.png) no-repeat -34px 0px;
+  }
+
+  .bx-prev:hover {
+    // background-position: 0 0;
+  }
+
+  .bx-next:hover {
+    // background-position: -43px 0;
+  }
+
+  .bx-controls-direction a {
+    position: absolute;
+    top: 45%;
+    margin-top: -17px;
+    outline: 0;
+    width: 34px;
+    height: 43px;
+    text-indent: -9999px;
+    z-index: 9999;
+    &.disabled {
+      display: none;
+    }
+  }
+
+  .bx-controls-auto {
+    text-align: center;
+
+    .bx-start {
+      display: block;
+      text-indent: -9999px;
+      width: 10px;
+      height: 11px;
+      outline: 0;
+      background: url(images/controls.png) -86px -11px no-repeat;
+      margin: 0 3px;
+
+      &:hover, &.active {
+        background-position: -86px 0;
+      }
+    }
+
+    .bx-stop {
+      display: block;
+      text-indent: -9999px;
+      width: 9px;
+      height: 11px;
+      outline: 0;
+      background: url(images/controls.png) -86px -44px no-repeat;
+      margin: 0 3px;
+
+      &:hover, &.active {
+        background-position: -86px -33px;
+      }
+    }
+  }
+
+  .bx-controls.bx-has-controls-auto.bx-has-pager {
+    .bx-pager {
+      text-align: left;
+      width: 80%;
+    }
+
+    .bx-controls-auto {
+      right: 0;
+      width: 35px;
+    }
+  }
+
+  .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666\9;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+
+    span {
+      color: #fff;
+      font-family: Arial;
+      display: block;
+      font-size: .85em;
+      padding: 10px;
+    }
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+}
+
+
+@media (min-width: 992px) {
+}
+
+
+@mixin flex-center() {
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
