@@ -326,8 +326,6 @@ header {
 
 
 #carousel {
-  display: none;
-
   @include middle-row;
 
   ul {
@@ -354,8 +352,6 @@ header {
 
 
 #bridge {
-  display: none;
-
   min-height: 420px;
   background-color: $dark-gray;
   color: $white;
