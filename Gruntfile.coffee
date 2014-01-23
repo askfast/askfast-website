@@ -14,7 +14,7 @@ module.exports = (grunt) ->
 
   appConfig =
     app: 'app'
-    dist: 'war'
+    dist: 'src/main/webapp'
 
   try
     appConfig.app = require('./bower.json').appPath or appConfig.app

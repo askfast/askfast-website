@@ -1,0 +1,1 @@
+define(["app"],function(e){e.run(["$rootScope","$location",function(e,t){e.$on("$routeChangeStart",function(e,t,n){}),e.$on("$routeChangeSuccess",function(e,t,n){}),e.$on("$routeChangeError",function(e,t,n,r){console.error("Error: changing routes!")})}])});
