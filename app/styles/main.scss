@@ -173,9 +173,6 @@ body {
     margin-top: 5px;
 
     li {
-      //display: inline-block;
-      //vertical-align: middle;
-
       a {
         padding: 15px 4px;
         margin: 0;
@@ -190,10 +187,6 @@ body {
         }
       }
 
-      span {
-
-      }
-
       .bullet {
         display: block;
         font-size: 2em;
@@ -202,7 +195,7 @@ body {
         width: 4px;
         height: 4px;
         background-color: $pink;
-        margin: 22px 2px;
+        margin: 23px 2px;
 
         @include border-radius(2px);
       }
@@ -258,13 +251,6 @@ footer {
 }
 
 
-//header {
-//  height: 60px;
-//
-//  @include middle-row;
-//}
-
-
 #sub-header {
   height: 40px;
   background-color: $pink;
@@ -287,56 +273,58 @@ footer {
     &:hover {
     }
   }
+}
 
-  #tweets {
-    margin-top: 10px;
-    margin-left: -40px;
 
-    ul {
-      li {
-        a {
-          display: block;
-          overflow: hidden;
-          height: 20px;
-          padding-left: 20px;
-          margin-right: 15px;
-          line-height: 1.6em;
-          background: url(../images/subheader-bullet.png) no-repeat;
-        }
+#tweets {
+  margin-top: 10px;
+  margin-left: -40px;
+
+  ul {
+    li {
+      a {
+        display: block;
+        overflow: hidden;
+        height: 20px;
+        padding-left: 20px;
+        margin-right: 15px;
+        line-height: 1.6em;
+        background: url(../images/subheader-bullet.png) no-repeat;
       }
     }
   }
+}
 
-  #languages {
-    ul {
-      margin-top: 10px;
 
-      li {
-        margin-left: 3px;
-        background-color: $pink;
-        padding: 1px 3px;
+#languages {
+  ul {
+    margin-top: 10px;
 
-        @include border-radius(4px);
+    li {
+      margin-left: 3px;
+      background-color: $pink;
+      padding: 1px 3px;
 
-        a {
-          display: block;
+      @include border-radius(4px);
 
-          &:hover {
-            cursor: pointer;
-          }
+      a {
+        display: block;
+
+        &:hover {
+          cursor: pointer;
         }
       }
+    }
 
-      li.active {
-        background-color: $light-pink;
+    li.active {
+      background-color: $light-pink;
 
-        a {
-          color: $font-color;
+      a {
+        color: $font-color;
 
-          &:hover {
-            text-decoration: none;
-            cursor: default;
-          }
+        &:hover {
+          text-decoration: none;
+          cursor: default;
         }
       }
     }
@@ -645,7 +633,7 @@ footer {
       width: 10px;
       height: 11px;
       outline: 0;
-      background: url(images/controls.png) -86px -11px no-repeat;
+      // background: url(images/controls.png) -86px -11px no-repeat;
       margin: 0 3px;
 
       &:hover, &.active {
@@ -659,7 +647,7 @@ footer {
       width: 9px;
       height: 11px;
       outline: 0;
-      background: url(images/controls.png) -86px -44px no-repeat;
+      // background: url(images/controls.png) -86px -44px no-repeat;
       margin: 0 3px;
 
       &:hover, &.active {
@@ -723,13 +711,13 @@ footer {
 }
 
 
-@mixin flex-center() {
-  display: -webkit-flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
+//@mixin flex-center() {
+//  display: -webkit-flexbox;
+//  display: -ms-flexbox;
+//  display: -webkit-flex;
+//  display: flex;
+//  -webkit-flex-align: center;
+//  -ms-flex-align: center;
+//  -webkit-align-items: center;
+//  align-items: center;
+//}
