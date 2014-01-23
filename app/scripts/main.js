@@ -35,6 +35,7 @@ require (
     'angular-resource',
     'angular-route',
 
+    'localization',
     'config',
     'app',
     'routes',

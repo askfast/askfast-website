@@ -46,6 +46,18 @@ module.exports = (grunt) ->
       jade:
         files: ['<%= paths.app %>/{,*/}*.jade']
         tasks: ['jade']
+      coffee:
+        files: ["<%= paths.app %>/scripts/{,*/}*.coffee"]
+        tasks: ["coffee:dist"]
+      coffeeTest:
+        files: [
+          "test/coffee/spec/{,*/}*.coffee"
+          "test/coffee/e2e/{,*/}*.coffee"
+        ]
+        tasks: [
+          "coffee:testUnit"
+          "coffee:testEnd"
+        ]
       compass:
         files: ['<%= paths.app %>/styles/{,*/}*.{scss,sass}']
         tasks: ['compass:server']
@@ -104,6 +116,47 @@ module.exports = (grunt) ->
         'Gruntfile.js'
         '<%= paths.app %>/scripts/{,*/}*.js'
       ]
+
+    coffeelint:
+      options:
+        no_trailing_whitespace:
+          level: "error"
+      app: ["<%= paths.app %>/scripts/{,*/}*.coffee"]
+      tests:
+        files:
+          src: [
+            "test/e2e/{,*/}*.coffee"
+            "test/spec/{,*/}*.coffee"
+          ]
+
+    coffee:
+      options:
+        sourceMap: true
+        sourceRoot: ""
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= paths.app %>/scripts"
+          src: "{,*/}*.coffee"
+          dest: ".tmp/scripts"
+          ext: ".js"
+        ]
+      testUnit:
+        files: [
+          expand: true
+          cwd: "test/coffee/spec"
+          src: "{,*/}*.coffee"
+          dest: "test/tests/spec"
+          ext: ".js"
+        ]
+      testEnd:
+        files: [
+          expand: true
+          cwd: "test/coffee/e2e"
+          src: "{,*/}*.coffee"
+          dest: "test/tests/e2e"
+          ext: ".js"
+        ]
 
     compass:
       options:
