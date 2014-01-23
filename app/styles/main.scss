@@ -24,8 +24,8 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 // @import "../vendors/bootstrap-sass/lib/dropdowns";
 // @import "../vendors/bootstrap-sass/lib/button-groups";
 @import "../vendors/bootstrap-sass/lib/input-groups";
-// @import "../vendors/bootstrap-sass/lib/navs";
-// @import "../vendors/bootstrap-sass/lib/navbar";
+@import "../vendors/bootstrap-sass/lib/navs";
+@import "../vendors/bootstrap-sass/lib/navbar";
 // @import "../vendors/bootstrap-sass/lib/breadcrumbs";
 // @import "../vendors/bootstrap-sass/lib/pagination";
 // @import "../vendors/bootstrap-sass/lib/pager";
@@ -133,6 +133,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: $font-color;
   font-size: 12px;
+  background-color: $white;
 
   h1, h2, h3 {
     font-family: 'Titillium Web', sans-serif;
@@ -148,8 +149,65 @@ body {
 #wrap {
   min-height: 100%;
   height: auto !important;
-  margin: 0 auto -60px;
-  padding: 0 0 60px;
+  padding: 60px 0 20px 0;
+}
+
+
+.navbar {
+  min-height: 60px;
+  background-color: $white;
+  border: none;
+  padding-left: 20px;
+
+  .navbar-brand {
+    display: block;
+    text-indent: -9999px;
+    width: 131px;
+    height: 60px;
+    background: url($sprite) -180px 0;
+    margin-right: 20px;
+  }
+
+  .navbar-nav {
+    line-height: 1em;
+    margin-top: 5px;
+
+    li {
+      //display: inline-block;
+      //vertical-align: middle;
+
+      a {
+        padding: 15px 4px;
+        margin: 0;
+        font-size: 1.15em;
+        color: $dark-gray;
+        background-color: none;
+
+        &:hover {
+          color: $dark-gray;
+          background-color: none;
+          text-decoration: underline;
+        }
+      }
+
+      span {
+
+      }
+
+      .bullet {
+        display: block;
+        font-size: 2em;
+        color: $pink;
+        text-indent: -9999px;
+        width: 4px;
+        height: 4px;
+        background-color: $pink;
+        margin: 22px 2px;
+
+        @include border-radius(2px);
+      }
+    }
+  }
 }
 
 
@@ -200,54 +258,11 @@ footer {
 }
 
 
-header {
-  height: 60px;
-
-  @include middle-row;
-
-  #nav {
-    text-align: center;
-    margin-top: 25px;
-    line-height: 1em;
-
-    li {
-      padding: 0;
-      display: inline-block;
-      vertical-align: middle;
-
-      a {
-        color: $gray;
-        font-size: 1.15em;
-      }
-
-      span {
-        display: block;
-        font-size: 2em;
-        color: $pink;
-        text-indent: -9999px;
-        width: 4px;
-        height: 4px;
-        background-color: $pink;
-        margin: 0 2px;
-
-        @include border-radius(2px);
-      }
-    }
-  }
-
-  #user-nav {
-    margin-top: 20px;
-
-    li {
-      padding: 0;
-
-      a {
-        color: $gray;
-        font-size: 1.15em;
-      }
-    }
-  }
-}
+//header {
+//  height: 60px;
+//
+//  @include middle-row;
+//}
 
 
 #sub-header {
