@@ -1,6 +1,6 @@
 define(
   ['controllers/controllers'],
-  function (controllers)
+  function (controllers, locals)
   {
     'use strict';
 

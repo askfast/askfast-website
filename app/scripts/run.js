@@ -1,15 +1,16 @@
 define(
-  ['app'],
-  function (app)
+  ['app', 'localization', 'config'],
+  function (app, locals, config)
   {
     'use strict';
 
     app.run(
       [
-        '$rootScope', '$location',
-        function($rootScope, $location)
+        '$rootScope',
+        function($rootScope)
         {
-
+          console.log('localization =>', locals);
+          console.log('config =>', config);
 
           /**
            * TODO: Add this event listeners to a directive

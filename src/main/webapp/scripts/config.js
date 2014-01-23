@@ -1,1 +1,11 @@
-define({app:{version:"0.0.1",released:"Thursday, January 23rd, 2014, 10:38:10 AM"}});
+(function() {
+  define({
+    app: {
+      version: '@@version',
+      released: '@@released'
+    }
+  });
+
+}).call(this);
+
+//# sourceMappingURL=../../.tmp/scripts/config.js.map
