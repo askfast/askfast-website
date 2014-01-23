@@ -9,8 +9,15 @@ define(
         '$rootScope',
         function($rootScope)
         {
-          console.log('localization =>', locals);
-          console.log('config =>', config);
+          $rootScope.app = $rootScope.app || {};
+
+          $rootScope.setLanguage = function (language)
+          {
+            $rootScope.app.language = language;
+            $rootScope.ui = locals.ui[language];
+          };
+
+          $rootScope.setLanguage(config.app.default.language);
 
           /**
            * TODO: Add this event listeners to a directive

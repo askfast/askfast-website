@@ -11,23 +11,23 @@ block nav
   .col-md-8
     ul#nav.list-inline
       li
-        a(href='#developers') DEVELOPERS
+        a(href='#developers') {{ui.globals.nav.main.developers}}
       li
         span &#183
       li
-        a(href='#business') BUSINESS
+        a(href='#business') {{ui.globals.nav.main.business}}
       li
         span &#183
       li
-        a(href='#dialogs') DIALOGS
+        a(href='#dialogs') {{ui.globals.nav.main.dialogs}}
       li
         span &#183
       li
-        a(href='#prices') PRICE
+        a(href='#prices') {{ui.globals.nav.main.price}}
       li
         span &#183
       li
-        a(href='#about') ABOUT US
+        a(href='#about') {{ui.globals.nav.main.aboutUs}}
 
 
 block user-nav
@@ -78,8 +78,6 @@ block icons
   link(rel='shortcut icon', href='icons/favicon.png')
 
 
-
-
 block tweets
   .col-md-10
     #tweets
@@ -96,12 +94,10 @@ block languages
   .col-md-2
     #languages.pull-right
       ul
-        li
-          a(href='') EN
-        li.active
-          a(href='') NL
-
-
+        li(class="{{(app.language == 'en') && 'active'}}")
+          a(ng-click="setLanguage('en')") EN
+        li(class="{{(app.language == 'nl') && 'active'}}")
+          a(ng-click="setLanguage('nl')") NL
 
 
 block iestuff

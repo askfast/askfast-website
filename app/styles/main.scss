@@ -305,6 +305,10 @@ header {
 
         a {
           display: block;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
 

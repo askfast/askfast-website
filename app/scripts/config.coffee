@@ -1,5 +1,5 @@
 define app:
   version:  '@@version'
   released: '@@released'
-  defaults:
+  default:
     language: 'en'
