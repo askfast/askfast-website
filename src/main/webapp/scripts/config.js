@@ -2,7 +2,10 @@
   define({
     app: {
       version: '@@version',
-      released: '@@released'
+      released: '@@released',
+      "default": {
+        language: 'en'
+      }
     }
   });
 

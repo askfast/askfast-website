@@ -19,6 +19,7 @@ define(
 
           $rootScope.setLanguage(config.app.default.language);
 
+
           /**
            * TODO: Add this event listeners to a directive
            */

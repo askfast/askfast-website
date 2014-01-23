@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="icons/favicon.png">
-    <link rel="stylesheet" href="styles/cf4ca018.main.css">
+    <link rel="stylesheet" href="styles/6d9e2199.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -41,15 +41,15 @@
             <div class="col-md-2"><a href="#home"><img src="images/e973109b.askfast-logo.png" alt="AskFast"></a></div>
             <div class="col-md-8">
               <ul id="nav" class="list-inline">
-                <li><a href="#developers">DEVELOPERS</a></li>
+                <li><a href="#developers">{{ui.globals.nav.main.developers}}</a></li>
                 <li><span>&#183</span></li>
-                <li><a href="#business">BUSINESS</a></li>
+                <li><a href="#business">{{ui.globals.nav.main.business}}</a></li>
                 <li><span>&#183</span></li>
-                <li><a href="#dialogs">DIALOGS</a></li>
+                <li><a href="#dialogs">{{ui.globals.nav.main.dialogs}}</a></li>
                 <li><span>&#183</span></li>
-                <li><a href="#prices">PRICE</a></li>
+                <li><a href="#prices">{{ui.globals.nav.main.price}}</a></li>
                 <li><span>&#183</span></li>
-                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#about">{{ui.globals.nav.main.aboutUs}}</a></li>
               </ul>
             </div>
             <div class="col-md-2 text-right">
@@ -75,8 +75,8 @@
             <div class="col-md-2">
               <div id="languages" class="pull-right">
                 <ul>
-                  <li><a href="">EN</a></li>
-                  <li class="active"><a href="">NL</a></li>
+                  <li class="{{(app.language == 'en') &amp;&amp; 'active'}}"><a ng-click="setLanguage('en')">EN</a></li>
+                  <li class="{{(app.language == 'nl') &amp;&amp; 'active'}}"><a ng-click="setLanguage('nl')">NL</a></li>
                 </ul>
               </div>
             </div>

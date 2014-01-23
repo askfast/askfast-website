@@ -8,8 +8,6 @@ define ui:
           dialogs:    'DIALOGS'
           price:      'PRICE'
           aboutUs:    'ABOUT US'
-    home:
-      title: "English"
   nl:
     globals:
       nav:
@@ -19,5 +17,3 @@ define ui:
           dialogs:    'DIALOGS'
           price:      'PRIJS'
           aboutUs:    'OVER ONS'
-    home:
-      title: "Nederlands"

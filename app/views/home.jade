@@ -61,9 +61,9 @@
         li#email
           a(ng-click='setChannelView("email")',
           class='{{(channelView.email) && "active"}}') email
-        li#gmail
-          a(ng-click='setChannelView("gmail")',
-          class='{{(channelView.gmail) && "active"}}') gmail
+        li#gMail
+          a(ng-click='setChannelView("gMail")',
+          class='{{(channelView.gMail) && "active"}}') gmail
       br
       div(ng-show='channelView.tel')
         p
@@ -83,7 +83,7 @@
       div(ng-show='channelView.email')
         p
           | Email stuff
-      div(ng-show='channelView.gmail')
+      div(ng-show='channelView.gMail')
         p
           | Gmail stuff
     .col-md-6
