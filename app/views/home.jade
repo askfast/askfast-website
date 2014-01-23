@@ -50,26 +50,57 @@
       h1.text-pink Communication channels
       ul.icons-list.list-inline
         li#tel
-          a(href='#') tel
+          a(ng-click='setChannelView("tel")',
+          class='{{(channelView.tel) && "active"}}') tel
         li#mail
-          a(href='#') mail
+          a(ng-click='setChannelView("mail")',
+          class='{{(channelView.mail) && "active"}}') mail
         li#twitter
-          a(href='#') twitter
+          a(ng-click='setChannelView("twitter")',
+          class='{{(channelView.twitter) && "active"}}') twitter
         li#email
-          a(href='#') email
+          a(ng-click='setChannelView("email")',
+          class='{{(channelView.email) && "active"}}') email
         li#gmail
-          a(href='#') gmail
+          a(ng-click='setChannelView("gmail")',
+          class='{{(channelView.gmail) && "active"}}') gmail
       br
-      p
-        | ASK- Fast is a cloud communication solution that
-        | is designed and developed for developers and businesses.
-      ul.bullets
-        li Inbound Call
-        li Outbound Call
-        li Text to Speech
-        li Call forwarding and many more feautures.
+      div(ng-show='channelView.tel')
+        p
+          | ASK- Fast is a cloud communication solution that
+          | is designed and developed for developers and businesses.
+        ul.bullets
+          li Inbound Call
+          li Outbound Call
+          li Text to Speech
+          li Call forwarding and many more feautures.
+      div(ng-show='channelView.mail')
+        p
+          | Mail stuff
+      div(ng-show='channelView.twitter')
+        p
+          | Twitter stuff
+      div(ng-show='channelView.email')
+        p
+          | Email stuff
+      div(ng-show='channelView.gmail')
+        p
+          | Gmail stuff
     .col-md-6
-      img.img-responsive(src='../images/stock-communication-channel.png', alt='Stock communication channels')
+      div(ng-show='channelView.tel')
+        img.img-responsive(src='../images/stock-communication-channel.png', alt='Stock communication channels')
+      div(ng-show='channelView.mail')
+        p(style='margin-top:30px')
+          | Image mail
+      div(ng-show='channelView.twitter')
+        p(style='margin-top:30px')
+          | Image twitter
+      div(ng-show='channelView.email')
+        p(style='margin-top:30px')
+          | Image email
+      div(ng-show='channelView.gmail')
+        p(style='margin-top:30px')
+          | Image gmail
 
 
 
@@ -78,35 +109,68 @@
     .col-md-4.col-md-offset-1
       ul.icons-list.list-inline
         li#cost
-          a.active(href='#') cost
+          a(ng-click='setPromiseView("cost")',
+          class='{{(promiseView.cost) && "active"}}') cost
         li#analyze
-          a(href='#') analyze
+          a(ng-click='setPromiseView("analyze")',
+          class='{{(promiseView.analyze) && "active"}}') analyze
         li#time
-          a(href='#') time
+          a(ng-click='setPromiseView("time")',
+          class='{{(promiseView.time) && "active"}}') time
         li#customizable
-          a(href='#') customizable
+          a(ng-click='setPromiseView("customizable")',
+          class='{{(promiseView.customizable) && "active"}}') customizable
         li#integration
-          a(href='#') integration
+          a(ng-click='setPromiseView("integration")',
+          class='{{(promiseView.integration) && "active"}}') integration
         li#cloud
-          a(href='#') cloud
+          a(ng-click='setPromiseView("cloud")',
+          class='{{(promiseView.cloud) && "active"}}') cloud
         li#ideas
-          a(href='#') ideas
+          a(ng-click='setPromiseView("ideas")',
+          class='{{(promiseView.ideas) && "active"}}') ideas
         li#performance
-          a(href='#') performance
+          a(ng-click='setPromiseView("performance")',
+          class='{{(promiseView.performance) && "active"}}') performance
         li#privacy
-          a(href='#') privacy
+          a(ng-click='setPromiseView("privacy")',
+          class='{{(promiseView.privacy) && "active"}}') privacy
     .col-md-7
-      h1
-        span.text-white We promise
-        | &nbsp;
-        span.text-pink Cost Reduction
-      p
-        | ASK-Fast reduces the cost of communication while creating
-        | added value to your business context through automated agents.
-        | Our rates are among the cheapest in Europe.
-      p
-        a.btn.btn-primary(href='#') Create an account
-
+      div(ng-show='promiseView.cost')
+        h1
+          span.text-white We promise
+          | &nbsp;
+          span.text-pink Cost Reduction
+        p
+          | ASK-Fast reduces the cost of communication while creating
+          | added value to your business context through automated agents.
+          | Our rates are among the cheapest in Europe.
+        p
+          a.btn.btn-primary(href='#') Create an account
+      div(ng-show='promiseView.analyze')
+        p
+          | Analyze stuff
+      div(ng-show='promiseView.time')
+        p
+          | Time stuff
+      div(ng-show='promiseView.customizable')
+        p
+          | customizable stuff
+      div(ng-show='promiseView.integration')
+        p
+          | integration stuff
+      div(ng-show='promiseView.cloud')
+        p
+          | cloud stuff
+      div(ng-show='promiseView.ideas')
+        p
+          | ideas stuff
+      div(ng-show='promiseView.performance')
+        p
+          | performance stuff
+      div(ng-show='promiseView.privacy')
+        p
+          | privacy stuff
 
 
 #references

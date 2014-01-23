@@ -87,6 +87,7 @@ $sprite: '../images/askfast-sprite.png' !default;
 
     &:hover {
       background: url($sprite) $y1 $y2;
+      cursor: pointer;
     }
   }
 
