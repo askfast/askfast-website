@@ -1,26 +1,46 @@
 define(
-  ['controllers/controllers', 'jquery'],
+  ['controllers/controllers'],
   function (controllers)
   {
     'use strict';
 
-    /*
-    $(document).ready(function ()
-    {
-      $('.bxslider').bxSlider();
-    });
-
-    $('.bxslider').bxSlider();
-
-    console.log('coming to ehre');
-    */
-
     controllers.controller ('promotional',
       [
-        '$scope', 'User',
-        function ($scope, User)
+        '$rootScope', '$scope',
+        function ($rootScope, $scope)
         {
-          $scope.name = User.get();
+          $scope.setChannelView = function (view)
+          {
+            $scope.channelView = {
+              tel:    false,
+              mail:   false,
+              twitter:false,
+              email:  false,
+              gmail:  false
+            };
+
+            $scope.channelView[view] = true;
+          };
+
+          $scope.setPromiseView = function (view)
+          {
+            $scope.promiseView = {
+              cost:         false,
+              analyze:      false,
+              time:         false,
+              customizable: false,
+              integration:  false,
+              cloud:        false,
+              ideas:        false,
+              performance:  false,
+              privacy:      false
+            };
+
+            $scope.promiseView[view] = true;
+          };
+
+          $scope.setChannelView('tel');
+          $scope.setPromiseView('cost');
         }
       ]
     );
