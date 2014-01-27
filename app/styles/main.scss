@@ -7,12 +7,12 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
 // Reset
 @import "../vendors/bootstrap-sass/lib/normalize";
-@import "../vendors/bootstrap-sass/lib/print";
+// @import "../vendors/bootstrap-sass/lib/print";
 
 // Core CSS
 @import "../vendors/bootstrap-sass/lib/scaffolding";
 @import "../vendors/bootstrap-sass/lib/type";
-@import "../vendors/bootstrap-sass/lib/code";
+// @import "../vendors/bootstrap-sass/lib/code";
 @import "../vendors/bootstrap-sass/lib/grid";
 @import "../vendors/bootstrap-sass/lib/tables";
 @import "../vendors/bootstrap-sass/lib/forms";
@@ -29,8 +29,8 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 // @import "../vendors/bootstrap-sass/lib/breadcrumbs";
 // @import "../vendors/bootstrap-sass/lib/pagination";
 // @import "../vendors/bootstrap-sass/lib/pager";
-@import "../vendors/bootstrap-sass/lib/labels";
-@import "../vendors/bootstrap-sass/lib/badges";
+// @import "../vendors/bootstrap-sass/lib/labels";
+// @import "../vendors/bootstrap-sass/lib/badges";
 // @import "../vendors/bootstrap-sass/lib/jumbotron";
 // @import "../vendors/bootstrap-sass/lib/thumbnails";
 // @import "../vendors/bootstrap-sass/lib/alerts";
@@ -55,6 +55,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import url(http://fonts.googleapis.com/css?family=Lato|Titillium+Web);
 
 
+
 $white:     #ffffff !default;
 $pink:      #e21f8d !default;
 $light-pink:#f8c8e2 !default;
@@ -62,16 +63,11 @@ $gray:      #454545 !default;
 $dark-gray: #313338 !default;
 $blue:      #15cdef !default;
 
-
 $font-color: $gray;
 $button-color: #2a2c30 !default;
 
-
 $sprite: '../images/askfast-sprite.png' !default;
 
-
-.text-pink  { color: $pink }
-.text-white { color: $white }
 
 
 @mixin border-radius($r) {
@@ -123,11 +119,13 @@ $sprite: '../images/askfast-sprite.png' !default;
 }
 
 
+
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
+
 
 body {
   font-family: 'Lato', sans-serif;
@@ -146,18 +144,16 @@ body {
 }
 
 
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  padding: 60px 0 20px 0;
-}
+.text-pink  { color: $pink }
+.text-white { color: $white }
 
 
 .navbar {
   min-height: 60px;
   background-color: $white;
   border: none;
-  padding-left: 20px;
+  border-bottom: 2px solid $pink;
+  z-index: 500;
 
   .navbar-brand {
     display: block;
@@ -165,7 +161,7 @@ body {
     width: 131px;
     height: 60px;
     background: url($sprite) -180px 0;
-    margin-right: 20px;
+    margin: 0 20px;
   }
 
   .navbar-nav {
@@ -186,27 +182,26 @@ body {
           text-decoration: underline;
         }
       }
-
-      .bullet {
-        display: block;
-        font-size: 2em;
-        color: $pink;
-        text-indent: -9999px;
-        width: 4px;
-        height: 4px;
-        background-color: $pink;
-        margin: 23px 2px;
-
-        @include border-radius(2px);
-      }
     }
   }
-}
 
+  .navbar-toggle {
+    border: 1px solid $pink;
+    background-color: $white;
+    margin-top: 15px;
 
-#footer {
-  height: 60px;
-  background-color: #f5f5f5;
+    &:hover {
+      background-color: $pink;
+
+      .icon-bar {
+        background-color: $white;
+      }
+    }
+
+    .icon-bar {
+      background-color: $pink;
+    }
+  }
 }
 
 
@@ -227,27 +222,20 @@ body {
 }
 
 
-footer {
-  border-top: 3px solid $pink;
-
-  .container-fluid {
-    max-width: 1170px;
-    margin: 0 auto;
-  }
-
-  #footer-nav {
-    padding: 17px 15px 0 15px;
-
-    li {
-      padding: 0;
-      margin-right: 5px;
-
-      a {
-        color: $gray;
-        font-size: 1.15em;
-      }
+.icons-list {
+  li {
+    a {
+      display: block;
+      text-indent: -9999px;
     }
   }
+}
+
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  padding: 60px 0 20px 0;
 }
 
 
@@ -337,9 +325,16 @@ footer {
 
   ul {
     li {
-      height: 320px;
+      min-height: 320px;
+//      display: block;
+//      height: 100%;
+//      min-height: 100%;
     }
   }
+
+//  .bx-pager {
+//    visibility: hidden;
+//  }
 
   #who-wants-pink {
     font-size: 1.2em;
@@ -353,6 +348,10 @@ footer {
     h1 {
       font-size: 3em;
       margin-top: 30px;
+    }
+
+    .btn {
+      margin-bottom: 20px;
     }
   }
 }
@@ -372,16 +371,6 @@ footer {
 
   img {
     margin-top: -60px;
-  }
-}
-
-
-.icons-list {
-  li {
-    a {
-      display: block;
-      text-indent: -9999px;
-    }
   }
 }
 
@@ -436,7 +425,6 @@ footer {
 }
 
 
-
 #promises {
   min-height: 350px;
   background: url(../images/section-shadow.png) repeat-x;
@@ -463,11 +451,15 @@ footer {
   }
 
   ul.icons-list {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    min-width: 230px;
+    height: 230px;
+    margin: 0 auto;
+
     li {
       padding: 0;
       margin: 0;
+
       a {
         width: 72px;
         height: 72px;
@@ -486,7 +478,6 @@ footer {
   }
 
 }
-
 
 
 #references {
@@ -515,11 +506,30 @@ footer {
 }
 
 
-
 #quotes {
   @include middle-row;
 }
 
+
+footer {
+  border-top: 3px solid $pink;
+
+  @include middle-row;
+
+  #footer-nav {
+    padding: 17px 15px 0 15px;
+
+    li {
+      padding: 0;
+      margin-right: 5px;
+
+      a {
+        color: $gray;
+        font-size: 1.15em;
+      }
+    }
+  }
+}
 
 
 .bx-wrapper {
@@ -540,28 +550,24 @@ footer {
 
   .bx-pager, .bx-controls-auto {
     position: absolute;
-    bottom: -30px;
+    bottom: 0;
     width: 100%;
   }
 
   .bx-loading {
     min-height: 50px;
+    // TODO: Replace with sprite
     background: url(../images/bx_loader.gif) center center no-repeat white;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2000;
+    z-index: 200;
   }
 
   .bx-pager {
     text-align: center;
-    font-size: .85em;
-    font-family: Arial;
-    font-weight: bold;
-    color: #666;
-    padding-top: 20px;
 
     .bx-pager-item {
       display: inline-block;
@@ -577,28 +583,33 @@ footer {
   }
 
   .bx-pager.bx-default-pager a {
-    background: #666;
-    text-indent: -9999px;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 36px;
+    height: 36px;
     margin: 0 5px;
     outline: 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    @include border-radius(72px);
+    border: 2px solid $blue;
+    background-color: $white;
+    font-size: 1.8em;
+    color: $pink;
+
     &:hover, &.active {
-      background: #000;
+      background: $pink;
+      color: $white;
+      text-decoration: none;
     }
   }
 
   .bx-prev {
     left: -100px;
+    // TODO: Replace with sprite
     background: url(../images/carousel-controls.png) no-repeat 0 0px;
   }
 
   .bx-next {
     right: -100px;
+    // TODO: Replace with sprite
     background: url(../images/carousel-controls.png) no-repeat -34px 0px;
   }
 
@@ -618,7 +629,8 @@ footer {
     width: 34px;
     height: 43px;
     text-indent: -9999px;
-    z-index: 9999;
+    z-index: 300;
+
     &.disabled {
       display: none;
     }
@@ -688,6 +700,58 @@ footer {
 
 
 
+
+@media (max-width: 480px) {
+  .navbar {
+    background-color: $pink;
+
+    .navbar-header {
+      background-color: $white;
+    }
+
+    ul {
+      li {
+        margin-left: 20px;
+        a {
+          padding: 10px 4px !important;
+          color: $white !important;
+        }
+      }
+    }
+
+    .navbar-right {
+      border-top: 1px solid $white;
+    }
+  }
+
+  #carousel {
+    padding-bottom: 40px;
+
+    ul {
+      li {
+        min-height: 560px;
+      }
+    }
+  }
+
+  #bridge {
+    img {
+      margin-top: -15px;
+    }
+  }
+
+  .bx-wrapper {
+    .bx-prev, .bx-next {
+      display: none;
+    }
+  }
+
+  #tweets, #footer-nav {
+    display: none;
+  }
+}
+
+
 @media (max-width: 767px) {
   #footer {
     margin-left: -20px;
@@ -707,17 +771,20 @@ footer {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 768px) and (max-width: 979px) {
 }
 
 
-//@mixin flex-center() {
-//  display: -webkit-flexbox;
-//  display: -ms-flexbox;
-//  display: -webkit-flex;
-//  display: flex;
-//  -webkit-flex-align: center;
-//  -ms-flex-align: center;
-//  -webkit-align-items: center;
-//  align-items: center;
-//}
+@media (max-width: 979px) {
+}
+
+
+@media (min-width: 980px) {
+  .bx-pager {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1200px) {
+}

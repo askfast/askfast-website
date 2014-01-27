@@ -1,10 +1,31 @@
+script.
+  $(document).ready(function ()
+  {
+    $('.bxslider').bxSlider({
+      pager:          true,
+      touchEnabled:   false,
+      adaptiveHeight: true,
+      onSlideBefore: function ()
+      {
+        if (window.top.scrollY != 0)
+        {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
+  });
+
+
 #carousel
   .row
     .col-md-10.col-md-offset-1
       ul.bxslider
         li#who-wants-pink
           .row
-            .col-md-6
+            .col-md-6.col-md-push-6
+              img.img-responsive.pull-right(src='../images/illustration-hands-cloud.png',
+              alt='Illustration Hands Cloud')
+            .col-md-6.col-md-pull-6
               h1.text-pink Who wants some pink?
               p
                 | ASK- Fast is a cloud communication solution that
@@ -14,16 +35,18 @@
                 | for your application or your customer service.
               p
                 a.btn.btn-primary(href='#') Join Now
-            .col-md-6
-              img.img-responsive.pull-right(src='../images/illustration-hands-cloud.png',
-                  alt='Illustration Hands Cloud')
         li
           .row
             .col-md-12
               br
               br
               h1 Slide 2
-
+              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
+              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
+              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
+              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
+              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
+              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
 
 
 #bridge
@@ -192,13 +215,3 @@
         p “We are using ASK-Fast cloud communication for our alarming system.”
         footer
           h3 Johnny Billie, CEO
-
-
-
-script.
-  $(document).ready(function ()
-  {
-    $('.bxslider').bxSlider({
-      pager: false
-    });
-  });
