@@ -1,24 +1,22 @@
-script.
-  $(document).ready(function ()
-  {
-    $('.bxslider').bxSlider({
-      pager:          true,
-      touchEnabled:   false,
-      adaptiveHeight: true,
-      onSlideBefore: function ()
-      {
-        if (window.top.scrollY != 0)
-        {
-          window.scrollTo(0, 0);
-        }
-      }
-    });
-  });
-
-
 #carousel
   .row
     .col-md-10.col-md-offset-1
+      script.
+        $(document).ready(function ()
+        {
+          $('#carousel .bxslider').bxSlider({
+          pager:          true,
+          touchEnabled:   false,
+          adaptiveHeight: true,
+          onSlideBefore:  function ()
+          {
+          if (window.top.scrollY != 0)
+          {
+          window.scrollTo(0, 0);
+            }
+            }
+          });
+        });
       ul.bxslider
         li#who-wants-pink
           .row
@@ -41,9 +39,6 @@ script.
               br
               br
               h1 Slide 2
-              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
-              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
-              p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
               p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
               p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
               p Sed vitae gravida tortor. Fusce bibendum ac est id tincidunt. Nullam ac vehicula leo. Maecenas pharetra dictum diam non pharetra. Nullam suscipit, nulla non iaculis fringilla, quam urna accumsan leo, in lobortis quam neque ut ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed cursus turpis ac turpis ornare iaculis. Integer dignissim, sapien vitae congue dapibus, risus nisi auctor libero, non lobortis eros risus in leo. Cras vel urna neque. Quisque ut nibh eu ligula cursus pretium. Aliquam volutpat gravida vestibulum. Etiam nibh dui, ullamcorper quis cursus sit amet, mattis quis lectus. Integer at leo nisl. Aenean mattis lectus dolor. Integer ullamcorper velit suscipit, sodales sapien sit amet, ultrices magna.
@@ -200,6 +195,22 @@ script.
   .row
     .col-md-10.col-md-offset-1
       h1.text-pink Our references
+      script.
+        $(document).ready(function ()
+        {
+          $('#references .bxslider').bxSlider({
+            pager:          true,
+            touchEnabled:   false,
+            adaptiveHeight: true,
+            onSlideBefore:  function ()
+            {
+              if (window.top.scrollY != 0)
+              {
+                window.scrollTo(0, 0);
+              }
+            }
+          });
+        });
       ul.bxslider
         li
           .row
