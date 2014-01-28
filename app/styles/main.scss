@@ -560,8 +560,19 @@ body {
 #references {
   @include middle-row;
 
+  ul.bxslider {
+    li {
+      margin-bottom: 15px;
+
+      .col-md-3 {
+        text-align: center;
+      }
+    }
+  }
+
   blockquote {
     border: none;
+    margin-top: 20px;
 
     p {
       font-size: 1.87em;
@@ -814,6 +825,7 @@ footer {
     ul {
       li {
         margin-left: 20px;
+        
         a {
           padding: 10px 4px !important;
           color: $white !important;
@@ -854,6 +866,16 @@ footer {
 
   #tweets, #footer-nav {
     display: none;
+  }
+
+  #references {
+    .bx-wrapper {
+      margin-top: 30px;
+
+      .bx-pager {
+        top: -20px;
+      }
+    }
   }
 }
 
