@@ -364,26 +364,48 @@ body {
 
   ul {
     li {
-      min-height: 320px;
+      min-height: 340px;
+      font-size: 1.2em;
+      position: relative;
+
+      .row {
+        position: absolute;
+        bottom: -1px;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      .btn {
+        margin-bottom: 20px;
+      }
     }
   }
 
   #who-wants-pink {
-    font-size: 1.2em;
-    position: relative;
-
-    .row {
-      position: absolute;
-      bottom: -1px;
-    }
-
     h1 {
-      font-size: 3em;
-      margin-top: 30px;
+      margin-top: 5px;
+    }
+  }
+
+  #writing-a-letter {
+    h1 {
+      margin-top: -15px;
     }
 
-    .btn {
-      margin-bottom: 20px;
+    img {
+      bottom: 0;
+    }
+  }
+
+  #use-your-fingers {
+    h1 {
+      margin-top: -25px;
+    }
+
+    img {
+      bottom: 0;
     }
   }
 }
@@ -810,6 +832,10 @@ footer {
     ul {
       li {
         min-height: 560px;
+
+        h1 {
+          font-size: 2.8em;
+        }
       }
     }
   }
