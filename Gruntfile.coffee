@@ -113,7 +113,7 @@ module.exports = (grunt) ->
             '.tmp'
             '<%= paths.dist %>/*'
             '!<%= paths.dist %>/vendors*'
-            '!<%= paths.dist %>/WEB-INF*'
+            # '!<%= paths.dist %>/WEB-INF*' # depreciated
             '!<%= paths.dist %>/.git*'
           ]
         ]
