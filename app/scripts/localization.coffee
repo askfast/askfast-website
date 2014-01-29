@@ -10,6 +10,30 @@ define ui:
           aboutUs:    'ABOUT US'
     pages:
       home:
+        carousel:
+          cta: 'Join Now'
+          slide1:
+            title: 'Who wants some pink?'
+            content: [
+              'ASK- Fast is a cloud communication solution that is designed and developed for
+              developers and businesses.'
+              'You can simply develop an automated communication for your application or your customer
+              service.'
+            ]
+          slide2:
+            title: 'Writing a letter to your customer?'
+            content: [
+              'How great is that. If you do not want to focus on efficiency fine. ASK-Fast would
+              like to provide better tools to you for your business. Power of full customisation is
+              waiting for you and many opportunities too…'
+            ]
+          slide3:
+            title: 'Use your fingers for a better communication.'
+            content: [
+              'We do, we are coders. We are providing you a full-fetched API for SMS, E-mail, Automated
+              Phone call, Twitter at the same time. We are keeping all the hard work for ourselves and
+              want you to use your fingers for a better communication experience.'
+            ]
         promises:
           enterance: 'We promise'
           cta: 'Create an account'
@@ -65,6 +89,30 @@ define ui:
           aboutUs:    'OVER ONS'
     pages:
       home:
+        carousel:
+          cta: '(NL) Join Now'
+          slide1:
+            title: '(NL) Who wants some pink?'
+            content: [
+              '(NL) ASK- Fast is a cloud communication solution that is designed and developed for
+              developers and businesses.'
+              '(NL) You can simply develop an automated communication for your application or your
+              customer service.'
+            ]
+          slide2:
+            title: '(NL) Writing a letter to your customer?'
+            content: [
+              '(NL) How great is that. If you do not want to focus on efficiency fine. ASK-Fast would
+              like to provide better tools to you for your business. Power of full customisation is
+              waiting for you and many opportunities too…'
+            ]
+          slide3:
+            title: '(NL) Use your fingers for a better communication.'
+            content: [
+              '(NL) We do, we are coders. We are providing you a full-fetched API for SMS, E-mail,
+              Automated Phone call, Twitter at the same time. We are keeping all the hard work for
+              ourselves and want you to use your fingers for a better communication experience.'
+            ]
         promises:
           enterance: 'Wij beloven'
           cta: 'Maak een account aan'

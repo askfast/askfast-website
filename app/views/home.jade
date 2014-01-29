@@ -21,42 +21,33 @@
               img.img-responsive.pull-right(src='../images/illustration-hands-cloud.png',
               alt='Illustration Hands Cloud')
             .col-md-6.col-md-pull-6.col-sm-6.col-sm-pull-6
-              h1.text-pink Who wants some pink?
+              h1.text-pink {{ui.pages.home.carousel.slide1.title}}
+              p(ng-repeat="content in ui.pages.home.carousel.slide1.content")
+                | {{content}}
               p
-                | ASK- Fast is a cloud communication solution that
-                | is designed and developed for developers and businesses.
-              p
-                | You can simply develop an automated communication
-                | for your application or your customer service.
-              p
-                a.btn.btn-primary(href='#') Join Now
+                a.btn.btn-primary(href='#') {{ui.pages.home.carousel.cta}}
         li#writing-a-letter
           .row
             .col-md-6.col-md-push-6.col-sm-7.col-sm-push-5
               img.img-responsive.pull-right(src='../images/stock-man-business.png',
               alt='Picture of business man with typewriter')
             .col-md-6.col-md-pull-6.col-sm-5.col-sm-pull-7
-              h1.text-pink Writing a letter to your customer?
+              h1.text-pink {{ui.pages.home.carousel.slide2.title}}
+              p(ng-repeat="content in ui.pages.home.carousel.slide2.content")
+                | {{content}}
               p
-                | How great is that. If you do not want to focus on efficiency fine.
-                | ASK-Fast would like to provide better tools to you for your business.
-                | Power of full customisation is waiting for you and many opportunities too…
-              p
-                a.btn.btn-primary(href='#') Join Now
+                a.btn.btn-primary(href='#') {{ui.pages.home.carousel.cta}}
         li#use-your-fingers
           .row
             .col-md-6.col-md-push-6.col-sm-6.col-sm-push-6
               img.img-responsive.pull-right(src='../images/stock-fingers.png',
               alt='Picture of fingers')
             .col-md-6.col-md-pull-6.col-sm-6.col-sm-pull-6
-              h1.text-pink Use your fingers for a better communication.
+              h1.text-pink {{ui.pages.home.carousel.slide3.title}}
+              p(ng-repeat="content in ui.pages.home.carousel.slide3.content")
+                | {{content}}
               p
-                | We do, we are coders. We are providing you a full-fetched API for SMS,
-                | E-mail, Automated Phone call, Twitter at the same time. We are keeping
-                | all the hard work for ourselves and want you to use your fingers for a
-                | better communication experience.
-              p
-                a.btn.btn-primary(href='#') Join Now
+                a.btn.btn-primary(href='#') {{ui.pages.home.carousel.cta}}
 
 
 #bridge
