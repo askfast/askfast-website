@@ -8,6 +8,13 @@ define ui:
           dialogs:    'DIALOGS'
           price:      'PRICE'
           aboutUs:    'ABOUT US'
+        user:
+          register: 'REGISTER'
+          login:    'LOGIN'
+        footer:
+          jobs:     'JOBS'
+          legal:    'LEGAL'
+          contact:  'CONTACT'
     pages:
       home:
         carousel:
@@ -129,6 +136,13 @@ define ui:
           dialogs:    'DIALOGS'
           price:      'PRIJS'
           aboutUs:    'OVER ONS'
+        user:
+          register: 'INSCHRIJVEN'
+          login:    'LOGIN'
+        footer:
+          jobs:     'VACATURES'
+          legal:    'LEGAAL'
+          contact:  'CONTACT'
     pages:
       home:
         carousel:
