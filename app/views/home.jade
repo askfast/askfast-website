@@ -63,45 +63,44 @@
 #channels
   .row
     .col-md-5.col-md-offset-1.col-sm-6
-      h1.text-pink Communication channels
+      h1.text-pink {{ui.pages.home.channels.title}}
       ul.icons-list.list-inline
         li#tel
           a(ng-click='setChannelView("tel")',
-          class='{{(channelView.tel) && "active"}}') tel
+          class='{{(channelView.tel) && "active"}}') Tel
         li#mail
           a(ng-click='setChannelView("mail")',
-          class='{{(channelView.mail) && "active"}}') mail
+          class='{{(channelView.mail) && "active"}}') Mail
         li#twitter
           a(ng-click='setChannelView("twitter")',
-          class='{{(channelView.twitter) && "active"}}') twitter
+          class='{{(channelView.twitter) && "active"}}') Twitter
         li#email
           a(ng-click='setChannelView("email")',
-          class='{{(channelView.email) && "active"}}') email
+          class='{{(channelView.email) && "active"}}') E-mail
         li#gMail
           a(ng-click='setChannelView("gMail")',
-          class='{{(channelView.gMail) && "active"}}') gmail
+          class='{{(channelView.gMail) && "active"}}') Gmail
       br
       div(ng-show='channelView.tel')
-        p
-          | ASK- Fast is a cloud communication solution that
-          | is designed and developed for developers and businesses.
-        ul.bullets
-          li Inbound Call
-          li Outbound Call
-          li Text to Speech
-          li Call forwarding and many more feautures.
+        p(ng-repeat='content in ui.pages.home.channels.tel.content') {{content}}
+        ul.bullets(ng-show='ui.pages.home.channels.tel.list')
+          li(ng-repeat='list in ui.pages.home.channels.tel.list') {{list}}
       div(ng-show='channelView.mail')
-        p
-          | Mail stuff
+        p(ng-repeat='content in ui.pages.home.channels.mail.content') {{content}}
+        ul.bullets(ng-show='ui.pages.home.channels.mail.list')
+          li(ng-repeat='list in ui.pages.home.channels.mail.list') {{list}}
       div(ng-show='channelView.twitter')
-        p
-          | Twitter stuff
+        p(ng-repeat='content in ui.pages.home.channels.twitter.content') {{content}}
+        ul.bullets(ng-show='ui.pages.home.channels.twitter.list')
+          li(ng-repeat='list in ui.pages.home.channels.twitter.list') {{list}}
       div(ng-show='channelView.email')
-        p
-          | Email stuff
+        p(ng-repeat='content in ui.pages.home.channels.email.content') {{content}}
+        ul.bullets(ng-show='ui.pages.home.channels.email.list')
+          li(ng-repeat='list in ui.pages.home.channels.email.list') {{list}}
       div(ng-show='channelView.gMail')
-        p
-          | Gmail stuff
+        p(ng-repeat='content in ui.pages.home.channels.gMail.content') {{content}}
+        ul.bullets(ng-show='ui.pages.home.channels.gMail.list')
+          li(ng-repeat='list in ui.pages.home.channels.gMail.list') {{list}}
     .col-md-5.col-sm-6
       img.img-responsive(src='../images/stock-communication-channel.png',
       alt='Stock communication channels',

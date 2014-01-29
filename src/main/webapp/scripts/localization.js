@@ -15,6 +15,64 @@
         },
         pages: {
           home: {
+            carousel: {
+              cta: 'Join Now',
+              slide1: {
+                title: 'Who wants some pink?',
+                content: [
+                  'ASK- Fast is a cloud communication solution that is designed and developed for\
+              developers and businesses.', 'You can simply develop an automated communication for your application or your customer\
+              service.'
+                ]
+              },
+              slide2: {
+                title: 'Writing a letter to your customer?',
+                content: [
+                  'How great is that. If you do not want to focus on efficiency fine. ASK-Fast would\
+              like to provide better tools to you for your business. Power of full customisation is\
+              waiting for you and many opportunities too…'
+                ]
+              },
+              slide3: {
+                title: 'Use your fingers for a better communication.',
+                content: [
+                  'We do, we are coders. We are providing you a full-fetched API for SMS, E-mail, Automated\
+              Phone call, Twitter at the same time. We are keeping all the hard work for ourselves and\
+              want you to use your fingers for a better communication experience.'
+                ]
+              }
+            },
+            bridge: {
+              cta: 'Case Study',
+              title: 'We bridge software and telecom industry.',
+              content: [
+                'ASK- Fast is a cloud communication solution that is designed and developed for\
+            developers and businesses.', 'You can simply develop an automated communication for your application or your customer\
+            service. It will work with common communication channel and almost with every device.'
+              ]
+            },
+            channels: {
+              title: 'Communication channels',
+              tel: {
+                content: [
+                  'ASK- Fast is a cloud communication solution that is designed and developed for\
+              developers and businesses.'
+                ],
+                list: ['Inbound Call', 'Outbound Call', 'Text to Speech', 'Call forwarding and many more features.']
+              },
+              mail: {
+                content: ['Mail content']
+              },
+              twitter: {
+                content: ['Twitter content']
+              },
+              email: {
+                content: ['Email content']
+              },
+              gMail: {
+                content: ['Gmail content']
+              }
+            },
             promises: {
               enterance: 'We promise',
               cta: 'Create an account',
@@ -86,6 +144,65 @@
         },
         pages: {
           home: {
+            carousel: {
+              cta: '(NL) Join Now',
+              slide1: {
+                title: '(NL) Who wants some pink?',
+                content: [
+                  '(NL) ASK- Fast is a cloud communication solution that is designed and developed for\
+              developers and businesses.', '(NL) You can simply develop an automated communication for your application or your\
+              customer service.'
+                ]
+              },
+              slide2: {
+                title: '(NL) Writing a letter to your customer?',
+                content: [
+                  '(NL) How great is that. If you do not want to focus on efficiency fine. ASK-Fast would\
+              like to provide better tools to you for your business. Power of full customisation is\
+              waiting for you and many opportunities too…'
+                ]
+              },
+              slide3: {
+                title: '(NL) Use your fingers for a better communication.',
+                content: [
+                  '(NL) We do, we are coders. We are providing you a full-fetched API for SMS, E-mail,\
+              Automated Phone call, Twitter at the same time. We are keeping all the hard work for\
+              ourselves and want you to use your fingers for a better communication experience.'
+                ]
+              }
+            },
+            bridge: {
+              cta: '(NL) Case Study',
+              title: '(NL) We bridge software and telecom industry.',
+              content: [
+                '(NL) ASK- Fast is a cloud communication solution that is designed and developed for\
+            developers and businesses.', '(NL) You can simply develop an automated communication for your application or your\
+            customer service. It will work with common communication channel and almost with every\
+            device.'
+              ]
+            },
+            channels: {
+              title: '(NL) Communication channels',
+              tel: {
+                content: [
+                  '(NL) ASK- Fast is a cloud communication solution that is designed and developed for\
+              developers and businesses.'
+                ],
+                list: ['(NL) Inbound Call', '(NL) Outbound Call', '(NL) Text to Speech', '(NL) Call forwarding and many more features.']
+              },
+              mail: {
+                content: ['(NL) Mail content']
+              },
+              twitter: {
+                content: ['(NL) Twitter content']
+              },
+              email: {
+                content: ['(NL) Email content']
+              },
+              gMail: {
+                content: ['(NL) Gmail content']
+              }
+            },
             promises: {
               enterance: 'Wij beloven',
               cta: 'Maak een account aan',

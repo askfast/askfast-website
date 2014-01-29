@@ -20,16 +20,9 @@
           <div class="row">
             <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6"><img src="../images/4476183f.illustration-hands-cloud.png" alt="Illustration Hands Cloud" class="img-responsive pull-right"></div>
             <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6">
-              <h1 class="text-pink">Who wants some pink?</h1>
-              <p>
-                ASK- Fast is a cloud communication solution that
-                is designed and developed for developers and businesses.
-              </p>
-              <p>
-                You can simply develop an automated communication
-                for your application or your customer service.
-              </p>
-              <p><a href="#" class="btn btn-primary">Join Now</a></p>
+              <h1 class="text-pink">{{ui.pages.home.carousel.slide1.title}}</h1>
+              <p ng-repeat="content in ui.pages.home.carousel.slide1.content">{{content}}</p>
+              <p><a href="#" class="btn btn-primary">{{ui.pages.home.carousel.cta}}</a></p>
             </div>
           </div>
         </li>
@@ -37,13 +30,9 @@
           <div class="row">
             <div class="col-md-6 col-md-push-6 col-sm-7 col-sm-push-5"><img src="../images/33533f3f.stock-man-business.png" alt="Picture of business man with typewriter" class="img-responsive pull-right"></div>
             <div class="col-md-6 col-md-pull-6 col-sm-5 col-sm-pull-7">
-              <h1 class="text-pink">Writing a letter to your customer?</h1>
-              <p>
-                How great is that. If you do not want to focus on efficiency fine.
-                ASK-Fast would like to provide better tools to you for your business.
-                Power of full customisation is waiting for you and many opportunities too…
-              </p>
-              <p><a href="#" class="btn btn-primary">Join Now</a></p>
+              <h1 class="text-pink">{{ui.pages.home.carousel.slide2.title}}</h1>
+              <p ng-repeat="content in ui.pages.home.carousel.slide2.content">{{content}}</p>
+              <p><a href="#" class="btn btn-primary">{{ui.pages.home.carousel.cta}}</a></p>
             </div>
           </div>
         </li>
@@ -51,14 +40,9 @@
           <div class="row">
             <div class="col-md-6 col-md-push-6 col-sm-6 col-sm-push-6"><img src="../images/a2e42450.stock-fingers.png" alt="Picture of fingers" class="img-responsive pull-right"></div>
             <div class="col-md-6 col-md-pull-6 col-sm-6 col-sm-pull-6">
-              <h1 class="text-pink">Use your fingers for a better communication.</h1>
-              <p>
-                We do, we are coders. We are providing you a full-fetched API for SMS,
-                E-mail, Automated Phone call, Twitter at the same time. We are keeping
-                all the hard work for ourselves and want you to use your fingers for a
-                better communication experience.
-              </p>
-              <p><a href="#" class="btn btn-primary">Join Now</a></p>
+              <h1 class="text-pink">{{ui.pages.home.carousel.slide3.title}}</h1>
+              <p ng-repeat="content in ui.pages.home.carousel.slide3.content">{{content}}</p>
+              <p><a href="#" class="btn btn-primary">{{ui.pages.home.carousel.cta}}</a></p>
             </div>
           </div>
         </li>
@@ -70,54 +54,52 @@
   <div class="row">
     <div class="col-md-5 col-md-offset-1 col-sm-6"><img src="../images/34ba8a69.illustration-askfast-engine.png" alt="Illustration AskFast engine" class="img-responsive"></div>
     <div class="col-md-5 col-sm-6">
-      <h1 class="text-white">We bridge software and telecom industry.</h1>
-      <p>
-        ASK- Fast is a cloud communication solution that
-        is designed and developed for developers and businesses.
-      </p>
-      <p>
-        You can simply develop an automated communication
-        for your application or your customer service. It will work
-        with common communication channel and almost with every device.
-      </p>
-      <p><a href="#" class="btn btn-primary">Case Study</a></p>
+      <h1 class="text-white">{{ui.pages.home.bridge.title}}</h1>
+      <p ng-repeat="content in ui.pages.home.bridge.content">{{content}}</p>
+      <p><a href="#" class="btn btn-primary">{{ui.pages.home.bridge.cta}}</a></p>
     </div>
   </div>
 </div>
 <div id="channels">
   <div class="row">
     <div class="col-md-5 col-md-offset-1 col-sm-6">
-      <h1 class="text-pink">Communication channels</h1>
+      <h1 class="text-pink">{{ui.pages.home.channels.title}}</h1>
       <ul class="icons-list list-inline">
-        <li id="tel"><a ng-click="setChannelView(&quot;tel&quot;)" class="{{(channelView.tel) &amp;&amp; &quot;active&quot;}}">tel</a></li>
-        <li id="mail"><a ng-click="setChannelView(&quot;mail&quot;)" class="{{(channelView.mail) &amp;&amp; &quot;active&quot;}}">mail</a></li>
-        <li id="twitter"><a ng-click="setChannelView(&quot;twitter&quot;)" class="{{(channelView.twitter) &amp;&amp; &quot;active&quot;}}">twitter</a></li>
-        <li id="email"><a ng-click="setChannelView(&quot;email&quot;)" class="{{(channelView.email) &amp;&amp; &quot;active&quot;}}">email</a></li>
-        <li id="gMail"><a ng-click="setChannelView(&quot;gMail&quot;)" class="{{(channelView.gMail) &amp;&amp; &quot;active&quot;}}">gmail</a></li>
+        <li id="tel"><a ng-click="setChannelView(&quot;tel&quot;)" class="{{(channelView.tel) &amp;&amp; &quot;active&quot;}}">Tel</a></li>
+        <li id="mail"><a ng-click="setChannelView(&quot;mail&quot;)" class="{{(channelView.mail) &amp;&amp; &quot;active&quot;}}">Mail</a></li>
+        <li id="twitter"><a ng-click="setChannelView(&quot;twitter&quot;)" class="{{(channelView.twitter) &amp;&amp; &quot;active&quot;}}">Twitter</a></li>
+        <li id="email"><a ng-click="setChannelView(&quot;email&quot;)" class="{{(channelView.email) &amp;&amp; &quot;active&quot;}}">E-mail</a></li>
+        <li id="gMail"><a ng-click="setChannelView(&quot;gMail&quot;)" class="{{(channelView.gMail) &amp;&amp; &quot;active&quot;}}">Gmail</a></li>
       </ul><br>
       <div ng-show="channelView.tel">
-        <p>
-          ASK- Fast is a cloud communication solution that
-          is designed and developed for developers and businesses.
-        </p>
-        <ul class="bullets">
-          <li>Inbound Call</li>
-          <li>Outbound Call</li>
-          <li>Text to Speech</li>
-          <li>Call forwarding and many more feautures.</li>
+        <p ng-repeat="content in ui.pages.home.channels.tel.content">{{content}}</p>
+        <ul ng-show="ui.pages.home.channels.tel.list" class="bullets">
+          <li ng-repeat="list in ui.pages.home.channels.tel.list">{{list}}</li>
         </ul>
       </div>
       <div ng-show="channelView.mail">
-        <p>Mail stuff</p>
+        <p ng-repeat="content in ui.pages.home.channels.mail.content">{{content}}</p>
+        <ul ng-show="ui.pages.home.channels.mail.list" class="bullets">
+          <li ng-repeat="list in ui.pages.home.channels.mail.list">{{list}}</li>
+        </ul>
       </div>
       <div ng-show="channelView.twitter">
-        <p>Twitter stuff</p>
+        <p ng-repeat="content in ui.pages.home.channels.twitter.content">{{content}}</p>
+        <ul ng-show="ui.pages.home.channels.twitter.list" class="bullets">
+          <li ng-repeat="list in ui.pages.home.channels.twitter.list">{{list}}</li>
+        </ul>
       </div>
       <div ng-show="channelView.email">
-        <p>Email stuff</p>
+        <p ng-repeat="content in ui.pages.home.channels.email.content">{{content}}</p>
+        <ul ng-show="ui.pages.home.channels.email.list" class="bullets">
+          <li ng-repeat="list in ui.pages.home.channels.email.list">{{list}}</li>
+        </ul>
       </div>
       <div ng-show="channelView.gMail">
-        <p>Gmail stuff</p>
+        <p ng-repeat="content in ui.pages.home.channels.gMail.content">{{content}}</p>
+        <ul ng-show="ui.pages.home.channels.gMail.list" class="bullets">
+          <li ng-repeat="list in ui.pages.home.channels.gMail.list">{{list}}</li>
+        </ul>
       </div>
     </div>
     <div class="col-md-5 col-sm-6"><img src="../images/613aed4f.stock-communication-channel.png" alt="Stock communication channels" ng-show="channelView.tel" class="img-responsive">

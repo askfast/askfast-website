@@ -43,6 +43,35 @@ define ui:
             'You can simply develop an automated communication for your application or your customer
             service. It will work with common communication channel and almost with every device.'
           ]
+        channels:
+          title: 'Communication channels'
+          tel:
+            content: [
+              'ASK- Fast is a cloud communication solution that is designed and developed for
+              developers and businesses.'
+            ]
+            list: [
+              'Inbound Call'
+              'Outbound Call'
+              'Text to Speech'
+              'Call forwarding and many more features.'
+            ]
+          mail:
+            content: [
+              'Mail content'
+            ]
+          twitter:
+            content: [
+              'Twitter content'
+            ]
+          email:
+            content: [
+              'Email content'
+            ]
+          gMail:
+            content: [
+              'Gmail content'
+            ]
         promises:
           enterance: 'We promise'
           cta: 'Create an account'
@@ -132,6 +161,35 @@ define ui:
             customer service. It will work with common communication channel and almost with every
             device.'
           ]
+        channels:
+          title: '(NL) Communication channels'
+          tel:
+            content: [
+              '(NL) ASK- Fast is a cloud communication solution that is designed and developed for
+              developers and businesses.'
+            ]
+            list: [
+              '(NL) Inbound Call'
+              '(NL) Outbound Call'
+              '(NL) Text to Speech'
+              '(NL) Call forwarding and many more features.'
+            ]
+          mail:
+            content: [
+              '(NL) Mail content'
+            ]
+          twitter:
+            content: [
+              '(NL) Twitter content'
+            ]
+          email:
+            content: [
+              '(NL) Email content'
+            ]
+          gMail:
+            content: [
+              '(NL) Gmail content'
+            ]
         promises:
           enterance: 'Wij beloven'
           cta: 'Maak een account aan'
