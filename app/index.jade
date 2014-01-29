@@ -1,10 +1,12 @@
 extends layout
 
 
+
 block logo
   .col-md-2
     a(href='#home')
       img(src='images/askfast-logo.png', alt='AskFast')
+
 
 
 block navbar
@@ -19,7 +21,7 @@ block navbar
         a.navbar-brand(href='#') Project name
       .collapse.navbar-collapse
         ul.nav.navbar-nav
-          li
+          li.active
             a(href='#developers') {{ui.globals.nav.main.developers}}
           li
             a(href='#business') {{ui.globals.nav.main.business}}
@@ -34,6 +36,7 @@ block navbar
             a(href='#register') REGISTER
           li
             a(href='#login') LOGIN
+
 
 
 block nav
@@ -59,6 +62,7 @@ block nav
         a(href='#about') {{ui.globals.nav.main.aboutUs}}
 
 
+
 block user-nav
   .col-md-2.text-right
     ul#user-nav.list-inline
@@ -68,6 +72,7 @@ block user-nav
         span |
       li
         a(href='#login') LOGIN
+
 
 
 block footer
@@ -89,6 +94,7 @@ block footer
             img(src='images/askfast-logo.png', alt='AskFast')
 
 
+
 block icons
   link(rel='apple-touch-icon-precomposed', sizes='144x144', href='icons/apple-touch-icon-144-precomposed.png')
   link(rel='apple-touch-icon-precomposed', sizes='114x114', href='icons/apple-touch-icon-114-precomposed.png')
@@ -97,9 +103,9 @@ block icons
   link(rel='shortcut icon', href='/favicon.png')
 
 
+
 block tweets
-  .col-md-10
-    #tweets
+  #tweets.col-md-10
       ul
         li
           a(href='#') Virtual Phone numbers are available in Jordan
@@ -109,14 +115,27 @@ block tweets
           a(href='#') Register for our webinar
 
 
+
+block sub-header-menu
+  #sub-header-menu.col-md-10
+    ul.sub-header-menu
+      li.active
+        a(ng-click="") FastStart
+      li
+        a(ng-click="") Devmods
+      li
+        a(ng-click="") Documents
+
+
+
 block languages
-  .col-md-2
-    #languages.pull-right
-      ul
-        li(class="{{(app.language == 'en') && 'active'}}")
-          a(ng-click="setLanguage('en')") EN
-        li(class="{{(app.language == 'nl') && 'active'}}")
-          a(ng-click="setLanguage('nl')") NL
+  #languages.col-md-2
+    ul.sub-header-menu.pull-right
+      li(class="{{(app.language == 'en') && 'active'}}")
+        a(ng-click="setLanguage('en')") EN
+      li(class="{{(app.language == 'nl') && 'active'}}")
+        a(ng-click="setLanguage('nl')") NL
+
 
 
 block iestuff
@@ -130,6 +149,7 @@ block iestuff
   //if lt IE 9
     script(src='vendors/es5-shim/es5-shim.js')
     script(src='vendors/json3/lib/json3.min.js')
+
 
 
 //block analytics
