@@ -34,6 +34,15 @@ define ui:
               Phone call, Twitter at the same time. We are keeping all the hard work for ourselves and
               want you to use your fingers for a better communication experience.'
             ]
+        bridge:
+          cta: 'Case Study'
+          title: 'We bridge software and telecom industry.'
+          content: [
+            'ASK- Fast is a cloud communication solution that is designed and developed for
+            developers and businesses.'
+            'You can simply develop an automated communication for your application or your customer
+            service. It will work with common communication channel and almost with every device.'
+          ]
         promises:
           enterance: 'We promise'
           cta: 'Create an account'
@@ -113,6 +122,16 @@ define ui:
               Automated Phone call, Twitter at the same time. We are keeping all the hard work for
               ourselves and want you to use your fingers for a better communication experience.'
             ]
+        bridge:
+          cta: '(NL) Case Study'
+          title: '(NL) We bridge software and telecom industry.'
+          content: [
+            '(NL) ASK- Fast is a cloud communication solution that is designed and developed for
+            developers and businesses.'
+            '(NL) You can simply develop an automated communication for your application or your
+            customer service. It will work with common communication channel and almost with every
+            device.'
+          ]
         promises:
           enterance: 'Wij beloven'
           cta: 'Maak een account aan'

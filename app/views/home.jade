@@ -22,8 +22,7 @@
               alt='Illustration Hands Cloud')
             .col-md-6.col-md-pull-6.col-sm-6.col-sm-pull-6
               h1.text-pink {{ui.pages.home.carousel.slide1.title}}
-              p(ng-repeat="content in ui.pages.home.carousel.slide1.content")
-                | {{content}}
+              p(ng-repeat='content in ui.pages.home.carousel.slide1.content') {{content}}
               p
                 a.btn.btn-primary(href='#') {{ui.pages.home.carousel.cta}}
         li#writing-a-letter
@@ -33,8 +32,7 @@
               alt='Picture of business man with typewriter')
             .col-md-6.col-md-pull-6.col-sm-5.col-sm-pull-7
               h1.text-pink {{ui.pages.home.carousel.slide2.title}}
-              p(ng-repeat="content in ui.pages.home.carousel.slide2.content")
-                | {{content}}
+              p(ng-repeat='content in ui.pages.home.carousel.slide2.content') {{content}}
               p
                 a.btn.btn-primary(href='#') {{ui.pages.home.carousel.cta}}
         li#use-your-fingers
@@ -44,8 +42,7 @@
               alt='Picture of fingers')
             .col-md-6.col-md-pull-6.col-sm-6.col-sm-pull-6
               h1.text-pink {{ui.pages.home.carousel.slide3.title}}
-              p(ng-repeat="content in ui.pages.home.carousel.slide3.content")
-                | {{content}}
+              p(ng-repeat='content in ui.pages.home.carousel.slide3.content') {{content}}
               p
                 a.btn.btn-primary(href='#') {{ui.pages.home.carousel.cta}}
 
@@ -56,16 +53,10 @@
       img.img-responsive(src='../images/illustration-askfast-engine.png',
       alt='Illustration AskFast engine')
     .col-md-5.col-sm-6
-      h1.text-white We bridge software and telecom industry.
+      h1.text-white {{ui.pages.home.bridge.title}}
+      p(ng-repeat='content in ui.pages.home.bridge.content') {{content}}
       p
-        | ASK- Fast is a cloud communication solution that
-        | is designed and developed for developers and businesses.
-      p
-        | You can simply develop an automated communication
-        | for your application or your customer service. It will work
-        | with common communication channel and almost with every device.
-      p
-        a.btn.btn-primary(href='#') Case Study
+        a.btn.btn-primary(href='#') {{ui.pages.home.bridge.cta}}
 
 
 
