@@ -116,6 +116,10 @@ define ui:
             content: 'Security and privacy are very important to ASK-Fast. We are investing in new
                       security technologies and using our own platform products to increase the
                       security and privacy of our customers.'
+        reference:
+          quote: 'We are using ASK-Fast cloud communication for our alarming system.'
+          person: 'Johnny Billie, CEO'
+
   nl:
     globals:
       nav:
@@ -234,3 +238,6 @@ define ui:
             content: 'Beveiliging en privacy zijn zeer belangrijk voor ASK-Fast. Wij investeren in
                       nieuwe veiligheidstechnologieën en gebruiken onze eigen producten om de
                       beveiliging en privacy van onze klanten te vergroten.'
+        reference:
+          quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.'
+          person: '(NL) Johnny Billie, CEO'
