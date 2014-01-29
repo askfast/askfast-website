@@ -12,6 +12,64 @@
               aboutUs: 'ABOUT US'
             }
           }
+        },
+        pages: {
+          home: {
+            promises: {
+              enterance: 'We promise',
+              cta: 'Create an account',
+              cost: {
+                title: 'Cost Reduction',
+                content: 'ASK-Fast reduces the cost of communication while creating added value to your\
+                      business context through automated agents. Our rates are among the cheapest\
+                      in Europe.'
+              },
+              analyze: {
+                title: 'Real time monitoring',
+                content: 'The result of the communication will be shared with you in order to create\
+                      new strategies for your plans. You can export the results to your PC or\
+                      another system.'
+              },
+              time: {
+                title: 'Save time for your business',
+                content: 'Manual communication takes a lot of time compared to automated communication.\
+                      With a well-designed flow, you can save time to create new business\
+                      opportunities for your business.'
+              },
+              customizable: {
+                title: 'Customizable solutions',
+                content: 'Our solutions can be customized according to business rules of our customers.\
+                      We promise that you will never pay for more than what you get.'
+              },
+              integration: {
+                title: 'Easy integration to any system',
+                content: 'We developed an ASK-Fast API for easy integration. ASK-Fast speaks your\
+                      language and creates business opportunities for our platform members.'
+              },
+              cloud: {
+                title: 'Any device, any time ',
+                content: 'ASK-Fast is a cloud based communication platform. You can use it anywhere,\
+                      anytime you need and with any kind of device.'
+              },
+              ideas: {
+                title: 'Open to new ideas',
+                content: 'ASK-Fast believes in open business and therefore we listen to the needs of\
+                      our members, customers and stakeholders.'
+              },
+              performance: {
+                title: 'Performance boost',
+                content: 'Automated communication will increase the performance of your employees,\
+                      supply chain and customer relationship. ASK-Fast knows how to reach a person\
+                      via different media.'
+              },
+              privacy: {
+                title: 'Care about Security and Privacy',
+                content: 'Security and privacy are very important to ASK-Fast. We are investing in new\
+                      security technologies and using our own platform products to increase the\
+                      security and privacy of our customers.'
+              }
+            }
+          }
         }
       },
       nl: {
@@ -23,6 +81,64 @@
               dialogs: 'DIALOGS',
               price: 'PRIJS',
               aboutUs: 'OVER ONS'
+            }
+          }
+        },
+        pages: {
+          home: {
+            promises: {
+              enterance: 'Wij beloven',
+              cta: 'Maak een account aan',
+              cost: {
+                title: 'Kostenverlaging',
+                content: 'ASK-Fast vermindert de kosten van communicatie terwijl het waarde toevoegt\
+                      voor uw bedrijf door de geautomatiseerde agents. Onze tarieven behoren tot\
+                      de laagste van Europa.'
+              },
+              analyze: {
+                title: 'Realtime-controle',
+                content: 'Het resultaat van de communicatie wordt met u gedeeld om nieuwe strategieën\
+                      voor uw plannen te creëren. U kunt de resultaten exporteren naar uw PC of\
+                      een ander apparaat.'
+              },
+              time: {
+                title: 'Bespaar tijd voor uw bedrijf',
+                content: 'Handmatige communicatie neemt veel tijd in beslag vergeleken met\
+                      geautomatiseerde communicatie. Met een goed ontworpen flow kunt u tijd\
+                      winnen om nieuwe zakelijke mogelijkheden te creëren.'
+              },
+              customizable: {
+                title: 'Aanpasbare oplossingen',
+                content: 'Onze oplossingen kunnen aangepast worden naar uw wens. We beloven dat u\
+                      nooit voor meer zult betalen dan u daadwerkelijk krijgt.'
+              },
+              integration: {
+                title: 'Simpele integratie in elk systeem',
+                content: 'We hebben een ASK-Fast API ontwikkeld voor eenvoudige integratie. ASK-Fast\
+                      spreekt uw taal en creërt zakelijke mogelijkheden voor gebruikers.'
+              },
+              cloud: {
+                title: 'Op elk apparaat en op elk tijdstip',
+                content: 'ASK-Fast is een communicatieplatform gebaseerd op de cloud. U kunt het\
+                      overal en op elk tijdstip gebruiken met elk type apparaat.'
+              },
+              ideas: {
+                title: 'Open voor nieuwe ideëen',
+                content: 'ASK-Fast gelooft in open business en daarom luisteren wij naar de wensen van\
+                      onze gebruikers, klanten en stakeholders.'
+              },
+              performance: {
+                title: 'Prestatieverbetering',
+                content: 'Geautomatiseerde communicatie zal de prestaties verbeteren van uw werknemers,\
+                      leveranciers en klantenrelaties. ASK-Fast weet hoe iemand bereikt kan worden\
+                      via verschillende media.'
+              },
+              privacy: {
+                title: 'Belang van Beveiliging en Privacy',
+                content: 'Beveiliging en privacy zijn zeer belangrijk voor ASK-Fast. Wij investeren in\
+                      nieuwe veiligheidstechnologieën en gebruiken onze eigen producten om de\
+                      beveiliging en privacy van onze klanten te vergroten.'
+              }
             }
           }
         }

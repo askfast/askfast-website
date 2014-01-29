@@ -144,39 +144,17 @@
       </ul>
     </div>
     <div class="col-md-7 col-sm-8">
-      <div ng-show="promiseView.cost">
-        <h1><span class="text-white">We promise</span>&nbsp;<span class="text-pink">Cost Reduction</span></h1>
-        <p>
-          ASK-Fast reduces the cost of communication while creating
-          added value to your business context through automated agents.
-          Our rates are among the cheapest in Europe.
-        </p>
-        <p><a href="#" class="btn btn-primary">Create an account</a></p>
-      </div>
-      <div ng-show="promiseView.analyze">
-        <p>Analyze stuff</p>
-      </div>
-      <div ng-show="promiseView.time">
-        <p>Time stuff</p>
-      </div>
-      <div ng-show="promiseView.customizable">
-        <p>customizable stuff</p>
-      </div>
-      <div ng-show="promiseView.integration">
-        <p>integration stuff</p>
-      </div>
-      <div ng-show="promiseView.cloud">
-        <p>cloud stuff</p>
-      </div>
-      <div ng-show="promiseView.ideas">
-        <p>ideas stuff</p>
-      </div>
-      <div ng-show="promiseView.performance">
-        <p>performance stuff</p>
-      </div>
-      <div ng-show="promiseView.privacy">
-        <p>privacy stuff</p>
-      </div>
+      <h1><span class="text-white">{{ui.pages.home.promises.enterance}} &nbsp;</span><span ng-show="promiseView.cost" class="text-pink">{{ui.pages.home.promises.cost.title}}</span><span ng-show="promiseView.analyze" class="text-pink">{{ui.pages.home.promises.analyze.title}}</span><span ng-show="promiseView.time" class="text-pink">{{ui.pages.home.promises.time.title}}</span><span ng-show="promiseView.customizable" class="text-pink">{{ui.pages.home.promises.customizable.title}}</span><span ng-show="promiseView.integration" class="text-pink">{{ui.pages.home.promises.integration.title}}</span><span ng-show="promiseView.cloud" class="text-pink">{{ui.pages.home.promises.cloud.title}}</span><span ng-show="promiseView.ideas" class="text-pink">{{ui.pages.home.promises.ideas.title}}</span><span ng-show="promiseView.performance" class="text-pink">{{ui.pages.home.promises.performance.title}}</span><span ng-show="promiseView.privacy" class="text-pink">{{ui.pages.home.promises.privacy.title}}</span></h1>
+      <p ng-show="promiseView.cost">{{ui.pages.home.promises.cost.content}}</p>
+      <p ng-show="promiseView.analyze">{{ui.pages.home.promises.analyze.content}}</p>
+      <p ng-show="promiseView.time">{{ui.pages.home.promises.time.content}}</p>
+      <p ng-show="promiseView.customizable">{{ui.pages.home.promises.customizable.content}}</p>
+      <p ng-show="promiseView.integration">{{ui.pages.home.promises.integration.content}}</p>
+      <p ng-show="promiseView.cloud">{{ui.pages.home.promises.cloud.content}}</p>
+      <p ng-show="promiseView.ideas">{{ui.pages.home.promises.ideas.content}}</p>
+      <p ng-show="promiseView.performance">{{ui.pages.home.promises.performance.content}}</p>
+      <p ng-show="promiseView.privacy">{{ui.pages.home.promises.privacy.content}}</p>
+      <p><a href="#" class="btn btn-primary">{{ui.pages.home.promises.cta}}</a></p>
     </div>
   </div>
 </div>

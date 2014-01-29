@@ -171,41 +171,28 @@
           a(ng-click='setPromiseView("privacy")',
           class='{{(promiseView.privacy) && "active"}}') privacy
     .col-md-7.col-sm-8
-      div(ng-show='promiseView.cost')
-        h1
-          span.text-white We promise
-          | &nbsp;
-          span.text-pink Cost Reduction
-        p
-          | ASK-Fast reduces the cost of communication while creating
-          | added value to your business context through automated agents.
-          | Our rates are among the cheapest in Europe.
-        p
-          a.btn.btn-primary(href='#') Create an account
-      div(ng-show='promiseView.analyze')
-        p
-          | Analyze stuff
-      div(ng-show='promiseView.time')
-        p
-          | Time stuff
-      div(ng-show='promiseView.customizable')
-        p
-          | customizable stuff
-      div(ng-show='promiseView.integration')
-        p
-          | integration stuff
-      div(ng-show='promiseView.cloud')
-        p
-          | cloud stuff
-      div(ng-show='promiseView.ideas')
-        p
-          | ideas stuff
-      div(ng-show='promiseView.performance')
-        p
-          | performance stuff
-      div(ng-show='promiseView.privacy')
-        p
-          | privacy stuff
+      h1
+        span.text-white {{ui.pages.home.promises.enterance}} &nbsp;
+        span.text-pink(ng-show='promiseView.cost') {{ui.pages.home.promises.cost.title}}
+        span.text-pink(ng-show='promiseView.analyze') {{ui.pages.home.promises.analyze.title}}
+        span.text-pink(ng-show='promiseView.time') {{ui.pages.home.promises.time.title}}
+        span.text-pink(ng-show='promiseView.customizable') {{ui.pages.home.promises.customizable.title}}
+        span.text-pink(ng-show='promiseView.integration') {{ui.pages.home.promises.integration.title}}
+        span.text-pink(ng-show='promiseView.cloud') {{ui.pages.home.promises.cloud.title}}
+        span.text-pink(ng-show='promiseView.ideas') {{ui.pages.home.promises.ideas.title}}
+        span.text-pink(ng-show='promiseView.performance') {{ui.pages.home.promises.performance.title}}
+        span.text-pink(ng-show='promiseView.privacy') {{ui.pages.home.promises.privacy.title}}
+      p(ng-show='promiseView.cost') {{ui.pages.home.promises.cost.content}}
+      p(ng-show='promiseView.analyze') {{ui.pages.home.promises.analyze.content}}
+      p(ng-show='promiseView.time') {{ui.pages.home.promises.time.content}}
+      p(ng-show='promiseView.customizable') {{ui.pages.home.promises.customizable.content}}
+      p(ng-show='promiseView.integration') {{ui.pages.home.promises.integration.content}}
+      p(ng-show='promiseView.cloud') {{ui.pages.home.promises.cloud.content}}
+      p(ng-show='promiseView.ideas') {{ui.pages.home.promises.ideas.content}}
+      p(ng-show='promiseView.performance') {{ui.pages.home.promises.performance.content}}
+      p(ng-show='promiseView.privacy') {{ui.pages.home.promises.privacy.content}}
+      p
+        a.btn.btn-primary(href='#') {{ui.pages.home.promises.cta}}
 
 
 #references
