@@ -6,8 +6,8 @@ define(
 
     app.run(
       [
-        '$rootScope',
-        function($rootScope)
+        '$rootScope', '$location',
+        function($rootScope, $location)
         {
           $rootScope.app = $rootScope.app || {};
 
@@ -19,12 +19,17 @@ define(
 
           $rootScope.setLanguage(config.app.default.language);
 
+          $rootScope.config = config.app;
+
+          $rootScope.location = {};
 
           /**
            * TODO: Add this event listeners to a directive
            */
           $rootScope.$on('$routeChangeStart', function (event, next, current)
           {
+            $rootScope.location.path = $location.path();
+
             // Remove this lines on production, eye-candy purple background for the home/splash page
             // ($location.path() == '/home') ? $('body').addClass('bs-docs-home') : $('body').removeClass('bs-docs-home');
           });

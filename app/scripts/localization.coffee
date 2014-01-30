@@ -7,7 +7,7 @@ define ui:
           business:   'BUSINESS'
           dialogs:    'DIALOGS'
           price:      'PRICE'
-          aboutUs:    'ABOUT US'
+          about:      'ABOUT US'
         user:
           register: 'REGISTER'
           login:    'LOGIN'
@@ -135,7 +135,7 @@ define ui:
           business:   'ZAKELIJK'
           dialogs:    'DIALOGS'
           price:      'PRIJS'
-          aboutUs:    'OVER ONS'
+          about:      'OVER ONS'
         user:
           register: 'INSCHRIJVEN'
           login:    'LOGIN'

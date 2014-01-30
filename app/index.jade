@@ -1,11 +1,31 @@
 extends layout
 
 
+block brand
+  a.navbar-brand(href='#home') ASK-Fast
 
-block logo
-  .col-md-2
-    a(href='#home')
-      img(src='images/askfast-logo.png', alt='AskFast')
+
+
+block main-nav
+  ul.nav.navbar-nav
+    li(ng-repeat='item in config.app.nav.main',
+    class="{{(location.path == '/' + item) && 'active'}}")
+      a(ng-href="{{'#' + item}}") {{ui.globals.nav.main[item]}}
+
+
+
+block user-nav
+  ul.nav.navbar-nav.navbar-right
+    li(ng-repeat='item in config.app.nav.user',
+    class="{{(location.path == '/' + item) && 'active'}}")
+      a(ng-href="{{'#' + item}}") {{ui.globals.nav.user[item]}}
+
+
+
+block footer-nav
+  ul#footer-nav.list-inline
+    li(ng-repeat='item in config.app.nav.footer')
+      a(ng-href="{{'#' + item}}") {{ui.globals.nav.footer[item]}}
 
 
 
@@ -18,60 +38,10 @@ block navbar
           span.icon-bar
           span.icon-bar
           span.icon-bar
-        a.navbar-brand(href='#') Project name
+        block brand
       .collapse.navbar-collapse
-        ul.nav.navbar-nav
-          li.active
-            a(href='#developers') {{ui.globals.nav.main.developers}}
-          li
-            a(href='#business') {{ui.globals.nav.main.business}}
-          li
-            a(href='#dialogs') {{ui.globals.nav.main.dialogs}}
-          li
-            a(href='#prices') {{ui.globals.nav.main.price}}
-          li
-            a(href='#about') {{ui.globals.nav.main.aboutUs}}
-        ul.nav.navbar-nav.navbar-right
-          li
-            a(href='#register') {{ui.globals.nav.user.register}}
-          li
-            a(href='#login') {{ui.globals.nav.user.login}}
-
-
-
-block nav
-  .col-md-8
-    ul#nav.list-inline
-      li
-        a(href='#developers') {{ui.globals.nav.main.developers}}
-      li
-        span &#183
-      li
-        a(href='#business') {{ui.globals.nav.main.business}}
-      li
-        span &#183
-      li
-        a(href='#dialogs') {{ui.globals.nav.main.dialogs}}
-      li
-        span &#183
-      li
-        a(href='#prices') {{ui.globals.nav.main.price}}
-      li
-        span &#183
-      li
-        a(href='#about') {{ui.globals.nav.main.aboutUs}}
-
-
-
-block user-nav
-  .col-md-2.text-right
-    ul#user-nav.list-inline
-      li
-        a(href='#register') REGISTER
-      li
-        span |
-      li
-        a(href='#login') LOGIN
+        block main-nav
+        block user-nav
 
 
 
@@ -80,15 +50,7 @@ block footer
     .container
       .row
         .col-md-8.col-md-offset-1
-          ul#footer-nav.list-inline
-            li
-              a(href='#about') {{ui.globals.nav.main.aboutUs}}
-            li
-              a(href='#jobs') {{ui.globals.nav.footer.jobs}}
-            li
-              a(href='#legal') {{ui.globals.nav.footer.legal}}
-            li
-              a(href='#contact') {{ui.globals.nav.footer.contact}}
+          block footer-nav
         .col-md-2
           a.pull-right(href='#home')
             img(src='images/askfast-logo.png', alt='AskFast')
@@ -96,10 +58,14 @@ block footer
 
 
 block icons
-  link(rel='apple-touch-icon-precomposed', sizes='144x144', href='icons/apple-touch-icon-144-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='114x114', href='icons/apple-touch-icon-114-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='72x72', href='icons/apple-touch-icon-72-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', href='icons/apple-touch-icon-57-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='144x144',
+  href='icons/apple-touch-icon-144-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='114x114',
+  href='icons/apple-touch-icon-114-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='72x72',
+  href='icons/apple-touch-icon-72-precomposed.png')
+  link(rel='apple-touch-icon-precomposed',
+  href='icons/apple-touch-icon-57-precomposed.png')
   link(rel='shortcut icon', href='/favicon.png')
 
 
