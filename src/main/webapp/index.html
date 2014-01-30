@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="stylesheet" href="styles/23d92c4e.main.css">
+    <link rel="stylesheet" href="styles/b798482b.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -37,19 +37,14 @@
     <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">Project name</a>
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#home" class="navbar-brand">ASK-Fast</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#developers">{{ui.globals.nav.main.developers}}</a></li>
-            <li><a href="#business">{{ui.globals.nav.main.business}}</a></li>
-            <li><a href="#dialogs">{{ui.globals.nav.main.dialogs}}</a></li>
-            <li><a href="#prices">{{ui.globals.nav.main.price}}</a></li>
-            <li><a href="#about">{{ui.globals.nav.main.aboutUs}}</a></li>
+            <li ng-repeat="item in config.app.nav.main" ng-class="(location.path == item) &amp;&amp; 'active'"><a ng-href="{{'#' + item}}">{{ui.globals.nav.main[item]}}</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#register">{{ui.globals.nav.user.register}}</a></li>
-            <li><a href="#login">{{ui.globals.nav.user.login}}</a></li>
+            <li ng-repeat="item in config.app.nav.user" ng-class="(location.path == item) &amp;&amp; 'active'"><a ng-href="{{'#' + item}}">{{ui.globals.nav.user[item]}}</a></li>
           </ul>
         </div>
       </div>
@@ -58,18 +53,23 @@
       <div class="container-fluid">
         <div id="sub-header">
           <div class="row">
-            <!-- block tweets-->
-            <div id="sub-header-menu" class="col-md-10">
-              <ul class="sub-header-menu">
-                <li class="active"><a ng-click="">FastStart</a></li>
-                <li><a ng-click="">Devmods</a></li>
-                <li><a ng-click="">Documents</a></li>
-              </ul>
+            <div class="col-md-10">
+              <div id="tweets" ng-hide="config.app.nav.subs[location.path]">
+                <ul>
+                  <li><a href="#">Virtual Phone numbers are available in Jordan</a></li>
+                  <li><a href="#">Say Hi to our new office in Berlin</a></li>
+                  <li><a href="#">Register for our webinar</a></li>
+                </ul>
+              </div>
+              <div id="sub-header-menu" ng-show="config.app.nav.subs[location.path]">
+                <ul class="sub-header-menu">
+                  <li ng-repeat="item in config.app.nav.subs[location.path]" ng-class="(subView[item]) &amp;&amp; 'active'"><a ng-click="setSubView(item)">{{ui.globals.nav.subs[location.path][item]}}</a></li>
+                </ul>
+              </div>
             </div>
             <div id="languages" class="col-md-2">
               <ul class="sub-header-menu pull-right">
-                <li class="{{(app.language == 'en') &amp;&amp; 'active'}}"><a ng-click="setLanguage('en')">EN</a></li>
-                <li class="{{(app.language == 'nl') &amp;&amp; 'active'}}"><a ng-click="setLanguage('nl')">NL</a></li>
+                <li ng-repeat="item in config.app.languages" ng-class="(app.language == item) &amp;&amp; 'active'"><a ng-click="setLanguage(item)">{{item.toUpperCase()}}</a></li>
               </ul>
             </div>
           </div>
@@ -82,13 +82,10 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-1">
             <ul id="footer-nav" class="list-inline">
-              <li><a href="#about">{{ui.globals.nav.main.aboutUs}}</a></li>
-              <li><a href="#jobs">{{ui.globals.nav.footer.jobs}}</a></li>
-              <li><a href="#legal">{{ui.globals.nav.footer.legal}}</a></li>
-              <li><a href="#contact">{{ui.globals.nav.footer.contact}}</a></li>
+              <li ng-repeat="item in config.app.nav.footer"><a ng-href="{{'#' + item}}">{{ui.globals.nav.footer[item]}}</a></li>
             </ul>
           </div>
-          <div class="col-md-2"><a href="#home" class="pull-right"><img src="images/e973109b.askfast-logo.png" alt="AskFast"></a></div>
+          <div class="col-md-2"><a href="#home" class="navbar-brand">ASK-Fast</a></div>
         </div>
       </div>
     </footer>

@@ -21,24 +21,54 @@ define(
 
           $rootScope.config = config.app;
 
+          var parts = [];
+
+          angular.forEach($rootScope.config.app.nav.subs, function (sub)
+          {
+            angular.forEach(sub, function (part)
+            {
+              parts.push(part);
+            });
+          });
+
+          $rootScope.subView = {};
+
+          function resetSubViews ()
+          {
+            angular.forEach(parts, function (part)
+            {
+              $rootScope.subView[part] = false;
+            });
+          }
+
+          $rootScope.setSubView = function (view)
+          {
+            resetSubViews();
+
+            $rootScope.subView[view] = true;
+          };
+
           $rootScope.location = {};
 
-          /**
-           * TODO: Add this event listeners to a directive
-           */
-          $rootScope.$on('$routeChangeStart', function (event, next, current)
+          $rootScope.$on('$routeChangeStart', function ()
           {
-            $rootScope.location.path = $location.path();
+            $rootScope.location.path = $location.path().substring(1);
 
-            // Remove this lines on production, eye-candy purple background for the home/splash page
-            // ($location.path() == '/home') ? $('body').addClass('bs-docs-home') : $('body').removeClass('bs-docs-home');
+            if ($rootScope.config.app.nav.subs[$rootScope.location.path])
+            {
+              $rootScope.subView[$rootScope.config.app.nav.subs[$rootScope.location.path][0]] = true;
+            }
+            else
+            {
+              resetSubViews();
+            }
           });
 
-          $rootScope.$on('$routeChangeSuccess', function (event, current, previous)
+          $rootScope.$on('$routeChangeSuccess', function ()
           {
           });
 
-          $rootScope.$on('$routeChangeError', function (event, current, previous, rejection)
+          $rootScope.$on('$routeChangeError', function ()
           {
             console.error('Error: changing routes!');
           });

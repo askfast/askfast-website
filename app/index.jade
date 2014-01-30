@@ -9,7 +9,7 @@ block brand
 block main-nav
   ul.nav.navbar-nav
     li(ng-repeat='item in config.app.nav.main',
-    class="{{(location.path == '/' + item) && 'active'}}")
+    ng-class="(location.path == item) && 'active'")
       a(ng-href="{{'#' + item}}") {{ui.globals.nav.main[item]}}
 
 
@@ -17,7 +17,7 @@ block main-nav
 block user-nav
   ul.nav.navbar-nav.navbar-right
     li(ng-repeat='item in config.app.nav.user',
-    class="{{(location.path == '/' + item) && 'active'}}")
+    ng-class="(location.path == item) && 'active'")
       a(ng-href="{{'#' + item}}") {{ui.globals.nav.user[item]}}
 
 
@@ -25,7 +25,7 @@ block user-nav
 block languages-nav
   ul.sub-header-menu.pull-right
     li(ng-repeat='item in config.app.languages',
-    class="{{(app.language == item) && 'active'}}")
+    ng-class="(app.language == item) && 'active'")
       a(ng-click="setLanguage(item)") {{item.toUpperCase()}}
 
 
@@ -77,13 +77,13 @@ block tweets
 
 block sub-header-menu
   .col-md-10
-    #tweets(ng-hide='config.app.nav.subs[location.path.substring(1)]')
+    #tweets(ng-hide='config.app.nav.subs[location.path]')
       block tweets
-    #sub-header-menu(ng-show='config.app.nav.subs[location.path.substring(1)]')
+    #sub-header-menu(ng-show='config.app.nav.subs[location.path]')
       ul.sub-header-menu
-        li(ng-repeat='item in config.app.nav.subs[location.path.substring(1)]',
-        class='')
-          a(ng-click="") {{ui.globals.nav.subs[location.path.substring(1)][item]}}
+        li(ng-repeat='item in config.app.nav.subs[location.path]',
+        ng-class="(subView[item]) && 'active'")
+          a(ng-click="setSubView(item)") {{ui.globals.nav.subs[location.path][item]}}
 
 
 

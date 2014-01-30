@@ -8,8 +8,8 @@
               developers: 'DEVELOPERS',
               business: 'BUSINESS',
               dialogs: 'DIALOGS',
-              price: 'PRICE',
-              aboutUs: 'ABOUT US'
+              prices: 'PRICE',
+              about: 'ABOUT US'
             },
             user: {
               register: 'REGISTER',
@@ -19,6 +19,24 @@
               jobs: 'JOBS',
               legal: 'LEGAL',
               contact: 'CONTACT'
+            },
+            subs: {
+              developers: {
+                faststart: 'Fast Start',
+                devmods: 'Developer Modules',
+                documents: 'Documents'
+              },
+              business: {
+                solutions: 'Solutions',
+                benefits: 'Benefits'
+              },
+              dialogs: {
+                what: 'What is it?'
+              },
+              about: {
+                team: 'Team',
+                contact: 'Contact'
+              }
             }
           }
         },
@@ -150,8 +168,8 @@
               developers: 'DEVELOPERS',
               business: 'ZAKELIJK',
               dialogs: 'DIALOGS',
-              price: 'PRIJS',
-              aboutUs: 'OVER ONS'
+              prices: 'PRIJS',
+              about: 'OVER ONS'
             },
             user: {
               register: 'INSCHRIJVEN',
@@ -161,6 +179,24 @@
               jobs: 'VACATURES',
               legal: 'LEGAAL',
               contact: 'CONTACT'
+            },
+            subs: {
+              developers: {
+                faststart: '(NL) Fast Start',
+                devmods: '(NL) Developer Modules',
+                documents: '(NL) Documents'
+              },
+              business: {
+                solutions: '(NL) Solutions',
+                benefits: '(NL) Benefits'
+              },
+              dialogs: {
+                what: '(NL) What is it?'
+              },
+              about: {
+                team: '(NL) Team',
+                contact: '(NL) Contact'
+              }
             }
           }
         },
