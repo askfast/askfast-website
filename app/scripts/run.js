@@ -1,6 +1,6 @@
 define(
-  ['app'],
-  function (app)
+  ['app', 'localization', 'config'],
+  function (app, locals, config)
   {
     'use strict';
 
@@ -9,22 +9,66 @@ define(
         '$rootScope', '$location',
         function($rootScope, $location)
         {
+          $rootScope.app = $rootScope.app || {};
 
-
-          /**
-           * TODO: Add this event listeners to a directive
-           */
-          $rootScope.$on('$routeChangeStart', function (event, next, current)
+          $rootScope.setLanguage = function (language)
           {
-            // Remove this lines on production, eye-candy purple background for the home/splash page
-            // ($location.path() == '/home') ? $('body').addClass('bs-docs-home') : $('body').removeClass('bs-docs-home');
+            $rootScope.app.language = language;
+            $rootScope.ui = locals.ui[language];
+          };
+
+          $rootScope.setLanguage(config.app.defaults.language);
+
+          $rootScope.config = config.app;
+
+          var parts = [];
+
+          angular.forEach($rootScope.config.app.nav.subs, function (sub)
+          {
+            angular.forEach(sub, function (part)
+            {
+              parts.push(part);
+            });
           });
 
-          $rootScope.$on('$routeChangeSuccess', function (event, current, previous)
+          $rootScope.subView = {};
+
+          function resetSubViews ()
+          {
+            angular.forEach(parts, function (part)
+            {
+              $rootScope.subView[part] = false;
+            });
+          }
+
+          $rootScope.setSubView = function (view)
+          {
+            resetSubViews();
+
+            $rootScope.subView[view] = true;
+          };
+
+          $rootScope.location = {};
+
+          $rootScope.$on('$routeChangeStart', function ()
+          {
+            $rootScope.location.path = $location.path().substring(1);
+
+            if ($rootScope.config.app.nav.subs[$rootScope.location.path])
+            {
+              $rootScope.subView[$rootScope.config.app.nav.subs[$rootScope.location.path][0]] = true;
+            }
+            else
+            {
+              resetSubViews();
+            }
+          });
+
+          $rootScope.$on('$routeChangeSuccess', function ()
           {
           });
 
-          $rootScope.$on('$routeChangeError', function (event, current, previous, rejection)
+          $rootScope.$on('$routeChangeError', function ()
           {
             console.error('Error: changing routes!');
           });

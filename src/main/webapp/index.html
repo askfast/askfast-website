@@ -23,8 +23,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icons/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="icons/favicon.png">
-    <link rel="stylesheet" href="styles/cf4ca018.main.css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="styles/0e46e6db.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -34,51 +34,43 @@
     <script src="vendors/es5-shim/es5-shim.js"></script>
     <script src="vendors/json3/lib/json3.min.js"></script>
     <![endif]-->
+    <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#home" class="navbar-brand">ASK-Fast</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li ng-repeat="item in config.app.nav.main" ng-class="(location.path == item) &amp;&amp; 'active'"><a ng-href="{{'#' + item}}">{{ui.globals.nav.main[item]}}</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li ng-repeat="item in config.app.nav.user" ng-class="(location.path == item) &amp;&amp; 'active'"><a ng-href="{{'#' + item}}">{{ui.globals.nav.user[item]}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="wrap">
       <div class="container-fluid">
-        <header>
-          <div class="row">
-            <div class="col-md-2"><a href="#home"><img src="images/e973109b.askfast-logo.png" alt="AskFast"></a></div>
-            <div class="col-md-8">
-              <ul id="nav" class="list-inline">
-                <li><a href="#developers">DEVELOPERS</a></li>
-                <li><span>&#183</span></li>
-                <li><a href="#business">BUSINESS</a></li>
-                <li><span>&#183</span></li>
-                <li><a href="#dialogs">DIALOGS</a></li>
-                <li><span>&#183</span></li>
-                <li><a href="#prices">PRICE</a></li>
-                <li><span>&#183</span></li>
-                <li><a href="#about">ABOUT US</a></li>
-              </ul>
-            </div>
-            <div class="col-md-2 text-right">
-              <ul id="user-nav" class="list-inline">
-                <li><a href="#register">REGISTER</a></li>
-                <li><span>|</span></li>
-                <li><a href="#login">LOGIN</a></li>
-              </ul>
-            </div>
-          </div>
-        </header>
         <div id="sub-header">
           <div class="row">
             <div class="col-md-10">
-              <div id="tweets">
+              <div id="tweets" ng-hide="config.app.nav.subs[location.path]">
                 <ul>
                   <li><a href="#">Virtual Phone numbers are available in Jordan</a></li>
                   <li><a href="#">Say Hi to our new office in Berlin</a></li>
                   <li><a href="#">Register for our webinar</a></li>
                 </ul>
               </div>
-            </div>
-            <div class="col-md-2">
-              <div id="languages" class="pull-right">
-                <ul>
-                  <li><a href="">EN</a></li>
-                  <li class="active"><a href="">NL</a></li>
+              <div id="sub-header-menu" ng-show="config.app.nav.subs[location.path]">
+                <ul class="sub-header-menu">
+                  <li ng-repeat="item in config.app.nav.subs[location.path]" ng-class="(subView[item]) &amp;&amp; 'active'"><a ng-click="setSubView(item)">{{ui.globals.nav.subs[location.path][item]}}</a></li>
                 </ul>
               </div>
+            </div>
+            <div id="languages" class="col-md-2">
+              <ul class="sub-header-menu pull-right">
+                <li ng-repeat="item in config.app.languages" ng-class="(app.language == item) &amp;&amp; 'active'"><a ng-click="setLanguage(item)">{{item.toUpperCase()}}</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -90,21 +82,13 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-1">
             <ul id="footer-nav" class="list-inline">
-              <li><a href="#about">ABOUT US</a></li>
-              <li><span>&nbsp;</span></li>
-              <li><a href="#jobs">JOBS</a></li>
-              <li><span>&nbsp;</span></li>
-              <li><a href="#legal">LEGAL</a></li>
-              <li><span>&nbsp;</span></li>
-              <li><a href="#contact">CONTACT US</a></li>
-              <li><span>&nbsp;</span></li>
-              <li><a href="#about">ABOUT US</a></li>
+              <li ng-repeat="item in config.app.nav.footer"><a ng-href="{{'#' + item}}">{{ui.globals.nav.footer[item]}}</a></li>
             </ul>
           </div>
-          <div class="col-md-2"><a href="#home" class="pull-right"><img src="images/e973109b.askfast-logo.png" alt="AskFast"></a></div>
+          <div class="col-md-2"><a href="#home" class="navbar-brand">ASK-Fast</a></div>
         </div>
       </div>
     </footer>
-    <script data-main="scripts/821d1383.main" src="vendors/requirejs/require.js"></script>
+    <script data-main="scripts/7f854c95.main" src="vendors/requirejs/require.js"></script>
   </body>
 </html>

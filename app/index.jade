@@ -1,44 +1,56 @@
 extends layout
 
 
-block logo
-  .col-md-2
-    a(href='#home')
-      img(src='images/askfast-logo.png', alt='AskFast')
+block brand
+  a.navbar-brand(href='#home') ASK-Fast
 
 
-block nav
-  .col-md-8
-    ul#nav.list-inline
-      li
-        a(href='#developers') DEVELOPERS
-      li
-        span &#183
-      li
-        a(href='#business') BUSINESS
-      li
-        span &#183
-      li
-        a(href='#dialogs') DIALOGS
-      li
-        span &#183
-      li
-        a(href='#prices') PRICE
-      li
-        span &#183
-      li
-        a(href='#about') ABOUT US
+
+block main-nav
+  ul.nav.navbar-nav
+    li(ng-repeat='item in config.app.nav.main',
+    ng-class="(location.path == item) && 'active'")
+      a(ng-href="{{'#' + item}}") {{ui.globals.nav.main[item]}}
+
 
 
 block user-nav
-  .col-md-2.text-right
-    ul#user-nav.list-inline
-      li
-        a(href='#register') REGISTER
-      li
-        span |
-      li
-        a(href='#login') LOGIN
+  ul.nav.navbar-nav.navbar-right
+    li(ng-repeat='item in config.app.nav.user',
+    ng-class="(location.path == item) && 'active'")
+      a(ng-href="{{'#' + item}}") {{ui.globals.nav.user[item]}}
+
+
+
+block languages-nav
+  ul.sub-header-menu.pull-right
+    li(ng-repeat='item in config.app.languages',
+    ng-class="(app.language == item) && 'active'")
+      a(ng-click="setLanguage(item)") {{item.toUpperCase()}}
+
+
+
+block footer-nav
+  ul#footer-nav.list-inline
+    li(ng-repeat='item in config.app.nav.footer')
+      a(ng-href="{{'#' + item}}") {{ui.globals.nav.footer[item]}}
+
+
+
+block navbar
+  .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    .container
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        block brand
+      .collapse.navbar-collapse
+        block main-nav
+        block user-nav
+
 
 
 block footer
@@ -46,61 +58,51 @@ block footer
     .container
       .row
         .col-md-8.col-md-offset-1
-          ul#footer-nav.list-inline
-            li
-              a(href='#about') ABOUT US
-            li
-              span &nbsp;
-            li
-              a(href='#jobs') JOBS
-            li
-              span &nbsp;
-            li
-              a(href='#legal') LEGAL
-            li
-              span &nbsp;
-            li
-              a(href='#contact') CONTACT US
-            li
-              span &nbsp;
-            li
-              a(href='#about') ABOUT US
+          block footer-nav
         .col-md-2
-          a.pull-right(href='#home')
-            img(src='images/askfast-logo.png', alt='AskFast')
-
-
-block icons
-  link(rel='apple-touch-icon-precomposed', sizes='144x144', href='icons/apple-touch-icon-144-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='114x114', href='icons/apple-touch-icon-114-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='72x72', href='icons/apple-touch-icon-72-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', href='icons/apple-touch-icon-57-precomposed.png')
-  link(rel='shortcut icon', href='icons/favicon.png')
-
+          block brand
 
 
 
 block tweets
+  ul
+    li
+      a(href='#') Virtual Phone numbers are available in Jordan
+    li
+      a(href='#') Say Hi to our new office in Berlin
+    li
+      a(href='#') Register for our webinar
+
+
+
+block sub-header-menu
   .col-md-10
-    #tweets
-      ul
-        li
-          a(href='#') Virtual Phone numbers are available in Jordan
-        li
-          a(href='#') Say Hi to our new office in Berlin
-        li
-          a(href='#') Register for our webinar
+    #tweets(ng-hide='config.app.nav.subs[location.path]')
+      block tweets
+    #sub-header-menu(ng-show='config.app.nav.subs[location.path]')
+      ul.sub-header-menu
+        li(ng-repeat='item in config.app.nav.subs[location.path]',
+        ng-class="(subView[item]) && 'active'")
+          a(ng-click="setSubView(item)") {{ui.globals.nav.subs[location.path][item]}}
+
 
 
 block languages
-  .col-md-2
-    #languages.pull-right
-      ul
-        li
-          a(href='') EN
-        li.active
-          a(href='') NL
+  #languages.col-md-2
+    block languages-nav
 
+
+
+block icons
+  link(rel='apple-touch-icon-precomposed', sizes='144x144',
+  href='icons/apple-touch-icon-144-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='114x114',
+  href='icons/apple-touch-icon-114-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='72x72',
+  href='icons/apple-touch-icon-72-precomposed.png')
+  link(rel='apple-touch-icon-precomposed',
+  href='icons/apple-touch-icon-57-precomposed.png')
+  link(rel='shortcut icon', href='/favicon.png')
 
 
 
@@ -115,6 +117,7 @@ block iestuff
   //if lt IE 9
     script(src='vendors/es5-shim/es5-shim.js')
     script(src='vendors/json3/lib/json3.min.js')
+
 
 
 //block analytics

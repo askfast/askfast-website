@@ -46,6 +46,18 @@ module.exports = (grunt) ->
       jade:
         files: ['<%= paths.app %>/{,*/}*.jade']
         tasks: ['jade']
+      coffee:
+        files: ['<%= paths.app %>/scripts/{,*/}*.coffee']
+        tasks: ['coffee:dist']
+      coffeeTest:
+        files: [
+          'test/coffee/spec/{,*/}*.coffee'
+          'test/coffee/e2e/{,*/}*.coffee'
+        ]
+        tasks: [
+          'coffee:testUnit'
+          'coffee:testEnd'
+        ]
       compass:
         files: ['<%= paths.app %>/styles/{,*/}*.{scss,sass}']
         tasks: ['compass:server']
@@ -83,6 +95,16 @@ module.exports = (grunt) ->
           middleware: (connect) ->
             [mountFolder(connect, appConfig.dist)]
 
+    autoprefixer:
+      options: ["last 1 version"]
+      dist:
+        files: [
+          expand: true
+          cwd: ".tmp/styles/"
+          src: "{,*/}*.css"
+          dest: ".tmp/styles/"
+        ]
+
     clean:
       dist:
         files: [
@@ -91,11 +113,12 @@ module.exports = (grunt) ->
             '.tmp'
             '<%= paths.dist %>/*'
             '!<%= paths.dist %>/vendors*'
-            '!<%= paths.dist %>/WEB-INF*'
+            # '!<%= paths.dist %>/WEB-INF*' # depreciated
             '!<%= paths.dist %>/.git*'
           ]
         ]
       server: '.tmp'
+      rest: '<%= paths.dist %>/scripts/{,*/}*.coffee'
 
     jshint:
       options:
@@ -104,6 +127,47 @@ module.exports = (grunt) ->
         'Gruntfile.js'
         '<%= paths.app %>/scripts/{,*/}*.js'
       ]
+
+    coffeelint:
+      options:
+        no_trailing_whitespace:
+          level: 'error'
+      app: ['<%= paths.app %>/scripts/{,*/}*.coffee']
+      tests:
+        files:
+          src: [
+            'test/e2e/{,*/}*.coffee'
+            'test/spec/{,*/}*.coffee'
+          ]
+
+    coffee:
+      options:
+        sourceMap: true
+        sourceRoot: ''
+      dist:
+        files: [
+          expand: true
+          cwd: '<%= paths.app %>/scripts'
+          src: '{,*/}*.coffee'
+          dest: '.tmp/scripts'
+          ext: '.js'
+        ]
+      testUnit:
+        files: [
+          expand: true
+          cwd: 'test/coffee/spec'
+          src: '{,*/}*.coffee'
+          dest: 'test/tests/spec'
+          ext: '.js'
+        ]
+      testEnd:
+        files: [
+          expand: true
+          cwd: 'test/coffee/e2e'
+          src: '{,*/}*.coffee'
+          dest: 'test/tests/e2e'
+          ext: '.js'
+        ]
 
     compass:
       options:
@@ -153,6 +217,15 @@ module.exports = (grunt) ->
           dest: '<%= paths.dist %>/images'
         ]
 
+    svgmin:
+      dist:
+        files: [
+          expand: true
+          cwd: "<%= paths.app %>/images"
+          src: "{,*/}*.svg"
+          dest: "<%= paths.dist %>/images"
+        ]
+
     cssmin: {}
   
     htmlmin:
@@ -197,13 +270,38 @@ module.exports = (grunt) ->
           dest: '<%= paths.dist %>/images'
           src: ['generated/*']
         ]
+      styles:
+        expand: true
+        cwd: "<%= paths.app %>/styles"
+        dest: ".tmp/styles/"
+        src: "{,*/}*.css"
+      rest:
+        expand: true
+        cwd: ".tmp/scripts"
+        dest: "<%= paths.dist %>/scripts/"
+        src: "{,*/}*"
 
     concurrent:
       server: [
+        'coffee:dist'
         'compass:server'
         'jade'
+        'copy:styles'
       ]
-      test: ['compass']
+      test: [
+        'coffee:testUnit'
+        'coffee:testEnd'
+        'compass'
+        'copy:styles'
+      ]
+      dist: [
+        'coffee:dist'
+        'compass:dist'
+        'copy:styles'
+        'imagemin'
+        'svgmin'
+        'htmlmin'
+      ]
 
     karma:
       unit:
@@ -300,6 +398,7 @@ module.exports = (grunt) ->
     grunt.task.run [
       'clean:server'
       'concurrent:server'
+      'autoprefixer'
       'connect:livereload'
       'watch'
     ]
@@ -313,10 +412,14 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build', [
     'clean:dist'
+    'coffee:dist'
+    'coffee:testUnit'
+    'coffee:testEnd'
     'compass:dist'
     'jade'
     'useminPrepare'
     'imagemin'
+    'svgmin'
     'htmlmin'
     'concat'
     'copy'
@@ -326,6 +429,8 @@ module.exports = (grunt) ->
     'rev'
     'usemin'
     'replace'
+    'copy:rest'
+    'clean:rest'
   ]
 
   grunt.registerTask 'patch', [

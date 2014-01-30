@@ -22,16 +22,12 @@ html.no-js(lang='en')
     // endbuild
   body
     block iestuff
+    block navbar
     #wrap
       .container-fluid
-        header
-          .row
-            block logo
-            block nav
-            block user-nav
         #sub-header
           .row
-            block tweets
+            block sub-header-menu
             block languages
         div(ng-view='')
     block footer

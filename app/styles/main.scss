@@ -1,60 +1,50 @@
+/*
+ *
+ * Variables
+ *
+ */
 $iconSpritePath: "../images/glyphicons-halflings.png";
 $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-// Core variables and mixins
-@import "../vendors/bootstrap-sass/lib/variables";
+
+
+/*
+ *
+ * Bootstrap modules
+ *
+ */
+@import "../vendors/bootstrap-sass/lib/variables"; // TODO: strip unused variables by embedding them here
 @import "../vendors/bootstrap-sass/lib/mixins";
-
-// Reset
 @import "../vendors/bootstrap-sass/lib/normalize";
-@import "../vendors/bootstrap-sass/lib/print";
-
-// Core CSS
 @import "../vendors/bootstrap-sass/lib/scaffolding";
 @import "../vendors/bootstrap-sass/lib/type";
-@import "../vendors/bootstrap-sass/lib/code";
 @import "../vendors/bootstrap-sass/lib/grid";
 @import "../vendors/bootstrap-sass/lib/tables";
 @import "../vendors/bootstrap-sass/lib/forms";
 @import "../vendors/bootstrap-sass/lib/buttons";
-
-// Components
 @import "../vendors/bootstrap-sass/lib/component-animations";
-// @import "../vendors/bootstrap-sass/lib/glyphicons";
-// @import "../vendors/bootstrap-sass/lib/dropdowns";
-// @import "../vendors/bootstrap-sass/lib/button-groups";
 @import "../vendors/bootstrap-sass/lib/input-groups";
-// @import "../vendors/bootstrap-sass/lib/navs";
-// @import "../vendors/bootstrap-sass/lib/navbar";
-// @import "../vendors/bootstrap-sass/lib/breadcrumbs";
-// @import "../vendors/bootstrap-sass/lib/pagination";
-// @import "../vendors/bootstrap-sass/lib/pager";
-@import "../vendors/bootstrap-sass/lib/labels";
-@import "../vendors/bootstrap-sass/lib/badges";
-// @import "../vendors/bootstrap-sass/lib/jumbotron";
-// @import "../vendors/bootstrap-sass/lib/thumbnails";
-// @import "../vendors/bootstrap-sass/lib/alerts";
-// @import "../vendors/bootstrap-sass/lib/progress-bars";
-// @import "../vendors/bootstrap-sass/lib/media";
-// @import "../vendors/bootstrap-sass/lib/list-group";
-// @import "../vendors/bootstrap-sass/lib/panels";
-// @import "../vendors/bootstrap-sass/lib/wells";
-// @import "../vendors/bootstrap-sass/lib/close";
-
-// Components w/ JavaScript
-// @import "../vendors/bootstrap-sass/lib/modals";
-// @import "../vendors/bootstrap-sass/lib/tooltip";
-// @import "../vendors/bootstrap-sass/lib/popovers";
-// @import "../vendors/bootstrap-sass/lib/carousel";
-
-// Utility classes
+@import "../vendors/bootstrap-sass/lib/navs";
+@import "../vendors/bootstrap-sass/lib/navbar";
 @import "../vendors/bootstrap-sass/lib/utilities";
 @import "../vendors/bootstrap-sass/lib/responsive-utilities";
 
 
+
+/*
+ *
+ * Fonts
+ *
+ */
 @import url(http://fonts.googleapis.com/css?family=Lato|Titillium+Web);
 
 
+
+/*
+ *
+ * App related variables
+ *
+ */
 $white:     #ffffff !default;
 $pink:      #e21f8d !default;
 $light-pink:#f8c8e2 !default;
@@ -62,18 +52,19 @@ $gray:      #454545 !default;
 $dark-gray: #313338 !default;
 $blue:      #15cdef !default;
 
-
 $font-color: $gray;
 $button-color: #2a2c30 !default;
 
-
 $sprite: '../images/askfast-sprite.png' !default;
+$channels-sprite: '../images/communucation-channels-sprite.png' !default;
 
 
-.text-pink  { color: $pink }
-.text-white { color: $white }
 
-
+/*
+ *
+ * Mixins
+ *
+ */
 @mixin border-radius($r) {
   -webkit-border-radius: $r;
   -moz-border-radius: $r;
@@ -123,6 +114,25 @@ $sprite: '../images/askfast-sprite.png' !default;
 }
 
 
+@mixin navbar-brand ($alignment) {
+  .navbar-brand {
+    float: $alignment;
+    display: block;
+    text-indent: -9999px;
+    width: 131px;
+    height: 60px;
+    background: url($sprite) -180px 0;
+    margin: 0 20px 0 0 !important;
+  }
+}
+
+
+
+/*
+ *
+ * General styling
+ *
+ */
 html, body {
   margin: 0;
   padding: 0;
@@ -133,6 +143,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: $font-color;
   font-size: 12px;
+  background-color: $white;
 
   h1, h2, h3 {
     font-family: 'Titillium Web', sans-serif;
@@ -144,21 +155,93 @@ body {
   }
 }
 
+.text-pink  { color: $pink }
+.text-white { color: $white }
 
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  margin: 0 auto -60px;
-  padding: 0 0 60px;
+
+
+/*
+ *
+ * Navigation
+ *
+ */
+.navbar {
+  min-height: 60px;
+  background-color: $white;
+  border: none;
+  border-bottom: 2px solid $pink;
+  z-index: 500;
+
+  @include navbar-brand(left);
+
+  .navbar-nav {
+    line-height: 1em;
+    margin: 0;
+    min-height: 60px;
+    padding: 0;
+
+    li {
+      a {
+        height: 60px;
+        display: block;
+        padding: 20px 4px 0 4px;
+        margin: 0;
+        font-size: 1.15em;
+        color: $dark-gray;
+        background-color: none;
+
+        &:hover {
+          text-decoration: none;
+          color: $pink;
+          background-color: none;
+        }
+      }
+    }
+
+    .active {
+      a {
+        color: $pink;
+        background-color: $white;
+        background-image: url(../images/menu-indicator.png);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+        &:hover {
+          text-decoration: none;
+          cursor: default;
+          background-color: $white;
+          color: $font-color;
+        }
+      }
+    }
+  }
+
+  .navbar-toggle {
+    border: 1px solid $pink;
+    background-color: $white;
+    margin-top: 15px;
+
+    &:hover {
+      background-color: $pink;
+
+      .icon-bar {
+        background-color: $white;
+      }
+    }
+
+    .icon-bar {
+      background-color: $pink;
+    }
+  }
 }
 
 
-#footer {
-  height: 60px;
-  background-color: #f5f5f5;
-}
 
-
+/*
+ *
+ * Custom styling
+ *
+ */
 .btn-primary {
   @include border-radius(0);
 
@@ -176,82 +259,37 @@ body {
 }
 
 
-footer {
-  border-top: 3px solid $pink;
-
-  .container-fluid {
-    max-width: 1170px;
-    margin: 0 auto;
-  }
-
-  #footer-nav {
-    padding: 17px 15px 0 15px;
-
-    li {
-      padding: 0;
-      margin-right: 5px;
-
-      a {
-        color: $gray;
-        font-size: 1.15em;
-      }
+.icons-list {
+  li {
+    a {
+      display: block;
+      text-indent: -9999px;
     }
   }
 }
 
 
-header {
-  height: 60px;
 
-  @include middle-row;
-
-  #nav {
-    text-align: center;
-    margin-top: 25px;
-    line-height: 1em;
-
-    li {
-      padding: 0;
-      display: inline-block;
-      vertical-align: middle;
-
-      a {
-        color: $gray;
-        font-size: 1.15em;
-      }
-
-      span {
-        display: block;
-        font-size: 2em;
-        color: $pink;
-        text-indent: -9999px;
-        width: 4px;
-        height: 4px;
-        background-color: $pink;
-        margin: 0 2px;
-
-        @include border-radius(2px);
-      }
-    }
-  }
-
-  #user-nav {
-    margin-top: 20px;
-
-    li {
-      padding: 0;
-
-      a {
-        color: $gray;
-        font-size: 1.15em;
-      }
-    }
-  }
+/*
+ *
+ * Frame
+ *
+ */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  padding: 60px 0 20px 0;
 }
 
 
+
+/*
+ *
+ * Sub header
+ *
+ */
 #sub-header {
-  height: 40px;
+  min-height: 40px;
   background-color: $pink;
   color: $white;
 
@@ -273,84 +311,156 @@ header {
     }
   }
 
-  #tweets {
+  ul.sub-header-menu {
     margin-top: 10px;
-    margin-left: -40px;
 
-    ul {
-      li {
-        a {
-          display: block;
-          overflow: hidden;
-          height: 20px;
-          padding-left: 20px;
-          margin-right: 15px;
-          line-height: 1.6em;
-          background: url(../images/subheader-bullet.png) no-repeat;
+    li {
+      display: inline;
+      float: left;
+      margin-left: 3px;
+      background-color: $pink;
+      padding: 1px 3px;
+
+      @include border-radius(4px);
+
+      a {
+        display: block;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    li.active {
+      background-color: $light-pink;
+
+      a {
+        color: $font-color;
+
+        &:hover {
+          text-decoration: none;
+          cursor: default;
         }
       }
     }
   }
 
-  #languages {
+  #sub-header-menu {
     ul {
-      margin-top: 10px;
+      margin-left: 0 !important;
+      padding-left: 0 !important;
 
       li {
-        margin-left: 3px;
-        background-color: $pink;
-        padding: 1px 3px;
+        padding: 1px 8px;
 
-        @include border-radius(4px);
-
-        a {
-          display: block;
-        }
-      }
-
-      li.active {
-        background-color: $light-pink;
-
-        a {
-          color: $font-color;
-
-          &:hover {
-            text-decoration: none;
-            cursor: default;
-          }
-        }
+        @include border-radius(20px);
       }
     }
   }
 }
 
 
+
+/*
+ *
+ * Tweets
+ *
+ */
+#tweets {
+  margin-top: 10px;
+  margin-left: -40px;
+
+  ul {
+    li {
+      a {
+        display: block;
+        overflow: hidden;
+        height: 20px;
+        padding-left: 20px;
+        margin-right: 15px;
+        line-height: 1.6em;
+        background: url(../images/subheader-bullet.png) no-repeat;
+      }
+    }
+  }
+}
+
+
+
+/*
+ *
+ * Languages
+ *
+ */
+#languages {
+}
+
+
+
+/*
+ *
+ * Carousels and slides
+ *
+ */
 #carousel {
   @include middle-row;
 
   ul {
     li {
-      height: 320px;
+      min-height: 340px;
+      font-size: 1.2em;
+      position: relative;
+
+      .row {
+        position: absolute;
+        bottom: -1px;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+
+      .btn {
+        margin-bottom: 20px;
+      }
     }
   }
 
   #who-wants-pink {
-    font-size: 1.2em;
-    position: relative;
+    h1 {
+      margin-top: 5px;
+    }
+  }
 
-    .row {
-      position: absolute;
-      bottom: -1px;
+  #writing-a-letter {
+    h1 {
+      margin-top: -15px;
     }
 
+    img {
+      bottom: 0;
+    }
+  }
+
+  #use-your-fingers {
     h1 {
-      font-size: 3em;
-      margin-top: 30px;
+      margin-top: -25px;
+    }
+
+    img {
+      bottom: 0;
     }
   }
 }
 
 
+
+/*
+ *
+ * Front-page: Bridge
+ *
+ */
 #bridge {
   min-height: 420px;
   background-color: $dark-gray;
@@ -369,16 +479,12 @@ header {
 }
 
 
-.icons-list {
-  li {
-    a {
-      display: block;
-      text-indent: -9999px;
-    }
-  }
-}
 
-
+/*
+ *
+ * Front-page: Channels
+ *
+ */
 #channels {
   min-height: 370px;
   background: url(../images/section-shadow.png) repeat-x;
@@ -402,7 +508,7 @@ header {
     #mail    { @include btn-icon(-36px,  0, -36px,  -36px) }
     #twitter { @include btn-icon(-72px,  0, -72px,  -36px) }
     #email   { @include btn-icon(-108px, 0, -108px, -36px) }
-    #gmail   { @include btn-icon(-144px, 0, -144px, -36px) }
+    #gMail   { @include btn-icon(-144px, 0, -144px, -36px) }
   }
 
   ul.bullets {
@@ -421,15 +527,26 @@ header {
     }
   }
 
-  .col-md-6 {
-    img {
-      margin-top: 10px;
-    }
+  .channel-image {
+    margin-top: 20px;
+    width: 530px;
+    height: 340px;
   }
+
+  #channel-tel      { background: url($channels-sprite) 0 0;       }
+  #channel-mail     { background: url($channels-sprite) 0 -340px;  }
+  #channel-twitter  { background: url($channels-sprite) 0 -680px;  }
+  #channel-email    { background: url($channels-sprite) 0 -1020px; }
+  #channel-gMail    { background: url($channels-sprite) 0 -1360px; }
 }
 
 
 
+/*
+ *
+ * Front-page: Promises
+ *
+ */
 #promises {
   min-height: 350px;
   background: url(../images/section-shadow.png) repeat-x;
@@ -456,11 +573,15 @@ header {
   }
 
   ul.icons-list {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    min-width: 230px;
+    height: 230px;
+    margin: 0 auto;
+
     li {
       padding: 0;
       margin: 0;
+
       a {
         width: 72px;
         height: 72px;
@@ -477,16 +598,31 @@ header {
     #performance  { @include btn-icon(-504px, -72px, -504px, -144px) }
     #privacy      { @include btn-icon(-576px, -72px, -576px, -144px) }
   }
-
 }
 
 
 
+/*
+ *
+ * Front-page: References
+ *
+ */
 #references {
   @include middle-row;
 
+  ul.bxslider {
+    li {
+      margin-bottom: 15px;
+
+      .col-md-3 {
+        text-align: center;
+      }
+    }
+  }
+
   blockquote {
     border: none;
+    margin-top: 20px;
 
     p {
       font-size: 1.87em;
@@ -509,12 +645,51 @@ header {
 
 
 
+/*
+ *
+ * Front-page: Quotes
+ *
+ */
 #quotes {
   @include middle-row;
 }
 
 
 
+/*
+ *
+ * Front-page: Footer
+ *
+ */
+footer {
+  border-top: 3px solid $pink;
+
+  @include middle-row;
+
+  @include navbar-brand(right);
+
+  #footer-nav {
+    padding: 17px 15px 0 15px;
+
+    li {
+      padding: 0;
+      margin-right: 5px;
+
+      a {
+        color: $gray;
+        font-size: 1.15em;
+      }
+    }
+  }
+}
+
+
+
+/*
+ *
+ * bxSlider widget
+ *
+ */
 .bx-wrapper {
   position: relative;
   margin: 0 auto;
@@ -529,32 +704,29 @@ header {
   .bx-viewport {
     left: -5px;
     background: #fff;
+    padding-top: 15px;
   }
 
   .bx-pager, .bx-controls-auto {
     position: absolute;
-    bottom: -30px;
+    top: 10px;
     width: 100%;
   }
 
   .bx-loading {
     min-height: 50px;
+    // TODO: Replace with sprite
     background: url(../images/bx_loader.gif) center center no-repeat white;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2000;
+    z-index: 200;
   }
 
   .bx-pager {
     text-align: center;
-    font-size: .85em;
-    font-family: Arial;
-    font-weight: bold;
-    color: #666;
-    padding-top: 20px;
 
     .bx-pager-item {
       display: inline-block;
@@ -570,28 +742,35 @@ header {
   }
 
   .bx-pager.bx-default-pager a {
-    background: #666;
-    text-indent: -9999px;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     margin: 0 5px;
     outline: 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    border: 2px solid $blue;
+    background-color: $white;
+    font-size: 1.8em;
+    color: $pink;
+    text-indent: -9999px;
+
+    @include border-radius(40px);
+
     &:hover, &.active {
-      background: #000;
+      background: $pink;
+      color: $white;
+      text-decoration: none;
     }
   }
 
   .bx-prev {
     left: -100px;
+    // TODO: Replace with sprite
     background: url(../images/carousel-controls.png) no-repeat 0 0px;
   }
 
   .bx-next {
     right: -100px;
+    // TODO: Replace with sprite
     background: url(../images/carousel-controls.png) no-repeat -34px 0px;
   }
 
@@ -611,7 +790,8 @@ header {
     width: 34px;
     height: 43px;
     text-indent: -9999px;
-    z-index: 9999;
+    z-index: 300;
+
     &.disabled {
       display: none;
     }
@@ -626,7 +806,7 @@ header {
       width: 10px;
       height: 11px;
       outline: 0;
-      background: url(images/controls.png) -86px -11px no-repeat;
+      // background: url(images/controls.png) -86px -11px no-repeat;
       margin: 0 3px;
 
       &:hover, &.active {
@@ -640,7 +820,7 @@ header {
       width: 9px;
       height: 11px;
       outline: 0;
-      background: url(images/controls.png) -86px -44px no-repeat;
+      // background: url(images/controls.png) -86px -44px no-repeat;
       margin: 0 3px;
 
       &:hover, &.active {
@@ -681,13 +861,96 @@ header {
 
 
 
-@media (max-width: 767px) {
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
+/*
+ *
+ * Responsive layouts
+ *
+ */
+@media (max-width: 480px) {
+  .navbar {
+    background-color: $pink;
+
+    .navbar-header {
+      background-color: $white;
+    }
+
+    .navbar-brand {
+      margin: 0 0 0 20px !important;
+    }
+
+    ul {
+      li {
+        margin-left: 20px;
+        height: 45px;
+
+        a {
+          padding: 10px 4px !important;
+          color: $white !important;
+        }
+      }
+
+      .active {
+        a {
+          background-color: $pink !important;
+          background-image: none !important;
+        }
+      }
+    }
+
+    .navbar-right {
+      border-top: 1px solid $white;
+    }
   }
+
+  #sub-header {
+
+    #languages {
+      position: relative;
+
+      ul {
+        position: absolute;
+        top: -10px;
+        right: 8px;
+        width: 100px;
+      }
+    }
+
+    #sub-header-menu {
+      max-width: 20px !important;
+
+      ul {
+        margin-bottom: 15px;
+
+        li {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  #carousel {
+    padding-bottom: 40px;
+
+    ul {
+      li {
+        min-height: 560px;
+
+        h1 {
+          font-size: 2.8em;
+        }
+      }
+    }
+  }
+
+  #bridge {
+    img {
+      margin-top: -15px;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
 }
 
 
@@ -700,17 +963,98 @@ header {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 480px) and (max-width: 979px) {
+  h1 {
+    font-size: 2.8em;
+  }
+
+  #sub-header {
+    #languages {
+      ul {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  #carousel {
+    ul {
+      li {
+        img {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  #writing-a-letter {
+    img {
+      position: absolute;
+      bottom: -300px !important;
+    }
+  }
+
+  #use-your-fingers {
+    img {
+      position: absolute;
+      bottom: -285px !important;
+    }
+  }
+
+  #channels {
+    .col-sm-6 {
+      display: table !important;
+
+      img {
+        display: table-cell !important;
+        vertical-align: middle !important;
+      }
+    }
+  }
+
+  #references {
+    .bx-wrapper {
+      margin-top: 30px;
+
+      .bx-pager {
+        top: -20px;
+      }
+    }
+  }
 }
 
 
-@mixin flex-center() {
-  display: -webkit-flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+@media (max-width: 979px) {
+  #bridge {
+    img {
+      margin-top: -10px;
+    }
+  }
+
+  #tweets, #footer-nav {
+    display: none;
+  }
+
+  .bx-wrapper {
+    .bx-prev, .bx-next {
+      display: none !important;
+    }
+  }
+
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+@media (min-width: 980px) {
+  .bx-pager {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1200px) {
 }

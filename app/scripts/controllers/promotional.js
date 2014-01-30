@@ -16,7 +16,7 @@ define(
               mail:   false,
               twitter:false,
               email:  false,
-              gmail:  false
+              gMail:  false
             };
 
             $scope.channelView[view] = true;
