@@ -1,7 +1,7 @@
 define app:
   version:  '@@version'
   released: '@@released'
-  default:
+  defaults:
     language: 'en'
   app:
     languages: [
@@ -25,3 +25,20 @@ define app:
         'legal'
         'contact'
       ]
+      subs:
+        developers: [
+          'faststart'
+          'devmods'
+          'documents'
+        ]
+        business: [
+          'solutions'
+          'benefits'
+        ]
+        dialogs: [
+          'what'
+        ]
+        about: [
+          'team'
+          'contact'
+        ]

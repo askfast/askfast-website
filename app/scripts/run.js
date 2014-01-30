@@ -17,7 +17,7 @@ define(
             $rootScope.ui = locals.ui[language];
           };
 
-          $rootScope.setLanguage(config.app.default.language);
+          $rootScope.setLanguage(config.app.defaults.language);
 
           $rootScope.config = config.app;
 

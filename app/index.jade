@@ -65,26 +65,25 @@ block footer
 
 
 block tweets
-  #tweets.col-md-10
-      ul
-        li
-          a(href='#') Virtual Phone numbers are available in Jordan
-        li
-          a(href='#') Say Hi to our new office in Berlin
-        li
-          a(href='#') Register for our webinar
+  ul
+    li
+      a(href='#') Virtual Phone numbers are available in Jordan
+    li
+      a(href='#') Say Hi to our new office in Berlin
+    li
+      a(href='#') Register for our webinar
 
 
 
 block sub-header-menu
-  #sub-header-menu.col-md-10
-    ul.sub-header-menu
-      li.active
-        a(ng-click="") FastStart
-      li
-        a(ng-click="") Devmods
-      li
-        a(ng-click="") Documents
+  .col-md-10
+    #tweets(ng-hide='config.app.nav.subs[location.path.substring(1)]')
+      block tweets
+    #sub-header-menu(ng-show='config.app.nav.subs[location.path.substring(1)]')
+      ul.sub-header-menu
+        li(ng-repeat='item in config.app.nav.subs[location.path.substring(1)]',
+        class='')
+          a(ng-click="") {{ui.globals.nav.subs[location.path.substring(1)][item]}}
 
 
 

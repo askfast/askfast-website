@@ -6,7 +6,7 @@ define ui:
           developers: 'DEVELOPERS'
           business:   'BUSINESS'
           dialogs:    'DIALOGS'
-          price:      'PRICE'
+          prices:     'PRICE'
           about:      'ABOUT US'
         user:
           register: 'REGISTER'
@@ -15,6 +15,19 @@ define ui:
           jobs:     'JOBS'
           legal:    'LEGAL'
           contact:  'CONTACT'
+        subs:
+          developers:
+            faststart:  'Fast Start'
+            devmods:    'Developer Modules'
+            documents:  'Documents'
+          business:
+            solutions:  'Solutions'
+            benefits:   'Benefits'
+          dialogs:
+            what:       'What is it?'
+          about:
+            team:       'Team'
+            contact:    'Contact'
     pages:
       home:
         carousel:
@@ -134,7 +147,7 @@ define ui:
           developers: 'DEVELOPERS'
           business:   'ZAKELIJK'
           dialogs:    'DIALOGS'
-          price:      'PRIJS'
+          prices:     'PRIJS'
           about:      'OVER ONS'
         user:
           register: 'INSCHRIJVEN'
@@ -143,6 +156,19 @@ define ui:
           jobs:     'VACATURES'
           legal:    'LEGAAL'
           contact:  'CONTACT'
+        subs:
+          developers:
+            faststart:  '(NL) Fast Start'
+            devmods:    '(NL) Developer Modules'
+            documents:  '(NL) Documents'
+          business:
+            solutions:  '(NL) Solutions'
+            benefits:   '(NL) Benefits'
+          dialogs:
+            what:       '(NL) What is it?'
+          about:
+            team:       '(NL) Team'
+            contact:    '(NL) Contact'
     pages:
       home:
         carousel:
