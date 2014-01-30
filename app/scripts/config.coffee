@@ -4,6 +4,10 @@ define app:
   default:
     language: 'en'
   app:
+    languages: [
+      'en'
+      'nl'
+    ]
     nav:
       main: [
         'developers'

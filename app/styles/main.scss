@@ -112,6 +112,18 @@ $sprite: '../images/askfast-sprite.png' !default;
   }
 }
 
+@mixin navbar-brand ($alignment) {
+  .navbar-brand {
+    float: $alignment;
+    display: block;
+    text-indent: -9999px;
+    width: 131px;
+    height: 60px;
+    background: url($sprite) -180px 0;
+    margin: 0 20px 0 0 !important;
+  }
+}
+
 
 
 /*
@@ -158,14 +170,7 @@ body {
   border-bottom: 2px solid $pink;
   z-index: 500;
 
-  .navbar-brand {
-    display: block;
-    text-indent: -9999px;
-    width: 131px;
-    height: 60px;
-    background: url($sprite) -180px 0;
-    margin: 0 20px 0 0 !important;
-  }
+  @include navbar-brand(left);
 
   .navbar-nav {
     line-height: 1em;
@@ -654,6 +659,8 @@ footer {
   border-top: 3px solid $pink;
 
   @include middle-row;
+
+  @include navbar-brand(right);
 
   #footer-nav {
     padding: 17px 15px 0 15px;

@@ -22,6 +22,14 @@ block user-nav
 
 
 
+block languages-nav
+  ul.sub-header-menu.pull-right
+    li(ng-repeat='item in config.app.languages',
+    class="{{(app.language == item) && 'active'}}")
+      a(ng-click="setLanguage(item)") {{item.toUpperCase()}}
+
+
+
 block footer-nav
   ul#footer-nav.list-inline
     li(ng-repeat='item in config.app.nav.footer')
@@ -52,21 +60,7 @@ block footer
         .col-md-8.col-md-offset-1
           block footer-nav
         .col-md-2
-          a.pull-right(href='#home')
-            img(src='images/askfast-logo.png', alt='AskFast')
-
-
-
-block icons
-  link(rel='apple-touch-icon-precomposed', sizes='144x144',
-  href='icons/apple-touch-icon-144-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='114x114',
-  href='icons/apple-touch-icon-114-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='72x72',
-  href='icons/apple-touch-icon-72-precomposed.png')
-  link(rel='apple-touch-icon-precomposed',
-  href='icons/apple-touch-icon-57-precomposed.png')
-  link(rel='shortcut icon', href='/favicon.png')
+          block brand
 
 
 
@@ -96,11 +90,20 @@ block sub-header-menu
 
 block languages
   #languages.col-md-2
-    ul.sub-header-menu.pull-right
-      li(class="{{(app.language == 'en') && 'active'}}")
-        a(ng-click="setLanguage('en')") EN
-      li(class="{{(app.language == 'nl') && 'active'}}")
-        a(ng-click="setLanguage('nl')") NL
+    block languages-nav
+
+
+
+block icons
+  link(rel='apple-touch-icon-precomposed', sizes='144x144',
+  href='icons/apple-touch-icon-144-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='114x114',
+  href='icons/apple-touch-icon-114-precomposed.png')
+  link(rel='apple-touch-icon-precomposed', sizes='72x72',
+  href='icons/apple-touch-icon-72-precomposed.png')
+  link(rel='apple-touch-icon-precomposed',
+  href='icons/apple-touch-icon-57-precomposed.png')
+  link(rel='shortcut icon', href='/favicon.png')
 
 
 
