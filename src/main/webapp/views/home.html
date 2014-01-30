@@ -102,11 +102,12 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-5 col-sm-6"><img src="../images/613aed4f.stock-communication-channel.png" alt="Stock communication channels" ng-show="channelView.tel" class="img-responsive">
-      <p style="margin-top:30px" ng-show="channelView.mail">Image mail</p>
-      <p style="margin-top:30px" ng-show="channelView.twitter">Image twitter</p>
-      <p style="margin-top:30px" ng-show="channelView.email">Image email</p>
-      <p style="margin-top:30px" ng-show="channelView.gmail">Image gmail</p>
+    <div class="col-md-6 col-sm-6">
+      <div id="channel-tel" ng-show="channelView.tel" class="img-responsive channel-image"></div>
+      <div id="channel-mail" ng-show="channelView.mail" class="img-responsive channel-image"></div>
+      <div id="channel-twitter" ng-show="channelView.twitter" class="img-responsive channel-image"></div>
+      <div id="channel-email" ng-show="channelView.email" class="img-responsive channel-image"></div>
+      <div id="channel-gMail" ng-show="channelView.gMail" class="img-responsive channel-image"></div>
     </div>
   </div>
 </div>

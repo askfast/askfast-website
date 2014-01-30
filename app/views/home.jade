@@ -102,22 +102,12 @@
         p(ng-repeat='content in ui.pages.home.channels.gMail.content') {{content}}
         ul.bullets(ng-show='ui.pages.home.channels.gMail.list')
           li(ng-repeat='list in ui.pages.home.channels.gMail.list') {{list}}
-    .col-md-5.col-sm-6
-      img.img-responsive(src='../images/stock-communication-channel.png',
-      alt='Stock communication channels',
-      ng-show='channelView.tel')
-      p(style='margin-top:30px',
-      ng-show='channelView.mail')
-        | Image mail
-      p(style='margin-top:30px',
-      ng-show='channelView.twitter')
-        | Image twitter
-      p(style='margin-top:30px',
-      ng-show='channelView.email')
-        | Image email
-      p(style='margin-top:30px',
-      ng-show='channelView.gmail')
-        | Image gmail
+    .col-md-6.col-sm-6
+      div.img-responsive.channel-image#channel-tel(ng-show='channelView.tel')
+      div.img-responsive.channel-image#channel-mail(ng-show='channelView.mail')
+      div.img-responsive.channel-image#channel-twitter(ng-show='channelView.twitter')
+      div.img-responsive.channel-image#channel-email(ng-show='channelView.email')
+      div.img-responsive.channel-image#channel-gMail(ng-show='channelView.gMail')
 
 
 
