@@ -50,7 +50,7 @@
 
 
 #bridge
-  .container-fluid.container-dark
+  .container-fluid.container-content.container-dark
     .row
       .col-md-5.col-md-offset-1.col-sm-6
         img.img-responsive(src='../images/illustration-askfast-engine.png',
@@ -64,9 +64,20 @@
 
 
 #channels
-  .container-fluid
+  .container-fluid.container-content
     .row
-      .col-md-5.col-md-offset-1.col-sm-6
+      .col-md-6.col-md-push-6.col-sm-6.col-sm-push-6
+        img.img-responsive.channel-image(ng-src='../images/channels/phone.png',
+        ng-show='channelView.tel')
+        img.img-responsive.channel-image(ng-src='../images/channels/sms.png',
+        ng-show='channelView.mail')
+        img.img-responsive.channel-image(ng-src='../images/channels/twitter.png',
+        ng-show='channelView.twitter')
+        img.img-responsive.channel-image(ng-src='../images/channels/email.png',
+        ng-show='channelView.email')
+        img.img-responsive.channel-image(ng-src='../images/channels/gtalk.png',
+        ng-show='channelView.gMail')
+      .col-md-5.col-md-pull-5.col-sm-6.col-sm-pull-6
         h1.text-pink {{ui.pages.home.channels.title}}
         ul.icons-list.list-inline
           li#tel
@@ -105,22 +116,11 @@
           p(ng-repeat='content in ui.pages.home.channels.gMail.content') {{content}}
           ul.bullets(ng-show='ui.pages.home.channels.gMail.list')
             li(ng-repeat='list in ui.pages.home.channels.gMail.list') {{list}}
-      .col-md-6.col-sm-6
-        img.img-responsive.channel-image(ng-src='../images/channels/phone.png',
-        ng-show='channelView.tel')
-        img.img-responsive.channel-image(ng-src='../images/channels/sms.png',
-        ng-show='channelView.mail')
-        img.img-responsive.channel-image(ng-src='../images/channels/twitter.png',
-        ng-show='channelView.twitter')
-        img.img-responsive.channel-image(ng-src='../images/channels/email.png',
-        ng-show='channelView.email')
-        img.img-responsive.channel-image(ng-src='../images/channels/gtalk.png',
-        ng-show='channelView.gMail')
 
 
 
 #promises
-  .container-fluid
+  .container-fluid.container-content.container-dark
     .row
       .col-md-4.col-md-offset-1.col-sm-4
         ul.icons-list.list-inline
@@ -178,7 +178,7 @@
 
 
 #references
-  .container-fluid
+  .container-fluid.container-content
     .row
       .col-md-10.col-md-offset-1.col-sm-12
         h1.text-pink Our references

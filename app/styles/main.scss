@@ -280,8 +280,15 @@ body {
   height: auto !important;
   padding: 60px 0 20px 0;
 
+  .container-content {
+    padding: 30px 0;
+
+    @include front-widget;
+  }
+
   .container-dark {
     background-color: $dark-gray;
+    color: $white;
   }
 }
 
@@ -466,16 +473,10 @@ body {
  *
  */
 #bridge {
-  min-height: 420px;
+  // min-height: 420px;
   background-color: $dark-gray;
   color: $white;
   font-size: 1.2em;
-
-  @include front-widget;
-
-  h1 {
-    margin: 50px 0;
-  }
 
   img {
     margin-top: -60px;
@@ -490,14 +491,11 @@ body {
  *
  */
 #channels {
-  min-height: 370px;
   background: url(../images/section-shadow.png) repeat-x;
   font-size: 1.2em;
 
-  @include front-widget;
-
   h1 {
-    margin: 30px 0 20px 0;
+    margin-bottom: 20px;
   }
 
   ul.icons-list {
@@ -544,28 +542,9 @@ body {
  *
  */
 #promises {
-  min-height: 350px;
-  background: url(../images/section-shadow.png) repeat-x;
-  background-color: $dark-gray;
-  color: $white;
-
-  @include front-widget;
-
-  h1 {
-    margin: 30px 0 20px 0;
-  }
-
   p {
     font-size: 1.5em;
     font-weight: normal;
-  }
-
-  .col-md-4 {
-    margin-top: 50px;
-  }
-
-  .col-md-7 {
-    margin-top: 30px;
   }
 
   ul.icons-list {
@@ -604,8 +583,6 @@ body {
  *
  */
 #references {
-  @include middle-row;
-
   ul.bxslider {
     li {
       margin-bottom: 15px;
@@ -905,7 +882,7 @@ footer {
 
       ul {
         position: absolute;
-        top: -10px;
+        top: 0px;
         right: 8px;
         width: 100px;
       }
@@ -967,7 +944,7 @@ footer {
   #sub-header {
     #languages {
       ul {
-        margin-top: 0 !important;
+        margin-top: 10px !important;
       }
     }
   }
@@ -993,17 +970,6 @@ footer {
     img {
       position: absolute;
       bottom: -285px !important;
-    }
-  }
-
-  #channels {
-    .col-sm-6 {
-      display: table !important;
-
-      img {
-        display: table-cell !important;
-        vertical-align: middle !important;
-      }
     }
   }
 
