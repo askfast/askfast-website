@@ -139,6 +139,46 @@ define ui:
         reference:
           quote: 'We are using ASK-Fast cloud communication for our alarming system.'
           person: 'Johnny Billie, CEO'
+      developers:
+        faststart:
+          row1:
+            title: 'Hey Developer'
+            content: [
+              'Our team believes that communication can be enhanced by technology and it should be
+              dialog driven. We have already integrated all possible media types to our dialog
+              centered API for you and the expansion continues. Our API will provide you phone, SMS,
+              e-mail and Twitter communications for your stand alone or integrated solutions.'
+            ]
+          row2:
+            title: 'It is all about a mindset'
+            cta: 'Check API'
+            content: [
+              'We think software. When we see a problem in a company, eg. a customer interaction
+              that’s not efficient, we think “How can software solve this problem?”'
+              'Remember Apple? Their hardware is just facilitating their software experience. It’s all
+              about the software. It’s all about the experience. Hardware can be anything and is only
+              supportive.'
+              'Should I buy or should I build a software solution?'
+              'Often when you buy you end up with a solution that is all integrated into one big
+              plate of spaghetti with all sorts of things you don’t need. And by definition it’s
+              inflexible because the more that’s prebuilt, the less flexibility there is.'
+              'Because of the movement to the cloud, because of the rise of APIs, and smaller building
+              blocks, it is good to build. This means you are going to operate in an agile way. Don’t
+              become an expert in everything by building everything, but choose to buy smaller building
+              blocks to maintain that agility.'
+              'ASKFAST delivers the blocks you need to build your way into agility.'
+            ]
+          row3:
+            title: 'Create value together'
+            content: [
+              'Do you want to integrate an automated communication flow to your own application? Or
+              would you rather give service to somebody in order to enhance their existing system or
+              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.'
+              'Sign up now and get some free credits for your developments. You don’t have to share
+              your creditcard information in order to see our solutions. If you have any other
+              questions, you can always communicate with our technical team. We are open to new
+              ideas and we will do our best to support you!'
+            ]
 
   nl:
     globals:
@@ -281,3 +321,43 @@ define ui:
         reference:
           quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.'
           person: '(NL) Johnny Billie, CEO'
+      developers:
+        faststart:
+          row1:
+            title: '(NL) Hey Developer'
+            content: [
+              '(NL) Our team believes that communication can be enhanced by technology and it should be
+              dialog driven. We have already integrated all possible media types to our dialog
+              centered API for you and the expansion continues. Our API will provide you phone, SMS,
+              e-mail and Twitter communications for your stand alone or integrated solutions.'
+            ]
+          row2:
+            title: '(NL) It is all about a mindset'
+            cta: '(NL) Check API'
+            content: [
+              '(NL) We think software. When we see a problem in a company, eg. a customer interaction
+              that’s not efficient, we think “How can software solve this problem?”'
+              '(NL) Remember Apple? Their hardware is just facilitating their software experience.
+              It’s all about the software. It’s all about the experience. Hardware can be anything and
+              is only supportive.'
+              '(NL) Should I buy or should I build a software solution?'
+              '(NL) Often when you buy you end up with a solution that is all integrated into one big
+              plate of spaghetti with all sorts of things you don’t need. And by definition it’s
+              inflexible because the more that’s prebuilt, the less flexibility there is.'
+              '(NL) Because of the movement to the cloud, because of the rise of APIs, and smaller
+              building blocks, it is good to build. This means you are going to operate in an agile
+              way. Don’t become an expert in everything by building everything, but choose to buy
+              smaller building blocks to maintain that agility.'
+              '(NL) ASKFAST delivers the blocks you need to build your way into agility.'
+            ]
+          row3:
+            title: '(NL) Create value together'
+            content: [
+              '(NL) Do you want to integrate an automated communication flow to your own application? Or
+              would you rather give service to somebody in order to enhance their existing system or
+              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.'
+              '(NL) Sign up now and get some free credits for your developments. You don’t have to share
+              your creditcard information in order to see our solutions. If you have any other
+              questions, you can always communicate with our technical team. We are open to new
+              ideas and we will do our best to support you!'
+            ]

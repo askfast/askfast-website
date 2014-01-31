@@ -279,6 +279,10 @@ body {
   min-height: 100%;
   height: auto !important;
   padding: 60px 0 20px 0;
+
+  .container-dark {
+    background-color: $dark-gray;
+  }
 }
 
 
@@ -529,15 +533,7 @@ body {
 
   .channel-image {
     margin-top: 20px;
-    width: 530px;
-    height: 340px;
   }
-
-  #channel-tel      { background: url($channels-sprite) 0 0;       }
-  #channel-mail     { background: url($channels-sprite) 0 -340px;  }
-  #channel-twitter  { background: url($channels-sprite) 0 -680px;  }
-  #channel-email    { background: url($channels-sprite) 0 -1020px; }
-  #channel-gMail    { background: url($channels-sprite) 0 -1360px; }
 }
 
 

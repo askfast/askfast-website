@@ -1,11 +1,33 @@
-.row(ng-show='subView.faststart')
-  .col-md-12
-    h2 Fast Start
+.container(ng-show='subView.faststart')
+  .row
+    .col-md-6
+      h1.text-pink {{ui.pages.developers.faststart.row1.title}}
+      p(ng-repeat='content in ui.pages.developers.faststart.row1.content') {{content}}
+    .col-md-6
+      span
+  .row
+    .col-md-6
+      span
+    .col-md-6
+      h1 {{ui.pages.developers.faststart.row2.title}}
+      p(ng-repeat='content in ui.pages.developers.faststart.row2.content') {{content}}
+  .row
+    .col-md-6
+      h1.text-pink {{ui.pages.developers.faststart.row3.title}}
+      p(ng-repeat='content in ui.pages.developers.faststart.row3.content') {{content}}
+    .col-md-6
+      span
 
-.row(ng-show='subView.devmods')
-  .col-md-12
-    h2 Developer Modules
 
-.row(ng-show='subView.documents')
-  .col-md-12
-    h2 Documents
+
+.container(ng-show='subView.devmods')
+  .row
+    .col-md-12
+      h2 Developer Modules
+
+
+
+.container(ng-show='subView.documents')
+  .row
+    .col-md-12
+      h2 Documents
