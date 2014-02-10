@@ -106,6 +106,7 @@ $channels-sprite: '../images/communucation-channels-sprite.png' !default;
 
   p {
     line-height: 1.4em;
+    font-size: 1.2em;
 
     .btn {
       margin-top: 30px;
@@ -279,6 +280,17 @@ body {
   min-height: 100%;
   height: auto !important;
   padding: 60px 0 20px 0;
+
+  .container-content {
+    padding: 30px 0;
+
+    @include front-widget;
+  }
+
+  .container-dark {
+    background-color: $dark-gray;
+    color: $white;
+  }
 }
 
 
@@ -315,8 +327,6 @@ body {
     margin-top: 10px;
 
     li {
-      display: inline;
-      float: left;
       margin-left: 3px;
       background-color: $pink;
       padding: 1px 3px;
@@ -462,16 +472,9 @@ body {
  *
  */
 #bridge {
-  min-height: 420px;
   background-color: $dark-gray;
   color: $white;
   font-size: 1.2em;
-
-  @include front-widget;
-
-  h1 {
-    margin: 50px 0;
-  }
 
   img {
     margin-top: -60px;
@@ -486,14 +489,11 @@ body {
  *
  */
 #channels {
-  min-height: 370px;
   background: url(../images/section-shadow.png) repeat-x;
   font-size: 1.2em;
 
-  @include front-widget;
-
   h1 {
-    margin: 30px 0 20px 0;
+    margin-bottom: 20px;
   }
 
   ul.icons-list {
@@ -529,15 +529,7 @@ body {
 
   .channel-image {
     margin-top: 20px;
-    width: 530px;
-    height: 340px;
   }
-
-  #channel-tel      { background: url($channels-sprite) 0 0;       }
-  #channel-mail     { background: url($channels-sprite) 0 -340px;  }
-  #channel-twitter  { background: url($channels-sprite) 0 -680px;  }
-  #channel-email    { background: url($channels-sprite) 0 -1020px; }
-  #channel-gMail    { background: url($channels-sprite) 0 -1360px; }
 }
 
 
@@ -548,28 +540,9 @@ body {
  *
  */
 #promises {
-  min-height: 350px;
-  background: url(../images/section-shadow.png) repeat-x;
-  background-color: $dark-gray;
-  color: $white;
-
-  @include front-widget;
-
-  h1 {
-    margin: 30px 0 20px 0;
-  }
-
   p {
     font-size: 1.5em;
     font-weight: normal;
-  }
-
-  .col-md-4 {
-    margin-top: 50px;
-  }
-
-  .col-md-7 {
-    margin-top: 30px;
   }
 
   ul.icons-list {
@@ -608,8 +581,6 @@ body {
  *
  */
 #references {
-  @include middle-row;
-
   ul.bxslider {
     li {
       margin-bottom: 15px;
@@ -910,20 +881,17 @@ footer {
       ul {
         position: absolute;
         top: -10px;
-        right: 8px;
-        width: 100px;
+        right: 12px;
       }
     }
 
     #sub-header-menu {
-      max-width: 20px !important;
+      margin-bottom: 15px;
 
-      ul {
-        margin-bottom: 15px;
-
-        li {
-          margin-bottom: 15px;
-        }
+      li {
+        clear: both !important;
+        display: block !important;
+        margin-bottom: 15px !important;
       }
     }
   }
@@ -971,7 +939,7 @@ footer {
   #sub-header {
     #languages {
       ul {
-        margin-top: 0 !important;
+        margin-top: 10px !important;
       }
     }
   }
@@ -997,17 +965,6 @@ footer {
     img {
       position: absolute;
       bottom: -285px !important;
-    }
-  }
-
-  #channels {
-    .col-sm-6 {
-      display: table !important;
-
-      img {
-        display: table-cell !important;
-        vertical-align: middle !important;
-      }
     }
   }
 
@@ -1057,4 +1014,132 @@ footer {
 
 
 @media (min-width: 1200px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pre{
+  background:#000;
+  color:#E13A9A;
+}
+
+//.white-txt{
+//  color:#fff;
+//}
+//
+//.pink-txt{
+//  color:#e13096;
+//}
+//.blue-txt{
+//  color:#5968c9;
+//}
+//.blue-txt{
+//  color:#00ecff;
+//}
+
+.verify{
+  position:relative;
+  width:320px;
+  height:500px;
+
+  margin:20px auto;
+}
+
+a.sprite{
+  background:url(../images/verify-sprite.png) no-repeat;
+  text-indent:-9999px;
+  display:inline-block;
+}
+.verify a{
+  width:159px;
+  height:179px;
+}
+a.verify-icon{
+  background-position:0 -92px;
+  position:absolute;
+  top:90px;
+  left:0;
+}
+a.broadcast-icon{
+  background-position:-165px 0px;
+  position:absolute;
+  top:0;
+  left:160px;
+}
+a.traking-icon{
+  background-position:0 -274px;
+  position:absolute;
+  top:269px;
+  left:0;
+}
+a.click-icon{
+  background-position:-164px -182px;
+  position:absolute;
+  top:178px;
+  left:159px;
+}
+
+
+/*hover effect*/
+a.verify-icon.active,
+a.verify-icon:hover{
+  background-position:0 -541px;
+
+}
+a.broadcast-icon.active,
+a.broadcast-icon:hover{
+  background-position:-165px -451px;
+
+}
+a.traking-icon:hover{
+  background-position:0 -724px;
+
+}
+a.click-icon.active,
+a.click-icon:hover{
+  background-position:-164px -631px;
+
+}
+.fixed-left{
+  position:fixed;
+  z-index:2;
+}
+
+/*Broadcastapi section css goes here*/
+
+.list-roman{
+  list-style:lower-roman;
+}
+.list-alpha{
+  list-style:lower-alpha;
+}
+
+
+/*click2call page css goes here*/
+.list-decimal{
+  list-style:decimal;
+  margin-bottom:15px;
+}
+.list-decimal li{
+  margin-bottom:5px;
 }

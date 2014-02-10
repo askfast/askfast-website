@@ -13,9 +13,8 @@
           user: ['register', 'login'],
           footer: ['jobs', 'legal', 'contact'],
           subs: {
-            developers: ['faststart', 'devmods', 'documents'],
+            developers: ['devmods', 'faststart', 'documents'],
             business: ['solutions', 'benefits'],
-            dialogs: ['what'],
             about: ['team', 'contact']
           }
         }

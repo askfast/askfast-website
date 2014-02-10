@@ -139,6 +139,151 @@ define ui:
         reference:
           quote: 'We are using ASK-Fast cloud communication for our alarming system.'
           person: 'Johnny Billie, CEO'
+      developers:
+        faststart:
+          row1:
+            title: 'Hey Developer'
+            content: [
+              'Our team believes that communication can be enhanced by technology and it should be
+              dialog driven. We have already integrated all possible media types to our dialog
+              centered API for you and the expansion continues. Our API will provide you phone, SMS,
+              e-mail and Twitter communications for your stand alone or integrated solutions.'
+            ]
+          row2:
+            title: 'It is all about a mindset'
+            cta: 'Check API'
+            content: [
+              'We think software. When we see a problem in a company, eg. a customer interaction
+              that’s not efficient, we think “How can software solve this problem?”'
+              'Remember Apple? Their hardware is just facilitating their software experience. It’s all
+              about the software. It’s all about the experience. Hardware can be anything and is only
+              supportive.'
+              'Should I buy or should I build a software solution?'
+              'Often when you buy you end up with a solution that is all integrated into one big
+              plate of spaghetti with all sorts of things you don’t need. And by definition it’s
+              inflexible because the more that’s prebuilt, the less flexibility there is.'
+              'Because of the movement to the cloud, because of the rise of APIs, and smaller building
+              blocks, it is good to build. This means you are going to operate in an agile way. Don’t
+              become an expert in everything by building everything, but choose to buy smaller building
+              blocks to maintain that agility.'
+              'ASKFAST delivers the blocks you need to build your way into agility.'
+            ]
+          row3:
+            title: 'Create value together'
+            content: [
+              'Do you want to integrate an automated communication flow to your own application? Or
+              would you rather give service to somebody in order to enhance their existing system or
+              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.'
+              'Sign up now and get some free credits for your developments. You don’t have to share
+              your creditcard information in order to see our solutions. If you have any other
+              questions, you can always communicate with our technical team. We are open to new
+              ideas and we will do our best to support you!'
+            ]
+        devmods:
+          verify:
+            title: 'VerifyMe'
+            content: [
+              'VerifyMe is used for verifying E-mail, Mobile and Landline phone of a user or a
+              system. It has two processes (Initiate and Verify) to understand if the number is
+              which a REST API imlemented for these two processes.'
+            ]
+            chapters: [
+              {
+                title: 'Initiate'
+                content: [
+                  'This REST call initiates a dialog to push (by text or audio) the random
+                  verification code to the phonenumber specified'
+                ]
+                code: 'initiate'
+                parts: [
+                  {
+                    title: 'verificationMedium'
+                    content: [
+                      'medium used to send/play the verification code. Auto is an option which
+                      automatically predicts the medium based on the address field:'
+                    ]
+                  }
+                  {
+                    title: 'address'
+                    content: [
+                      'medium used to send/play the verification code.'
+                      'Mobile number, an SMS triggered. Fixedline number, a automated phone call
+                      is triggered. For anything else, an Email is triggered.'
+                    ]
+                  }
+                  {
+                    title: 'message'
+                    content: [
+                      'This is parsed for a maching “[code]”. If found [code] is replaced by the
+                      random code that is generated.'
+                      'If not, the message is appended with “Code: ”. For a Phone call, this
+                      audio URL is played before playing out the random code.'
+                    ]
+                  }
+                  {
+                    title: 'sessionTimeoutInSecs'
+                    content: [
+                      'This is the maximum time until which a verify API call is valid. Default
+                      value is 180s, incase this field is left empty/null.'
+                    ]
+                  }
+                  {
+                    title: 'verificationCodeLength'
+                    content: [
+                      'This is the length of the random number that has to be generated. Default
+                      value is 4, incase this field is left empty/null.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: 'Response'
+                content: [
+                  'The following response is generated on success. The initiateResponse field
+                  indicates if there was an error in initiating the verification. If it is successful,
+                  a verificationInfo is also sent in the same response, which gives some extra details
+                  about the address being verified.'
+                ]
+                code: 'response'
+                parts: [
+                  {
+                    title: 'verificationStartTimestamp'
+                    content: [
+                      'timestamp in millis when this verification step was initiated.'
+                    ]
+                  }
+                  {
+                    title: 'adapterConfigId'
+                    content: [
+                      'corresponding adapter used to perform the step. This is useful when
+                      multiple adapters can be used to perform the step. E.g. multiple XMPP adapters.'
+                    ]
+                  }
+                  {
+                    title: 'verified'
+                    content: [
+                      'if the address is verified already or not.'
+                    ]
+                  }
+                  {
+                    title: 'id'
+                    content: [
+                      'a unique Id generated to mark this verification step. This is used in
+                      the Verify step explained below.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: 'Verify'
+                content: [
+                  'This API validates the random verification code provided by the user.
+                  Note that, to be validated successfully, this API has to be triggered before
+                  the sessionTimeoutInSecs field defined in the initiate step above.'
+                ]
+                code: 'verify'
+              }
+            ]
 
   nl:
     globals:
@@ -281,3 +426,148 @@ define ui:
         reference:
           quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.'
           person: '(NL) Johnny Billie, CEO'
+      developers:
+        faststart:
+          row1:
+            title: '(NL) Hey Developer'
+            content: [
+              '(NL) Our team believes that communication can be enhanced by technology and it should be
+              dialog driven. We have already integrated all possible media types to our dialog
+              centered API for you and the expansion continues. Our API will provide you phone, SMS,
+              e-mail and Twitter communications for your stand alone or integrated solutions.'
+            ]
+          row2:
+            title: '(NL) It is all about a mindset'
+            cta: '(NL) Check API'
+            content: [
+              '(NL) We think software. When we see a problem in a company, eg. a customer interaction
+              that’s not efficient, we think “How can software solve this problem?”'
+              '(NL) Remember Apple? Their hardware is just facilitating their software experience.
+              It’s all about the software. It’s all about the experience. Hardware can be anything and
+              is only supportive.'
+              '(NL) Should I buy or should I build a software solution?'
+              '(NL) Often when you buy you end up with a solution that is all integrated into one big
+              plate of spaghetti with all sorts of things you don’t need. And by definition it’s
+              inflexible because the more that’s prebuilt, the less flexibility there is.'
+              '(NL) Because of the movement to the cloud, because of the rise of APIs, and smaller
+              building blocks, it is good to build. This means you are going to operate in an agile
+              way. Don’t become an expert in everything by building everything, but choose to buy
+              smaller building blocks to maintain that agility.'
+              '(NL) ASKFAST delivers the blocks you need to build your way into agility.'
+            ]
+          row3:
+            title: '(NL) Create value together'
+            content: [
+              '(NL) Do you want to integrate an automated communication flow to your own application? Or
+              would you rather give service to somebody in order to enhance their existing system or
+              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.'
+              '(NL) Sign up now and get some free credits for your developments. You don’t have to share
+              your creditcard information in order to see our solutions. If you have any other
+              questions, you can always communicate with our technical team. We are open to new
+              ideas and we will do our best to support you!'
+            ]
+        devmods:
+          verify:
+            title: '(NL) VerifyMe'
+            content: [
+              '(NL) VerifyMe is used for verifying E-mail, Mobile and Landline phone of a user or a
+              system. It has two processes (Initiate and Verify) to understand if the number is
+              which a REST API imlemented for these two processes.'
+            ]
+            chapters: [
+              {
+                title: '(NL) Initiate'
+                content: [
+                  '(NL) This REST call initiates a dialog to push (by text or audio) the random
+                  verification code to the phonenumber specified'
+                ]
+                code: 'initiate'
+                parts: [
+                  {
+                    title: '(NL) verificationMedium'
+                    content: [
+                      '(NL) medium used to send/play the verification code. Auto is an option which
+                      automatically predicts the medium based on the address field:'
+                    ]
+                  }
+                  {
+                    title: '(NL) address'
+                    content: [
+                      '(NL) medium used to send/play the verification code.'
+                      '(NL) Mobile number, an SMS triggered. Fixedline number, a automated phone call
+                      is triggered. For anything else, an Email is triggered.'
+                    ]
+                  }
+                  {
+                    title: '(NL) message'
+                    content: [
+                      '(NL) This is parsed for a maching “[code]”. If found [code] is replaced by the
+                      random code that is generated.'
+                      '(NL) If not, the message is appended with “Code: ”. For a Phone call, this
+                      audio URL is played before playing out the random code.'
+                    ]
+                  }
+                  {
+                    title: '(NL) sessionTimeoutInSecs'
+                    content: [
+                      '(NL) This is the maximum time until which a verify API call is valid. Default
+                      value is 180s, incase this field is left empty/null.'
+                    ]
+                  }
+                  {
+                    title: '(NL) verificationCodeLength'
+                    content: [
+                      '(NL) This is the length of the random number that has to be generated. Default
+                      value is 4, incase this field is left empty/null.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: '(NL) Response'
+                content: [
+                  '(NL) The following response is generated on success. The initiateResponse field
+                  indicates if there was an error in initiating the verification. If it is successful,
+                  a verificationInfo is also sent in the same response, which gives some extra details
+                  about the address being verified.'
+                ]
+                code: 'response'
+                parts: [
+                  {
+                    title: '(NL) verificationStartTimestamp'
+                    content: [
+                      '(NL) timestamp in millis when this verification step was initiated.'
+                    ]
+                  }
+                  {
+                    title: '(NL) adapterConfigId'
+                    content: [
+                      '(NL) corresponding adapter used to perform the step. This is useful when
+                      multiple adapters can be used to perform the step. E.g. multiple XMPP adapters.'
+                    ]
+                  }
+                  {
+                    title: '(NL) verified'
+                    content: [
+                      '(NL) if the address is verified already or not.'
+                    ]
+                  }
+                  {
+                    title: '(NL) id'
+                    content: [
+                      '(NL) a unique Id generated to mark this verification step. This is used in
+                      the Verify step explained below.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: '(NL) Verify'
+                content: [
+                  '(NL) This API validates the random verification code provided by the user.
+                  Note that, to be validated successfully, this API has to be triggered before
+                  the sessionTimeoutInSecs field defined in the initiate step above.'
+                ]
+                code: 'verify'
+              }
+            ]
