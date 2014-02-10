@@ -194,6 +194,7 @@ define ui:
                   'This REST call initiates a dialog to push (by text or audio) the random
                   verification code to the phonenumber specified'
                 ]
+                code: 'initiate'
                 parts: [
                   {
                     title: 'verificationMedium'
@@ -243,6 +244,7 @@ define ui:
                   a verificationInfo is also sent in the same response, which gives some extra details
                   about the address being verified.'
                 ]
+                code: 'response'
                 parts: [
                   {
                     title: 'verificationStartTimestamp'
@@ -279,6 +281,7 @@ define ui:
                   Note that, to be validated successfully, this API has to be triggered before
                   the sessionTimeoutInSecs field defined in the initiate step above.'
                 ]
+                code: 'verify'
               }
             ]
 
@@ -478,6 +481,7 @@ define ui:
                   '(NL) This REST call initiates a dialog to push (by text or audio) the random
                   verification code to the phonenumber specified'
                 ]
+                code: 'initiate'
                 parts: [
                   {
                     title: '(NL) verificationMedium'
@@ -527,6 +531,7 @@ define ui:
                   a verificationInfo is also sent in the same response, which gives some extra details
                   about the address being verified.'
                 ]
+                code: 'response'
                 parts: [
                   {
                     title: '(NL) verificationStartTimestamp'
@@ -563,5 +568,6 @@ define ui:
                   Note that, to be validated successfully, this API has to be triggered before
                   the sessionTimeoutInSecs field defined in the initiate step above.'
                 ]
+                code: 'verify'
               }
             ]
