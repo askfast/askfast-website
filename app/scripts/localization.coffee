@@ -179,6 +179,108 @@ define ui:
               questions, you can always communicate with our technical team. We are open to new
               ideas and we will do our best to support you!'
             ]
+        devmods:
+          verify:
+            title: 'VerifyMe'
+            content: [
+              'VerifyMe is used for verifying E-mail, Mobile and Landline phone of a user or a
+              system. It has two processes (Initiate and Verify) to understand if the number is
+              which a REST API imlemented for these two processes.'
+            ]
+            chapters: [
+              {
+                title: 'Initiate'
+                content: [
+                  'This REST call initiates a dialog to push (by text or audio) the random
+                  verification code to the phonenumber specified'
+                ]
+                parts: [
+                  {
+                    title: 'verificationMedium'
+                    content: [
+                      'medium used to send/play the verification code. Auto is an option which
+                      automatically predicts the medium based on the address field:'
+                    ]
+                  }
+                  {
+                    title: 'address'
+                    content: [
+                      'medium used to send/play the verification code.'
+                      'Mobile number, an SMS triggered. Fixedline number, a automated phone call
+                      is triggered. For anything else, an Email is triggered.'
+                    ]
+                  }
+                  {
+                    title: 'message'
+                    content: [
+                      'This is parsed for a maching “[code]”. If found [code] is replaced by the
+                      random code that is generated.'
+                      'If not, the message is appended with “Code: ”. For a Phone call, this
+                      audio URL is played before playing out the random code.'
+                    ]
+                  }
+                  {
+                    title: 'sessionTimeoutInSecs'
+                    content: [
+                      'This is the maximum time until which a verify API call is valid. Default
+                      value is 180s, incase this field is left empty/null.'
+                    ]
+                  }
+                  {
+                    title: 'verificationCodeLength'
+                    content: [
+                      'This is the length of the random number that has to be generated. Default
+                      value is 4, incase this field is left empty/null.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: 'Response'
+                content: [
+                  'The following response is generated on success. The initiateResponse field
+                  indicates if there was an error in initiating the verification. If it is successful,
+                  a verificationInfo is also sent in the same response, which gives some extra details
+                  about the address being verified.'
+                ]
+                parts: [
+                  {
+                    title: 'verificationStartTimestamp'
+                    content: [
+                      'timestamp in millis when this verification step was initiated.'
+                    ]
+                  }
+                  {
+                    title: 'adapterConfigId'
+                    content: [
+                      'corresponding adapter used to perform the step. This is useful when
+                      multiple adapters can be used to perform the step. E.g. multiple XMPP adapters.'
+                    ]
+                  }
+                  {
+                    title: 'verified'
+                    content: [
+                      'if the address is verified already or not.'
+                    ]
+                  }
+                  {
+                    title: 'id'
+                    content: [
+                      'a unique Id generated to mark this verification step. This is used in
+                      the Verify step explained below.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: 'Verify'
+                content: [
+                  'This API validates the random verification code provided by the user.
+                  Note that, to be validated successfully, this API has to be triggered before
+                  the sessionTimeoutInSecs field defined in the initiate step above.'
+                ]
+              }
+            ]
 
   nl:
     globals:
@@ -360,4 +462,106 @@ define ui:
               your creditcard information in order to see our solutions. If you have any other
               questions, you can always communicate with our technical team. We are open to new
               ideas and we will do our best to support you!'
+            ]
+        devmods:
+          verify:
+            title: '(NL) VerifyMe'
+            content: [
+              '(NL) VerifyMe is used for verifying E-mail, Mobile and Landline phone of a user or a
+              system. It has two processes (Initiate and Verify) to understand if the number is
+              which a REST API imlemented for these two processes.'
+            ]
+            chapters: [
+              {
+                title: '(NL) Initiate'
+                content: [
+                  '(NL) This REST call initiates a dialog to push (by text or audio) the random
+                  verification code to the phonenumber specified'
+                ]
+                parts: [
+                  {
+                    title: '(NL) verificationMedium'
+                    content: [
+                      '(NL) medium used to send/play the verification code. Auto is an option which
+                      automatically predicts the medium based on the address field:'
+                    ]
+                  }
+                  {
+                    title: '(NL) address'
+                    content: [
+                      '(NL) medium used to send/play the verification code.'
+                      '(NL) Mobile number, an SMS triggered. Fixedline number, a automated phone call
+                      is triggered. For anything else, an Email is triggered.'
+                    ]
+                  }
+                  {
+                    title: '(NL) message'
+                    content: [
+                      '(NL) This is parsed for a maching “[code]”. If found [code] is replaced by the
+                      random code that is generated.'
+                      '(NL) If not, the message is appended with “Code: ”. For a Phone call, this
+                      audio URL is played before playing out the random code.'
+                    ]
+                  }
+                  {
+                    title: '(NL) sessionTimeoutInSecs'
+                    content: [
+                      '(NL) This is the maximum time until which a verify API call is valid. Default
+                      value is 180s, incase this field is left empty/null.'
+                    ]
+                  }
+                  {
+                    title: '(NL) verificationCodeLength'
+                    content: [
+                      '(NL) This is the length of the random number that has to be generated. Default
+                      value is 4, incase this field is left empty/null.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: '(NL) Response'
+                content: [
+                  '(NL) The following response is generated on success. The initiateResponse field
+                  indicates if there was an error in initiating the verification. If it is successful,
+                  a verificationInfo is also sent in the same response, which gives some extra details
+                  about the address being verified.'
+                ]
+                parts: [
+                  {
+                    title: '(NL) verificationStartTimestamp'
+                    content: [
+                      '(NL) timestamp in millis when this verification step was initiated.'
+                    ]
+                  }
+                  {
+                    title: '(NL) adapterConfigId'
+                    content: [
+                      '(NL) corresponding adapter used to perform the step. This is useful when
+                      multiple adapters can be used to perform the step. E.g. multiple XMPP adapters.'
+                    ]
+                  }
+                  {
+                    title: '(NL) verified'
+                    content: [
+                      '(NL) if the address is verified already or not.'
+                    ]
+                  }
+                  {
+                    title: '(NL) id'
+                    content: [
+                      '(NL) a unique Id generated to mark this verification step. This is used in
+                      the Verify step explained below.'
+                    ]
+                  }
+                ]
+              }
+              {
+                title: '(NL) Verify'
+                content: [
+                  '(NL) This API validates the random verification code provided by the user.
+                  Note that, to be validated successfully, this API has to be triggered before
+                  the sessionTimeoutInSecs field defined in the initiate step above.'
+                ]
+              }
             ]

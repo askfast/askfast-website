@@ -106,6 +106,7 @@ $channels-sprite: '../images/communucation-channels-sprite.png' !default;
 
   p {
     line-height: 1.4em;
+    font-size: 1.2em;
 
     .btn {
       margin-top: 30px;
@@ -326,8 +327,6 @@ body {
     margin-top: 10px;
 
     li {
-      display: inline;
-      float: left;
       margin-left: 3px;
       background-color: $pink;
       padding: 1px 3px;
@@ -473,7 +472,6 @@ body {
  *
  */
 #bridge {
-  // min-height: 420px;
   background-color: $dark-gray;
   color: $white;
   font-size: 1.2em;
@@ -882,21 +880,18 @@ footer {
 
       ul {
         position: absolute;
-        top: 0px;
-        right: 8px;
-        width: 100px;
+        top: -10px;
+        right: 12px;
       }
     }
 
     #sub-header-menu {
-      max-width: 20px !important;
+      margin-bottom: 15px;
 
-      ul {
-        margin-bottom: 15px;
-
-        li {
-          margin-bottom: 15px;
-        }
+      li {
+        clear: both !important;
+        display: block !important;
+        margin-bottom: 15px !important;
       }
     }
   }
@@ -1019,4 +1014,132 @@ footer {
 
 
 @media (min-width: 1200px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pre{
+  background:#000;
+  color:#E13A9A;
+}
+
+//.white-txt{
+//  color:#fff;
+//}
+//
+//.pink-txt{
+//  color:#e13096;
+//}
+//.blue-txt{
+//  color:#5968c9;
+//}
+//.blue-txt{
+//  color:#00ecff;
+//}
+
+.verify{
+  position:relative;
+  width:320px;
+  height:500px;
+
+  margin:20px auto;
+}
+
+a.sprite{
+  background:url(../images/verify-sprite.png) no-repeat;
+  text-indent:-9999px;
+  display:inline-block;
+}
+.verify a{
+  width:159px;
+  height:179px;
+}
+a.verify-icon{
+  background-position:0 -92px;
+  position:absolute;
+  top:90px;
+  left:0;
+}
+a.broadcast-icon{
+  background-position:-165px 0px;
+  position:absolute;
+  top:0;
+  left:160px;
+}
+a.traking-icon{
+  background-position:0 -274px;
+  position:absolute;
+  top:269px;
+  left:0;
+}
+a.click-icon{
+  background-position:-164px -182px;
+  position:absolute;
+  top:178px;
+  left:159px;
+}
+
+
+/*hover effect*/
+a.verify-icon.active,
+a.verify-icon:hover{
+  background-position:0 -541px;
+
+}
+a.broadcast-icon.active,
+a.broadcast-icon:hover{
+  background-position:-165px -451px;
+
+}
+a.traking-icon:hover{
+  background-position:0 -724px;
+
+}
+a.click-icon.active,
+a.click-icon:hover{
+  background-position:-164px -631px;
+
+}
+.fixed-left{
+  position:fixed;
+  z-index:2;
+}
+
+/*Broadcastapi section css goes here*/
+
+.list-roman{
+  list-style:lower-roman;
+}
+.list-alpha{
+  list-style:lower-alpha;
+}
+
+
+/*click2call page css goes here*/
+.list-decimal{
+  list-style:decimal;
+  margin-bottom:15px;
+}
+.list-decimal li{
+  margin-bottom:5px;
 }

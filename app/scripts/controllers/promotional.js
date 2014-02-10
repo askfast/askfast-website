@@ -39,8 +39,21 @@ define(
             $scope.promiseView[view] = true;
           };
 
+          $scope.switchDevMod = function (mod)
+          {
+            $scope.devModView = {
+              verify:   false,
+              broadcast:false,
+              tracking: false,
+              click:    false
+            };
+
+            $scope.devModView[mod] = true;
+          };
+
           $scope.setChannelView('tel');
           $scope.setPromiseView('cost');
+          $scope.switchDevMod('verify');
         }
       ]
     );

@@ -27,17 +27,17 @@ define app:
       ]
       subs:
         developers: [
-          'faststart'
           'devmods'
+          'faststart'
           'documents'
         ]
         business: [
           'solutions'
           'benefits'
         ]
-        dialogs: [
-          'what'
-        ]
+#        dialogs: [
+#          'what'
+#        ]
         about: [
           'team'
           'contact'
