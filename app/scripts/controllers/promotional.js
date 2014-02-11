@@ -53,7 +53,7 @@ define(
 
           $scope.setChannelView('tel');
           $scope.setPromiseView('cost');
-          $scope.switchDevMod('verify');
+          $scope.switchDevMod('click');
         }
       ]
     );

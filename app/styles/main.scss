@@ -154,9 +154,26 @@ body {
     &:hover {
     }
   }
+
+  dl {
+    font-size: 1.2em;
+    dt {
+    }
+    dd {
+      margin-bottom: 15px;
+    }
+  }
+
+  pre {
+    b {
+      color: $white;
+      font-weight: normal;
+    }
+  }
 }
 
 .text-pink  { color: $pink }
+.text-blue  { color: $blue }
 .text-white { color: $white }
 
 
@@ -1041,6 +1058,8 @@ footer {
 pre{
   background:#000;
   color:#E13A9A;
+  padding: 10px;
+  overflow: auto;
 }
 
 //.white-txt{
@@ -1086,7 +1105,7 @@ a.broadcast-icon{
   top:0;
   left:160px;
 }
-a.traking-icon{
+a.tracking-icon{
   background-position:0 -274px;
   position:absolute;
   top:269px;
@@ -1111,7 +1130,7 @@ a.broadcast-icon:hover{
   background-position:-165px -451px;
 
 }
-a.traking-icon:hover{
+a.tracking-icon:hover{
   background-position:0 -724px;
 
 }
