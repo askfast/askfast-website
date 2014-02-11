@@ -21,29 +21,22 @@ article(ng-show='subView.faststart')
       .col-md-6
         span
 
-
-
-
-
-
 article(ng-show='subView.devmods')
-
 
   .container-fluid.container-content.container-dark
     .row
       .col-md-6
-        h1 What's Devmods?
-        //p(ng-repeat='content in ui.pages.developers.faststart.row2.content') {{content}}
+        h1 {{ui.pages.developers.devmods.title}}
+        p(ng-repeat='content in ui.pages.developers.devmods.content') {{content}}
+        ul
+          li(ng-repeat='item in ui.pages.developers.devmods.list') {{item}}
       .col-md-6
         span
-
 
   .container-fluid.container-content
     .row
       .col-md-12
         .row
-
-
 
           .col-md-5
             .verify
@@ -56,8 +49,6 @@ article(ng-show='subView.devmods')
                 class='{{(devModView.tracking) && "active"}}') Number traking
                 a.sprite.click-icon(ng-click='switchDevMod("click")',
                 class='{{(devModView.click) && "active"}}') click 2 call
-
-
 
           .col-md-7(ng-show='devModView.verify')
             h1.text-pink VerifyMe
@@ -320,9 +311,6 @@ article(ng-show='subView.devmods')
               | &nbsp;"&lt;verification code send in the initiation step&gt;"
               br
               span.text-white }
-
-
-
 
           .col-md-7(ng-show='devModView.broadcast')
 
@@ -1344,16 +1332,10 @@ article(ng-show='subView.devmods')
               br
               span.text-white }
 
-
-
-
           .col-md-7(ng-show='devModView.tracking')
             h1.text-pink Number tracking
             p.
               no content
-
-
-
 
           .col-md-7(ng-show='devModView.click')
             h1.text-pink Click2Call
@@ -1593,11 +1575,6 @@ article(ng-show='subView.devmods')
               carries the startTime (timestamp at which the phone call started), answerTime
               (timestamp at which the phone call was answered) and releaseTime (timestamp at
               which the phone call was hang up).
-
-
-
-
-
 
 article(ng-show='subView.documents')
   .container-fluid.container-content

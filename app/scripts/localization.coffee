@@ -180,9 +180,16 @@ define ui:
               ideas and we will do our best to support you!'
             ]
         devmods:
-          title: ''
+          title: 'What\'s Devmods?'
           content: [
-            ''
+            'Devmods are special modules of ASK-Fast API that developer can use them for
+            certain cases. Currently,  ASK-Fast API contains four different modules which are;'
+          ]
+          list: [
+            'Broadcast'
+            'Verify Me'
+            'Click2Call'
+            'Number Tracking'
           ]
   nl:
     globals:
@@ -366,7 +373,14 @@ define ui:
               ideas and we will do our best to support you!'
             ]
         devmods:
-          title: '(NL) '
+          title: '(NL) What\'s Devmods?'
           content: [
-            '(NL) '
+            '(NL) Devmods are special modules of ASK-Fast API that developer can use them for
+            certain cases. Currently,  ASK-Fast API contains four different modules which are;'
+          ]
+          list: [
+            '(NL) Broadcast'
+            '(NL) Verify Me'
+            '(NL) Click2Call'
+            '(NL) Number Tracking'
           ]
