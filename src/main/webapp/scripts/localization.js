@@ -162,132 +162,64 @@
           developers: {
             faststart: {
               row1: {
-                title: 'Hey Developer',
+                title: 'It is all about a mindset',
                 content: [
-                  'Our team believes that communication can be enhanced by technology and it should be\
-              dialog driven. We have already integrated all possible media types to our dialog\
-              centered API for you and the expansion continues. Our API will provide you phone, SMS,\
-              e-mail and Twitter communications for your stand alone or integrated solutions.'
-                ]
+                  'We think software. When we see a problem in a company, eg. a customer\
+              interaction that’s not efficient, we think “How can software solve this problem?”', 'It’s all about the software. It’s all about the experience. Hardware can be\
+              anything and is only supportive.', 'Should I buy or should I build a software solution?', 'Often when you buy you end up with a solution that is all integrated into one\
+              big plate of spaghetti with all sorts of things you don’t need. And by definition it’s\
+              inflexible because the more that’s prebuilt, the less flexibility there is.', 'Because of the movement to the cloud, because of the rise of APIs, and smaller\
+              building blocks, it is good to build. This means you are going to operate in an agile\
+              way. Don’t become an expert in everything by building everything, but choose to buy\
+              smaller building blocks to maintain that agility.', 'ASKFAST delivers the blocks you need to build your way into agility.'
+                ],
+                cta: 'Join Now'
               },
               row2: {
-                title: 'It is all about a mindset',
-                cta: 'Check API',
-                content: [
-                  'We think software. When we see a problem in a company, eg. a customer interaction\
-              that’s not efficient, we think “How can software solve this problem?”', 'Remember Apple? Their hardware is just facilitating their software experience. It’s all\
-              about the software. It’s all about the experience. Hardware can be anything and is only\
-              supportive.', 'Should I buy or should I build a software solution?', 'Often when you buy you end up with a solution that is all integrated into one big\
-              plate of spaghetti with all sorts of things you don’t need. And by definition it’s\
-              inflexible because the more that’s prebuilt, the less flexibility there is.', 'Because of the movement to the cloud, because of the rise of APIs, and smaller building\
-              blocks, it is good to build. This means you are going to operate in an agile way. Don’t\
-              become an expert in everything by building everything, but choose to buy smaller building\
-              blocks to maintain that agility.', 'ASKFAST delivers the blocks you need to build your way into agility.'
-                ]
-              },
-              row3: {
                 title: 'Create value together',
                 content: [
-                  'Do you want to integrate an automated communication flow to your own application? Or\
-              would you rather give service to somebody in order to enhance their existing system or\
-              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.', 'Sign up now and get some free credits for your developments. You don’t have to share\
-              your creditcard information in order to see our solutions. If you have any other\
-              questions, you can always communicate with our technical team. We are open to new\
-              ideas and we will do our best to support you!'
-                ]
+                  'Do you want to integrate an automated communication flow to your own\
+              application? Or would you rather give service to somebody in order to enhance their\
+              existing system or communication? You are at the right place. We can provide you in\
+              both options. That\'s the flexibility of ASK-Fast.', 'Sign up now and get some free credits for your developments. If you have any\
+              other questions, you can always communicate with our technical team. We are open to\
+              new ideas and we will do our best to support you! '
+                ],
+                cta: 'Join Now'
+              },
+              row3: {
+                title: 'Power up your applications',
+                content: [
+                  'ASK-Fast can power up your applications by adding a smooth communication layer\
+              with different components. You can create an automated call when it is needed,\
+              verification flows for order receiving and with many more usage. Check out our developer\
+              modules that you can use directly after completing registration.', 'Here is a small list of what you can do with ASK-Fast:'
+                ],
+                list: ['Verify your orders', 'Verify an account', 'Call forwarding', 'Broadcasting message', 'Click2call functionalities', 'Confirmation flows', 'Unified messaging and many more'],
+                cta: 'Try it for free'
+              },
+              row4: {
+                title: 'You make, we scale',
+                content: [
+                  'The ASK-Fast API users will have several extra advantages compared to other solutions.', 'ASK-Fast will promote your solutions in the dialogmarket and not only scale your\
+              solution technically but also commercially. Any other customer can use your solution\
+              by paying a price  that you are going to decide. Since you are adding an extra value,\
+              all the revenue will be yours after running costs of dialogs.', 'ASK-Fast will promote your solutions in the dialogmarket and not only scale\
+              your solution technically but also commercially. Any other customer can use your\
+              solution by paying a price  that you are going to decide. Since you are adding an\
+              extra value, all the revenue will be yours after running costs of dialogs.'
+                ],
+                cta: 'Create an account',
+                cancel: 'Not now, lets check the modules'
               }
             },
             devmods: {
-              verify: {
-                title: 'VerifyMe',
-                content: [
-                  'VerifyMe is used for verifying E-mail, Mobile and Landline phone of a user or a\
-              system. It has two processes (Initiate and Verify) to understand if the number is\
-              which a REST API imlemented for these two processes.'
-                ],
-                chapters: [
-                  {
-                    title: 'Initiate',
-                    content: [
-                      'This REST call initiates a dialog to push (by text or audio) the random\
-                  verification code to the phonenumber specified'
-                    ],
-                    code: 'initiate',
-                    parts: [
-                      {
-                        title: 'verificationMedium',
-                        content: [
-                          'medium used to send/play the verification code. Auto is an option which\
-                      automatically predicts the medium based on the address field:'
-                        ]
-                      }, {
-                        title: 'address',
-                        content: [
-                          'medium used to send/play the verification code.', 'Mobile number, an SMS triggered. Fixedline number, a automated phone call\
-                      is triggered. For anything else, an Email is triggered.'
-                        ]
-                      }, {
-                        title: 'message',
-                        content: [
-                          'This is parsed for a maching “[code]”. If found [code] is replaced by the\
-                      random code that is generated.', 'If not, the message is appended with “Code: ”. For a Phone call, this\
-                      audio URL is played before playing out the random code.'
-                        ]
-                      }, {
-                        title: 'sessionTimeoutInSecs',
-                        content: [
-                          'This is the maximum time until which a verify API call is valid. Default\
-                      value is 180s, incase this field is left empty/null.'
-                        ]
-                      }, {
-                        title: 'verificationCodeLength',
-                        content: [
-                          'This is the length of the random number that has to be generated. Default\
-                      value is 4, incase this field is left empty/null.'
-                        ]
-                      }
-                    ]
-                  }, {
-                    title: 'Response',
-                    content: [
-                      'The following response is generated on success. The initiateResponse field\
-                  indicates if there was an error in initiating the verification. If it is successful,\
-                  a verificationInfo is also sent in the same response, which gives some extra details\
-                  about the address being verified.'
-                    ],
-                    code: 'response',
-                    parts: [
-                      {
-                        title: 'verificationStartTimestamp',
-                        content: ['timestamp in millis when this verification step was initiated.']
-                      }, {
-                        title: 'adapterConfigId',
-                        content: [
-                          'corresponding adapter used to perform the step. This is useful when\
-                      multiple adapters can be used to perform the step. E.g. multiple XMPP adapters.'
-                        ]
-                      }, {
-                        title: 'verified',
-                        content: ['if the address is verified already or not.']
-                      }, {
-                        title: 'id',
-                        content: [
-                          'a unique Id generated to mark this verification step. This is used in\
-                      the Verify step explained below.'
-                        ]
-                      }
-                    ]
-                  }, {
-                    title: 'Verify',
-                    content: [
-                      'This API validates the random verification code provided by the user.\
-                  Note that, to be validated successfully, this API has to be triggered before\
-                  the sessionTimeoutInSecs field defined in the initiate step above.'
-                    ],
-                    code: 'verify'
-                  }
-                ]
-              }
+              title: 'What\'s Devmods?',
+              content: [
+                'Devmods are special modules of ASK-Fast API that developer can use them for\
+            certain cases. Currently,  ASK-Fast API contains four different modules which are;'
+              ],
+              list: ['Broadcast', 'Verify Me', 'Click2Call', 'Number Tracking']
             }
           }
         }
@@ -454,132 +386,65 @@
           developers: {
             faststart: {
               row1: {
-                title: '(NL) Hey Developer',
-                content: [
-                  '(NL) Our team believes that communication can be enhanced by technology and it should be\
-              dialog driven. We have already integrated all possible media types to our dialog\
-              centered API for you and the expansion continues. Our API will provide you phone, SMS,\
-              e-mail and Twitter communications for your stand alone or integrated solutions.'
-                ]
-              },
-              row2: {
                 title: '(NL) It is all about a mindset',
-                cta: '(NL) Check API',
                 content: [
-                  '(NL) We think software. When we see a problem in a company, eg. a customer interaction\
-              that’s not efficient, we think “How can software solve this problem?”', '(NL) Remember Apple? Their hardware is just facilitating their software experience.\
-              It’s all about the software. It’s all about the experience. Hardware can be anything and\
-              is only supportive.', '(NL) Should I buy or should I build a software solution?', '(NL) Often when you buy you end up with a solution that is all integrated into one big\
-              plate of spaghetti with all sorts of things you don’t need. And by definition it’s\
+                  '(NL) We think software. When we see a problem in a company, eg. a customer\
+              interaction that’s not efficient, we think “How can software solve this problem?”', '(NL) It’s all about the software. It’s all about the experience. Hardware can be\
+              anything and is only supportive.', '(NL) Should I buy or should I build a software solution?', '(NL) Often when you buy you end up with a solution that is all integrated into one\
+              big plate of spaghetti with all sorts of things you don’t need. And by definition it’s\
               inflexible because the more that’s prebuilt, the less flexibility there is.', '(NL) Because of the movement to the cloud, because of the rise of APIs, and smaller\
               building blocks, it is good to build. This means you are going to operate in an agile\
               way. Don’t become an expert in everything by building everything, but choose to buy\
               smaller building blocks to maintain that agility.', '(NL) ASKFAST delivers the blocks you need to build your way into agility.'
-                ]
+                ],
+                cta: '(NL) Join Now'
               },
-              row3: {
+              row2: {
                 title: '(NL) Create value together',
                 content: [
-                  '(NL) Do you want to integrate an automated communication flow to your own application? Or\
-              would you rather give service to somebody in order to enhance their existing system or\
-              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.', '(NL) Sign up now and get some free credits for your developments. You don’t have to share\
-              your creditcard information in order to see our solutions. If you have any other\
-              questions, you can always communicate with our technical team. We are open to new\
-              ideas and we will do our best to support you!'
-                ]
+                  '(NL) Do you want to integrate an automated communication flow to your own\
+              application? Or would you rather give service to somebody in order to enhance their\
+              existing system or communication? You are at the right place. We can provide you in\
+              both options. That\'s the flexibility of ASK-Fast.', '(NL) Sign up now and get some free credits for your developments. If you have any\
+              other questions, you can always communicate with our technical team. We are open to\
+              new ideas and we will do our best to support you! '
+                ],
+                cta: '(NL) Join Now'
+              },
+              row3: {
+                title: '(NL) Power up your applications',
+                content: [
+                  '(NL) ASK-Fast can power up your applications by adding a smooth communication layer\
+              with different components. You can create an automated call when it is needed,\
+              verification flows for order receiving and with many more usage. Check out our developer\
+              modules that you can use directly after completing registration.', '(NL) Here is a small list of what you can do with ASK-Fast:'
+                ],
+                list: ['(NL) Verify your orders', '(NL) Verify an account', '(NL) Call forwarding', '(NL) Broadcasting message', '(NL) Click2call functionalities', '(NL) Confirmation flows', '(NL) Unified messaging and many more'],
+                cta: '(NL) Try it for free'
+              },
+              row4: {
+                title: '(NL) You make, we scale',
+                content: [
+                  '(NL) The ASK-Fast API users will have several extra advantages compared to other\
+              solutions.', '(NL) ASK-Fast will promote your solutions in the dialogmarket and not only scale your\
+              solution technically but also commercially. Any other customer can use your solution\
+              by paying a price  that you are going to decide. Since you are adding an extra value,\
+              all the revenue will be yours after running costs of dialogs.', '(NL) ASK-Fast will promote your solutions in the dialogmarket and not only scale\
+              your solution technically but also commercially. Any other customer can use your\
+              solution by paying a price  that you are going to decide. Since you are adding an\
+              extra value, all the revenue will be yours after running costs of dialogs.'
+                ],
+                cta: '(NL) Create an account',
+                cancel: '(NL) Not now, lets check the modules'
               }
             },
             devmods: {
-              verify: {
-                title: '(NL) VerifyMe',
-                content: [
-                  '(NL) VerifyMe is used for verifying E-mail, Mobile and Landline phone of a user or a\
-              system. It has two processes (Initiate and Verify) to understand if the number is\
-              which a REST API imlemented for these two processes.'
-                ],
-                chapters: [
-                  {
-                    title: '(NL) Initiate',
-                    content: [
-                      '(NL) This REST call initiates a dialog to push (by text or audio) the random\
-                  verification code to the phonenumber specified'
-                    ],
-                    code: 'initiate',
-                    parts: [
-                      {
-                        title: '(NL) verificationMedium',
-                        content: [
-                          '(NL) medium used to send/play the verification code. Auto is an option which\
-                      automatically predicts the medium based on the address field:'
-                        ]
-                      }, {
-                        title: '(NL) address',
-                        content: [
-                          '(NL) medium used to send/play the verification code.', '(NL) Mobile number, an SMS triggered. Fixedline number, a automated phone call\
-                      is triggered. For anything else, an Email is triggered.'
-                        ]
-                      }, {
-                        title: '(NL) message',
-                        content: [
-                          '(NL) This is parsed for a maching “[code]”. If found [code] is replaced by the\
-                      random code that is generated.', '(NL) If not, the message is appended with “Code: ”. For a Phone call, this\
-                      audio URL is played before playing out the random code.'
-                        ]
-                      }, {
-                        title: '(NL) sessionTimeoutInSecs',
-                        content: [
-                          '(NL) This is the maximum time until which a verify API call is valid. Default\
-                      value is 180s, incase this field is left empty/null.'
-                        ]
-                      }, {
-                        title: '(NL) verificationCodeLength',
-                        content: [
-                          '(NL) This is the length of the random number that has to be generated. Default\
-                      value is 4, incase this field is left empty/null.'
-                        ]
-                      }
-                    ]
-                  }, {
-                    title: '(NL) Response',
-                    content: [
-                      '(NL) The following response is generated on success. The initiateResponse field\
-                  indicates if there was an error in initiating the verification. If it is successful,\
-                  a verificationInfo is also sent in the same response, which gives some extra details\
-                  about the address being verified.'
-                    ],
-                    code: 'response',
-                    parts: [
-                      {
-                        title: '(NL) verificationStartTimestamp',
-                        content: ['(NL) timestamp in millis when this verification step was initiated.']
-                      }, {
-                        title: '(NL) adapterConfigId',
-                        content: [
-                          '(NL) corresponding adapter used to perform the step. This is useful when\
-                      multiple adapters can be used to perform the step. E.g. multiple XMPP adapters.'
-                        ]
-                      }, {
-                        title: '(NL) verified',
-                        content: ['(NL) if the address is verified already or not.']
-                      }, {
-                        title: '(NL) id',
-                        content: [
-                          '(NL) a unique Id generated to mark this verification step. This is used in\
-                      the Verify step explained below.'
-                        ]
-                      }
-                    ]
-                  }, {
-                    title: '(NL) Verify',
-                    content: [
-                      '(NL) This API validates the random verification code provided by the user.\
-                  Note that, to be validated successfully, this API has to be triggered before\
-                  the sessionTimeoutInSecs field defined in the initiate step above.'
-                    ],
-                    code: 'verify'
-                  }
-                ]
-              }
+              title: '(NL) What\'s Devmods?',
+              content: [
+                '(NL) Devmods are special modules of ASK-Fast API that developer can use them for\
+            certain cases. Currently,  ASK-Fast API contains four different modules which are;'
+              ],
+              list: ['(NL) Broadcast', '(NL) Verify Me', '(NL) Click2Call', '(NL) Number Tracking']
             }
           }
         }
