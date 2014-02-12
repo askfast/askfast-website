@@ -142,43 +142,69 @@ define ui:
       developers:
         faststart:
           row1:
-            title: 'Hey Developer'
-            content: [
-              'Our team believes that communication can be enhanced by technology and it should be
-              dialog driven. We have already integrated all possible media types to our dialog
-              centered API for you and the expansion continues. Our API will provide you phone, SMS,
-              e-mail and Twitter communications for your stand alone or integrated solutions.'
-            ]
-          row2:
             title: 'It is all about a mindset'
-            cta: 'Check API'
             content: [
-              'We think software. When we see a problem in a company, eg. a customer interaction
-              that’s not efficient, we think “How can software solve this problem?”'
-              'Remember Apple? Their hardware is just facilitating their software experience. It’s all
-              about the software. It’s all about the experience. Hardware can be anything and is only
-              supportive.'
+              'We think software. When we see a problem in a company, eg. a customer
+              interaction that’s not efficient, we think “How can software solve this problem?”'
+              'It’s all about the software. It’s all about the experience. Hardware can be
+              anything and is only supportive.'
               'Should I buy or should I build a software solution?'
-              'Often when you buy you end up with a solution that is all integrated into one big
-              plate of spaghetti with all sorts of things you don’t need. And by definition it’s
+              'Often when you buy you end up with a solution that is all integrated into one
+              big plate of spaghetti with all sorts of things you don’t need. And by definition it’s
               inflexible because the more that’s prebuilt, the less flexibility there is.'
-              'Because of the movement to the cloud, because of the rise of APIs, and smaller building
-              blocks, it is good to build. This means you are going to operate in an agile way. Don’t
-              become an expert in everything by building everything, but choose to buy smaller building
-              blocks to maintain that agility.'
+              'Because of the movement to the cloud, because of the rise of APIs, and smaller
+              building blocks, it is good to build. This means you are going to operate in an agile
+              way. Don’t become an expert in everything by building everything, but choose to buy
+              smaller building blocks to maintain that agility.'
               'ASKFAST delivers the blocks you need to build your way into agility.'
             ]
-          row3:
+            cta: 'Join Now'
+          row2:
             title: 'Create value together'
             content: [
-              'Do you want to integrate an automated communication flow to your own application? Or
-              would you rather give service to somebody in order to enhance their existing system or
-              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.'
-              'Sign up now and get some free credits for your developments. You don’t have to share
-              your creditcard information in order to see our solutions. If you have any other
-              questions, you can always communicate with our technical team. We are open to new
-              ideas and we will do our best to support you!'
+              'Do you want to integrate an automated communication flow to your own
+              application? Or would you rather give service to somebody in order to enhance their
+              existing system or communication? You are at the right place. We can provide you in
+              both options. That\'s the flexibility of ASK-Fast.'
+              'Sign up now and get some free credits for your developments. If you have any
+              other questions, you can always communicate with our technical team. We are open to
+              new ideas and we will do our best to support you! '
             ]
+            cta: 'Join Now'
+          row3:
+            title: 'Power up your applications'
+            content: [
+              'ASK-Fast can power up your applications by adding a smooth communication layer
+              with different components. You can create an automated call when it is needed,
+              verification flows for order receiving and with many more usage. Check out our developer
+              modules that you can use directly after completing registration.'
+              'Here is a small list of what you can do with ASK-Fast:'
+            ]
+            list: [
+              'Verify your orders'
+              'Verify an account'
+              'Call forwarding'
+              'Broadcasting message'
+              'Click2call functionalities'
+              'Confirmation flows'
+              'Unified messaging and many more'
+            ]
+            cta: 'Try it for free'
+          row4:
+            title: 'You make, we scale'
+            content: [
+              'The ASK-Fast API users will have several extra advantages compared to other solutions.'
+              'ASK-Fast will promote your solutions in the dialogmarket and not only scale your
+              solution technically but also commercially. Any other customer can use your solution
+              by paying a price  that you are going to decide. Since you are adding an extra value,
+              all the revenue will be yours after running costs of dialogs.'
+              'ASK-Fast will promote your solutions in the dialogmarket and not only scale
+              your solution technically but also commercially. Any other customer can use your
+              solution by paying a price  that you are going to decide. Since you are adding an
+              extra value, all the revenue will be yours after running costs of dialogs.'
+            ]
+            cta: 'Create an account'
+            cancel: 'Not now, lets check the modules'
         devmods:
           title: 'What\'s Devmods?'
           content: [
@@ -335,25 +361,15 @@ define ui:
       developers:
         faststart:
           row1:
-            title: '(NL) Hey Developer'
-            content: [
-              '(NL) Our team believes that communication can be enhanced by technology and it should be
-              dialog driven. We have already integrated all possible media types to our dialog
-              centered API for you and the expansion continues. Our API will provide you phone, SMS,
-              e-mail and Twitter communications for your stand alone or integrated solutions.'
-            ]
-          row2:
             title: '(NL) It is all about a mindset'
-            cta: '(NL) Check API'
             content: [
-              '(NL) We think software. When we see a problem in a company, eg. a customer interaction
-              that’s not efficient, we think “How can software solve this problem?”'
-              '(NL) Remember Apple? Their hardware is just facilitating their software experience.
-              It’s all about the software. It’s all about the experience. Hardware can be anything and
-              is only supportive.'
+              '(NL) We think software. When we see a problem in a company, eg. a customer
+              interaction that’s not efficient, we think “How can software solve this problem?”'
+              '(NL) It’s all about the software. It’s all about the experience. Hardware can be
+              anything and is only supportive.'
               '(NL) Should I buy or should I build a software solution?'
-              '(NL) Often when you buy you end up with a solution that is all integrated into one big
-              plate of spaghetti with all sorts of things you don’t need. And by definition it’s
+              '(NL) Often when you buy you end up with a solution that is all integrated into one
+              big plate of spaghetti with all sorts of things you don’t need. And by definition it’s
               inflexible because the more that’s prebuilt, the less flexibility there is.'
               '(NL) Because of the movement to the cloud, because of the rise of APIs, and smaller
               building blocks, it is good to build. This means you are going to operate in an agile
@@ -361,17 +377,54 @@ define ui:
               smaller building blocks to maintain that agility.'
               '(NL) ASKFAST delivers the blocks you need to build your way into agility.'
             ]
-          row3:
+            cta: '(NL) Join Now'
+          row2:
             title: '(NL) Create value together'
             content: [
-              '(NL) Do you want to integrate an automated communication flow to your own application? Or
-              would you rather give service to somebody in order to enhance their existing system or
-              communication? We can provide you in both cases. That’s the flexibility of ASK-Fast.'
-              '(NL) Sign up now and get some free credits for your developments. You don’t have to share
-              your creditcard information in order to see our solutions. If you have any other
-              questions, you can always communicate with our technical team. We are open to new
-              ideas and we will do our best to support you!'
+              '(NL) Do you want to integrate an automated communication flow to your own
+              application? Or would you rather give service to somebody in order to enhance their
+              existing system or communication? You are at the right place. We can provide you in
+              both options. That\'s the flexibility of ASK-Fast.'
+              '(NL) Sign up now and get some free credits for your developments. If you have any
+              other questions, you can always communicate with our technical team. We are open to
+              new ideas and we will do our best to support you! '
             ]
+            cta: '(NL) Join Now'
+          row3:
+            title: '(NL) Power up your applications'
+            content: [
+              '(NL) ASK-Fast can power up your applications by adding a smooth communication layer
+              with different components. You can create an automated call when it is needed,
+              verification flows for order receiving and with many more usage. Check out our developer
+              modules that you can use directly after completing registration.'
+              '(NL) Here is a small list of what you can do with ASK-Fast:'
+            ]
+            list: [
+              '(NL) Verify your orders'
+              '(NL) Verify an account'
+              '(NL) Call forwarding'
+              '(NL) Broadcasting message'
+              '(NL) Click2call functionalities'
+              '(NL) Confirmation flows'
+              '(NL) Unified messaging and many more'
+            ]
+            cta: '(NL) Try it for free'
+          row4:
+            title: '(NL) You make, we scale'
+            content: [
+              '(NL) The ASK-Fast API users will have several extra advantages compared to other
+              solutions.'
+              '(NL) ASK-Fast will promote your solutions in the dialogmarket and not only scale your
+              solution technically but also commercially. Any other customer can use your solution
+              by paying a price  that you are going to decide. Since you are adding an extra value,
+              all the revenue will be yours after running costs of dialogs.'
+              '(NL) ASK-Fast will promote your solutions in the dialogmarket and not only scale
+              your solution technically but also commercially. Any other customer can use your
+              solution by paying a price  that you are going to decide. Since you are adding an
+              extra value, all the revenue will be yours after running costs of dialogs.'
+            ]
+            cta: '(NL) Create an account'
+            cancel: '(NL) Not now, lets check the modules'
         devmods:
           title: '(NL) What\'s Devmods?'
           content: [

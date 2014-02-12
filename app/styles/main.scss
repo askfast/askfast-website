@@ -528,26 +528,29 @@ body {
     #gMail   { @include btn-icon(-144px, 0, -144px, -36px) }
   }
 
-  ul.bullets {
-    list-style-image: none;
-    font-size: 1.25em;
-    margin-top: 15px;
-    font-weight: normal;
-
-    li {
-      display: block;
-      min-height: 23px;
-      background: url(../images/red-bullet.png) no-repeat;
-      padding-left: 30px;
-      margin-bottom: 10px;
-      line-height: 1.25em;
-    }
-  }
-
   .channel-image {
     margin-top: 20px;
   }
 }
+
+
+
+ul.bullets {
+  list-style-image: none;
+  font-size: 1.25em;
+  margin-top: 15px;
+  font-weight: normal;
+
+  li {
+    display: block;
+    min-height: 23px;
+    background: url(../images/red-bullet.png) no-repeat;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    line-height: 1.25em;
+  }
+}
+
 
 
 
@@ -640,6 +643,30 @@ body {
  */
 #quotes {
   @include middle-row;
+}
+
+
+
+#fast-start {
+  #row4 {
+    margin-bottom: -20px;
+
+    .btn-cancel {
+      color: $blue;
+      text-decoration: underline;
+      display: inline-block;
+      margin-left: 5px;
+      padding-top: 5px;
+    }
+  }
+}
+
+
+#docs-search {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  padding: 10px 0;
 }
 
 
@@ -932,6 +959,20 @@ footer {
       margin-top: -15px;
     }
   }
+
+  #fast-start {
+    #row4 {
+      .btn-primary {
+        margin-bottom: 15px;
+      }
+
+      .btn-cancel {
+        display: inline;
+        margin: 10px 0 0 -2px;
+        padding: 0;
+      }
+    }
+  }
 }
 
 
@@ -1031,6 +1072,23 @@ footer {
 
 
 @media (min-width: 1200px) {
+  #fast-start {
+    #row1 {
+      img {
+        margin-top: 80px;
+      }
+    }
+    #row2 {
+      img {
+        margin-top: 15px;
+      }
+    }
+    #row4 {
+      img {
+        margin-top: 30px;
+      }
+    }
+  }
 }
 
 
