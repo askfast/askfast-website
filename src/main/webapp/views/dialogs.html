@@ -1,8 +1,49 @@
-<article>
-  <div class="container-fluid container-content">
+<article id="dialogs">
+  <div id="row1" class="container-fluid container-content">
     <div class="row">
-      <div class="col-md-12">
-        <h2>What is a dialog?</h2>
+      <div class="col-md-6 col-md-push-6"><img ng-src="../images/f82850b7.stock-people-dialog.png" alt="Image of people in dialog" class="img-responsive"></div>
+      <div class="col-md-6 col-md-pull-6">
+        <h1 class="text-pink">{{ui.pages.dialogs.row1.title}}</h1>
+        <p ng-repeat="content in ui.pages.dialogs.row1.content">{{content}}</p>
+      </div>
+    </div>
+  </div>
+  <div id="row2" class="container-fluid container-content container-dark">
+    <div class="row">
+      <div class="col-md-6"><img ng-src="../images/1c574524.stock-hands-devices.png" alt="Image of devices" class="img-responsive"></div>
+      <div class="col-md-6">
+        <h1>{{ui.pages.dialogs.row2.title}}</h1>
+        <p ng-repeat="content in ui.pages.dialogs.row2.content">{{content}}</p>
+        <p><a href="#" class="btn btn-primary">{{ui.pages.dialogs.row2.cta}}</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="row3" class="container-fluid container-content">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6"></div>
+      <div class="col-md-6 col-md-pull-6">
+        <h1 class="text-pink">{{ui.pages.dialogs.row3.title}}</h1>
+        <p ng-repeat="content in ui.pages.dialogs.row3.content">{{content}}</p>
+      </div>
+    </div>
+  </div>
+  <div id="row4" class="container-fluid container-content container-dark">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>{{ui.pages.dialogs.row4.title}}</h1>
+        <p><img ng-src="../images/35fead67.logo-broadcast.png" alt="Broadcast logo"></p>
+        <p ng-repeat="content in ui.pages.dialogs.row4.content">{{content}}</p>
+        <p><a href="#" class="btn btn-primary">{{ui.pages.dialogs.row4.cta}}</a><a href="#" class="btn btn-cancel">{{ui.pages.dialogs.row4.cancel}}</a></p>
+      </div>
+    </div>
+  </div>
+  <div id="row5" class="container-fluid container-content">
+    <div class="row">
+      <div class="col-md-6"><img ng-src="../images/d2d475d0.stock-dialog-market.png" alt="Image of dialog market" class="img-responsive"></div>
+      <div class="col-md-6">
+        <h1 class="text-pink">{{ui.pages.dialogs.row5.title}}</h1>
+        <p ng-repeat="content in ui.pages.dialogs.row5.content">{{content}}</p>
+        <p><a href="#" class="btn btn-primary">{{ui.pages.dialogs.row5.cta}}</a></p>
       </div>
     </div>
   </div>

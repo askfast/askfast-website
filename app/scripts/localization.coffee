@@ -280,79 +280,78 @@ define ui:
           row1:
             title: 'Benefits of ASK-Fast'
             content: [
-              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
-              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              'ASK-Fast can give you more than words. We can bridge your communication with
+              any cloud system. No more hardware startup costs and welcome to the flexibility of the
+              cloud communication.'
+              'With ASK-Fast, marketing campaigns, increasing employee performance, higher
+              customer satisfaction can be much more effective than conventional communication ways.
+              It can be shaped according to your business without any start-up investment.'
+              'You can get rid of many elements about your communication, you can still keep
+              your coffee and your pc tough. '
             ]
             cta: 'Join Now'
           row2:
             title: 'Automated communication'
             content: [
-              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
-              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
-              'Welcome to age of efficieny'
+              'We believe that business is no longer separated B2C or B2B it is all about
+              H2H: Human to human. The communication of Human to Human can be very expensive since
+              it needs real human resources and oral communication generally takes time.'
+              'If your company tries to communicate with each possible client with real time
+              communication, the cost of customer will be high. We can help you turn some part of
+              communication to be automated that you can make your business flow more efficient.'
+              'For instance, let’s take an internet visitor who spends 4 minutes looking a
+              certain service of yours from your website. What would you do if you can talk with him
+              in real life? Ask about what he is seeking for or giving extra information about your
+              service or special prizes…ASK-Fast can give you the ultimate automated communication
+              that help you to develop your communication in a very clever way.'
+              'Your web developer can create a call-me button that is powered by ASK-Fast
+              Click-2-Call developer module. He can insert some rules according to your business
+              flow. By having this special button, your visitor can talk with your most suitable
+              salesperson that is available who is driving back to your office or simply connected
+              to your call center in India.'
+              'Saves time and saves money. Welcome to the age of efficiency.'
             ]
             cta: 'Talk now'
           row3:
             title: 'Measure non-digitals'
             content: [
-              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
-              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
-              'Tataaaaaaaaa!'
+              'For some business domains, spending money on hard copy advertising campaigns
+              can be great opportunity. However, there are limited and not accurate ways of determining
+              which ad brings in the most business.'
+              'ASK-Fast can help you turn these non-digital channels to digital ones. You can
+              assign a unique phone number to each campaign therefore you can track the most successful
+              ones. Do not you want to allocate your funds according to what they bring to you?'
+              'Money is here inside of the hat. We are not magicians and the money was already
+              inside of your business, it appeared because of becoming more efficient.'
+              'Tataaaaaaaaaaaaaa!'
             ]
           row4:
             title: 'You may need some advisory input from your technical department.'
             content: [
-              'Do not take our word, you can share our website and solutions with your
-              own network. We are pretty confident.'
+              'Do not take our word, you can share our website and solutions with your own
+              network. We are pretty confident about our sevice. '
             ]
             cta: 'Share now'
           row5:
             title: 'Experience the technology'
             content: [
-              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luct.'
-              'Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              'ASK-Fast is not just offering you one channel for your communication but brings
+              you all: Phone, E-mail, SmS and Twitter at the same time. All communication channels
+              can follow up with another channel and all of them can work with two way communication
+              like dialogs.'
+              'Let’s make it concrete with an example. Your salesperson tries to call your
+              customer and he did not pick up the phone. ASK-Fast can make our system to send an
+              automated e-mail relevant to topic with contact information of salesperson after getting
+              confirmation from him with one click.'
+              '“Hey John! I just give a call to you but i think that you are quite busy. I want
+              to talk you about our new price offer. Since we are working together for 4 years, we
+              would like to offer you an extra 5% discount. Feel free to contact me via 011111111 or
+              company@company.com.'
+              'Do you also want to receive SMS if he reads this e-mail? Sure. why not? This is the
+              power that we are bringing to your business.'
             ]
-            tagline: 'That\'s the power that will change the shape of your business.'
+            tagline: 'That\'s the power that will change the shape of your business: Your people
+                      powered with technology.'
             cta: 'Talk now'
       dialogs:
         row1:
@@ -758,79 +757,78 @@ define ui:
           row1:
             title: '(NL) Benefits of ASK-Fast'
             content: [
-              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
-              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              '(NL) ASK-Fast can give you more than words. We can bridge your communication with
+              any cloud system. No more hardware startup costs and welcome to the flexibility of the
+              cloud communication.'
+              '(NL) With ASK-Fast, marketing campaigns, increasing employee performance, higher
+              customer satisfaction can be much more effective than conventional communication ways.
+              It can be shaped according to your business without any start-up investment.'
+              '(NL) You can get rid of many elements about your communication, you can still keep
+              your coffee and your pc tough. '
             ]
             cta: '(NL) Join Now'
           row2:
             title: '(NL) Automated communication'
             content: [
-              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
-              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
-              '(NL) Welcome to age of efficieny'
+              '(NL) We believe that business is no longer separated B2C or B2B it is all about
+              H2H: Human to human. The communication of Human to Human can be very expensive since
+              it needs real human resources and oral communication generally takes time.'
+              '(NL) If your company tries to communicate with each possible client with real time
+              communication, the cost of customer will be high. We can help you turn some part of
+              communication to be automated that you can make your business flow more efficient.'
+              '(NL) For instance, let’s take an internet visitor who spends 4 minutes looking a
+              certain service of yours from your website. What would you do if you can talk with him
+              in real life? Ask about what he is seeking for or giving extra information about your
+              service or special prizes…ASK-Fast can give you the ultimate automated communication
+              that help you to develop your communication in a very clever way.'
+              '(NL) Your web developer can create a call-me button that is powered by ASK-Fast
+              Click-2-Call developer module. He can insert some rules according to your business
+              flow. By having this special button, your visitor can talk with your most suitable
+              salesperson that is available who is driving back to your office or simply connected
+              to your call center in India.'
+              '(NL) Saves time and saves money. Welcome to the age of efficiency.'
             ]
             cta: '(NL) Talk now'
           row3:
             title: '(NL) Measure non-digitals'
             content: [
-              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
-              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
-              '(NL) Tataaaaaaaaa!'
+              '(NL) For some business domains, spending money on hard copy advertising campaigns
+              can be great opportunity. However, there are limited and not accurate ways of determining
+              which ad brings in the most business.'
+              '(NL) ASK-Fast can help you turn these non-digital channels to digital ones. You can
+              assign a unique phone number to each campaign therefore you can track the most successful
+              ones. Do not you want to allocate your funds according to what they bring to you?'
+              '(NL) Money is here inside of the hat. We are not magicians and the money was already
+              inside of your business, it appeared because of becoming more efficient.'
+              '(NL) Tataaaaaaaaaaaaaa!'
             ]
           row4:
             title: '(NL) You may need some advisory input from your technical department.'
             content: [
-              '(NL) Do not take our word, you can share our website and solutions with your
-              own network. We are pretty confident.'
+              '(NL) Do not take our word, you can share our website and solutions with your own
+              network. We are pretty confident about our sevice. '
             ]
             cta: '(NL) Share now'
           row5:
             title: '(NL) Experience the technology'
             content: [
-              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
-              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
-              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
-              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
-              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luct.'
-              '(NL) Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
-              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
-              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
-              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
-              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
-              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
-              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              '(NL) ASK-Fast is not just offering you one channel for your communication but brings
+              you all: Phone, E-mail, SmS and Twitter at the same time. All communication channels
+              can follow up with another channel and all of them can work with two way communication
+              like dialogs.'
+              '(NL) Let’s make it concrete with an example. Your salesperson tries to call your
+              customer and he did not pick up the phone. ASK-Fast can make our system to send an
+              automated e-mail relevant to topic with contact information of salesperson after getting
+              confirmation from him with one click.'
+              '(NL) “Hey John! I just give a call to you but i think that you are quite busy. I want
+              to talk you about our new price offer. Since we are working together for 4 years, we
+              would like to offer you an extra 5% discount. Feel free to contact me via 011111111 or
+              company@company.com.'
+              '(NL) Do you also want to receive SMS if he reads this e-mail? Sure. why not? This is the
+              power that we are bringing to your business.'
             ]
-            tagline: '(NL) That\'s the power that will change the shape of your business.'
+            tagline: '(NL) That\'s the power that will change the shape of your business: Your people
+              powered with technology.'
             cta: '(NL) Talk now'
       dialogs:
         row1:
