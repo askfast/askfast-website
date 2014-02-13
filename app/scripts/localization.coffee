@@ -412,6 +412,34 @@ define ui:
             'Some more text about dialog market will be here.'
           ]
           cta: 'Get more info'
+      prices:
+        row1:
+          title: 'Pay-as-you-use is our price model'
+          content: [
+            'You can start using our services directly. There are no contracts or start-up
+            fees. Our prices can vary depending on the communication medium type and whether the call
+            is inbound or outbound. Our prices are among the cheapest in Europe.'
+          ]
+          placeholders:
+            from: 'From:'
+            to: 'To:'
+        row2:
+          titles:
+            inbound: 'Inbound'
+            outbound: 'Outbound'
+          cta: 'Download the full list (.csv)'
+        row3:
+          title: 'Enterprise level'
+          content: [
+            'After passing 10000 transaction. ASK-Fast offers you a different payment cycle
+            and pricing.'
+            'If you are interested in those options, you can contact to our Sales Department.'
+          ]
+          cta: 'Contact Sales'
+
+
+
+
   nl:
     globals:
       nav:
@@ -827,3 +855,27 @@ define ui:
             '(NL) Some more text about dialog market will be here.'
           ]
           cta: '(NL) Get more info'
+      prices:
+        row1:
+          title: '(NL) Pay-as-you-use is our price model'
+          content: [
+            '(NL) You can start using our services directly. There are no contracts or start-up
+            fees. Our prices can vary depending on the communication medium type and whether the call
+            is inbound or outbound. Our prices are among the cheapest in Europe.'
+          ]
+          placeholders:
+            from: '(NL) From:'
+            to: '(NL) To:'
+        row2:
+          titles:
+            inbound: '(NL) Inbound'
+            outbound: '(NL) Outbound'
+          cta: '(NL) Download the full list (.csv)'
+        row3:
+          title: '(NL) Enterprise level'
+          content: [
+            '(NL) After passing 10000 transaction. ASK-Fast offers you a different payment cycle
+            and pricing.'
+            '(NL) If you are interested in those options, you can contact to our Sales Department.'
+          ]
+          cta: '(NL) Contact Sales'

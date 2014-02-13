@@ -566,7 +566,6 @@ ul.bullets {
 
 
 
-
 /*
  *
  * Front-page: Promises
@@ -739,11 +738,12 @@ ul.bullets {
 }
 
 
-#docs-search {
+.input-emphasize {
   display: block;
   overflow: hidden;
   border: 1px solid #dddddd;
-  padding: 10px 0;
+  padding: 10px;
+  background-color: $white;
 }
 
 
@@ -784,6 +784,46 @@ ul.bullets {
   #row4 {
     img {
       margin: 15px 0 20px 0;
+    }
+  }
+}
+
+
+#prices {
+  #row1 {
+    .indicators {
+      margin-top: 30px;
+      margin-bottom: -55px;
+
+      .piles {
+        margin-top: 20px;
+        min-height: 23px;
+        background: url(../images/red-bullet.png) repeat-x;
+      }
+    }
+  }
+
+  #row2 {
+    .table, tr, td {
+      border: none;
+    }
+
+    .table {
+      font-size: 1.3em;
+
+      td {
+        vertical-align: middle;
+      }
+
+      .price-thumb {
+        width: 70px;
+      }
+    }
+  }
+
+  #row3 {
+    .list-inline {
+      margin-top: 40px;
     }
   }
 }
