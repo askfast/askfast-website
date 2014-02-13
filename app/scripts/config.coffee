@@ -32,8 +32,8 @@ define app:
           'documents'
         ]
         business: [
-          'solutions'
           'benefits'
+          'solutions'
         ]
 #        dialogs: [
 #          'what'

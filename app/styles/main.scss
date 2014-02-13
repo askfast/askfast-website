@@ -36,7 +36,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
  * Fonts
  *
  */
-@import url(http://fonts.googleapis.com/css?family=Lato|Titillium+Web);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700|Titillium+Web);
 
 
 
@@ -51,6 +51,7 @@ $light-pink:#f8c8e2 !default;
 $gray:      #454545 !default;
 $dark-gray: #313338 !default;
 $blue:      #15cdef !default;
+$black:     #000000 !default;
 
 $font-color: $gray;
 $button-color: #2a2c30 !default;
@@ -164,7 +165,12 @@ body {
     }
   }
 
-  pre {
+  pre{
+    background: $black;
+    color: $pink;
+    padding: 10px;
+    overflow: auto;
+
     b {
       color: $white;
       font-weight: normal;
@@ -176,6 +182,8 @@ body {
 .text-blue  { color: $blue }
 .text-white { color: $white }
 
+.list-roman { list-style:lower-roman; }
+.list-alpha { list-style:lower-alpha; }
 
 
 /*
@@ -296,7 +304,7 @@ body {
 #wrap {
   min-height: 100%;
   height: auto !important;
-  padding: 60px 0 20px 0;
+  padding: 60px 0 0 0;
 
   .container-content {
     padding: 30px 0;
@@ -306,6 +314,11 @@ body {
 
   .container-dark {
     background-color: $dark-gray;
+    color: $white;
+  }
+
+  .container-black {
+    background-color: $black;
     color: $white;
   }
 }
@@ -635,7 +648,6 @@ ul.bullets {
 }
 
 
-
 /*
  *
  * Front-page: Quotes
@@ -646,19 +658,84 @@ ul.bullets {
 }
 
 
-
 #fast-start {
-  #row4 {
-    margin-bottom: -20px;
+}
 
-    .btn-cancel {
-      color: $blue;
-      text-decoration: underline;
-      display: inline-block;
-      margin-left: 5px;
-      padding-top: 5px;
-    }
+
+.verify {
+  position:relative;
+  width:320px;
+  height:500px;
+  margin:20px auto;
+
+  a.sprite {
+    width:159px;
+    height:179px;
+    background:url(../images/verify-sprite2.png) no-repeat;
+    text-indent:-9999px;
+    display:inline-block;
   }
+
+  a.verify-icon {
+    background-position:0 -92px;
+    position:absolute;
+    top:90px;
+    left:0;
+  }
+
+  a.broadcast-icon {
+    background-position:-165px 0px;
+    position:absolute;
+    top:0;
+    left:160px;
+  }
+
+  a.tracking-icon {
+    background-position:0 -274px;
+    position:absolute;
+    top:269px;
+    left:0;
+  }
+
+  a.click-icon {
+    background-position:-164px -182px;
+    position:absolute;
+    top:178px;
+    left:159px;
+  }
+
+  a.verify-icon.active,
+  a.verify-icon:hover {
+    background-position:0 -541px;
+  }
+
+  a.broadcast-icon.active,
+  a.broadcast-icon:hover {
+    background-position:-165px -451px;
+  }
+
+  a.tracking-icon:hover {
+    background-position:0 -724px;
+  }
+
+  a.click-icon.active,
+  a.click-icon:hover {
+    background-position:-164px -631px;
+  }
+
+  .fixed-left {
+    position:fixed;
+    z-index:2;
+  }
+}
+
+
+.btn-cancel {
+  color: $blue;
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 5px;
+  padding-top: 5px;
 }
 
 
@@ -669,6 +746,47 @@ ul.bullets {
   padding: 10px 0;
 }
 
+
+#solutions {
+  #row3 {
+    iframe {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+  #row4 {
+    img {
+      margin-top: -30px;
+    }
+  }
+}
+
+
+#benefits {
+  #row5 {
+    .well {
+      background-color: $pink;
+      padding: 10px;
+      color: $white;
+      font-weight: normal;
+
+      @include border-radius(5px);
+    }
+
+    strong {
+      font-size: 1.15em;
+    }
+  }
+}
+
+
+#dialogs {
+  #row4 {
+    img {
+      margin: 15px 0 20px 0;
+    }
+  }
+}
 
 
 /*
@@ -960,17 +1078,15 @@ footer {
     }
   }
 
-  #fast-start {
-    #row4 {
-      .btn-primary {
-        margin-bottom: 15px;
-      }
+  #row4 {
+    .btn-primary {
+      margin-bottom: 15px;
+    }
 
-      .btn-cancel {
-        display: inline;
-        margin: 10px 0 0 -2px;
-        padding: 0;
-      }
+    .btn-cancel {
+      display: inline;
+      margin: 10px 0 0 -2px;
+      padding: 0;
     }
   }
 }
@@ -1089,134 +1205,22 @@ footer {
       }
     }
   }
-}
 
+  #solutions {
+    #row1 {
+      position: relative;
+      height: 100%;
 
+      img {
+        position: absolute;
+        top: 158px;
+      }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-pre{
-  background:#000;
-  color:#E13A9A;
-  padding: 10px;
-  overflow: auto;
-}
-
-//.white-txt{
-//  color:#fff;
-//}
-//
-//.pink-txt{
-//  color:#e13096;
-//}
-//.blue-txt{
-//  color:#5968c9;
-//}
-//.blue-txt{
-//  color:#00ecff;
-//}
-
-.verify{
-  position:relative;
-  width:320px;
-  height:500px;
-
-  margin:20px auto;
-}
-
-a.sprite{
-  background:url(../images/verify-sprite2.png) no-repeat;
-  text-indent:-9999px;
-  display:inline-block;
-}
-.verify a{
-  width:159px;
-  height:179px;
-}
-a.verify-icon{
-  background-position:0 -92px;
-  position:absolute;
-  top:90px;
-  left:0;
-}
-a.broadcast-icon{
-  background-position:-165px 0px;
-  position:absolute;
-  top:0;
-  left:160px;
-}
-a.tracking-icon{
-  background-position:0 -274px;
-  position:absolute;
-  top:269px;
-  left:0;
-}
-a.click-icon{
-  background-position:-164px -182px;
-  position:absolute;
-  top:178px;
-  left:159px;
-}
-
-
-/*hover effect*/
-a.verify-icon.active,
-a.verify-icon:hover{
-  background-position:0 -541px;
-
-}
-a.broadcast-icon.active,
-a.broadcast-icon:hover{
-  background-position:-165px -451px;
-
-}
-a.tracking-icon:hover{
-  background-position:0 -724px;
-
-}
-a.click-icon.active,
-a.click-icon:hover{
-  background-position:-164px -631px;
-
-}
-.fixed-left{
-  position:fixed;
-  z-index:2;
-}
-
-/*Broadcastapi section css goes here*/
-
-.list-roman{
-  list-style:lower-roman;
-}
-.list-alpha{
-  list-style:lower-alpha;
-}
-
-
-/*click2call page css goes here*/
-.list-decimal{
-  list-style:decimal;
-  margin-bottom:15px;
-}
-.list-decimal li{
-  margin-bottom:5px;
+    #row3 {
+      iframe {
+        margin-top: 60px;
+      }
+    }
+  }
 }

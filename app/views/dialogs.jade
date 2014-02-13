@@ -1,5 +1,42 @@
-article
-  .container-fluid.container-content
+article#dialogs
+  #row1.container-fluid.container-content
     .row
-      .col-md-12
-        h2 What is a dialog?
+      .col-md-6.col-md-push-6
+        img.img-responsive(ng-src='../images/stock-people-dialog.png', alt='Image of people in dialog')
+      .col-md-6.col-md-pull-6
+        h1.text-pink {{ui.pages.dialogs.row1.title}}
+        p(ng-repeat='content in ui.pages.dialogs.row1.content') {{content}}
+  #row2.container-fluid.container-content.container-dark
+    .row
+      .col-md-6
+        img.img-responsive(ng-src='../images/stock-hands-devices.png', alt='Image of devices')
+      .col-md-6
+        h1 {{ui.pages.dialogs.row2.title}}
+        p(ng-repeat='content in ui.pages.dialogs.row2.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.dialogs.row2.cta}}
+  #row3.container-fluid.container-content
+    .row
+      .col-md-6.col-md-push-6
+      .col-md-6.col-md-pull-6
+        h1.text-pink {{ui.pages.dialogs.row3.title}}
+        p(ng-repeat='content in ui.pages.dialogs.row3.content') {{content}}
+  #row4.container-fluid.container-content.container-dark
+    .row
+      .col-md-12.text-center
+        h1 {{ui.pages.dialogs.row4.title}}
+        p
+          img(ng-src='../images/logo-broadcast.png', alt='Broadcast logo')
+        p(ng-repeat='content in ui.pages.dialogs.row4.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.dialogs.row4.cta}}
+          a.btn.btn-cancel(href='#') {{ui.pages.dialogs.row4.cancel}}
+  #row5.container-fluid.container-content
+    .row
+      .col-md-6
+        img.img-responsive(ng-src='../images/stock-dialog-market.png', alt='Image of dialog market')
+      .col-md-6
+        h1.text-pink {{ui.pages.dialogs.row5.title}}
+        p(ng-repeat='content in ui.pages.dialogs.row5.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.dialogs.row5.cta}}

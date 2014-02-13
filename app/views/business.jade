@@ -1,13 +1,94 @@
-article(ng-show='subView.solutions')
-  .container-fluid.container-content
+article#solutions(ng-show='subView.solutions')
+  #row1.container-fluid.container-content
     .row
-      .col-md-12
-        h2 Solutions
-
-
-
-article(ng-show='subView.benefits')
-  .container-fluid.container-content
+      .col-md-6.col-md-push-6
+        img.img-responsive(ng-src='../images/stock-flowers.png', alt='Image of flowers')
+      .col-md-6.col-md-pull-6
+        h1.text-pink {{ui.pages.business.solutions.row1.title}}
+        p(ng-repeat='content in ui.pages.business.solutions.row1.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.solutions.row1.cta}}
+  #row2.container-fluid.container-content.container-dark
     .row
-      .col-md-12
-        h2 Benefits
+      .col-md-6
+        img.img-responsive(ng-src='../images/stock-trend-workers.png', alt='Image of trend workers')
+      .col-md-6
+        h1 {{ui.pages.business.solutions.row2.title}}
+        p(ng-repeat='content in ui.pages.business.solutions.row2.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.solutions.row2.cta}}
+  #row3.container-fluid.container-content
+    .row
+      .col-md-6.col-md-push-6
+        iframe(src='//player.vimeo.com/video/85667492',
+        width='500',
+        height='213',
+        frameborder='0',
+        webkitallowfullscreen='webkitallowfullscreen',
+        mozallowfullscreen='mozallowfullscreen',
+        allowfullscreen='allowfullscreen')
+      .col-md-6.col-md-pull-6
+        h1.text-pink {{ui.pages.business.solutions.row3.title}}
+        p(ng-repeat='content in ui.pages.business.solutions.row3.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.solutions.row3.cta}}
+  #row4.container-fluid.container-content.container-dark
+    .row
+      .col-md-6
+        img.img-responsive(ng-src='../images/stock-hanging-logos.png', alt='Image of hanging logos')
+      .col-md-6
+        h1 {{ui.pages.business.solutions.row4.title}}
+        p(ng-repeat='content in ui.pages.business.solutions.row4.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.solutions.row4.cta}}
+          a.btn.btn-cancel(href='#') {{ui.pages.business.solutions.row4.cancel}}
+
+
+
+article#benefits(ng-show='subView.benefits')
+  #row1.container-fluid.container-content
+    .row
+      .col-md-6.col-md-push-6
+        img.img-responsive(ng-src='../images/stock-laptop.png', alt='Image of laptop')
+      .col-md-6.col-md-pull-6
+        h1.text-pink {{ui.pages.business.benefits.row1.title}}
+        p(ng-repeat='content in ui.pages.business.benefits.row1.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.benefits.row1.cta}}
+  #row2.container-fluid.container-content.container-black
+    .row
+      .col-md-6
+        img.img-responsive(ng-src='../images/stock-brain.png', alt='Image of brain')
+      .col-md-6
+        h1 {{ui.pages.business.benefits.row2.title}}
+        p(ng-repeat='content in ui.pages.business.benefits.row2.content') {{content}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.benefits.row2.cta}}
+  #row3.container-fluid.container-content
+    .row
+      .col-md-6.col-md-push-6
+        img.img-responsive(ng-src='../images/stock-euro.png', alt='Image of euro')
+      .col-md-6.col-md-pull-6
+        h1.text-pink {{ui.pages.business.benefits.row3.title}}
+        p(ng-repeat='content in ui.pages.business.benefits.row3.content') {{content}}
+  #row4.container-fluid.container-content.container-dark
+    .row
+      .col-md-10
+        h2 {{ui.pages.business.benefits.row4.title}}
+        p(ng-repeat='content in ui.pages.business.benefits.row4.content') {{content}}
+      .col-md-1
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.benefits.row4.cta}}
+  #row5.container-fluid.container-content
+    .row
+      .col-md-6
+        img.img-responsive(ng-src='../images/stock-business-people.png', alt='Image of business people')
+      .col-md-6
+        h1.text-pink {{ui.pages.business.benefits.row5.title}}
+        p(ng-repeat='content in ui.pages.business.benefits.row5.content',
+        class="{{($index == 2) && 'well' || ''}}")
+          | {{content}}
+        p
+          strong {{ui.pages.business.benefits.row5.tagline}}
+        p
+          a.btn.btn-primary(href='#') {{ui.pages.business.benefits.row5.cta}}

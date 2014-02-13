@@ -217,6 +217,201 @@ define ui:
             'Click2Call'
             'Number Tracking'
           ]
+      business:
+        solutions:
+          row1:
+            title: 'World is disappearing'
+            content: [
+              'Telecommunication solutions… Do you want to spend tons of money on people who
+              are trying to sell you big, expensive, inflexible boxes that you’re going to run in
+              your own closet, and they come every year and charge you 20% support and maintenance
+              just to keep the thing running?'
+              'And what about implementing software… Do you want to cut in millions of hours
+              to some vendor and two years later the thing isn’t running and then the new CIO comes
+              in and says let’s cut our losses and kill this thing?'
+              'That world is disappearing. We’re moving to a flexible world of the cloud. And
+              we’re moving to a world of composable services.'
+              'The benefits? Saving money, get to market faster, having a more flexible solution!'
+              'How? Because of the agility, flexibility in the cloud and software world. This
+              impacts your ability to compete in the market, attract great talent, and respond to
+              changing conditions.'
+              'Don’t wait and ask if it’s gonna happen, but ASK-Fast.'
+            ]
+            cta: 'Join Now'
+          row2:
+            title: 'Readymade or Custom?'
+            content: [
+              'ASK-Fast is currently being in used in many areas and boosting our clients\'
+              businesses communication in different ways in three level: Pre-Service, during Service
+              and Post-Service. You can check the dialogs that is developed by our community.'
+              'Do you want us to check your current communication infrastructure? Sure,
+              ASK-Fast is providing consultancy service for premium customers. You will have an
+              extended analysis and custom made solutions for your business.'
+            ]
+            cta: 'Talk now'
+          row3:
+            title: 'Custom solution: Availability Dialog'
+            content: [
+              'The Royal Netherlands Sea Rescue Institution (KNRM) provides voluntary
+              assistance and support in open water to those in danger. ASK-Fast is helping them
+              being prepared and organized.'
+              'ASK-CS is helping KNRM with the availability management of their volunteers.
+              The ASK-Fast API has been used to create communication with different media: Volunteers
+              can start a KNRM dialog by chatting with Gtalk, sending an SMS or calling an 0800 number.'
+              'Because ASK-Fast believes the focus should be on dialogs which are independent
+              of media types, an internet connection is not required.'
+            ]
+            cta: 'Try it for free'
+          row4:
+            title: 'Generic ready to use solutions'
+            content: [
+              'The ASK-Fast API users will have several extra advantages compared to other
+              solutions.'
+              'ASK-Fast will promote your solutions in the dialogmarket and not only scale
+              your solution technically but also commercially. Any other customer can use your
+              solution by paying a price  that you are going to decide.  Since you are adding an
+              extra value, all the revenue will be yours after running costs of dialogs.'
+              'You do not need to start from stratch. You can use developer modules for having
+              a faster and shorter development cycle.'
+            ]
+            cta: 'Create an account'
+            cancel: 'Not now. lets check the modules'
+        benefits:
+          row1:
+            title: 'Benefits of ASK-Fast'
+            content: [
+              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
+              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+            ]
+            cta: 'Join Now'
+          row2:
+            title: 'Automated communication'
+            content: [
+              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
+              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              'Welcome to age of efficieny'
+            ]
+            cta: 'Talk now'
+          row3:
+            title: 'Measure non-digitals'
+            content: [
+              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
+              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              'Tataaaaaaaaa!'
+            ]
+          row4:
+            title: 'You may need some advisory input from your technical department.'
+            content: [
+              'Do not take our word, you can share our website and solutions with your
+              own network. We are pretty confident.'
+            ]
+            cta: 'Share now'
+          row5:
+            title: 'Experience the technology'
+            content: [
+              'Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              'Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luct.'
+              'Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              'Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+            ]
+            tagline: 'That\'s the power that will change the shape of your business.'
+            cta: 'Talk now'
+      dialogs:
+        row1:
+          title: 'Re-frame Dialog'
+          content: [
+            'Dialog is a form of communication that needs at least two parties. Conversations,
+            orders, complaints, feedbacks can be given as examples of dialogs. What you are saying
+            is of course important however; we believe that the way of saying things are as much
+            important as what you are saying.'
+            'ASK-Fast accepts the dialogs as the communication flows of any communication that
+            permits two-way communication. Our team thinks that each response can change the upcoming
+            question and can create another branch of the designed communication flow.'
+          ]
+        row2:
+          title: 'Tools are on us!'
+          content: [
+            'ASK-Fast gives away several tools that you can use while designing and developing
+            your dialogs. In addition to this, these tools can power up your dialogs with the new
+            opportunities of automated communications. Compared to real communication, automated
+            communications have lower costs, higher scalability rates.'
+            'According to our studies, dialogs are generally showing repeatable patterns in
+            different contexts. After developing a dialog for your own services, it can be usable by
+            another party with your permission. We created a marketplace that you can share, show or
+            sell your dialogs to other people with one click.'
+            'Let’s give a recent example of dialog.'
+          ]
+          cta: 'Check modules'
+        row3:
+          title: 'Cow Registration Dialog'
+          content: [
+            'According to Dutch Law, any newborn cow should be registered to the database of
+            the Dutch Government. One of our early partners developed a specific solution for this
+            purpose. His solution can collect necessary information with an interactive voice response
+            solution. The designed communication flow easily converted to SMS - Email communication
+            channels. Now, he can offer many different communication channels to the end user and not
+            binded to use a smartphone.'
+            'After a while, the same system has duplicated for another company which has the
+            almost same requirements as Dutch Government.'
+          ]
+        row4:
+          title: 'This month’s featured dialog'
+          content: [
+            'Email, SMS, automated phone call and Twitter… So many communications channels
+            nowadays, but which one to use? Broadcast® is the unified messaging service that supports
+            these communication channels. Because we believe that what you communicate is much more
+            important than how you communicate.'
+          ]
+          cta: 'Check now'
+        row5:
+          title: 'Dialogs are in a market'
+          content: [
+            'Dialogmarket is a marketplace for selling or sharing developed dialogs to other
+            people who may be interested in your dialogs. You can show, share and sell the knowledge
+            with other ASK-Fast users.'
+            'You have the full control of your dialogs. If you do not want to share or sell
+            your dialogs, it will be invisible to others.'
+            'Some more text about dialog market will be here.'
+          ]
+          cta: 'Get more info'
   nl:
     globals:
       nav:
@@ -437,3 +632,198 @@ define ui:
             '(NL) Click2Call'
             '(NL) Number Tracking'
           ]
+      business:
+        solutions:
+          row1:
+            title: '(NL) World is disappearing'
+            content: [
+              '(NL) Telecommunication solutions… Do you want to spend tons of money on people who
+              are trying to sell you big, expensive, inflexible boxes that you’re going to run in
+              your own closet, and they come every year and charge you 20% support and maintenance
+              just to keep the thing running?'
+              '(NL) And what about implementing software… Do you want to cut in millions of hours
+              to some vendor and two years later the thing isn’t running and then the new CIO comes
+              in and says let’s cut our losses and kill this thing?'
+              '(NL) That world is disappearing. We’re moving to a flexible world of the cloud. And
+              we’re moving to a world of composable services.'
+              '(NL) The benefits? Saving money, get to market faster, having a more flexible solution!'
+              '(NL) How? Because of the agility, flexibility in the cloud and software world. This
+              impacts your ability to compete in the market, attract great talent, and respond to
+              changing conditions.'
+              '(NL) Don’t wait and ask if it’s gonna happen, but ASK-Fast.'
+            ]
+            cta: '(NL) Join Now'
+          row2:
+            title: '(NL) Readymade or Custom?'
+            content: [
+              '(NL) ASK-Fast is currently being in used in many areas and boosting our clients\'
+              businesses communication in different ways in three level: Pre-Service, during Service
+              and Post-Service. You can check the dialogs that is developed by our community.'
+              '(NL) Do you want us to check your current communication infrastructure? Sure,
+              ASK-Fast is providing consultancy service for premium customers. You will have an
+              extended analysis and custom made solutions for your business.'
+            ]
+            cta: '(NL) Talk now'
+          row3:
+            title: '(NL) Custom solution: Availability Dialog'
+            content: [
+              '(NL) The Royal Netherlands Sea Rescue Institution (KNRM) provides voluntary
+              assistance and support in open water to those in danger. ASK-Fast is helping them
+              being prepared and organized.'
+              '(NL) ASK-CS is helping KNRM with the availability management of their volunteers.
+              The ASK-Fast API has been used to create communication with different media: Volunteers
+              can start a KNRM dialog by chatting with Gtalk, sending an SMS or calling an 0800 number.'
+              '(NL) Because ASK-Fast believes the focus should be on dialogs which are independent
+              of media types, an internet connection is not required.'
+            ]
+            cta: '(NL) Try it for free'
+          row4:
+            title: '(NL) Generic ready to use solutions'
+            content: [
+              '(NL) The ASK-Fast API users will have several extra advantages compared to other
+              solutions.'
+              '(NL) ASK-Fast will promote your solutions in the dialogmarket and not only scale
+              your solution technically but also commercially. Any other customer can use your
+              solution by paying a price  that you are going to decide.  Since you are adding an
+              extra value, all the revenue will be yours after running costs of dialogs.'
+              '(NL) You do not need to start from stratch. You can use developer modules for having
+              a faster and shorter development cycle.'
+            ]
+            cta: '(NL) Create an account'
+            cancel: '(NL) Not now. lets check the modules'
+        benefits:
+          row1:
+            title: '(NL) Benefits of ASK-Fast'
+            content: [
+              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
+              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+            ]
+            cta: '(NL) Join Now'
+          row2:
+            title: '(NL) Automated communication'
+            content: [
+              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
+              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              '(NL) Welcome to age of efficieny'
+            ]
+            cta: '(NL) Talk now'
+          row3:
+            title: '(NL) Measure non-digitals'
+            content: [
+              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luctus
+              risus. Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+              '(NL) Tataaaaaaaaa!'
+            ]
+          row4:
+            title: '(NL) You may need some advisory input from your technical department.'
+            content: [
+              '(NL) Do not take our word, you can share our website and solutions with your
+              own network. We are pretty confident.'
+            ]
+            cta: '(NL) Share now'
+          row5:
+            title: '(NL) Experience the technology'
+            content: [
+              '(NL) Morbi porta ligula enim. Sed et rhoncus leo. Praesent nec ante rutrum, sollicit
+              libero eu, venenatis ante. Nulla dictum bibendum ante, nec rutrum dolor ullamcorper in.
+              Praesent convallis sagittis arcu vel ullamcorper. Ut porttitor dui id venenatis pretium.'
+              '(NL) Etiam mollis luctus purus eu consequat. Donec vitae dolor hendrerit tortor
+              bibendum lacinia vitae non enim. Nulla pharetra est ultricies, facilisis dolor et, luct.'
+              '(NL) Nullam ultricies vestibulum orci, at pharetra nisl scelerisque vitae. Nam quis
+              tincidunt mi, et sodales ante. Mauris vitae quam lorem. Etiam interdum pulvinar justo,
+              pellentesque tempor velit. Aenean quis justo a lorem rhoncus ullamcorper.'
+              '(NL) Nam feugiat semper pellentesque. Pellentesque sollicitudin, urna quis vehicula
+              pulvinar, orci mauris aliquet purus, nec convallis libero ipsum eget dolor. Integer
+              condimentum purus porttitor bibendum lobortis. Nunc sagittis varius ultricies. Etiam
+              laoreet ultricies metus eget pretium. Aenean iaculis adipiscing purus et posuere.'
+            ]
+            tagline: '(NL) That\'s the power that will change the shape of your business.'
+            cta: '(NL) Talk now'
+      dialogs:
+        row1:
+          title: '(NL) Re-frame Dialog'
+          content: [
+            '(NL) Dialog is a form of communication that needs at least two parties. Conversations,
+            orders, complaints, feedbacks can be given as examples of dialogs. What you are saying
+            is of course important however; we believe that the way of saying things are as much
+            important as what you are saying.'
+            '(NL) ASK-Fast accepts the dialogs as the communication flows of any communication that
+            permits two-way communication. Our team thinks that each response can change the upcoming
+            question and can create another branch of the designed communication flow.'
+          ]
+        row2:
+          title: '(NL) Tools are on us!'
+          content: [
+            '(NL) ASK-Fast gives away several tools that you can use while designing and developing
+            your dialogs. In addition to this, these tools can power up your dialogs with the new
+            opportunities of automated communications. Compared to real communication, automated
+            communications have lower costs, higher scalability rates.'
+            '(NL) According to our studies, dialogs are generally showing repeatable patterns in
+            different contexts. After developing a dialog for your own services, it can be usable by
+            another party with your permission. We created a marketplace that you can share, show or
+            sell your dialogs to other people with one click.'
+            '(NL) Let’s give a recent example of dialog.'
+          ]
+          cta: '(NL) Check modules'
+        row3:
+          title: '(NL) Cow Registration Dialog'
+          content: [
+            '(NL) According to Dutch Law, any newborn cow should be registered to the database of
+            the Dutch Government. One of our early partners developed a specific solution for this
+            purpose. His solution can collect necessary information with an interactive voice response
+            solution. The designed communication flow easily converted to SMS - Email communication
+            channels. Now, he can offer many different communication channels to the end user and not
+            binded to use a smartphone.'
+            '(NL) After a while, the same system has duplicated for another company which has the
+            almost same requirements as Dutch Government.'
+          ]
+        row4:
+          title: '(NL) This month’s featured dialog'
+          content: [
+            '(NL) Email, SMS, automated phone call and Twitter… So many communications channels
+            nowadays, but which one to use? Broadcast® is the unified messaging service that supports
+            these communication channels. Because we believe that what you communicate is much more
+            important than how you communicate.'
+          ]
+          cta: '(NL) Check now'
+        row5:
+          title: '(NL) Dialogs are in a market'
+          content: [
+            '(NL) Dialogmarket is a marketplace for selling or sharing developed dialogs to other
+            people who may be interested in your dialogs. You can show, share and sell the knowledge
+            with other ASK-Fast users.'
+            '(NL) You have the full control of your dialogs. If you do not want to share or sell
+            your dialogs, it will be invisible to others.'
+            '(NL) Some more text about dialog market will be here.'
+          ]
+          cta: '(NL) Get more info'
