@@ -49,6 +49,7 @@ $white:     #ffffff !default;
 $pink:      #e21f8d !default;
 $light-pink:#f8c8e2 !default;
 $gray:      #454545 !default;
+$light-gray:#d6d4d7 !default;
 $dark-gray: #313338 !default;
 $blue:      #15cdef !default;
 $black:     #000000 !default;
@@ -320,6 +321,10 @@ body {
   .container-black {
     background-color: $black;
     color: $white;
+  }
+
+  .container-gray {
+    background-color: $light-gray;
   }
 }
 
@@ -825,6 +830,14 @@ ul.bullets {
     .list-inline {
       margin-top: 40px;
     }
+  }
+}
+
+
+#contact {
+  #map {
+    width: 100%;
+    height: 320px;
   }
 }
 

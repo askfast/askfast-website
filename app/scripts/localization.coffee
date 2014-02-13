@@ -436,6 +436,41 @@ define ui:
             'If you are interested in those options, you can contact to our Sales Department.'
           ]
           cta: 'Contact Sales'
+      about:
+        team:
+          row1:
+            title: 'Size does matter'
+            content: [
+              'We are an international and effective team. All our members have their
+              expertise and overall knowledge about software sector. We are looking for new team
+              members who are passionate for creating a difference in communication sector.'
+              'Thanks to all other aunt companies that made us so effective with an unimaginable
+              small size company.'
+            ]
+          row2:
+            title: 'We are a part of big family'
+            content: [
+              'As a partner in the Almende network, Ask-Fast works together with domain
+              experts to deliver the best solutions for businesses and end-users.'
+              'All partners are young, innovative and fast growing companies that all focus
+              on using the principles of self-organization to aid people.'
+              'Do you want to be investor or a  part of our family? Well, you need to talk it
+              with our grandpa.'
+            ]
+            cta: 'Talk to grandpa!'
+          row3:
+            title: 'Looking for a new adventure?'
+            introduction: 'We have currently three positions that has priority for our business.'
+            list: [
+              'Sales Manager Benelux'
+              'Backend Java Developer'
+              'App developer (IOS)'
+            ]
+            content: [
+              'We are always open to new ideas and if you think that you are the one for our
+              team, send us your open application.'
+            ]
+            cta: 'Open Application'
 
 
 
@@ -879,3 +914,38 @@ define ui:
             '(NL) If you are interested in those options, you can contact to our Sales Department.'
           ]
           cta: '(NL) Contact Sales'
+      about:
+        team:
+          row1:
+            title: '(NL) Size does matter'
+            content: [
+              '(NL) We are an international and effective team. All our members have their
+              expertise and overall knowledge about software sector. We are looking for new team
+              members who are passionate for creating a difference in communication sector.'
+              '(NL) Thanks to all other aunt companies that made us so effective with an unimaginable
+              small size company.'
+            ]
+          row2:
+            title: '(NL) We are a part of big family'
+            content: [
+              '(NL) As a partner in the Almende network, Ask-Fast works together with domain
+              experts to deliver the best solutions for businesses and end-users.'
+              '(NL) All partners are young, innovative and fast growing companies that all focus
+              on using the principles of self-organization to aid people.'
+              '(NL) Do you want to be investor or a  part of our family? Well, you need to talk it
+              with our grandpa.'
+            ]
+            cta: '(NL) Talk to grandpa!'
+          row3:
+            title: '(NL) Looking for a new adventure?'
+            introduction: '(NL) We have currently three positions that has priority for our business.'
+            list: [
+              'Sales Manager Benelux'
+              'Backend Java Developer'
+              'App developer (IOS)'
+            ]
+            content: [
+              '(NL) We are always open to new ideas and if you think that you are the one for our
+              team, send us your open application.'
+            ]
+            cta: '(NL) Open Application'
