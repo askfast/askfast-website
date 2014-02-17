@@ -23,6 +23,8 @@ article#sub-dialogs
   #row3.container-fluid.container-content
     .row
       .img-holder.col-md-6.col-md-push-6
+        img.img-responsive(ng-src='../images/stock-cow-registration.png',
+        alt='Image of cow registration')
       .content-holder.col-md-6.col-md-pull-6
         h1.text-pink {{ui.pages.dialogs.row3.title}}
         p(ng-repeat='content in ui.pages.dialogs.row3.content') {{content}}
