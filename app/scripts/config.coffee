@@ -27,8 +27,8 @@ define app:
       ]
       subs:
         developers: [
-          'devmods'
           'faststart'
+          'devmods'
           'documents'
         ]
         business: [

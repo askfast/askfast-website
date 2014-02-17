@@ -33,6 +33,16 @@ define(
             {
               $location.path(view);
             }
+
+            $rootScope.collapseMenu();
+          };
+
+          $rootScope.collapseMenu = function ()
+          {
+            if ($('.navbar .in').length > 0)
+            {
+              $('.navbar .navbar-collapse').removeClass('in').addClass('collapse');
+            }
           };
 
           var parts = [];
