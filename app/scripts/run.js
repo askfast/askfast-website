@@ -78,14 +78,9 @@ define(
             $rootScope.location.path = $location.path().substring(1);
           });
 
-          $rootScope.$on('$routeChangeSuccess', function ()
-          {
-          });
+          $rootScope.$on('$routeChangeSuccess', function () {});
 
-          $rootScope.$on('$routeChangeError', function ()
-          {
-            console.error('Error: changing routes!');
-          });
+          $rootScope.$on('$routeChangeError', function () {});
         }
       ]
     );
