@@ -53,6 +53,7 @@ $light-gray:#d6d4d7 !default;
 $dark-gray: #313338 !default;
 $blue:      #15cdef !default;
 $black:     #000000 !default;
+$creme:     #fbfbfb !default;
 
 $font-color: $gray;
 $button-color: #2a2c30 !default;
@@ -159,8 +160,10 @@ body {
 
   dl {
     font-size: 1.2em;
+
     dt {
     }
+
     dd {
       margin-bottom: 15px;
     }
@@ -221,6 +224,7 @@ body {
           text-decoration: none;
           color: $pink;
           background-color: none;
+          cursor: pointer;
         }
       }
     }
@@ -308,7 +312,7 @@ body {
   padding: 60px 0 0 0;
 
   .container-content {
-    padding: 30px 0;
+    padding: 0;
 
     @include front-widget;
   }
@@ -325,6 +329,29 @@ body {
 
   .container-gray {
     background-color: $light-gray;
+  }
+
+  .container-creme {
+    background-color: $creme;
+  }
+
+  .content-holder {
+    padding: 30px 0;
+
+    h1 {
+    }
+  }
+
+  .img-holder {
+    img {
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+  }
+
+  .img-bottom {
+    position: absolute;
+    bottom: -60px;
   }
 }
 
@@ -577,6 +604,8 @@ ul.bullets {
  *
  */
 #promises {
+  padding-top: 30px;
+
   p {
     font-size: 1.5em;
     font-weight: normal;
@@ -662,11 +691,26 @@ ul.bullets {
 }
 
 
-#fast-start {
+#sub-devmods {
+  .img-holder {
+    img {
+      margin-bottom: -30px;
+    }
+  }
+}
+
+
+#sub-fast-start {
+}
+
+
+.dev-mod-select {
+  display: none;
 }
 
 
 .verify {
+  display: block;
   position:relative;
   width:320px;
   height:500px;
@@ -675,7 +719,7 @@ ul.bullets {
   a.sprite {
     width:159px;
     height:179px;
-    background:url(../images/verify-sprite2.png) no-repeat;
+    background:url(../images/verify-sprite4.png) no-repeat;
     text-indent:-9999px;
     display:inline-block;
   }
@@ -752,7 +796,7 @@ ul.bullets {
 }
 
 
-#solutions {
+#sub-solutions {
   #row3 {
     iframe {
       max-width: 500px;
@@ -761,13 +805,19 @@ ul.bullets {
   }
   #row4 {
     img {
-      margin-top: -30px;
+      // margin-top: -30px;
     }
   }
 }
 
 
-#benefits {
+#sub-benefits {
+  #row1, #row2, #row3 {
+    img {
+      margin-top: 30px;
+    }
+  }
+
   #row5 {
     .well {
       background-color: $pink;
@@ -785,7 +835,13 @@ ul.bullets {
 }
 
 
-#dialogs {
+#sub-dialogs {
+  #row1 {
+    img {
+      margin-top: 30px;
+    }
+  }
+
   #row4 {
     img {
       margin: 15px 0 20px 0;
@@ -794,11 +850,11 @@ ul.bullets {
 }
 
 
-#prices {
+#sub-prices {
   #row1 {
     .indicators {
       margin-top: 30px;
-      margin-bottom: -55px;
+      margin-bottom: -25px;
 
       .piles {
         margin-top: 20px;
@@ -809,6 +865,8 @@ ul.bullets {
   }
 
   #row2 {
+    padding-top: 45px;
+
     .table, tr, td {
       border: none;
     }
@@ -834,7 +892,7 @@ ul.bullets {
 }
 
 
-#contact {
+#sub-contact {
   #map {
     width: 100%;
     height: 320px;
@@ -1142,6 +1200,18 @@ footer {
       padding: 0;
     }
   }
+
+  .dev-mod-select {
+    display: block;
+
+    select {
+      width: 100%;
+    }
+  }
+
+  .verify {
+    display: none;
+  }
 }
 
 
@@ -1241,32 +1311,32 @@ footer {
 
 
 @media (min-width: 1200px) {
-  #fast-start {
+  #sub-fast-start {
     #row1 {
       img {
-        margin-top: 80px;
+        // margin-top: 80px;
       }
     }
     #row2 {
       img {
-        margin-top: 15px;
+        // margin-top: 15px;
       }
     }
     #row4 {
       img {
-        margin-top: 30px;
+        // margin-top: 30px;
       }
     }
   }
 
-  #solutions {
+  #sub-solutions {
     #row1 {
-      position: relative;
-      height: 100%;
+      // position: relative;
+      // height: 100%;
 
       img {
-        position: absolute;
-        top: 158px;
+        // position: absolute;
+        // top: 158px;
       }
     }
 

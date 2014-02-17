@@ -54,6 +54,18 @@ define(
           $scope.setChannelView('tel');
           $scope.setPromiseView('cost');
           $scope.switchDevMod('verify');
+
+
+
+          var rows = $('.container-content');
+
+          angular.forEach(rows, function (row, index)
+          {
+            // console.log('image ->', $('#row' + (index+1) + ' .row .img-holder img').height());
+            // console.log('content ->', $('#row' + (index+1) + ' .row .content-holder').height());
+          });
+
+
         }
       ]
     );

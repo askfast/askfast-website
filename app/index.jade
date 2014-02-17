@@ -10,7 +10,7 @@ block main-nav
   ul.nav.navbar-nav
     li(ng-repeat='item in config.app.nav.main',
     ng-class="(location.path == item) && 'active'")
-      a(ng-href="{{'#' + item}}") {{ui.globals.nav.main[item]}}
+      a(ng-click='setMainView(item)') {{ui.globals.nav.main[item]}}
 
 
 
@@ -67,11 +67,11 @@ block footer
 block tweets
   ul
     li
-      a(href='#') Virtual Phone numbers are available in Jordan
+      a(href='') Virtual Phone numbers are available in Jordan
     li
-      a(href='#') Say Hi to our new office in Berlin
+      a(href='') Say Hi to our new office in Berlin
     li
-      a(href='#') Register for our webinar
+      a(href='') Register for our webinar
 
 
 

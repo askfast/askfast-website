@@ -21,6 +21,20 @@ define(
 
           $rootScope.config = config.app;
 
+          $rootScope.setMainView = function (view)
+          {
+            if ($rootScope.config.app.nav.subs[view])
+            {
+              $location.path(view).hash($rootScope.config.app.nav.subs[view][0]);
+
+              $rootScope.setSubView($rootScope.config.app.nav.subs[view][0]);
+            }
+            else
+            {
+              $location.path(view);
+            }
+          };
+
           var parts = [];
 
           angular.forEach($rootScope.config.app.nav.subs, function (sub)
@@ -33,35 +47,25 @@ define(
 
           $rootScope.subView = {};
 
-          function resetSubViews ()
+          $rootScope.setSubView = function (view)
           {
             angular.forEach(parts, function (part)
             {
               $rootScope.subView[part] = false;
             });
-          }
 
-          $rootScope.setSubView = function (view)
-          {
-            resetSubViews();
+            $location.hash(view);
 
             $rootScope.subView[view] = true;
           };
+
+          $location.hash() && $rootScope.setSubView($location.hash());
 
           $rootScope.location = {};
 
           $rootScope.$on('$routeChangeStart', function ()
           {
             $rootScope.location.path = $location.path().substring(1);
-
-            if ($rootScope.config.app.nav.subs[$rootScope.location.path])
-            {
-              $rootScope.subView[$rootScope.config.app.nav.subs[$rootScope.location.path][0]] = true;
-            }
-            else
-            {
-              resetSubViews();
-            }
           });
 
           $rootScope.$on('$routeChangeSuccess', function ()

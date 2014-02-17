@@ -1,36 +1,39 @@
-article#about(ng-show='subView.team')
+article#sub-about(ng-show='subView.team')
+
   #row1.container-fluid.container-content.container-gray
     .row
-      .col-md-6.col-md-push-6
+      .img-holder.col-md-6.col-md-push-6
         img.img-responsive(ng-src='../images/team-picture.png', alt='Image of AskFast team picture')
-      .col-md-6.col-md-pull-6
+      .content-holder.col-md-6.col-md-pull-6
         h1.text-pink {{ui.pages.about.team.row1.title}}
         p(ng-repeat='content in ui.pages.about.team.row1.content') {{content}}
+
   #row2.container-fluid.container-content.container-dark
     .row
-      .col-md-6
+      .img-holder.col-md-6
         img.img-responsive(ng-src='../images/almende-companies.png', alt='Logos of Almende investments')
-      .col-md-6
+      .content-holder.col-md-6
         h1 {{ui.pages.about.team.row2.title}}
         p(ng-repeat='content in ui.pages.about.team.row2.content') {{content}}
         p
-          a.btn.btn-primary(href='#') {{ui.pages.about.team.row2.cta}}
+          a.btn.btn-primary(href='') {{ui.pages.about.team.row2.cta}}
+
   #row3.container-fluid.container-content
     .row
-      .col-md-6.col-md-push-6
+      .img-holder.col-md-6.col-md-push-6
         img.img-responsive(ng-src='../images/stock-developer.png', alt='Image of developer with laptop')
-      .col-md-6.col-md-pull-6
+      .content-holder.col-md-6.col-md-pull-6
         h1.text-pink {{ui.pages.about.team.row3.title}}
         p {{ui.pages.about.team.row3.introduction}}
         ul.bullets
           li(ng-repeat='item in ui.pages.about.team.row3.list')
-            a(href='#') {{item}}
+            a(href='') {{item}}
         p(ng-repeat='content in ui.pages.about.team.row3.content') {{content}}
         p
-          a.btn.btn-primary(href='#') {{ui.pages.about.team.row3.cta}}
+          a.btn.btn-primary(href='') {{ui.pages.about.team.row3.cta}}
 
 
-article#contact(ng-show='subView.contact')
+article#sub-contact(ng-show='subView.contact')
   .container-fluid.container-content
     .row
       .col-md-12
@@ -38,15 +41,15 @@ article#contact(ng-show='subView.contact')
         script.
           var myLatlng = new google.maps.LatLng(51.907921, 4.452299);
           var mapOptions = {
-          zoom: 18,
-          center: myLatlng,
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-          panControl: true,
-          zoomControl: true,
-          mapTypeControl: false,
-          scaleControl: true,
-          streetViewControl: false,
-          overviewMapControl: true
+            zoom: 18,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            panControl: true,
+            zoomControl: true,
+            mapTypeControl: false,
+            scaleControl: true,
+            streetViewControl: false,
+            overviewMapControl: true
           };
           var mapElement = document.getElementById('map');
           var map = new google.maps.Map(mapElement, mapOptions);
