@@ -11,7 +11,7 @@
         nav: {
           main: ['developers', 'business', 'dialogs', 'prices', 'about'],
           user: ['register', 'login'],
-          footer: ['jobs', 'legal', 'contact'],
+          footer: ['legal', 'contact'],
           subs: {
             developers: ['faststart', 'devmods', 'documents'],
             business: ['solutions', 'benefits'],

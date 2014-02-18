@@ -70,7 +70,7 @@
               }
             },
             bridge: {
-              cta: 'Case Study',
+              cta: 'Check Solutions',
               title: 'We bridge software and telecom industry.',
               content: [
                 'ASK- Fast is a cloud communication solution that is designed and developed for\
@@ -154,10 +154,19 @@
                       security and privacy of our customers.'
               }
             },
-            reference: {
-              quote: 'We are using ASK-Fast cloud communication for our alarming system.',
-              person: 'Johnny Billie, CEO'
-            }
+            references: [
+              {
+                quote: 'We are using ASK-Fast cloud communication for our alarming system.',
+                person: 'Johnny Billie, CEO'
+              }, {
+                quote: 'Grativitation is not the reason for falling in love.',
+                person: 'Albert Einstein'
+              }, {
+                quote: 'When I understand my enemy to well enough to defeat him, then in that moment,\
+                    I also love him.',
+                person: 'A.E. Wiggin'
+              }
+            ]
           },
           developers: {
             faststart: {
@@ -624,10 +633,19 @@
                       beveiliging en privacy van onze klanten te vergroten.'
               }
             },
-            reference: {
-              quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.',
-              person: '(NL) Johnny Billie, CEO'
-            }
+            references: [
+              {
+                quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.',
+                person: 'Johnny Billie, CEO'
+              }, {
+                quote: '(NL) Grativitation is not the reason for falling in love.',
+                person: 'Albert Einstein'
+              }, {
+                quote: '(NL) When I understand my enemy to well enough to defeat him, then in that moment,\
+                    I also love him.',
+                person: 'A.E. Wiggin'
+              }
+            ]
           },
           developers: {
             faststart: {
