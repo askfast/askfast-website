@@ -126,6 +126,14 @@ $channels-sprite: '../images/communucation-channels-sprite.png' !default;
   }
 }
 
+@mixin input-emphasize () {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+  padding: 10px;
+  background-color: $white;
+}
+
 
 /*
  *
@@ -721,6 +729,34 @@ ul.bullets {
 }
 
 
+#sub-contact {
+  form {
+    padding-bottom: 90px;
+
+    .form-group {
+      @include input-emphasize;
+    }
+
+    .checkbox {
+      padding: 5px 0 8px 0;
+
+      label {
+        margin-right: 15px;
+        font-size: 1.1em;
+
+        input {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    textarea {
+      height: 200px;
+    }
+  }
+}
+
+
 .dev-mod-select {
   display: none;
 }
@@ -808,11 +844,7 @@ ul.bullets {
 
 
 .input-emphasize {
-  display: block;
-  overflow: hidden;
-  border: 1px solid #dddddd;
-  padding: 10px;
-  background-color: $white;
+  @include input-emphasize;
 }
 
 

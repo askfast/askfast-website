@@ -66,20 +66,39 @@ article#sub-contact(ng-show='subView.contact')
     .row
       .col-md-8.col-md-offset-2.text-center
         h2 We would like to hear from you!
-        p Telecommunication solutions... Do you want to spend tons of money on people who are trying to.
-        form(role='form')
-          .form-group
-            label(for='exampleInputEmail1') Email address
-            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
-          .form-group
-            label(for='exampleInputPassword1') Password
-            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
-          .form-group
-            label(for='exampleInputFile') File input
-            input#exampleInputFile(type='file')
-            p.help-block Example block-level help text here.
-          .checkbox
-            label
-              input(type='checkbox')
-              | Check me out
-          button.btn.btn-default(type='submit') Submit
+        .row
+          .col-md-8.col-md-offset-2
+            p.
+              Telecommunication solutions...
+              Do you want to spend tons of money on people who are trying to.
+            form(role='form')
+              .form-group
+                input.form-control(type='name',
+                placeholder='Name')
+              .form-group
+                input.form-control(type='surname',
+                placeholder='Surname')
+              .form-group
+                input.form-control(type='email',
+                placeholder='Email Adress')
+              .checkbox
+                label
+                  input(name='subject',
+                  type='radio')
+                  | Sales
+                label
+                  input(name='subject',
+                  type='radio')
+                  | Job application
+                label
+                  input(name='subject',
+                  type='radio')
+                  | Partnership
+                label
+                  input(name='subject',
+                  type='radio',
+                  checked)
+                  | Other
+              .form-group
+                textarea.form-control(placeholder='Your Message')
+              button.btn.btn-primary.pull-left(type='submit') Send

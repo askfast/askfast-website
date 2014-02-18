@@ -1525,6 +1525,7 @@ article#sub-devmods(ng-show='subView.devmods')
           (timestamp at which the phone call was answered) and releaseTime (timestamp at
           which the phone call was hang up).
 
+
 article#sub-documents(ng-show='subView.documents')
   .container-fluid.container-content
     .row
@@ -1533,9 +1534,11 @@ article#sub-documents(ng-show='subView.documents')
           form.form-inline(role='form')
             .col-lg-12
               .input-group
-                input#docsQuery.form-control(type='text', placeholder='Search in API')
+                input.form-control(type='text',
+                placeholder='Search in API')
                 span.input-group-btn
-                  button.btn.btn-default(type='button', style='height:34px') Search!
+                  button.btn.btn-default(type='button',
+                  style='height:34px') Search!
     .row
       .col-md-12
         h1.text-pink Start-up guide for developers
