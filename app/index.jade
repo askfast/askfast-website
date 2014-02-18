@@ -2,7 +2,8 @@ extends layout
 
 
 block brand
-  a.navbar-brand(href='#home', ng-click='collapseMenu()') ASK-Fast
+  a.navbar-brand(href='#home',
+  ng-click='collapseMenu()') ASK-Fast
 
 
 
@@ -38,10 +39,13 @@ block footer-nav
 
 
 block navbar
-  .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+  .navbar.navbar-inverse.navbar-fixed-top.ng-cloak(role='navigation',
+  ng-hide='isInternPage()')
     .container
       .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        button.navbar-toggle(type='button',
+        data-toggle='collapse',
+        data-target='.navbar-collapse')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
@@ -54,7 +58,7 @@ block navbar
 
 
 block footer
-  footer
+  footer.ng-cloak(ng-hide='isInternPage()')
     .container
       .row
         .col-md-10

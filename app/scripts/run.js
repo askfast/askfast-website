@@ -104,6 +104,13 @@ define(
             $rootScope.$apply();
           }, 10 * 1000);
 
+          $rootScope.isInternPage = function ()
+          {
+            var interns = ['/login', '/register'];
+
+            return (interns.indexOf($location.path()) >= 0);
+          };
+
           $rootScope.$on('$routeChangeStart', function ()
           {
             $rootScope.location.path = $location.path().substring(1);

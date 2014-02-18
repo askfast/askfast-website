@@ -25,6 +25,7 @@ $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 @import "../vendors/bootstrap-sass/lib/input-groups";
 @import "../vendors/bootstrap-sass/lib/navs";
 @import "../vendors/bootstrap-sass/lib/navbar";
+@import "../vendors/bootstrap-sass/lib/panels";
 @import "../vendors/bootstrap-sass/lib/utilities";
 @import "../vendors/bootstrap-sass/lib/responsive-utilities";
 
@@ -126,12 +127,18 @@ $channels-sprite: '../images/communucation-channels-sprite.png' !default;
   }
 }
 
+
 @mixin input-emphasize () {
   display: block;
   overflow: hidden;
   border: 1px solid #dddddd;
   padding: 10px;
   background-color: $white;
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, ng\:form {
+  display: none;
 }
 
 

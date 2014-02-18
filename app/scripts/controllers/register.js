@@ -9,6 +9,7 @@ define(
         '$scope',
         function ($scope)
         {
+
         }
       ]
     );
