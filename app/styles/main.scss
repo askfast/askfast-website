@@ -535,6 +535,10 @@ body {
   color: $white;
   font-size: 1.2em;
 
+  .container-content {
+    padding: 30px 0;
+  }
+
   img {
     margin-top: -60px;
   }
@@ -547,8 +551,11 @@ body {
  *
  */
 #channels {
-  background: url(../images/section-shadow.png) repeat-x;
   font-size: 1.2em;
+
+  .container-content {
+    padding: 20px 0 30px 0;
+  }
 
   h1 {
     margin-bottom: 20px;
@@ -593,13 +600,16 @@ ul.bullets {
 }
 
 
+
 /*
  *
  * Front-page: Promises
  *
  */
 #promises {
-  padding-top: 30px;
+  .container-content {
+    padding: 30px 0;
+  }
 
   p {
     font-size: 1.5em;
@@ -840,6 +850,10 @@ ul.bullets {
   display: inline-block;
   margin-left: 5px;
   padding-top: 5px;
+
+  &:hover {
+    color: $blue;
+  }
 }
 
 
@@ -1460,6 +1474,19 @@ footer {
       .img-holder {
         img {
           margin: 0 0 -60px 0;
+        }
+      }
+    }
+  }
+
+  #sub-contact {
+    form {
+      padding-bottom: 90px;
+
+      .checkbox {
+        label {
+          display: block;
+          margin-bottom: 5px;
         }
       }
     }

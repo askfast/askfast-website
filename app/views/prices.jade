@@ -110,4 +110,5 @@ article#sub-prices
     .row
       .col-md-12.text-center
         p
-          a.btn.btn-primary(href='') {{ui.pages.prices.row3.cta}}
+          a.btn.btn-primary(ng-click='redirectTo("about", "contact")')
+            | {{ui.pages.prices.row3.cta}}

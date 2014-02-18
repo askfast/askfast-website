@@ -8,7 +8,7 @@ article#sub-solutions(ng-show='subView.solutions')
         h1.text-pink {{ui.pages.business.solutions.row1.title}}
         p(ng-repeat='content in ui.pages.business.solutions.row1.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.solutions.row1.cta}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.business.solutions.row1.cta}}
 
   #row2.container-fluid.container-content.container-dark
     .row
@@ -18,7 +18,8 @@ article#sub-solutions(ng-show='subView.solutions')
         h1 {{ui.pages.business.solutions.row2.title}}
         p(ng-repeat='content in ui.pages.business.solutions.row2.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.solutions.row2.cta}}
+          a.btn.btn-primary(ng-click='redirectTo("about", "contact")')
+            | {{ui.pages.business.solutions.row2.cta}}
 
   #row3.container-fluid.container-content
     .row
@@ -34,7 +35,7 @@ article#sub-solutions(ng-show='subView.solutions')
         h1.text-pink {{ui.pages.business.solutions.row3.title}}
         p(ng-repeat='content in ui.pages.business.solutions.row3.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.solutions.row3.cta}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.business.solutions.row3.cta}}
 
   #row4.container-fluid.container-content.container-dark
     .row
@@ -44,8 +45,9 @@ article#sub-solutions(ng-show='subView.solutions')
         h1 {{ui.pages.business.solutions.row4.title}}
         p(ng-repeat='content in ui.pages.business.solutions.row4.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.solutions.row4.cta}}
-          a.btn.btn-cancel(href='') {{ui.pages.business.solutions.row4.cancel}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.business.solutions.row4.cta}}
+          a.btn.btn-cancel(ng-click='redirectTo("developers", "devmods")')
+            | {{ui.pages.business.solutions.row4.cancel}}
 
 
 
@@ -59,7 +61,7 @@ article#sub-benefits(ng-show='subView.benefits')
         h1.text-pink {{ui.pages.business.benefits.row1.title}}
         p(ng-repeat='content in ui.pages.business.benefits.row1.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.benefits.row1.cta}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.business.benefits.row1.cta}}
 
   #row2.container-fluid.container-content.container-black
     .row
@@ -69,7 +71,8 @@ article#sub-benefits(ng-show='subView.benefits')
         h1 {{ui.pages.business.benefits.row2.title}}
         p(ng-repeat='content in ui.pages.business.benefits.row2.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.benefits.row2.cta}}
+          a.btn.btn-primary(ng-click='redirectTo("about", "contact")')
+            | {{ui.pages.business.benefits.row2.cta}}
 
   #row3.container-fluid.container-content
     .row
@@ -86,7 +89,8 @@ article#sub-benefits(ng-show='subView.benefits')
         p(ng-repeat='content in ui.pages.business.benefits.row4.content') {{content}}
       .col-md-1
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.benefits.row4.cta}}
+          a.btn.btn-primary(href='')
+            | {{ui.pages.business.benefits.row4.cta}}
 
   #row5.container-fluid.container-content
     .row
@@ -100,4 +104,5 @@ article#sub-benefits(ng-show='subView.benefits')
         p
           strong {{ui.pages.business.benefits.row5.tagline}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.business.benefits.row5.cta}}
+          a.btn.btn-primary(ng-click='redirectTo("about", "contact")')
+            | {{ui.pages.business.benefits.row5.cta}}

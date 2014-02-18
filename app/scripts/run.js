@@ -69,6 +69,19 @@ define(
             $rootScope.subView[view] = true;
           };
 
+          $rootScope.contact = {};
+
+          $rootScope.redirectTo = function (main, sub)
+          {
+            $location.path(main).hash(sub);
+
+            $rootScope.setSubView(sub);
+
+            window.scrollTo(0, 0);
+
+            $rootScope.contact.subject.sales = true;
+          };
+
           $location.hash() && $rootScope.setSubView($location.hash());
 
           $rootScope.location = {};

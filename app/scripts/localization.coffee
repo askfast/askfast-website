@@ -55,7 +55,7 @@ define ui:
               want you to use your fingers for a better communication experience.'
             ]
         bridge:
-          cta: 'Case Study'
+          cta: 'Check Solutions'
           title: 'We bridge software and telecom industry.'
           content: [
             'ASK- Fast is a cloud communication solution that is designed and developed for

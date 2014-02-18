@@ -18,7 +18,8 @@ article#sub-about(ng-show='subView.team')
         h1 {{ui.pages.about.team.row2.title}}
         p(ng-repeat='content in ui.pages.about.team.row2.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.about.team.row2.cta}}
+          a.btn.btn-primary(href='//almende-investments.com')
+            | {{ui.pages.about.team.row2.cta}}
 
   #row3.container-fluid.container-content
     .row
@@ -33,7 +34,8 @@ article#sub-about(ng-show='subView.team')
             a(href='') {{item}}
         p(ng-repeat='content in ui.pages.about.team.row3.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.about.team.row3.cta}}
+          a.btn.btn-primary(ng-click='redirectTo("about", "contact")')
+            | {{ui.pages.about.team.row3.cta}}
 
 
 article#sub-contact(ng-show='subView.contact')
@@ -83,21 +85,24 @@ article#sub-contact(ng-show='subView.contact')
                 placeholder='Email Adress')
               .checkbox
                 label
-                  input(name='subject',
-                  type='radio')
+                  input(name='contact-subject',
+                   ng-model='contact.subject.sales',
+                   type='radio')
                   | Sales
                 label
-                  input(name='subject',
+                  input(name='contact-subject',
+                  ng-model='contact.subject.job',
                   type='radio')
                   | Job application
                 label
-                  input(name='subject',
+                  input(name='contact-subject',
+                  ng-model='contact.subject.partnership',
                   type='radio')
                   | Partnership
                 label
-                  input(name='subject',
-                  type='radio',
-                  checked)
+                  input(name='contact-subject',
+                  ng-model='contact.subject.other',
+                  type='radio')
                   | Other
               .form-group
                 textarea.form-control(placeholder='Your Message')

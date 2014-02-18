@@ -8,7 +8,7 @@ article#sub-fast-start(ng-show='subView.faststart')
         h1.text-pink {{ui.pages.developers.faststart.row1.title}}
         p(ng-repeat='content in ui.pages.developers.faststart.row1.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.developers.faststart.row1.cta}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row1.cta}}
 
   #row2.container-fluid.container-content.container-dark
     .row
@@ -18,7 +18,7 @@ article#sub-fast-start(ng-show='subView.faststart')
         h1 {{ui.pages.developers.faststart.row2.title}}
         p(ng-repeat='content in ui.pages.developers.faststart.row2.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.developers.faststart.row2.cta}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row2.cta}}
 
   #row3.container-fluid.container-content
     .row
@@ -30,7 +30,7 @@ article#sub-fast-start(ng-show='subView.faststart')
         ul.bullets
           li(ng-repeat='item in ui.pages.developers.faststart.row3.list') {{item}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.developers.faststart.row3.cta}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row3.cta}}
 
   #row4.container-fluid.container-content.container-dark
     .row
@@ -40,8 +40,9 @@ article#sub-fast-start(ng-show='subView.faststart')
         h1 {{ui.pages.developers.faststart.row4.title}}
         p(ng-repeat='content in ui.pages.developers.faststart.row4.content') {{content}}
         p
-          a.btn.btn-primary(href='') {{ui.pages.developers.faststart.row4.cta}}
-          a.btn.btn-cancel(href='') {{ui.pages.developers.faststart.row4.cancel}}
+          a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row4.cta}}
+          a.btn.btn-cancel(ng-click='setSubView("devmods")')
+            | {{ui.pages.developers.faststart.row4.cancel}}
 
 
 article#sub-devmods(ng-show='subView.devmods')

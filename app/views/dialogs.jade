@@ -18,7 +18,8 @@ article#sub-dialogs
         h1 {{ui.pages.dialogs.row2.title}}
         p(ng-repeat='content in ui.pages.dialogs.row2.content') {{content}}
         p
-          a.btn.btn-primary(href='#') {{ui.pages.dialogs.row2.cta}}
+          a.btn.btn-primary(ng-click='redirectTo("developers", "devmods")')
+            | {{ui.pages.dialogs.row2.cta}}
 
   #row3.container-fluid.container-content
     .row
@@ -37,8 +38,7 @@ article#sub-dialogs
           img(ng-src='../images/logo-broadcast.png', alt='Broadcast logo')
         p(ng-repeat='content in ui.pages.dialogs.row4.content') {{content}}
         p
-          a.btn.btn-primary(href='#') {{ui.pages.dialogs.row4.cta}}
-          a.btn.btn-cancel(href='#') {{ui.pages.dialogs.row4.cancel}}
+          a.btn.btn-primary(href='//broadcast.ask-fast.com') {{ui.pages.dialogs.row4.cta}}
 
   #row5.container-fluid.container-content.container-creme
     .row
@@ -48,4 +48,4 @@ article#sub-dialogs
         h1.text-pink {{ui.pages.dialogs.row5.title}}
         p(ng-repeat='content in ui.pages.dialogs.row5.content') {{content}}
         p
-          a.btn.btn-primary(href='#') {{ui.pages.dialogs.row5.cta}}
+          a.btn.btn-primary(href='//market.ask-fast.com') {{ui.pages.dialogs.row5.cta}}
