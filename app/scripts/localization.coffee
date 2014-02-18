@@ -136,9 +136,21 @@ define ui:
             content: 'Security and privacy are very important to ASK-Fast. We are investing in new
                       security technologies and using our own platform products to increase the
                       security and privacy of our customers.'
-        reference:
-          quote: 'We are using ASK-Fast cloud communication for our alarming system.'
-          person: 'Johnny Billie, CEO'
+        references: [
+          {
+            quote: 'We are using ASK-Fast cloud communication for our alarming system.'
+            person: 'Johnny Billie, CEO'
+          }
+          {
+            quote: 'Grativitation is not the reason for falling in love.'
+            person: 'Albert Einstein'
+          }
+          {
+            quote: 'When I understand my enemy to well enough to defeat him, then in that moment,
+                    I also love him.'
+            person: 'A.E. Wiggin'
+          }
+        ]
       developers:
         faststart:
           row1:
@@ -612,9 +624,21 @@ define ui:
             content: 'Beveiliging en privacy zijn zeer belangrijk voor ASK-Fast. Wij investeren in
                       nieuwe veiligheidstechnologieën en gebruiken onze eigen producten om de
                       beveiliging en privacy van onze klanten te vergroten.'
-        reference:
-          quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.'
-          person: '(NL) Johnny Billie, CEO'
+        references: [
+          {
+            quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.'
+            person: 'Johnny Billie, CEO'
+          }
+          {
+            quote: '(NL) Grativitation is not the reason for falling in love.'
+            person: 'Albert Einstein'
+          }
+          {
+            quote: '(NL) When I understand my enemy to well enough to defeat him, then in that moment,
+                    I also love him.'
+            person: 'A.E. Wiggin'
+          }
+        ]
       developers:
         faststart:
           row1:

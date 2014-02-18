@@ -86,6 +86,24 @@ define(
 
           $rootScope.location = {};
 
+          $rootScope.home = {
+            reference: {}
+          };
+
+          var i     = 0,
+            total = $rootScope.ui.pages.home.references.length;
+
+          $rootScope.home.reference = $rootScope.ui.pages.home.references[i];
+
+          setInterval(function ()
+          {
+            i = (i === total - 1) ? 0 : i + 1;
+
+            $rootScope.home.reference = $rootScope.ui.pages.home.references[i];
+
+            $rootScope.$apply();
+          }, 10 * 1000);
+
           $rootScope.$on('$routeChangeStart', function ()
           {
             $rootScope.location.path = $location.path().substring(1);
