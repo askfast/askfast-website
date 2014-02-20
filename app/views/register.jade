@@ -1,10 +1,106 @@
-section
-  .container
+section#register
+
+  #register-step-1.container(ng-show='isStep(1)')
     .row
-      .col.md-3
-        .panel.panel-default
+      .col-md-4.col-md-offset-4
+        .panel.panel-default.boxed
           .panel-heading
-            h3.panel-title Panel header
+            div.panel-icon
+            h3.text-pink Sign up
+            p Currently we are open for developers.
           .panel-body
-            | Panel content
-          .panel-footer Panel footer
+            form(role='form')
+              .form-group
+                label First Name
+                input.form-control(type='text', autofocus)
+              .form-group
+                label Last Name
+                input.form-control(type='text')
+              .form-group
+                label Email Adress
+                input.form-control(type='email')
+              .form-group
+                label Password
+                input.form-control(type='password')
+              .form-group
+                label Retype Password
+                input.form-control(type='password')
+              .checkbox
+                input(type='checkbox')
+                | I agree to the&nbsp;
+                a(href='') Terms of Service
+                | &nbsp;and&nbsp;
+                a(href='') Privacy Policy
+          .panel-footer.text-right
+            button.btn.btn-primary(ng-click='stepForward()') Sign Up
+
+
+  #register-step-2.container(ng-show='isStep(2)')
+    .row
+      .col-md-4.col-md-offset-4
+          .panel.panel-default.boxed
+            .panel-heading
+              div.panel-icon
+              h3.text-pink Sign up
+              p Currently we are open for developers.
+            .panel-body
+              form(role='form')
+                .form-group
+                  dl
+                    dt
+                      h4 We need to verify that you are a human.
+                    dd.
+                      We need to be very careful to protect our service and you from any spamming
+                      attempts.
+                  label Phone number
+                  input.form-control(type='text', autofocus)
+            .panel-footer.text-right
+              button.btn.btn-primary(ng-click='stepForward()') Send verification code
+
+
+  #register-step-3.container(ng-show='isStep(3)')
+    .row
+      .col-md-4.col-md-offset-4
+        .panel.panel-default.boxed
+          .panel-heading
+            div.panel-icon
+            h3.text-pink Sign up
+            p Currently we are open for developers.
+          .panel-body
+            form(role='form')
+              .form-group
+                dl
+                  dt
+                    h4
+                      span We just send you a verification code to &nbsp;
+                      br
+                      span +3161231456
+                  dd.
+                    If you did not get the verification, please click resend the code button for a
+                    new one.
+                label Verification code
+                input.form-control(type='text', autofocus)
+          .panel-footer.text-right
+            button.btn.btn-link Resend the code
+            button.btn.btn-primary(ng-click='stepForward()') Verify
+
+  #register-step-4.container(ng-show='isStep(4)')
+    .row
+      .col-md-4.col-md-offset-4
+        .panel.panel-default.boxed
+          .panel-heading
+            div.panel-icon
+            h3.text-pink Sign up
+            p Currently we are open for developers.
+          .panel-body
+            form(role='form')
+              .form-group
+                dl.text-center
+                  dt
+                    h4 Thank you for choosing us.
+                  dd
+                    | Your account is ready to use.
+                    br
+                    | It is time to be creative and get your hands dirty :)
+          .panel-footer.text-center
+            button.btn.btn-primary OK
