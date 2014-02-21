@@ -1,1 +1,29 @@
-h2 Login
+section#login
+  .container
+    .row
+      .col-md-4.col-md-offset-4
+        .panel.panel-default.boxed
+          .panel-heading
+            div.panel-icon
+            h3.text-pink Login
+            p Please login to continue.
+          .panel-body
+            form(role='form')
+              .form-group
+                label Email Adress
+                input.form-control(type='text',
+                ng-model='data.email')
+                p(ng-show="data.validation.email")
+                  small.text-danger This field is required
+              .form-group
+                label Password
+                input.form-control(type='password',
+                ng-model='data.password')
+                p(ng-show="data.validation.password")
+                  small.text-danger This field is required
+              .checkbox
+                label
+                  input(type='checkbox')
+                  | Remember me
+          .panel-footer.text-right
+            button.btn.btn-primary(ng-click='login()') Login

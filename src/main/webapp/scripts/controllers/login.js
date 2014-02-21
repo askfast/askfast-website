@@ -1,1 +1,1 @@
-define(["controllers/controllers"],function(e){e.controller("login",["$scope",function(e){}])});
+define(["controllers/controllers","modals/askfast"],function(e,t){e.controller("login",["$scope","$rootScope","AskFast",function(e,t,n){e.data={email:"",password:"",validation:{email:!1,password:!1}},e.login=function(){n.login("sven","098f6bcd4621d373cade4e832627b4f6")}}])});

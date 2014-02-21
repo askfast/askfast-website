@@ -191,7 +191,7 @@ $input-bg-disabled:              $gray-lighter !default;
 $input-color:                    $gray !default;
 $input-border:                   #ccc !default;
 $input-border-radius:            $border-radius-base !default;
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             lighten($pink, 25%) !default; //#66afe9 !default;
 
 $input-color-placeholder:        $gray-light !default;
 
@@ -1945,14 +1945,21 @@ footer {
   background-size: cover;
 }
 
-
-.register-1 {
+.register-0 {
   @include background-cover('../images/bg-registration-1.jpg');
 }
 
+.register-1 {
+  @include background-cover('../images/bg-registration-2.jpg');
+}
 
+.register-2 {
+  @include background-cover('../images/bg-registration-2.jpg');
+}
 
-
+.register-3 {
+  @include background-cover('../images/bg-registration-3.jpg');
+}
 
 #register-step-1 {
   .panel-icon {
@@ -1995,8 +2002,6 @@ footer {
 #register-step-4 {
   @include register-step-indicator(-288px, -288px);
 }
-
-
 
 #register {
   .panel-heading {

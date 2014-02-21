@@ -19,7 +19,8 @@ block user-nav
   ul.nav.navbar-nav.navbar-right
     li(ng-repeat='item in config.app.nav.user',
     ng-class="(location.path == item) && 'active'")
-      a(ng-href="{{'#' + item}}") {{ui.globals.nav.user[item]}}
+      a(ng-href="{{'#' + item + (item == 'register' && '#step-1' || '')}}")
+        | {{ui.globals.nav.user[item]}}
 
 
 

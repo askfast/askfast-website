@@ -9,6 +9,8 @@ define(
         '$rootScope', '$scope',
         function ($rootScope, $scope)
         {
+          $('body').removeClass();
+
           $scope.setChannelView = function (view)
           {
             $scope.channelView = {
