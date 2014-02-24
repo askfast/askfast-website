@@ -82,6 +82,7 @@ block tweets
 
 block sub-header-menu
   .col-md-10
+    span --> {{location.path}}
     #tweets(ng-hide='config.app.nav.subs[location.path]')
       block tweets
     #sub-header-menu(ng-show='config.app.nav.subs[location.path]')

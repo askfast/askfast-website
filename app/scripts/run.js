@@ -113,16 +113,7 @@ define(
 
           $rootScope.$on('$routeChangeStart', function ()
           {
-//            $rootScope.location.path = $location.path().substring(1);
-//
-//            switch ($rootScope.location.path)
-//            {
-//              case 'register':
-//                $('body').addClass('register-1');
-//                break;
-//              default:
-//                $('body').removeClass('register-1');
-//            }
+            $rootScope.location.path = $location.path().substring(1);
           });
 
           $rootScope.$on('$routeChangeSuccess', function () {});
