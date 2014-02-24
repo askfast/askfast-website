@@ -9,11 +9,9 @@
       app: {
         languages: ['en', 'nl'],
         nav: {
-          main: ['developers', 'business', 'dialogs', 'prices', 'about'],
-          user: ['register', 'login'],
-          footer: ['legal', 'contact'],
+          main: ['developers', 'business', 'dialogs', 'about'],
           subs: {
-            developers: ['faststart', 'devmods', 'documents'],
+            developers: ['faststart', 'devmods'],
             business: ['solutions', 'benefits'],
             about: ['team', 'contact']
           }

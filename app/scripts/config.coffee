@@ -13,23 +13,23 @@ define app:
         'developers'
         'business'
         'dialogs'
-        'prices'
+#        'prices'
         'about'
       ]
-      user: [
-        'register'
-        'login'
-      ]
-      footer : [
+#      user: [
+#        'register'
+#        'login'
+#      ]
+#      footer : [
 #        'jobs'
-        'legal'
-        'contact'
-      ]
+#        'legal'
+#        'contact'
+#      ]
       subs:
         developers: [
           'faststart'
           'devmods'
-          'documents'
+#          'documents'
         ]
         business: [
           'solutions'

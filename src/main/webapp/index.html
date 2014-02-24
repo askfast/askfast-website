@@ -67,11 +67,7 @@
                 </ul>
               </div>
             </div>
-            <div id="languages" class="col-md-2">
-              <ul class="sub-header-menu pull-right">
-                <li ng-repeat="item in config.app.languages" ng-class="(app.language == item) &amp;&amp; 'active'"><a ng-click="setLanguage(item)">{{item.toUpperCase()}}</a></li>
-              </ul>
-            </div>
+            <!--block languages-->
           </div>
         </div>
         <div ng-view=""></div>

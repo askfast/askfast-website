@@ -5,7 +5,8 @@
       <div class="content-holder col-md-6 col-md-pull-6">
         <h1 class="text-pink">{{ui.pages.developers.faststart.row1.title}}</h1>
         <p ng-repeat="content in ui.pages.developers.faststart.row1.content">{{content}}</p>
-        <p><a href="#/register" class="btn btn-primary">{{ui.pages.developers.faststart.row1.cta}}</a></p>
+        <!--p-->
+        <!--  a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row1.cta}}-->
       </div>
     </div>
   </div>
@@ -15,7 +16,8 @@
       <div class="content-holder col-md-6">
         <h1>{{ui.pages.developers.faststart.row2.title}}</h1>
         <p ng-repeat="content in ui.pages.developers.faststart.row2.content">{{content}}</p>
-        <p><a href="#/register" class="btn btn-primary">{{ui.pages.developers.faststart.row2.cta}}</a></p>
+        <!--p-->
+        <!--  a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row2.cta}}-->
       </div>
     </div>
   </div>
@@ -28,7 +30,8 @@
         <ul class="bullets">
           <li ng-repeat="item in ui.pages.developers.faststart.row3.list">{{item}}</li>
         </ul>
-        <p><a href="#/register" class="btn btn-primary">{{ui.pages.developers.faststart.row3.cta}}</a></p>
+        <!--p-->
+        <!--  a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row3.cta}}-->
       </div>
     </div>
   </div>
@@ -38,7 +41,11 @@
       <div class="content-holder col-md-6">
         <h1>{{ui.pages.developers.faststart.row4.title}}</h1>
         <p ng-repeat="content in ui.pages.developers.faststart.row4.content">{{content}}</p>
-        <p><a href="#/register" class="btn btn-primary">{{ui.pages.developers.faststart.row4.cta}}</a><a ng-click="setSubView(&quot;devmods&quot;)" class="btn btn-cancel">{{ui.pages.developers.faststart.row4.cancel}}</a></p>
+        <p>
+          <!--a.btn.btn-primary(href='#/register') {{ui.pages.developers.faststart.row4.cta}}-->
+          <!--a.btn.btn-cancel(ng-click='setSubView("devmods")')-->
+          <!--  | {{ui.pages.developers.faststart.row4.cancel}}-->
+        </p>
       </div>
     </div>
   </div>
