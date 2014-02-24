@@ -65,33 +65,40 @@ define ui:
           ]
         channels:
           title: 'Communication channels'
-          tel:
-            content: [
-              'ASK- Fast is a cloud communication solution that is designed and developed for
-              developers and businesses.'
-            ]
-            list: [
-              'Inbound Call'
-              'Outbound Call'
-              'Text to Speech'
-              'Call forwarding and many more features.'
-            ]
-          mail:
-            content: [
-              'Mail content'
-            ]
-          twitter:
-            content: [
-              'Twitter content'
-            ]
-          email:
-            content: [
-              'Email content'
-            ]
-          gMail:
-            content: [
-              'Gmail content'
-            ]
+          content: [
+            'ASK- Fast is a cloud communication solution that is designed and developed for
+            developers and businesses.'
+          ]
+          tel:[
+            'In- and outgoing phone calls'
+            '0800/0900 special numbers'
+            'Virtual mobile number'
+            'Local phone numbers'
+            'Text to speech (TTS)'
+            'IVR solutions'
+            'Contactbook'
+          ]
+          mail:[
+            'Keywords'
+            'Sender ID'
+            'Premium SMS numbers (4 digit)'
+            'Long codes'
+          ]
+          twitter:[
+            'Mention user names'
+            'Analysis on one subject'
+          ]
+          email:[
+            'HTML Plain text'
+            'Read notifications'
+            'Grouping recipients'
+          ]
+          gMail:[
+            'Reminders and messages'
+            'Keyword entry - search engine'
+            'Dialog mentality'
+            'Your own account and alias can be used'
+          ]
         promises:
           enterance: 'We promise'
           cta: 'Create an account'
@@ -138,17 +145,14 @@ define ui:
                       security and privacy of our customers.'
         references: [
           {
-            quote: 'We are using ASK-Fast cloud communication for our alarming system.'
-            person: 'Johnny Billie, CEO'
+            quote: 'We are very content with the Falls Telephone System, it really helps us
+                    in collecting the data in a valid way.'
+            person: 'Radboud - Yvonne Schoon'
           }
           {
-            quote: 'Grativitation is not the reason for falling in love.'
-            person: 'Albert Einstein'
-          }
-          {
-            quote: 'When I understand my enemy to well enough to defeat him, then in that moment,
-                    I also love him.'
-            person: 'A.E. Wiggin'
+            quote: 'Click2call is a great way to anonymously connect our drivers with other
+                    logistical stakeholders.'
+            person: 'Deal BV - Richard van Klaveren'
           }
         ]
       developers:
@@ -553,33 +557,40 @@ define ui:
           ]
         channels:
           title: '(NL) Communication channels'
-          tel:
-            content: [
-              '(NL) ASK- Fast is a cloud communication solution that is designed and developed for
-              developers and businesses.'
-            ]
-            list: [
-              '(NL) Inbound Call'
-              '(NL) Outbound Call'
-              '(NL) Text to Speech'
-              '(NL) Call forwarding and many more features.'
-            ]
-          mail:
-            content: [
-              '(NL) Mail content'
-            ]
-          twitter:
-            content: [
-              '(NL) Twitter content'
-            ]
-          email:
-            content: [
-              '(NL) Email content'
-            ]
-          gMail:
-            content: [
-              '(NL) Gmail content'
-            ]
+          content: [
+            '(NL) ASK- Fast is a cloud communication solution that is designed and developed for
+            developers and businesses.'
+          ]
+          tel:[
+            '(NL) In- and outgoing phone calls'
+            '(NL) 0800/0900 special numbers'
+            '(NL) Virtual mobile number'
+            '(NL) Local phone numbers'
+            '(NL) Text to speech (TTS)'
+            '(NL) IVR solutions'
+            '(NL) Contactbook'
+          ]
+          mail:[
+            '(NL) Keywords'
+            '(NL) Sender ID'
+            '(NL) Premium SMS numbers (4 digit)'
+            '(NL) Long codes'
+          ]
+          twitter:[
+            '(NL) Mention user names'
+            '(NL) Analysis on one subject'
+          ]
+          email:[
+            '(NL) HTML Plain text'
+            '(NL) Read notifications'
+            '(NL) Grouping recipients'
+          ]
+          gMail:[
+            '(NL) Reminders and messages'
+            '(NL) Keyword entry - search engine'
+            '(NL) Dialog mentality'
+            '(NL) Your own account and alias can be used'
+          ]
         promises:
           enterance: 'Wij beloven'
           cta: 'Maak een account aan'
@@ -626,17 +637,14 @@ define ui:
                       beveiliging en privacy van onze klanten te vergroten.'
         references: [
           {
-            quote: '(NL) We are using ASK-Fast cloud communication for our alarming system.'
-            person: 'Johnny Billie, CEO'
+            quote: '(NL) We are very content with the Falls Telephone System, it really helps us
+                    in collecting the data in a valid way.'
+            person: 'Radboud - Yvonne Schoon'
           }
           {
-            quote: '(NL) Grativitation is not the reason for falling in love.'
-            person: 'Albert Einstein'
-          }
-          {
-            quote: '(NL) When I understand my enemy to well enough to defeat him, then in that moment,
-                    I also love him.'
-            person: 'A.E. Wiggin'
+            quote: '(NL) Click2call is a great way to anonymously connect our drivers with other
+                    logistical stakeholders.'
+            person: 'Deal BV - Richard van Klaveren'
           }
         ]
       developers:

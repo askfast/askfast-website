@@ -97,26 +97,22 @@
             a(ng-click='setChannelView("gMail")',
             class='{{(channelView.gMail) && "active"}}') Gmail
         br
+        p(ng-repeat='content in ui.pages.home.channels.content') {{content}}
         div(ng-show='channelView.tel')
-          p(ng-repeat='content in ui.pages.home.channels.tel.content') {{content}}
-          ul.bullets(ng-show='ui.pages.home.channels.tel.list')
-            li(ng-repeat='list in ui.pages.home.channels.tel.list') {{list}}
+          ul.bullets(ng-show='ui.pages.home.channels.tel')
+            li(ng-repeat='list in ui.pages.home.channels.tel') {{list}}
         div(ng-show='channelView.mail')
-          p(ng-repeat='content in ui.pages.home.channels.mail.content') {{content}}
-          ul.bullets(ng-show='ui.pages.home.channels.mail.list')
-            li(ng-repeat='list in ui.pages.home.channels.mail.list') {{list}}
+          ul.bullets(ng-show='ui.pages.home.channels.mail')
+            li(ng-repeat='list in ui.pages.home.channels.mail') {{list}}
         div(ng-show='channelView.twitter')
-          p(ng-repeat='content in ui.pages.home.channels.twitter.content') {{content}}
-          ul.bullets(ng-show='ui.pages.home.channels.twitter.list')
-            li(ng-repeat='list in ui.pages.home.channels.twitter.list') {{list}}
+          ul.bullets(ng-show='ui.pages.home.channels.twitter')
+            li(ng-repeat='list in ui.pages.home.channels.twitter') {{list}}
         div(ng-show='channelView.email')
-          p(ng-repeat='content in ui.pages.home.channels.email.content') {{content}}
-          ul.bullets(ng-show='ui.pages.home.channels.email.list')
-            li(ng-repeat='list in ui.pages.home.channels.email.list') {{list}}
+          ul.bullets(ng-show='ui.pages.home.channels.email')
+            li(ng-repeat='list in ui.pages.home.channels.email') {{list}}
         div(ng-show='channelView.gMail')
-          p(ng-repeat='content in ui.pages.home.channels.gMail.content') {{content}}
-          ul.bullets(ng-show='ui.pages.home.channels.gMail.list')
-            li(ng-repeat='list in ui.pages.home.channels.gMail.list') {{list}}
+          ul.bullets(ng-show='ui.pages.home.channels.gMail')
+            li(ng-repeat='list in ui.pages.home.channels.gMail') {{list}}
 
 
 
@@ -202,19 +198,19 @@
                 img.img-responsive(src='../images/references/rijkwaterstaat.png',
                 alt='Rijkwaterstaat')
               .col-md-3.col-sm-3
-                img.img-responsive(src='../images/references/regionale-stichting.png',
-                alt='Regionale Stichting')
+                img.img-responsive(src='../images/references/deal-services.png',
+                alt='Deal Services')
               .col-md-3.col-sm-3
-                img.img-responsive(src='../images/references/gallus-credit.png',
-                alt='Gallus Credit')
-          li
-            .row
-              .col-md-3.col-sm-3
-                img.img-responsive(src='../images/references/rijkwaterstaat-2.png',
-                alt='Rijkwaterstaat-2')
-              .col-md-3.col-sm-3
-                img.img-responsive(src='../images/references/reddingsbrigade-2.png',
-                alt='ReddingsBrigade-2')
+                img.img-responsive(src='../images/references/radboud-umc.png',
+                alt='Radboud UMC')
+          //li
+          //  .row
+          //    .col-md-3.col-sm-3
+          //      img.img-responsive(src='../images/references/rijkwaterstaat-2.png',
+          //      alt='Rijkwaterstaat-2')
+          //    .col-md-3.col-sm-3
+          //      img.img-responsive(src='../images/references/reddingsbrigade-2.png',
+          //      alt='ReddingsBrigade-2')
     .row
       .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1
         blockquote
