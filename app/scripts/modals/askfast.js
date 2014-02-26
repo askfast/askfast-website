@@ -114,6 +114,63 @@ define(
           );
 
 
+          var Contact = $resource(
+            'http://char-a-lot.appspot.com/rpc',
+            {},
+            {
+              request: {
+                method: 'POST',
+                params: {}
+              }
+            }
+          );
+
+
+          /**
+           * User login
+           */
+          AskFast.prototype.contact = function (contact)
+          {
+            var deferred = $q.defer();
+
+            var data = {
+              message: contact.message,
+              sender: contact.name + ' ' +
+                      contact.surname + ' <' +
+                      contact.email + '>',
+              subject: 'New message from AskFast, related to: ' + contact.subject
+            };
+
+            Contact.request(
+              {},
+              {
+                "method": "outboundCallWithMap",
+                "params": {
+                  "adapterID": "2dbe5b60-154a-11e3-b728-00007f000001",
+                  "addressMap": {
+                    "culusoy@ask-cs.com": "Sales"
+                  },
+                  "url": 		"http://askfastmarket1.appspot.com/resource/question/" + data.message,
+                  "publicKey": 	"",
+                  "privateKey": 	"",
+                  "senderName": data.sender,
+                  "subject": 	data.subject
+                }
+              },
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve(error);
+              }
+            );
+
+            return deferred.promise;
+          };
+
+
           /**
            * User login
            */

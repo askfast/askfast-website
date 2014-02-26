@@ -69,8 +69,6 @@ define(
             $rootScope.subView[view] = true;
           };
 
-          $rootScope.contact = {};
-
           $rootScope.redirectTo = function (main, sub)
           {
             $location.path(main).hash(sub);
@@ -91,7 +89,7 @@ define(
           };
 
           var i     = 0,
-            total = $rootScope.ui.pages.home.references.length;
+              total = $rootScope.ui.pages.home.references.length;
 
           $rootScope.home.reference = $rootScope.ui.pages.home.references[i];
 

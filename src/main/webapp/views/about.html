@@ -68,39 +68,44 @@
         <h2>We would like to hear from you!</h2>
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-            <p>
-              Telecommunication solutions...
-              Do you want to spend tons of money on people who are trying to.
-            </p>
-            <form role="form">
-              <div class="form-group">
-                <input type="text" placeholder="Name" class="form-control">
-              </div>
-              <div class="form-group">
-                <input type="text" placeholder="Surname" class="form-control">
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Email Adress" class="form-control">
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input name="contact-subject" ng-model="contact.subject.sales" type="radio">Sales
-                </label>
-                <label>
-                  <input name="contact-subject" ng-model="contact.subject.job" type="radio">Job application
-                </label>
-                <label>
-                  <input name="contact-subject" ng-model="contact.subject.partnership" type="radio">Partnership
-                </label>
-                <label>
-                  <input name="contact-subject" ng-model="contact.subject.other" type="radio">Other
-                </label>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" class="form-control"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary pull-left">Send</button>
-            </form>
+            <article ng-show="contact.sent">
+              <p>Your message has been successfully sent.</p>
+            </article>
+            <article ng-hide="contact.sent">
+              <p>
+                Telecommunication solutions...
+                Do you want to spend tons of money on people who are trying to.
+              </p>
+              <form role="form" ng-submit="sendContact(contact)">
+                <div class="form-group">
+                  <input type="text" ng-model="contact.name" placeholder="Name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="text" ng-model="contact.surname" placeholder="Surname" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="email" ng-model="contact.email" placeholder="Email Adress" class="form-control">
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input name="contact-subject" ng-model="contact.subject" value="Sales" type="radio">Sales
+                  </label>
+                  <label>
+                    <input name="contact-subject" ng-model="contact.subject" value="Job" type="radio">Job application
+                  </label>
+                  <label>
+                    <input name="contact-subject" ng-model="contact.subject" value="Partnership" type="radio">Partnership
+                  </label>
+                  <label>
+                    <input name="contact-subject" ng-model="contact.subject" value="Other" type="radio">Other
+                  </label>
+                </div>
+                <div class="form-group">
+                  <textarea ng-model="contact.message" placeholder="Your Message" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary pull-left">Send</button>
+              </form>
+            </article>
           </div>
         </div>
       </div>

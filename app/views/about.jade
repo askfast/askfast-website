@@ -70,40 +70,53 @@ article#sub-contact(ng-show='subView.contact')
         h2 We would like to hear from you!
         .row
           .col-md-8.col-md-offset-2
-            p.
-              Telecommunication solutions...
-              Do you want to spend tons of money on people who are trying to.
-            form(role='form')
-              .form-group
-                input.form-control(type='text',
-                placeholder='Name')
-              .form-group
-                input.form-control(type='text',
-                placeholder='Surname')
-              .form-group
-                input.form-control(type='email',
-                placeholder='Email Adress')
-              .checkbox
-                label
-                  input(name='contact-subject',
-                   ng-model='contact.subject.sales',
-                   type='radio')
-                  | Sales
-                label
-                  input(name='contact-subject',
-                  ng-model='contact.subject.job',
-                  type='radio')
-                  | Job application
-                label
-                  input(name='contact-subject',
-                  ng-model='contact.subject.partnership',
-                  type='radio')
-                  | Partnership
-                label
-                  input(name='contact-subject',
-                  ng-model='contact.subject.other',
-                  type='radio')
-                  | Other
-              .form-group
-                textarea.form-control(placeholder='Your Message')
-              button.btn.btn-primary.pull-left(type='submit') Send
+            article(ng-show='contact.sent')
+              p.
+                Your message has been successfully sent.
+            article(ng-hide='contact.sent')
+              p.
+                Telecommunication solutions...
+                Do you want to spend tons of money on people who are trying to.
+              form(role='form',
+              ng-submit='sendContact(contact)')
+                .form-group
+                  input.form-control(type='text',
+                  ng-model='contact.name',
+                  placeholder='Name')
+                .form-group
+                  input.form-control(type='text',
+                  ng-model='contact.surname',
+                  placeholder='Surname')
+                .form-group
+                  input.form-control(type='email',
+                  ng-model='contact.email',
+                  placeholder='Email Adress')
+                .checkbox
+                  label
+                    input(name='contact-subject',
+                     ng-model='contact.subject',
+                     value='Sales',
+                     type='radio')
+                    | Sales
+                  label
+                    input(name='contact-subject',
+                    ng-model='contact.subject',
+                    value='Job',
+                    type='radio')
+                    | Job application
+                  label
+                    input(name='contact-subject',
+                    ng-model='contact.subject',
+                    value='Partnership',
+                    type='radio')
+                    | Partnership
+                  label
+                    input(name='contact-subject',
+                    ng-model='contact.subject',
+                    value='Other',
+                    type='radio')
+                    | Other
+                .form-group
+                  textarea.form-control(ng-model='contact.message',
+                  placeholder='Your Message')
+                button.btn.btn-primary.pull-left(type='submit') Send
