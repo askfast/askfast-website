@@ -148,9 +148,10 @@ define(
                 "params": {
                   "adapterID": "2dbe5b60-154a-11e3-b728-00007f000001",
                   "addressMap": {
-                    "culusoy@ask-cs.com": "Sales"
+                    "culusoy@ask-cs.com": "Contact Inquiry"
                   },
-                  "url": 		"http://askfastmarket1.appspot.com/resource/question/" + data.message,
+                  "url": "http://askfastmarket1.appspot.com/resource/question/comment?message=" +
+                    encodeURIComponent(data.message),
                   "publicKey": 	"",
                   "privateKey": 	"",
                   "senderName": data.sender,
