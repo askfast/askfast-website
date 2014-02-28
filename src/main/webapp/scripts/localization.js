@@ -47,25 +47,22 @@
               slide1: {
                 title: 'Who wants some pink?',
                 content: [
-                  'ASK- Fast is a cloud communication solution that is designed and developed for\
-              developers and businesses.', 'You can simply develop an automated communication for your application or your customer\
-              service.'
+                  'ASK-Fast is a cloud communication solution. We’re developed for businesses and\
+              designed for developers.'
                 ]
               },
               slide2: {
                 title: 'Writing a letter to your customer?',
                 content: [
-                  'How great is that. If you do not want to focus on efficiency fine. ASK-Fast would\
-              like to provide better tools to you for your business. Power of full customisation is\
-              waiting for you and many opportunities too…'
+                  'Great idea, but not very efficient. ASK-Fast provides you with a combination of\
+              better tools to reach out to your customer. '
                 ]
               },
               slide3: {
                 title: 'Use your fingers for a better communication.',
                 content: [
-                  'We do, we are coders. We are providing you a full-fetched API for SMS, E-mail, Automated\
-              Phone call, Twitter at the same time. We are keeping all the hard work for ourselves and\
-              want you to use your fingers for a better communication experience.'
+                  'We use our fingers for a better communication experience. We are coders too, so\
+              we provide you with a full-fetched API. '
                 ]
               }
             },

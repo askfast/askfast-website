@@ -22,7 +22,8 @@
                 img.img-responsive.pull-right(src='../images/illustration-hands-cloud.png',
                 alt='Illustration Hands Cloud')
               .col-md-6.col-md-pull-6.col-sm-6.col-sm-pull-6
-                h1.text-pink {{ui.pages.home.carousel.slide1.title}}
+                h1.text-pink
+                  | {{ui.pages.home.carousel.slide1.title}}
                 p(ng-repeat='content in ui.pages.home.carousel.slide1.content') {{content}}
                 //p
                 //  a.btn.btn-primary(href='#/register') {{ui.pages.home.carousel.cta}}
