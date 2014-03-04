@@ -96,8 +96,9 @@
       <div class="img-holder col-md-6"><img ng-src="../images/a85e63c0.stock-business-people.png" alt="Image of business people" class="img-responsive"></div>
       <div class="content-holder col-md-6">
         <h1 class="text-pink">{{ui.pages.business.benefits.row5.title}}</h1>
-        <p ng-repeat="content in ui.pages.business.benefits.row5.content" class="{{($index == 2) &amp;&amp; 'well' || ''}}">{{content}}</p>
-        <p><strong>{{ui.pages.business.benefits.row5.tagline}}</strong></p>
+        <p ng-repeat="content in ui.pages.business.benefits.row5.content" class="{{($index == 1) &amp;&amp; 'well' || ''}}">{{content}}</p>
+        <!--p-->
+        <!--  strong {{ui.pages.business.benefits.row5.tagline}}-->
         <p><a ng-click="redirectTo(&quot;about&quot;, &quot;contact&quot;)" class="btn btn-primary">{{ui.pages.business.benefits.row5.cta}}</a></p>
       </div>
     </div>

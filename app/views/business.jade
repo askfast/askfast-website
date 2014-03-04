@@ -101,10 +101,10 @@ article#sub-benefits(ng-show='subView.benefits')
       .content-holder.col-md-6
         h1.text-pink {{ui.pages.business.benefits.row5.title}}
         p(ng-repeat='content in ui.pages.business.benefits.row5.content',
-        class="{{($index == 2) && 'well' || ''}}")
+        class="{{($index == 1) && 'well' || ''}}")
           | {{content}}
-        p
-          strong {{ui.pages.business.benefits.row5.tagline}}
+        //p
+        //  strong {{ui.pages.business.benefits.row5.tagline}}
         p
           a.btn.btn-primary(ng-click='redirectTo("about", "contact")')
             | {{ui.pages.business.benefits.row5.cta}}

@@ -68,21 +68,18 @@
             },
             bridge: {
               cta: 'Check Solutions',
-              title: 'We bridge software and telecom industry.',
+              title: 'Bridge industries',
               content: [
-                'ASK- Fast is a cloud communication solution that is designed and developed for\
-            developers and businesses.', 'You can simply develop an automated communication for your application or your customer\
-            service. It will work with common communication channel and almost with every device.'
+                'ASK-Fast bridges the software and the telecom industry: With ASK-Fast you can\
+            simply develop automated communication flows for your customer service or application.\
+            It works with all common communication channels. And with almost every device.'
               ]
             },
             channels: {
               title: 'Communication channels',
-              content: [
-                'ASK- Fast is a cloud communication solution that is designed and developed for\
-            developers and businesses.'
-              ],
+              content: [],
               tel: ['In- and outgoing phone calls', '0800/0900 special numbers', 'Virtual mobile number', 'Local phone numbers', 'Text to speech (TTS)', 'IVR solutions', 'Contactbook'],
-              mail: ['Keywords', 'Sender ID', 'Premium SMS numbers (4 digit)', 'Long codes'],
+              mail: ['Keywords', 'Sender ID', 'Premium SMS numbers (4 digit)', 'Long codes (Virtual mobile number)'],
               twitter: ['Mention user names', 'Analysis on one subject'],
               email: ['HTML Plain text', 'Read notifications', 'Grouping recipients'],
               gMail: ['Reminders and messages', 'Keyword entry - search engine', 'Dialog mentality', 'Your own account and alias can be used']
@@ -92,53 +89,48 @@
               cta: 'Create an account',
               cost: {
                 title: 'Cost Reduction',
-                content: 'ASK-Fast reduces the cost of communication while creating added value to your\
-                      business context through automated agents. Our rates are among the cheapest\
-                      in Europe.'
+                content: 'Reduce the costs of communication. ASK-Fast rates are among the cheapest\
+                      in Europe!'
               },
               analyze: {
                 title: 'Real time monitoring',
-                content: 'The result of the communication will be shared with you in order to create\
-                      new strategies for your plans. You can export the results to your PC or\
-                      another system.'
+                content: 'Monitor reactions as soon as a campaign starts. You can export the results\
+                      to your device. in order to create reports directly.'
               },
               time: {
-                title: 'Save time for your business',
-                content: 'Manual communication takes a lot of time compared to automated communication.\
-                      With a well-designed flow, you can save time to create new business\
-                      opportunities for your business.'
+                title: 'Time saving',
+                content: 'An automated communication flow saves your employees time. This may be\
+                      invested in other business opportunities. '
               },
               customizable: {
-                title: 'Customizable solutions',
-                content: 'Our solutions can be customized according to business rules of our customers.\
-                      We promise that you will never pay for more than what you get.'
+                title: 'Customization',
+                content: 'Our solutions can be customized according to your business rules. You will\
+                      never pay more than what you need.'
               },
               integration: {
-                title: 'Easy integration to any system',
-                content: 'We developed an ASK-Fast API for easy integration. ASK-Fast speaks your\
-                      language and creates business opportunities for our platform members.'
+                title: 'Integration',
+                content: 'You want to start fast: the ASK-Fast API is developed for easy\
+                      integration, so you can start instantly.'
               },
               cloud: {
-                title: 'Any device, any time ',
-                content: 'ASK-Fast is a cloud based communication platform. You can use it anywhere,\
-                      anytime you need and with any kind of device.'
+                title: 'Multi-device',
+                content: 'Desktop, iOS, Android or Blackberry: ASK-Fast can handle them all. This\
+                      means you stay in touch, wherever you are and whenever you want!'
               },
               ideas: {
-                title: 'Open to new ideas',
-                content: 'ASK-Fast believes in open business and therefore we listen to the needs of\
-                      our members, customers and stakeholders.'
+                title: 'Client oriented',
+                content: 'ASK-Fast believes in open business and therefore we listen to the needs\
+                      of our members, customers and stakeholders.'
               },
               performance: {
                 title: 'Performance boost',
-                content: 'Automated communication will increase the performance of your employees,\
-                      supply chain and customer relationship. ASK-Fast knows how to reach a person\
-                      via different media.'
+                content: 'ASK-Fast works with different communication channels. We therefore\
+                      always reach your customers which boosts your performance.'
               },
               privacy: {
-                title: 'Care about Security and Privacy',
-                content: 'Security and privacy are very important to ASK-Fast. We are investing in new\
-                      security technologies and using our own platform products to increase the\
-                      security and privacy of our customers.'
+                title: 'Security',
+                content: 'Security and privacy are important: ASK-Fast invests in new security\
+                      technologies for our customers.'
               }
             },
             references: [
@@ -158,26 +150,20 @@
               row1: {
                 title: 'It is all about a mindset',
                 content: [
-                  'We think software. When we see a problem in a company, eg. a customer\
-              interaction that’s not efficient, we think “How can software solve this problem?”', 'It’s all about the software. It’s all about the experience. Hardware can be\
-              anything and is only supportive.', 'Should I buy or should I build a software solution?', 'Often when you buy you end up with a solution that is all integrated into one\
-              big plate of spaghetti with all sorts of things you don’t need. And by definition it’s\
-              inflexible because the more that’s prebuilt, the less flexibility there is.', 'Because of the movement to the cloud, because of the rise of APIs, and smaller\
-              building blocks, it is good to build. This means you are going to operate in an agile\
-              way. Don’t become an expert in everything by building everything, but choose to buy\
-              smaller building blocks to maintain that agility.', 'ASKFAST delivers the blocks you need to build your way into agility.'
+                  'We think software. When we see a problem in a company, e.g. a customer\
+              interaction that’s not efficient, we think “How can software solve this problem?”.', 'Remember Apple? Their hardware is just facilitating their software experience.\
+              It’s all about the software. It’s all about the experience. Hardware can be anything\
+              and is only supportive.'
                 ],
                 cta: 'Join Now'
               },
               row2: {
                 title: 'Create value together',
                 content: [
-                  'Do you want to integrate an automated communication flow to your own\
-              application? Or would you rather give service to somebody in order to enhance their\
-              existing system or communication? You are at the right place. We can provide you in\
-              both options. That\'s the flexibility of ASK-Fast.', 'Sign up now and get some free credits for your developments. If you have any\
-              other questions, you can always communicate with our technical team. We are open to\
-              new ideas and we will do our best to support you! '
+                  'Do you want to integrate an automated communication flow into your own application?\
+              Or would you rather give service to somebody in order to enhance their existing system\
+              or communication?', 'In both cases you have come to the right place! That\'s the flexibility of ASK-Fast.\
+              Sign up now and get some free credits for your developments.'
                 ],
                 cta: 'Join Now'
               },
@@ -185,23 +171,19 @@
                 title: 'Power up your applications',
                 content: [
                   'ASK-Fast can power up your applications by adding a smooth communication layer\
-              with different components. You can create an automated call when it is needed,\
-              verification flows for order receiving and with many more usage. Check out our developer\
-              modules that you can use directly after completing registration.', 'Here is a small list of what you can do with ASK-Fast:'
+              with different components. Check out the developer modules that you can use after\
+              registration.', 'Here’s a small list of what you can do with ASK-Fast:'
                 ],
-                list: ['Verify your orders', 'Verify an account', 'Call forwarding', 'Broadcasting message', 'Click2call functionalities', 'Confirmation flows', 'Unified messaging and many more'],
+                list: ['Verify your orders', 'Verify an account', 'Call forwarding', 'Broadcasting messages', 'Click2call functionalities', 'Confirmation flows', 'Unified messaging', 'and much more..!'],
                 cta: 'Try it for free'
               },
               row4: {
                 title: 'You make, we scale',
                 content: [
-                  'The ASK-Fast API users will have several extra advantages compared to other solutions.', 'ASK-Fast will promote your solutions in the dialogmarket and not only scale your\
-              solution technically but also commercially. Any other customer can use your solution\
-              by paying a price  that you are going to decide. Since you are adding an extra value,\
-              all the revenue will be yours after running costs of dialogs.', 'ASK-Fast will promote your solutions in the dialogmarket and not only scale\
-              your solution technically but also commercially. Any other customer can use your\
-              solution by paying a price  that you are going to decide. Since you are adding an\
-              extra value, all the revenue will be yours after running costs of dialogs.'
+                  'ASK-Fast promotes your solution in the dialogmarket. We do not only scale it\
+              technically, but also commercially. Any other customer can use your solution by paying\
+              you a fee.', 'You don’t need to start from scratch: We provide you with our developer modules,\
+              so you can have a shorter development cycle!'
                 ],
                 cta: 'Create an account',
                 cancel: 'Not now, lets check the modules'
@@ -219,52 +201,47 @@
           business: {
             solutions: {
               row1: {
-                title: 'World is disappearing',
+                title: 'Telecommunication solutions: A disappearing world',
                 content: [
-                  'Telecommunication solutions… Do you want to spend tons of money on people who\
-              are trying to sell you big, expensive, inflexible boxes that you’re going to run in\
-              your own closet, and they come every year and charge you 20% support and maintenance\
-              just to keep the thing running?', 'And what about implementing software… Do you want to cut in millions of hours\
-              to some vendor and two years later the thing isn’t running and then the new CIO comes\
-              in and says let’s cut our losses and kill this thing?', 'That world is disappearing. We’re moving to a flexible world of the cloud. And\
-              we’re moving to a world of composable services.', 'The benefits? Saving money, get to market faster, having a more flexible solution!', 'How? Because of the agility, flexibility in the cloud and software world. This\
-              impacts your ability to compete in the market, attract great talent, and respond to\
-              changing conditions.', 'Don’t wait and ask if it’s gonna happen, but ASK-Fast.'
+                  'Do you want to spend tons of money on people who are trying to sell you big,\
+              expensive, inflexible boxes that you’re going to run in your own closet, and they come\
+              every year and charge you 20% support and maintenance just to keep the thing running?', 'That world is disappearing. We’re moving to a flexible world of the cloud. And\
+              we’re moving to a world of composable services. Don’t wait and ask if it’s gonna\
+              happen, but ASK-Fast.'
                 ],
                 cta: 'Join Now'
               },
               row2: {
-                title: 'Readymade or Custom?',
+                title: 'Off the shelf or custom?',
                 content: [
-                  'ASK-Fast is currently being in used in many areas and boosting our clients\'\
-              businesses communication in different ways in three level: Pre-Service, during Service\
-              and Post-Service. You can check the dialogs that is developed by our community.', 'Do you want us to check your current communication infrastructure? Sure,\
-              ASK-Fast is providing consultancy service for premium customers. You will have an\
-              extended analysis and custom made solutions for your business.'
+                  'ASK-Fast is being in used in many areas and boosts our clients\' business\
+              communication on three levels: Pre-Service, during Service and Post-Service.', 'Do you want us to check your communication infrastructure? As a premium client\
+              we provide you with an extensive analysis and customized solution for your business.'
                 ],
                 cta: 'Talk now'
               },
               row3: {
-                title: 'Custom solution: Availability Dialog',
+                title: 'Custom solutions: Availability Dialog',
                 content: [
                   'The Royal Netherlands Sea Rescue Institution (KNRM) provides voluntary\
-              assistance and support in open water to those in danger. ASK-Fast is helping them\
-              being prepared and organized.', 'ASK-CS is helping KNRM with the availability management of their volunteers.\
-              The ASK-Fast API has been used to create communication with different media: Volunteers\
-              can start a KNRM dialog by chatting with Gtalk, sending an SMS or calling an 0800 number.', 'Because ASK-Fast believes the focus should be on dialogs which are independent\
-              of media types, an internet connection is not required.'
+              assistance and support in open water to those in danger. ASK-Fast is helping them being\
+              prepared and organized.', 'StandBy is the application used by KNRM for availability management of their\
+              volunteers. The ASK-Fast API is used in StandBy to create communication with different\
+              media: Volunteers can start a KNRM dialog by chatting with Gtalk, sending an SMS or\
+              calling an 0800 number.'
                 ],
                 cta: 'Try it for free'
               },
               row4: {
-                title: 'Generic ready to use solutions',
+                title: 'Building blocks',
                 content: [
-                  'The ASK-Fast API users will have several extra advantages compared to other\
-              solutions.', 'ASK-Fast will promote your solutions in the dialogmarket and not only scale\
-              your solution technically but also commercially. Any other customer can use your\
-              solution by paying a price  that you are going to decide.  Since you are adding an\
-              extra value, all the revenue will be yours after running costs of dialogs.', 'You do not need to start from stratch. You can use developer modules for having\
-              a faster and shorter development cycle.'
+                  'Often when you buy a software solution you end up with something that is all\
+              integrated into one big plate of spaghetti with all sorts of things you don’t need. And\
+              by definition it’s inflexible because the more that’s prebuilt, the less flexibility\
+              there is.', 'Because of the movement to the cloud, because of the rise of APIs, and smaller\
+              building blocks, it is good to build. This means you are going to operate in an agile\
+              way. Don’t become an expert in everything by building everything, but choose to buy\
+              smaller building blocks to maintain that agility.'
                 ],
                 cta: 'Create an account',
                 cancel: 'Not now. lets check the modules'
@@ -274,43 +251,35 @@
               row1: {
                 title: 'Benefits of ASK-Fast',
                 content: [
-                  'ASK-Fast can give you more than words. We can bridge your communication with\
-              any cloud system. No more hardware startup costs and welcome to the flexibility of the\
-              cloud communication.', 'With ASK-Fast, marketing campaigns, increasing employee performance, higher\
-              customer satisfaction can be much more effective than conventional communication ways.\
-              It can be shaped according to your business without any start-up investment.', 'You can get rid of many elements about your communication, you can still keep\
-              your coffee and your pc tough. '
+                  'ASK-Fast can bridge your communications with any cloud system. The benefits?\
+              Saving money, get to market faster, having a more flexible solution!', 'How? Because of the agility, flexibility in the cloud and software world. This\
+              impacts your ability to compete in the market, attract great talent, and respond to\
+              changing conditions. We put the software in the cloud, but you keep your computer and\
+              coffee though.'
                 ],
                 cta: 'Join Now'
               },
               row2: {
                 title: 'Automated communication',
                 content: [
-                  'We believe that business is no longer separated B2C or B2B it is all about\
-              H2H: Human to human. The communication of Human to Human can be very expensive since\
-              it needs real human resources and oral communication generally takes time.', 'If your company tries to communicate with each possible client with real time\
-              communication, the cost of customer will be high. We can help you turn some part of\
-              communication to be automated that you can make your business flow more efficient.', 'For instance, let’s take an internet visitor who spends 4 minutes looking a\
-              certain service of yours from your website. What would you do if you can talk with him\
-              in real life? Ask about what he is seeking for or giving extra information about your\
-              service or special prizes…ASK-Fast can give you the ultimate automated communication\
-              that help you to develop your communication in a very clever way.', 'Your web developer can create a call-me button that is powered by ASK-Fast\
-              Click-2-Call developer module. He can insert some rules according to your business\
-              flow. By having this special button, your visitor can talk with your most suitable\
-              salesperson that is available who is driving back to your office or simply connected\
-              to your call center in India.', 'Saves time and saves money. Welcome to the age of efficiency.'
+                  'Let’s take an internet visitor who spends some minutes looking for a certain\
+              topic on your website. What would you do if you can talk with him face-to-face? You\
+              probably ask him what it is that he is looking for.', 'ASK-Fast is the automated communication tool that can help you do this, and in a\
+              clever way. It can create a ‘call-me’ button, directed to the most relevant salesperson\
+              that is available within seconds. Your web developer can implement this functionality\
+              within hours.'
                 ],
                 cta: 'Talk now'
               },
               row3: {
-                title: 'Measure non-digitals',
+                title: 'Measure, measure, measure',
                 content: [
-                  'For some business domains, spending money on hard copy advertising campaigns\
-              can be great opportunity. However, there are limited and not accurate ways of determining\
-              which ad brings in the most business.', 'ASK-Fast can help you turn these non-digital channels to digital ones. You can\
-              assign a unique phone number to each campaign therefore you can track the most successful\
-              ones. Do not you want to allocate your funds according to what they bring to you?', 'Money is here inside of the hat. We are not magicians and the money was already\
-              inside of your business, it appeared because of becoming more efficient.', 'Tataaaaaaaaaaaaaa!'
+                  'For some business domains, spending money on hard copy advertising campaigns like\
+              flyers and local newspapers is a great opportunity. However, it’s almost impossible to\
+              accurately determine  which ad brings in the most business.', 'What ASK-Fast can do is assign a unique number phone number to each campaign so\
+              you can track the most successful ones. This helps allocating funds effectively. This is\
+              not magic, the money was already inside your hat. It just appeared because you became\
+              more efficient.'
                 ]
               },
               row4: {
@@ -322,19 +291,15 @@
                 cta: 'Share now'
               },
               row5: {
-                title: 'Experience the technology',
+                title: 'Experience the multichannel technology',
                 content: [
-                  'ASK-Fast is not just offering you one channel for your communication but brings\
-              you all: Phone, E-mail, SmS and Twitter at the same time. All communication channels\
-              can follow up with another channel and all of them can work with two way communication\
-              like dialogs.', 'Let’s make it concrete with an example. Your salesperson tries to call your\
-              customer and he did not pick up the phone. ASK-Fast can make our system to send an\
-              automated e-mail relevant to topic with contact information of salesperson after getting\
-              confirmation from him with one click.', '“Hey John! I just give a call to you but i think that you are quite busy. I want\
-              to talk you about our new price offer. Since we are working together for 4 years, we\
-              would like to offer you an extra 5% discount. Feel free to contact me via 011111111 or\
-              company@company.com.', 'Do you also want to receive SMS if he reads this e-mail? Sure. why not? This is the\
-              power that we are bringing to your business.'
+                  'Imagine your account manager trying to call a customer. The customer doesn’t pick\
+              up the phone. ASK-Fast will send an automated e-mail relevant to topic with his contact\
+              information after getting confirmation from your account manager.', '"Hey John! I just gave you a call, but I think you’re busy. I want to talk to you\
+              about our new price offer: We’re working together now for over 4 years, so I would like\
+              to offer you a 10% extra discount! Feel free to contact me via 01234567890 or\
+              peter@mycompany.com. Kind Regards, Peter"', 'Do you also want to receive an SMS when he reads it? Sure, why not. ASK-Fast\
+              offers multichannel communication!'
                 ],
                 tagline: 'That\'s the power that will change the shape of your business: Your people\
                       powered with technology.',
@@ -344,58 +309,51 @@
           },
           dialogs: {
             row1: {
-              title: 'Re-frame Dialog',
+              title: 'Re-frame the Dialog',
               content: [
-                'Dialog is a form of communication that needs at least two parties. Conversations,\
-            orders, complaints, feedbacks can be given as examples of dialogs. What you are saying\
-            is of course important however; we believe that the way of saying things are as much\
-            important as what you are saying.', 'ASK-Fast accepts the dialogs as the communication flows of any communication that\
-            permits two-way communication. Our team thinks that each response can change the upcoming\
-            question and can create another branch of the designed communication flow.'
+                'A dialog is a form of two-way communication. Conversations, orders, complaints and\
+            feedback are all forms of dialogs. In dialogs it’s important not only what you are saying,\
+            but also how you are saying things.', 'Our team believes that each response can change the next question, which can create\
+            another designed flow of communication.'
               ]
             },
             row2: {
-              title: 'Tools are on us!',
+              title: 'The tools are on us!',
               content: [
                 'ASK-Fast gives away several tools that you can use while designing and developing\
-            your dialogs. In addition to this, these tools can power up your dialogs with the new\
-            opportunities of automated communications. Compared to real communication, automated\
-            communications have lower costs, higher scalability rates.', 'According to our studies, dialogs are generally showing repeatable patterns in\
-            different contexts. After developing a dialog for your own services, it can be usable by\
-            another party with your permission. We created a marketplace that you can share, show or\
-            sell your dialogs to other people with one click.', 'Let’s give a recent example of dialog.'
+            your dialogs. These tools can power up your dialogs with the new opportunities of\
+            automated communications.', 'Compared to live human communication, automated communications have lower costs and\
+            higher scalability possibilities.'
               ],
               cta: 'Check modules'
             },
             row3: {
               title: 'Cow Registration Dialog',
               content: [
-                'According to Dutch Law, any newborn cow should be registered to the database of\
+                'According to Dutch Law, any newborn cow should be registered in the database of\
             the Dutch Government. One of our early partners developed a specific solution for this\
-            purpose. His solution can collect necessary information with an interactive voice response\
-            solution. The designed communication flow easily converted to SMS - Email communication\
-            channels. Now, he can offer many different communication channels to the end user and not\
-            binded to use a smartphone.', 'After a while, the same system has duplicated for another company which has the\
-            almost same requirements as Dutch Government.'
+            purpose: collect necessary information with an interactive voice response solution.', 'The designed communication flow easily converted to SMS - Email communication\
+            channels. So instead of being limited to one communication channel, our partner can offer\
+            many different communication channels to the end user.'
               ]
             },
             row4: {
-              title: 'This month’s featured dialog',
+              title: 'A marketplace for dialogs',
               content: [
-                'Email, SMS, automated phone call and Twitter… So many communications channels\
-            nowadays, but which one to use? Broadcast® is the unified messaging service that supports\
-            these communication channels. Because we believe that what you communicate is much more\
-            important than how you communicate.'
+                'We discovered that dialogs are generally showing repeatable patterns in different\
+            contexts. So, after developing a dialog for your own service, with your permission it can\
+            be used by another party.', 'We created a marketplace where you can share, show or sell your dialogs to other\
+            people with one click. However, you still have full control of your dialogs. If you don’t\
+            want to share or sell your dialogs, you can make them invisible to others.'
               ],
               cta: 'Check now'
             },
             row5: {
-              title: 'Dialogs are in a market',
+              title: 'This month’s featured dialog',
               content: [
-                'Dialogmarket is a marketplace for selling or sharing developed dialogs to other\
-            people who may be interested in your dialogs. You can show, share and sell the knowledge\
-            with other ASK-Fast users.', 'You have the full control of your dialogs. If you do not want to share or sell\
-            your dialogs, it will be invisible to others.', 'Some more text about dialog market will be here.'
+                'Broadcast:  One message, multiple communication channels. Increase the coverage rate\
+            of your message with Broadcast. You can send the same message with Email, SMS, Twitter or\
+            Automated phone.'
               ],
               cta: 'Get more info'
             }
@@ -432,32 +390,27 @@
           about: {
             team: {
               row1: {
-                title: 'Size does matter',
+                title: 'An international team',
                 content: [
-                  'We are an international and effective team. All our members have their\
-              expertise and overall knowledge about software sector. We are looking for new team\
-              members who are passionate for creating a difference in communication sector.', 'Thanks to all other aunt companies that made us so effective with an unimaginable\
-              small size company.'
+                  'Ask-Fast has an international software team. All members have thorough knowledge\
+              about software in relation to communication. Moreover, we all have the same drive: Make\
+              a difference in communication with software!'
                 ]
               },
               row2: {
-                title: 'We are a part of big family',
+                title: 'We are part of a big family',
                 content: [
-                  'As a partner in the Almende network, Ask-Fast works together with domain\
-              experts to deliver the best solutions for businesses and end-users.', 'All partners are young, innovative and fast growing companies that all focus\
-              on using the principles of self-organization to aid people.', 'Do you want to be investor or a  part of our family? Well, you need to talk it\
-              with our grandpa.'
+                  'As a partner in the Almende network, Ask-Fast works together with domain experts\
+              to deliver the best solutions for businesses and end-users.', 'All partners are young, innovative and fast growing companies. The focus is on\
+              using the principles of self-organization to aid people.', 'We would love to welcome you to the family, as an investor or as a partner!'
                 ],
                 cta: 'Talk to grandpa!'
               },
               row3: {
-                title: 'Looking for a new adventure?',
-                introduction: 'We have currently three positions that has priority for our business.',
+                title: 'Do you want make a difference?',
+                introduction: 'Then join us! We currently have three positions available:',
                 list: ['Sales Manager Benelux', 'Backend Java Developer', 'App developer (IOS)'],
-                content: [
-                  'We are always open to new ideas and if you think that you are the one for our\
-              team, send us your open application.'
-                ],
+                content: ['Furthermore, we like people with new ideas. You can always apply for an open position.'],
                 cta: 'Open Application'
               }
             }
