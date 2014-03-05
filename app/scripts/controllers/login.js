@@ -6,22 +6,79 @@ define(
 
     controllers.controller ('login',
       [
-        '$scope', '$rootScope', 'AskFast',
-        function ($scope, $rootScope, AskFast)
+        '$scope', '$rootScope', 'AskFast', 'Session', 'Storage',
+        function ($scope, $rootScope, AskFast, Session, Storage)
         {
-          $scope.data = {
+          $scope.login = {
             email: '',
             password: '',
             validation: {
               email: false,
               password: false
-            }
+            },
+            error: {
+              state:  false,
+              code:   null
+            },
+            state: false
           };
 
-          $scope.login = function ()
+          var loginBtn = $('#login button[type=submit]');
+
+          if (!Storage.session.get('app'))
           {
-            AskFast.login('sven', '098f6bcd4621d373cade4e832627b4f6')
+            Storage.session.add('app', '{}');
           }
+
+          var login = angular.fromJson(Storage.get('login'));
+
+          if (login && login.remember)
+          {
+            $scope.login.email     = login.email;
+            $scope.login.password  = login.password;
+          }
+
+          $scope.auth = function ()
+          {
+            loginBtn.text('Login..').attr('disabled', 'disabled');
+
+            Storage.add('login', angular.toJson(
+              {
+                email:    $scope.login.email,
+                password: $scope.login.password,
+                remember: $scope.login.remember
+              }
+            ));
+
+            AskFast.login($scope.login)
+              .then(function (result)
+              {
+                if ([400, 403, 404, 500].indexOf(result.status) < 0)
+                {
+                  $scope.login.error = {
+                    state:  true,
+                    code:   result.status
+                  };
+
+                  loginBtn.text('Login').removeAttr('disabled');
+                }
+
+                if (result.hasOwnProperty('X-SESSION_ID'))
+                {
+                  $scope.login.error = {
+                    state:  false,
+                    code:   null
+                  };
+
+                  Session.set(result['X-SESSION_ID']);
+
+                  $scope.login.state = true;
+                }
+
+              });
+          };
+
+
         }
       ]
     );

@@ -1,6 +1,7 @@
 define app:
   version:  '@@version'
   released: '@@released'
+  title: 'DevCen'
   defaults:
     language: 'en'
   app:
@@ -16,10 +17,10 @@ define app:
 #        'prices'
         'about'
       ]
-#      user: [
-#        'register'
-#        'login'
-#      ]
+      user: [
+        'register'
+        'login'
+      ]
 #      footer : [
 #        'jobs'
 #        'legal'

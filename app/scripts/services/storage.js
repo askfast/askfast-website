@@ -9,12 +9,16 @@ define(
         '$rootScope',
         function ($rootScope)
         {
-
           // If there is a prefix set in the config lets use that with an appended
           // period for readability
           // var prefix = angularLocalStorage.constant;
 
-          if (config.title.substr(-1) !== '.') config.title = !!config.title ? config.title + '.' : '';
+          // console.log('config =>', config);
+
+          if (config.app.title.substr(-1) !== '.')
+          {
+            config.app.title = !!config.app.title ? config.app.title + '.' : '';
+          }
 
           // Checks the browser to see if local storage is supported
           var browserSupportsLocalStorage = function ()
@@ -38,7 +42,7 @@ define(
             if (!value && value !== 0 && value !== "") return false;
 
             try {
-              localStorage.setItem(config.title + key, value);
+              localStorage.setItem(config.app.title + key, value);
             }
             catch (e) {
               return false;
@@ -54,7 +58,7 @@ define(
           {
             if (!browserSupportsLocalStorage()) return false;
 
-            var item = localStorage.getItem(config.title + key);
+            var item = localStorage.getItem(config.app.title + key);
 
             if (!item) return null;
 
@@ -69,7 +73,7 @@ define(
             if (!browserSupportsLocalStorage()) return false;
 
             try {
-              localStorage.removeItem(config.title + key);
+              localStorage.removeItem(config.app.title + key);
             }
             catch (e) {
               return false;
@@ -86,12 +90,12 @@ define(
           {
             if (!browserSupportsLocalStorage()) return false;
 
-            var prefixLength = config.title.length;
+            var prefixLength = config.app.title.length;
 
             for (var key in localStorage)
             {
               // Only remove items that are for this app
-              if (key.substr(0, prefixLength) === config.title)
+              if (key.substr(0, prefixLength) === config.app.title)
               {
                 try {
                   removeFromLocalStorage(key.substr(prefixLength));
@@ -130,7 +134,7 @@ define(
             if (!value && value !== 0 && value !== "") return false;
 
             try {
-              sessionStorage.setItem(config.title + key, value);
+              sessionStorage.setItem(config.app.title + key, value);
             }
             catch (e) {
               return false;
@@ -147,7 +151,7 @@ define(
           {
             if (!browserSupportsSessionStorage()) return false;
 
-            var item = sessionStorage.getItem(config.title + key);
+            var item = sessionStorage.getItem(config.app.title + key);
 
             if (!item) return null;
 
@@ -163,7 +167,7 @@ define(
             if (!browserSupportsSessionStorage()) return false;
 
             try {
-              sessionStorage.removeItem(config.title + key);
+              sessionStorage.removeItem(config.app.title + key);
             }
             catch (e) {
               return false;
@@ -180,12 +184,12 @@ define(
           {
             if (!browserSupportsSessionStorage()) return false;
 
-            var prefixLength = config.title.length;
+            var prefixLength = config.app.title.length;
 
             for (var key in sessionStorage)
             {
               // Only remove items that are for this app
-              if (key.substr(0, prefixLength) === config.title)
+              if (key.substr(0, prefixLength) === config.app.title)
               {
                 try {
                   removeFromSessionStorage(key.substr(prefixLength));
@@ -241,7 +245,7 @@ define(
                 expiry = "; expires=" + expiryDate.toGMTString();
               }
 
-              document.cookie = config.title +
+              document.cookie = config.app.title +
                                 key +
                                 "=" +
                                 //encodeURIComponent(value) +
@@ -277,8 +281,8 @@ define(
               while (thisCookie.charAt(0)==' ')
                 thisCookie = thisCookie.substring(1, thisCookie.length);
 
-              if (thisCookie.indexOf(config.title + key + '=') == 0)
-                return decodeURIComponent(thisCookie.substring(config.title.length + key.length + 1, thisCookie.length));
+              if (thisCookie.indexOf(config.app.title + key + '=') == 0)
+                return decodeURIComponent(thisCookie.substring(config.app.title.length + key.length + 1, thisCookie.length));
             }
 
             return null;
@@ -295,7 +299,7 @@ define(
           {
             var thisCookie    = null,
               thisKey       = null,
-              prefixLength  = config.title.length,
+              prefixLength  = config.app.title.length,
               cookies       = document.cookie.split(';');
 
             for (var i=0; i < cookies.length; i++)

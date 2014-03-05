@@ -6,8 +6,8 @@ define(
 
     modals.factory('AskFast',
       [
-        '$resource', '$q', '$location', '$rootScope',
-        function ($resource, $q, $location, $rootScope)
+        '$resource', '$q', '$location', '$rootScope', 'Storage', 'Session', 'MD5',
+        function ($resource, $q, $location, $rootScope, Storage, Session, MD5)
         {
           var AskFast = $resource(
             $rootScope.config.host + '/:action/:id',
@@ -126,8 +126,62 @@ define(
           );
 
 
+
+
           /**
            * User login
+           */
+          AskFast.prototype.login = function (data)
+          {
+            var deferred = $q.defer();
+
+            AskFast.login(
+              {
+                username: data.email,
+                password: MD5(data.password)
+              },
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve(error);
+              }
+            );
+
+            return deferred.promise;
+          };
+
+
+
+
+          /**
+           * User logout
+           */
+          AskFast.prototype.logout = function ()
+          {
+            var deferred = $q.defer();
+
+            AskFast.process(null,
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve({error: error});
+              }
+            );
+
+            return deferred.promise;
+          };
+
+
+
+
+          /**
+           * Contact form
            */
           AskFast.prototype.contact = function (contact)
           {
@@ -171,60 +225,6 @@ define(
             return deferred.promise;
           };
 
-
-          /**
-           * User login
-           */
-          AskFast.prototype.login = function (username, password)
-          {
-            var deferred = $q.defer();
-
-            AskFast.login.process(
-              {
-                username: username,
-                password: password
-              },
-              function (result)
-              {
-                if (angular.equals(result, []))
-                {
-                  deferred.reject('Something went wrong with login!');
-                }
-                else
-                {
-                  deferred.resolve(result);
-                }
-              },
-              function (error)
-              {
-                deferred.resolve(error);
-              }
-            );
-
-            return deferred.promise;
-          };
-
-
-          /**
-           * User logout
-           */
-          AskFast.prototype.logout = function ()
-          {
-            var deferred = $q.defer();
-
-            AskFast.process(null,
-              function (result)
-              {
-                deferred.resolve(result);
-              },
-              function (error)
-              {
-                deferred.resolve({error: error});
-              }
-            );
-
-            return deferred.promise;
-          };
 
           return new AskFast();
         }
