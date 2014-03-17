@@ -36,6 +36,7 @@ define(
           {
             $scope.login.email     = login.email;
             $scope.login.password  = login.password;
+            $scope.login.remember  = login.remember;
           }
 
           $scope.auth = function ()

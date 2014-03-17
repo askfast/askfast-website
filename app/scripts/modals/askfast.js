@@ -10,7 +10,7 @@ define(
         function ($resource, $q, $location, $rootScope, Storage, Session, MD5)
         {
           var AskFast = $resource(
-            $rootScope.config.host + '/:action/:id',
+            $rootScope.config.host + '/:action/:level',
             {},
             {
               register: {
@@ -107,7 +107,7 @@ define(
                 method: 'POST',
                 params: {
                   action: 'keyserver',
-                  id: 'token'
+                  level: 'token'
                 }
               }
             }
@@ -124,8 +124,6 @@ define(
               }
             }
           );
-
-
 
 
           /**
@@ -146,7 +144,7 @@ define(
               },
               function (error)
               {
-                deferred.resolve(error);
+                deferred.resolve({error: error});
               }
             );
 
@@ -154,6 +152,85 @@ define(
           };
 
 
+          /**
+           * User registration
+           */
+          AskFast.prototype.register = function (data)
+          {
+            var deferred = $q.defer();
+
+            AskFast.register(
+              {
+                name:         data.user.name.full(),
+                username:     data.user.email,
+                password:     data.passwords.first,
+                phone:        data.user.phone,
+                verification: 'SMS'
+              },
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve({error: error});
+              }
+            );
+
+            return deferred.promise;
+          };
+
+
+          /**
+           * User registration verify
+           */
+          AskFast.prototype.verify = function (data)
+          {
+            var deferred = $q.defer();
+
+            AskFast.registerVerify(
+              {
+                code:     data.verification.code,
+                id:       localStorage.getItem('data.verification.id')
+              },
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve({error: error});
+              }
+            );
+
+            return deferred.promise;
+          };
+
+
+          /**
+           * User registration verify
+           */
+          AskFast.prototype.resend = function ()
+          {
+            var deferred = $q.defer();
+
+            AskFast.resendVerify(
+              {
+                code:         localStorage.getItem('data.verification.id'),
+                verification: 'SMS'
+              },
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve({error: error});
+              }
+            );
+
+            return deferred.promise;
+          };
 
 
           /**
@@ -176,8 +253,6 @@ define(
 
             return deferred.promise;
           };
-
-
 
 
           /**
@@ -218,7 +293,7 @@ define(
               },
               function (error)
               {
-                deferred.resolve(error);
+                deferred.resolve({error: error});
               }
             );
 

@@ -6,8 +6,8 @@ define(
 
     controllers.controller ('register',
       [
-        '$scope', '$location', 'AskFast',
-        function ($scope, $location, AskFast)
+        '$scope', '$rootScope', '$location', 'AskFast',
+        function ($scope, $rootScope, $location, AskFast)
         {
           $('body').addClass('register-0');
 
@@ -25,22 +25,32 @@ define(
               phone: ''
             },
             passwords: {
-              first: '',
+              first:  '',
               second: ''
             },
-            verification: '',
+            verification: {
+              id:     null,
+              code:   null,
+              resent: false
+            },
             agreed: false,
             validation: {
               name: {
-                first: false,
-                last: false
+                first:  false,
+                last:   false
               },
-              email: false,
-              passwords: false,
-              phone: false
+              email:    false,
+              passwords:false,
+              phone:    false
             },
-            submitted: false
+            submitted:  false,
+            error: {
+              register: false,
+              resent:   false,
+              verify:   false
+            }
           };
+
 
           $scope.step = {
             value: null,
@@ -75,7 +85,7 @@ define(
                       $scope.data.validation.email ||
                       $scope.data.validation.passwords)
                   {
-                   // result = false;
+                   result = false;
                   }
                   break;
 
@@ -101,8 +111,20 @@ define(
 
                 $location.hash('step-' + this.value);
               }
+
+              $scope.data.verification.resent = true;
+              $scope.data.error.register  = false;
+              $scope.data.error.resent    = false;
+              $scope.data.error.verify    = false;
             }
           };
+
+          if (localStorage.hasOwnProperty('data.verification.id'))
+          {
+            $scope.step.value = 3;
+
+            $location.hash('step-3');
+          }
 
           $scope.$watch('$location', function ()
           {
@@ -110,27 +132,76 @@ define(
 
             switch ($scope.step.resolve)
             {
-              case 1:
-                $('body').addClass('register-0');
-                break;
-
-              case 2:
-                $('body').addClass('register-1');
-                break;
-
-              case 3:
-                $('body').addClass('register-1');
-                break;
-
-              case 4:
-                $('body').addClass('register-3');
-                break;
-
-              default:
+              case 1: $('body').addClass('register-0'); break;
+              case 2: $('body').addClass('register-1'); break;
+              case 3: $('body').addClass('register-1'); break;
+              case 4: $('body').addClass('register-3'); break;
             }
           });
 
           $scope.step.value = $scope.step.resolve;
+
+
+          $scope.register = function ()
+          {
+            AskFast.register($scope.data)
+              .then(function (result)
+              {
+                if (!result.hasOwnProperty('error'))
+                {
+                  $scope.data.verification.id = result.verificationCode;
+
+                  localStorage.setItem('data.verification.id', result.verificationCode);
+
+                  $scope.step.forward();
+                }
+                else
+                {
+                  $scope.data.error.register = true;
+                }
+              });
+          };
+
+          $scope.verify = function ()
+          {
+            AskFast.verify($scope.data)
+              .then(function (result)
+              {
+                if (!result.hasOwnProperty('error'))
+                {
+                  localStorage.removeItem('data.verification.id');
+
+                  $scope.step.forward();
+
+                  $rootScope.session = result['X-SESSION_ID'];
+                }
+                else
+                {
+                  $scope.data.verification.resent = false;
+
+                  $scope.data.error.verify = true;
+                }
+              });
+          };
+
+          $scope.resend = function ()
+          {
+            AskFast.resend()
+              .then(function (result)
+              {
+                if (!result.hasOwnProperty('error'))
+                {
+                  $scope.data.verification.resent = true;
+
+                  $scope.data.error.verify = false;
+                }
+                else
+                {
+                  $scope.data.error.resent = true;
+                }
+              });
+          };
+
         }
       ]
     );

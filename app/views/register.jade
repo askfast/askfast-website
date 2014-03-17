@@ -9,7 +9,8 @@ section#register
             h3.text-pink Sign up
             p Currently we are open for developers.
           .panel-body
-            form(role='form')
+            form(role='form',
+            ng-submit='step.forward()')
               .form-group
                 label First Name
                 input.form-control(type='text',
@@ -68,7 +69,8 @@ section#register
               h3.text-pink Sign up
               p Currently we are open for developers.
             .panel-body
-              form(role='form')
+              form(role='form',
+              ng-submit='register()')
                 .form-group
                   dl
                     dt
@@ -80,8 +82,11 @@ section#register
                   input.form-control(type='text',
                   ng-model='data.user.phone',
                   autofocus='autofocus')
+                  p(ng-show="data.error.register")
+                    small.text-danger There has been a problem with registering your account.
             .panel-footer.text-right
-              button.btn.btn-primary(ng-click='step.forward()') Send verification code
+              button.btn.btn-primary(ng-click='register();')
+                | Send verification code
 
 
 
@@ -95,23 +100,31 @@ section#register
             h3.text-pink Sign up
             p Currently we are open for developers.
           .panel-body
-            form(role='form')
+            form(role='form',
+            ng-submit='verify()')
               .form-group
                 dl
                   dt
                     h4
                       span We just send you a verification code to &nbsp;
                       br
-                      span +3161231456
+                      span {{data.user.phone}}
                   dd.
                     If you did not get the verification, please click resend the code button for a
                     new one.
                 label Verification code
                 input.form-control(type='text',
+                ng-model='data.verification.code',
                 autofocus='autofocus')
+                p(ng-show="data.verification.resent")
+                  small.text-success Verification code has been sent again.
+                p(ng-show="data.error.resent")
+                  small.text-danger There has been a problem with resending the verification code.
+                p(ng-show="data.error.verify")
+                  small.text-danger There has been a problem with verifying. Please try again.
           .panel-footer.text-right
-            button.btn.btn-link Resend the code
-            button.btn.btn-primary(ng-click='step.forward()') Verify
+            button.btn.btn-link(ng-click='resend();') Resend the code
+            button.btn.btn-primary(ng-click='verify();') Verify
 
 
 
@@ -133,5 +146,9 @@ section#register
                     | Your account is ready to use.
                     br
                     | It is time to be creative and get your hands dirty :)
+                    br
+                    br
+                    strong Session ID: &nbsp;
+                    | {{session}}
           .panel-footer.text-center
             button.btn.btn-primary OK

@@ -9,7 +9,7 @@
             <p>Currently we are open for developers.</p>
           </div>
           <div class="panel-body">
-            <form role="form">
+            <form role="form" ng-submit="step.forward()">
               <div class="form-group">
                 <label>First Name</label>
                 <input type="text" ng-model="data.user.name.first" autofocus="autofocus" class="form-control">
@@ -59,7 +59,7 @@
             <p>Currently we are open for developers.</p>
           </div>
           <div class="panel-body">
-            <form role="form">
+            <form role="form" ng-submit="register()">
               <div class="form-group">
                 <dl>
                   <dt>
@@ -72,11 +72,12 @@
                 </dl>
                 <label>Phone number</label>
                 <input type="text" ng-model="data.user.phone" autofocus="autofocus" class="form-control">
+                <p ng-show="data.error.register"><small class="text-danger">There has been a problem with registering your account.</small></p>
               </div>
             </form>
           </div>
           <div class="panel-footer text-right">
-            <button ng-click="step.forward()" class="btn btn-primary">Send verification code</button>
+            <button ng-click="register();" class="btn btn-primary">Send verification code</button>
           </div>
         </div>
       </div>
@@ -92,11 +93,11 @@
             <p>Currently we are open for developers.</p>
           </div>
           <div class="panel-body">
-            <form role="form">
+            <form role="form" ng-submit="verify()">
               <div class="form-group">
                 <dl>
                   <dt>
-                    <h4><span>We just send you a verification code to &nbsp;</span><br><span>+3161231456</span></h4>
+                    <h4><span>We just send you a verification code to &nbsp;</span><br><span>{{data.user.phone}}</span></h4>
                   </dt>
                   <dd>
                     If you did not get the verification, please click resend the code button for a
@@ -104,13 +105,16 @@
                   </dd>
                 </dl>
                 <label>Verification code</label>
-                <input type="text" autofocus="autofocus" class="form-control">
+                <input type="text" ng-model="data.verification.code" autofocus="autofocus" class="form-control">
+                <p ng-show="data.verification.resent"><small class="text-success">Verification code has been sent again.</small></p>
+                <p ng-show="data.error.resent"><small class="text-danger">There has been a problem with resending the verification code.</small></p>
+                <p ng-show="data.error.verify"><small class="text-danger">There has been a problem with verifying. Please try again.</small></p>
               </div>
             </form>
           </div>
           <div class="panel-footer text-right">
-            <button class="btn btn-link">Resend the code</button>
-            <button ng-click="step.forward()" class="btn btn-primary">Verify</button>
+            <button ng-click="resend();" class="btn btn-link">Resend the code</button>
+            <button ng-click="verify();" class="btn btn-primary">Verify</button>
           </div>
         </div>
       </div>
@@ -132,7 +136,7 @@
                   <dt>
                     <h4>Thank you for choosing us.</h4>
                   </dt>
-                  <dd>Your account is ready to use.<br>It is time to be creative and get your hands dirty :)</dd>
+                  <dd>Your account is ready to use.<br>It is time to be creative and get your hands dirty :)<br><br><strong>Session ID: &nbsp;</strong>{{session}}</dd>
                 </dl>
               </div>
             </form>

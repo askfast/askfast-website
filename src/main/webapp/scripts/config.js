@@ -3,6 +3,7 @@
     app: {
       version: '@@version',
       released: '@@released',
+      title: 'DevCen',
       defaults: {
         language: 'en'
       },
@@ -10,6 +11,7 @@
         languages: ['en', 'nl'],
         nav: {
           main: ['developers', 'business', 'dialogs', 'about'],
+          user: ['register', 'login'],
           subs: {
             developers: ['faststart', 'devmods'],
             business: ['solutions', 'benefits'],
