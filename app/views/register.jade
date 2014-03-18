@@ -16,7 +16,8 @@ section#register
             h3.text-pink Sign up
             p Currently we are open for developers.
           .panel-body
-            form(role='form',
+            form(name='registrationForm1',
+            role='form',
             ng-submit='step.forward()')
               .form-group
                 label First Name
@@ -33,15 +34,19 @@ section#register
                   small.text-danger This field is required
               .form-group
                 label Email Adress
-                input.form-control(type='text',
+                input.form-control(name='email',
+                type='email',
                 ng-model='data.user.email',
+                ng-minlength='3',
                 ng-change='userExists()')
+                p(ng-show="data.validation.email")
+                  small.text-danger This field is required
+                p(ng-hide="registrationForm1.email.$valid")
+                  small.text-danger Please enter a valid email address.
                 p(ng-show="data.validation.userExists")
                   small.text-danger
                     | Please choose an another email adres. This email address has
                     | already been registered.
-                p(ng-show="data.validation.email")
-                  small.text-danger This field is required
               .form-group
                 label Password
                 input.form-control(type='password',
@@ -68,7 +73,6 @@ section#register
           .panel-footer.text-right
             button.btn.btn-primary(type='submit',
             ng-click='step.forward()') Sign Up
-            // class='{{(data.validation.userExists == true) && "disabled"}}'
 
 
 

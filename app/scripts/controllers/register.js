@@ -67,8 +67,8 @@ define(
                   $scope.data.submitted = true;
 
                   $scope.data.validation.name.first = (($scope.data.user.name.first == ''));
-                  $scope.data.validation.name.last = (($scope.data.user.name.last == ''));
-                  $scope.data.validation.email = (($scope.data.user.email == ''));
+                  $scope.data.validation.name.last  = (($scope.data.user.name.last == ''));
+                  $scope.data.validation.email      = (($scope.data.user.email == ''));
 
                   $scope.data.validation.passwords = (
                     ($scope.data.passwords.first == '') || ($scope.data.passwords.second == '') ||
@@ -150,9 +150,7 @@ define(
                   localStorage.setItem('data.verification.id', result.verificationCode);
 
                   // $scope.step.value = 3;
-
                   // $location.hash('step-3');
-
                   // $scope.step.forward();
                 }
                 else
@@ -177,11 +175,14 @@ define(
             {
               $scope.checkUsername = null;
 
-              AskFast.userExists($scope.data.user.email)
-                .then(function (result)
-                {
-                  $scope.data.validation.userExists = ((result.hasOwnProperty('error')));
-                });
+              if ($scope.registrationForm1.email.$valid)
+              {
+                AskFast.userExists($scope.data.user.email)
+                  .then(function (result)
+                  {
+                    $scope.data.validation.userExists = ((result.hasOwnProperty('error')));
+                  });
+              }
 
             }, CHECK_USERNAME_DELAY);
           };
