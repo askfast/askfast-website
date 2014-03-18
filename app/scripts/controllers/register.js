@@ -14,23 +14,23 @@ define(
           $scope.data = {
             user: {
               name: {
-                first:  'Cengiz',
-                last:   'Ulusoy',
+                first:  '',
+                last:   '',
                 full:   function () { return this.first + ' ' + this.last }
               },
-              email: 'cengiz ' + Date.now() + '@ask-cs.com',
-              phone: '0629143143'
+              email: '',
+              phone: ''
             },
             passwords: {
-              first:  'askask',
-              second: 'askask'
+              first:  '',
+              second: ''
             },
             verification: {
               id:     null,
               code:   null,
               resent: false
             },
-            agreed: true,
+            agreed: false,
             validation: {
               name: {
                 first:  false,
