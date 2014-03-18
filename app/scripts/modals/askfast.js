@@ -24,6 +24,13 @@ define(
                   verification: ''
                 }
               },
+              userExists: {
+                method: 'GET',
+                params: {
+                  action:   'user_exists',
+                  username: ''
+                }
+              },
               registerVerify: {
                 method: 'GET',
                 params: {
@@ -153,6 +160,14 @@ define(
 
 
           /**
+           * /user_exists?username={preferred_username}
+
+           returns a 200 if it doesn't exists and a 409 if it does.
+           * @type {*}
+           */
+
+
+          /**
            * User registration
            */
           AskFast.prototype.register = function (data)
@@ -166,6 +181,31 @@ define(
                 password:     data.passwords.first,
                 phone:        data.user.phone,
                 verification: 'SMS'
+              },
+              function (result)
+              {
+                deferred.resolve(result);
+              },
+              function (error)
+              {
+                deferred.resolve({error: error});
+              }
+            );
+
+            return deferred.promise;
+          };
+
+
+          /**
+           * Check whet username already exists
+           */
+          AskFast.prototype.userExists = function (username)
+          {
+            var deferred = $q.defer();
+
+            AskFast.userExists(
+              {
+                username: username
               },
               function (result)
               {

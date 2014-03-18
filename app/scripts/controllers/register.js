@@ -14,12 +14,9 @@ define(
           $scope.data = {
             user: {
               name: {
-                first: '',
-                last: '',
-                full: function ()
-                {
-                  return this.first + ' ' + this.last;
-                }
+                first:  '',
+                last:   '',
+                full:   function () { return this.first + ' ' + this.last }
               },
               email: '',
               phone: ''
@@ -39,9 +36,10 @@ define(
                 first:  false,
                 last:   false
               },
-              email:    false,
-              passwords:false,
-              phone:    false
+              email:      false,
+              userExists: false,
+              passwords:  false,
+              phone:      false
             },
             submitted:  false,
             error: {
@@ -57,10 +55,7 @@ define(
 
             resolve: Number($location.hash().split('-')[1]),
 
-            check: function (step)
-            {
-              return ((this.value === step));
-            },
+            check: function (step) { return ((this.value === step)) },
 
             validate: function (step)
             {
@@ -83,6 +78,7 @@ define(
                   if ($scope.data.validation.first ||
                       $scope.data.validation.last ||
                       $scope.data.validation.email ||
+                      $scope.data.validation.userExists ||
                       $scope.data.validation.passwords)
                   {
                    result = false;
@@ -112,10 +108,10 @@ define(
                 $location.hash('step-' + this.value);
               }
 
-              $scope.data.verification.resent = true;
-              $scope.data.error.register  = false;
-              $scope.data.error.resent    = false;
-              $scope.data.error.verify    = false;
+              $scope.data.verification.resent = false;
+              $scope.data.error.register      = false;
+              $scope.data.error.resent        = false;
+              $scope.data.error.verify        = false;
             }
           };
 
@@ -153,7 +149,11 @@ define(
 
                   localStorage.setItem('data.verification.id', result.verificationCode);
 
-                  $scope.step.forward();
+                  // $scope.step.value = 3;
+
+                  // $location.hash('step-3');
+
+                  // $scope.step.forward();
                 }
                 else
                 {
@@ -161,6 +161,33 @@ define(
                 }
               });
           };
+
+          var CHECK_USERNAME_DELAY = 500;
+
+          $scope.userExists = function ()
+          {
+            if ($scope.checkUsername)
+            {
+              clearTimeout($scope.checkUsername);
+
+              $scope.checkUsername = null;
+            }
+
+            $scope.checkUsername = setTimeout(function ()
+            {
+              $scope.checkUsername = null;
+
+              AskFast.userExists($scope.data.user.email)
+                .then(function (result)
+                {
+                  $scope.data.validation.userExists = ((result.hasOwnProperty('error')));
+                });
+
+            }, CHECK_USERNAME_DELAY);
+          };
+
+          $scope.checkUsername = null;
+
 
           $scope.verify = function ()
           {

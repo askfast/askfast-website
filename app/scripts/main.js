@@ -12,7 +12,7 @@ require.config (
       bootstrap:          '../vendors/bootstrap-sass/dist/js/bootstrap.min',
       'angular-resource': '../vendors/angular-resource/angular-resource.min',
       'angular-route':    '../vendors/angular-route/angular-route.min',
-      signet:   '../vendors/signet/signet.min',
+      //signet:   '../vendors/signet/signet.min',
       bxslider: '../vendors/bxslider-4/jquery.bxslider.min'
     },
     shim: {
@@ -51,7 +51,7 @@ require (
     'services/storage',
     'services/strings',
     'bootstrap',
-    'signet',
+    //'signet',
     'bxslider'
   ],
   function (angular, domReady)

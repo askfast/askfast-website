@@ -53,7 +53,8 @@ define(
             .when('/register',
             {
               templateUrl:    'views/register.html',
-              controller:     'register'
+              controller:     'register',
+              reloadOnSearch: false
             })
             .when('/login',
             {

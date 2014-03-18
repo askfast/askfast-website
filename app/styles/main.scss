@@ -951,6 +951,10 @@ body {
   }
 }
 
+.btn-primary.disabled {
+  background-color: $gray;
+}
+
 .btn-link {
   color: $blue;
   text-decoration: underline;
