@@ -1,12 +1,6 @@
 section#register
 
 
-  p.text-right {{data}}
-  a(href='http://localhost:9000/#/register#step-1', class='btn btn-primary') Return to base
-  br
-  br
-
-
   #register-step-1.container(ng-show='step.check(1)')
     .row
       .col-md-4.col-md-offset-4
@@ -87,7 +81,7 @@ section#register
               p Currently we are open for developers.
             .panel-body
               form(role='form',
-              ng-submit='register(); step.forward();')
+              ng-submit='register();')
                 .form-group
                   dl
                     dt
@@ -102,7 +96,7 @@ section#register
                   p(ng-show="data.error.register")
                     small.text-danger There has been a problem with registering your account.
             .panel-footer.text-right
-              button.btn.btn-primary(ng-click='register(); step.forward();')
+              button.btn.btn-primary(ng-click='register(); step.forward()')
                 | Send verification code
 
 

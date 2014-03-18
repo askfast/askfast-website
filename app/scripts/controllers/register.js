@@ -14,23 +14,23 @@ define(
           $scope.data = {
             user: {
               name: {
-                first:  '',
-                last:   '',
+                first:  'Cengiz',
+                last:   'Ulusoy',
                 full:   function () { return this.first + ' ' + this.last }
               },
-              email: '',
-              phone: ''
+              email: 'cengiz ' + Date.now() + '@ask-cs.com',
+              phone: '0629143143'
             },
             passwords: {
-              first:  '',
-              second: ''
+              first:  'askask',
+              second: 'askask'
             },
             verification: {
               id:     null,
               code:   null,
               resent: false
             },
-            agreed: false,
+            agreed: true,
             validation: {
               name: {
                 first:  false,
@@ -81,7 +81,8 @@ define(
                       $scope.data.validation.userExists ||
                       $scope.data.validation.passwords)
                   {
-                   result = false;
+
+                    result = false;
                   }
                   break;
 
@@ -99,7 +100,7 @@ define(
 
             forward: function ()
             {
-              var current = this.resolve;
+              var current = this.value;
 
               if (this.validate(current))
               {
@@ -137,7 +138,6 @@ define(
 
           $scope.step.value = $scope.step.resolve;
 
-
           $scope.register = function ()
           {
             AskFast.register($scope.data)
@@ -148,10 +148,6 @@ define(
                   $scope.data.verification.id = result.verificationCode;
 
                   localStorage.setItem('data.verification.id', result.verificationCode);
-
-                  // $scope.step.value = 3;
-                  // $location.hash('step-3');
-                  // $scope.step.forward();
                 }
                 else
                 {
@@ -188,7 +184,6 @@ define(
           };
 
           $scope.checkUsername = null;
-
 
           $scope.verify = function ()
           {
