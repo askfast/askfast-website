@@ -2,7 +2,8 @@ extends layout
 
 
 block brand
-  a.navbar-brand(href='#home') ASK-Fast
+  a.navbar-brand(href='#home',
+  ng-click='collapseMenu()') ASK-Fast
 
 
 
@@ -10,7 +11,7 @@ block main-nav
   ul.nav.navbar-nav
     li(ng-repeat='item in config.app.nav.main',
     ng-class="(location.path == item) && 'active'")
-      a(ng-href="{{'#' + item}}") {{ui.globals.nav.main[item]}}
+      a(ng-click='setMainView(item)') {{ui.globals.nav.main[item]}}
 
 
 
@@ -18,7 +19,8 @@ block user-nav
   ul.nav.navbar-nav.navbar-right
     li(ng-repeat='item in config.app.nav.user',
     ng-class="(location.path == item) && 'active'")
-      a(ng-href="{{'#' + item}}") {{ui.globals.nav.user[item]}}
+      a(ng-href="{{'#' + item + (item == 'register' && '#step-1' || '')}}")
+        | {{ui.globals.nav.user[item]}}
 
 
 
@@ -38,10 +40,13 @@ block footer-nav
 
 
 block navbar
-  .navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+  .navbar.navbar-inverse.navbar-fixed-top.ng-cloak(role='navigation',
+  ng-hide='isInternPage()')
     .container
       .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        button.navbar-toggle(type='button',
+        data-toggle='collapse',
+        data-target='.navbar-collapse')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
@@ -54,10 +59,10 @@ block navbar
 
 
 block footer
-  footer
+  footer.ng-cloak(ng-hide='isInternPage()')
     .container
       .row
-        .col-md-8.col-md-offset-1
+        .col-md-10
           block footer-nav
         .col-md-2
           block brand
@@ -65,13 +70,13 @@ block footer
 
 
 block tweets
-  ul
+  ul(ng-show='false')
     li
-      a(href='#') Virtual Phone numbers are available in Jordan
+      a(href='') Virtual Phone numbers are available in Jordan
     li
-      a(href='#') Say Hi to our new office in Berlin
+      a(href='') Say Hi to our new office in Berlin
     li
-      a(href='#') Register for our webinar
+      a(href='') Register for our webinar
 
 
 

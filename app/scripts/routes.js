@@ -40,11 +40,6 @@ define(
               templateUrl:    'views/about.html',
               controller:     'promotional'
             })
-            .when('/jobs',
-            {
-              templateUrl:    'views/jobs.html',
-              controller:     'promotional'
-            })
             .when('/legal',
             {
               templateUrl:    'views/legal.html',
@@ -58,7 +53,8 @@ define(
             .when('/register',
             {
               templateUrl:    'views/register.html',
-              controller:     'register'
+              controller:     'register',
+              reloadOnSearch: false
             })
             .when('/login',
             {

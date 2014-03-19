@@ -6,9 +6,11 @@ define(
 
     controllers.controller ('promotional',
       [
-        '$rootScope', '$scope',
-        function ($rootScope, $scope)
+        '$rootScope', '$scope', 'AskFast',
+        function ($rootScope, $scope, AskFast)
         {
+          $('body').removeClass();
+
           $scope.setChannelView = function (view)
           {
             $scope.channelView = {
@@ -54,6 +56,21 @@ define(
           $scope.setChannelView('tel');
           $scope.setPromiseView('cost');
           $scope.switchDevMod('verify');
+
+          $scope.contact = {};
+
+          $scope.contact.sent = false;
+
+          $scope.sendContact = function (contact)
+          {
+            AskFast.contact(contact)
+              .then(function (result)
+              {
+                console.log('result ->', result);
+
+                $scope.contact.sent = true;
+              });
+          };
         }
       ]
     );
