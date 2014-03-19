@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="stylesheet" href="styles/6e4438d5.main.css">
+    <link rel="stylesheet" href="styles/a00e0fcf.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -43,9 +43,7 @@
           <ul class="nav navbar-nav">
             <li ng-repeat="item in config.app.nav.main" ng-class="(location.path == item) &amp;&amp; 'active'"><a ng-click="setMainView(item)">{{ui.globals.nav.main[item]}}</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li ng-repeat="item in config.app.nav.user" ng-class="(location.path == item) &amp;&amp; 'active'"><a ng-href="{{'#' + item + (item == 'register' &amp;&amp; '#step-1' || '')}}">{{ui.globals.nav.user[item]}}</a></li>
-          </ul>
+          <!-- block user-nav-->
         </div>
       </div>
     </div>
@@ -85,7 +83,7 @@
         </div>
       </div>
     </footer>
-    <script data-main="scripts/cbf77fa1.main" src="vendors/requirejs/require.js"></script>
+    <script data-main="scripts/bc0b9dff.main" src="vendors/requirejs/require.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
   </body>
 </html>
