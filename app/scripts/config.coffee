@@ -1,7 +1,7 @@
 define app:
   version:  '@@version'
   released: '@@released'
-  title: 'DevCen'
+  title: 'ASK-Fast: Cloud Communication Service'
   defaults:
     language: 'en'
   app:

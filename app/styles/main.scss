@@ -1147,7 +1147,7 @@ body {
   ul {
     li {
       min-height: 340px;
-      font-size: 1.2em;
+      font-size: 1.3em;
       position: relative;
 
       .row {
@@ -1297,6 +1297,7 @@ ul.bullets {
       a {
         width: 72px;
         height: 72px;
+        font-size: 1.5em;
       }
     }
 
@@ -1647,7 +1648,8 @@ ul.bullets {
 
     .warranty {
       margin-left: 150px;
-
+      padding-bottom: 20px;
+      padding-top:20px;
     }
   }
 
