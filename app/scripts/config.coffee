@@ -14,7 +14,7 @@ define app:
         'developers'
         'business'
         'dialogs'
-#        'prices'
+        'prices'
         'about'
       ]
       user: [

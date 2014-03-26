@@ -1237,11 +1237,11 @@ body {
       }
     }
 
-    #tel     { @include btn-icon(0,      0, 0,      -36px) }
-    #mail    { @include btn-icon(-36px,  0, -36px,  -36px) }
-    #twitter { @include btn-icon(-72px,  0, -72px,  -36px) }
-    #email   { @include btn-icon(-108px, 0, -108px, -36px) }
-    #gMail   { @include btn-icon(-144px, 0, -144px, -36px) }
+    #tel     { @include btn-icon(0,      0, 0,      -36px); }
+    #mail    { @include btn-icon(-36px,  0, -36px,  -36px); }
+    #twitter { @include btn-icon(-72px,  0, -72px,  -36px); }
+    #email   { @include btn-icon(-108px, 0, -108px, -36px); }
+    #gMail   { @include btn-icon(-144px, 0, -144px, -36px); }
   }
 
   .channel-image {
@@ -1300,15 +1300,15 @@ ul.bullets {
       }
     }
 
-    #cost         { @include btn-icon(0,      -72px, 0,      -144px) }
-    #analyze      { @include btn-icon(-72px,  -72px, -72px,  -144px) }
-    #time         { @include btn-icon(-144px, -72px, -144px, -144px) }
-    #customizable { @include btn-icon(-216px, -72px, -216px, -144px) }
-    #integration  { @include btn-icon(-288px, -72px, -288px, -144px) }
-    #cloud        { @include btn-icon(-360px, -72px, -360px, -144px) }
-    #ideas        { @include btn-icon(-432px, -72px, -432px, -144px) }
-    #performance  { @include btn-icon(-504px, -72px, -504px, -144px) }
-    #privacy      { @include btn-icon(-576px, -72px, -576px, -144px) }
+    #cost         { @include btn-icon(0,      -72px, 0,      -144px); }
+    #analyze      { @include btn-icon(-72px,  -72px, -72px,  -144px); }
+    #time         { @include btn-icon(-144px, -72px, -144px, -144px); }
+    #customizable { @include btn-icon(-216px, -72px, -216px, -144px); }
+    #integration  { @include btn-icon(-288px, -72px, -288px, -144px); }
+    #cloud        { @include btn-icon(-360px, -72px, -360px, -144px); }
+    #ideas        { @include btn-icon(-432px, -72px, -432px, -144px); }
+    #performance  { @include btn-icon(-504px, -72px, -504px, -144px); }
+    #privacy      { @include btn-icon(-576px, -72px, -576px, -144px); }
   }
 }
 
@@ -1641,7 +1641,13 @@ ul.bullets {
         margin-top: 20px;
         min-height: 23px;
         background: url(../images/red-bullet.png) repeat-x;
+
       }
+    }
+
+    .warranty {
+      margin-left: 150px;
+
     }
   }
 
@@ -1660,7 +1666,49 @@ ul.bullets {
       }
 
       .price-thumb {
-        width: 70px;
+        width: 108px;
+        height: 70px;
+
+      }
+
+      #sms-price-inbound-icon {
+        background: url($sprite) 0px  -360px;
+
+      }
+      #phone-price-inbound-icon {
+        background: url($sprite) -108px  -360px;
+      }
+
+      #email-price-inbound-icon {
+        background: url($sprite) -216px  -360px;
+      }
+
+      #gtalk-price-inbound-icon {
+        background: url($sprite) -324px  -360px;
+      }
+
+      #twitter-price-inbound-icon {
+        background: url($sprite) -432px  -360px;
+      }
+
+      #sms-price-outbound-icon {
+        background: url($sprite) 0px  -432px;
+
+      }
+      #phone-price-outbound-icon {
+        background: url($sprite) -108px  -432px;
+      }
+
+      #email-price-outbound-icon {
+        background: url($sprite) -216px  -432px;
+      }
+
+      #gtalk-price-outbound-icon {
+        background: url($sprite) -324px  -432px;
+      }
+
+      #twitter-price-outbound-icon {
+        background: url($sprite) -432px  -432px;
       }
     }
   }
