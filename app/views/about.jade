@@ -66,10 +66,25 @@ article#sub-contact(ng-show='subView.contact')
 
   .container-fluid.container-content.container-dark
     .row
-      .col-md-8.col-md-offset-2.text-center
-        h2 We would like to hear from you!
+      .col-md-10.col-md-offset-1.text-center
+
+    .row
+      .col-md-10.col-md-offset-1.text-center
+              article
+                  p.
+
         .row
-          .col-md-8.col-md-offset-2
+          .col-md-4.col-md-offset-1
+            h3 Contact Details:
+            p <strong> Address: </strong>
+            p Coolhaven 236 3024 AN Rotterdam
+            p <strong> Phone: </strong>
+            p +31 (0) 10 225 0130
+            p <strong> E-mail: </strong>
+            p info@askfast.com
+
+          .col-md-6
+            h2  We would like to hear from you!
             article(ng-show='contact.sent')
               p.
                 Your message has been successfully sent.
@@ -120,3 +135,4 @@ article#sub-contact(ng-show='subView.contact')
                   textarea.form-control(ng-model='contact.message',
                   placeholder='Your Message')
                 button.btn.btn-primary.pull-left(type='submit') Send
+

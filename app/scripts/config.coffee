@@ -21,11 +21,11 @@ define app:
         'register'
         'login'
       ]
-#      footer : [
+      footer : [
 #        'jobs'
-#        'legal'
-#        'contact'
-#      ]
+        'legal'
+        'contact'
+      ]
       subs:
         developers: [
           'faststart'

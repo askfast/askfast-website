@@ -1,1 +1,36 @@
-h2 Legal
+.container-fluid.container-content.container-black
+    .row
+        .content-holder.col-md-6
+            h1 {{ui.pages.legal.title}}
+            p  We believe that your privacy is very important.
+            ul.bullets
+                li Privacy policy
+                li Terms of use
+        .img-holder.col-md-6
+            img.img-responsive(ng-src='../images/privacy.png', alt='Privacy')
+
+.container-fluid.container-content.container-white
+    .row
+        .col-md-12
+            h1 {{ui.pages.legal.title}}
+            .row
+                .col-md-12
+                    article
+                        h2 {{ui.pages.legal.subtitle1}}
+
+                        p {{ui.pages.legal.content1}}
+
+                        ul.bullets(ng-show='ui.pages.legal.list')
+                            li(ng-repeat='item in ui.pages.legal.list') {{item}}
+
+                        h2 {{ui.pages.legal.subtitle2}}
+
+                        p  {{ui.pages.legal.content2}}
+
+                        h2 {{ui.pages.legal.subtitle3}}
+
+                        p {{ui.pages.legal.content3}}
+
+                        h2 {{ui.pages.legal.subtitle4}}
+
+                        p {{ui.pages.legal.content4}}
