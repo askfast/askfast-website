@@ -6,7 +6,7 @@
 <html class="no-js lt-ie9 lt-ie8"></html>
 <![endif]-->
 <!--[if IE 8]>
-<html class="no-js lt-ie9"></html>
+<html class="no-js lt-ie9s"></html>
 <![endif]-->
 <!-- [if gt IE 8] <!-->
 <html lang="en" class="no-js">
@@ -14,7 +14,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>AskFast Development Center</title>
+    <title>ASK-Fast Cloud Communication Service</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <meta name="signet:authors" content="Cengiz Ulusoy">
@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icons/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="/favicon.png">
-    <link rel="stylesheet" href="styles/a00e0fcf.main.css">
+    <link rel="stylesheet" href="styles/5d5fa4ca.main.css">
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -74,12 +74,15 @@
     <footer ng-hide="isInternPage()" class="ng-cloak">
       <div class="container">
         <div class="row">
-          <div class="col-md-10">
+          <div class="col-md-4">
             <ul id="footer-nav" class="list-inline">
               <li ng-repeat="item in config.app.nav.footer"><a ng-href="{{'#' + item}}">{{ui.globals.nav.footer[item]}}</a></li>
             </ul>
           </div>
-          <div class="col-md-2"><a href="#home" ng-click="collapseMenu()" class="navbar-brand">ASK-Fast</a></div>
+          <div class="col-md-4 footer-address">
+            <p>Coolhaven 236 3024AN Rotterdam, info@ask-cs.com</p>
+          </div>
+          <div class="col-md-4"><a href="#home" ng-click="collapseMenu()" class="navbar-brand">ASK-Fast</a></div>
         </div>
       </div>
     </footer>

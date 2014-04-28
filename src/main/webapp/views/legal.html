@@ -1,1 +1,37 @@
-<h2>Legal</h2>
+<div class="container-fluid container-content container-black">
+  <div class="row">
+    <div class="content-holder col-md-6">
+      <h1>{{ui.pages.legal.title}}</h1>
+      <p> We believe that your privacy is very important.</p>
+      <ul class="bullets">
+        <li>Privacy policy</li>
+        <li>Terms of use</li>
+      </ul>
+    </div>
+    <div class="img-holder col-md-6"><img ng-src="../images/privacy.png" alt="Privacy" class="img-responsive"></div>
+  </div>
+</div>
+<div class="container-fluid container-content container-white">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>{{ui.pages.legal.title}}</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <article>
+            <h2>{{ui.pages.legal.subtitle1}}</h2>
+            <p>{{ui.pages.legal.content1}}</p>
+            <ul ng-show="ui.pages.legal.list" class="bullets">
+              <li ng-repeat="item in ui.pages.legal.list">{{item}}</li>
+            </ul>
+            <h2>{{ui.pages.legal.subtitle2}}</h2>
+            <p> {{ui.pages.legal.content2}}</p>
+            <h2>{{ui.pages.legal.subtitle3}}</h2>
+            <p>{{ui.pages.legal.content3}}</p>
+            <h2>{{ui.pages.legal.subtitle4}}</h2>
+            <p>{{ui.pages.legal.content4}}</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

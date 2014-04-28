@@ -414,6 +414,24 @@
                 cta: 'Open Application'
               }
             }
+          },
+          legal: {
+            title: 'ASK Fast Privacy Policy',
+            subtitle1: 'We respect your privacy',
+            content1: 'There are many different ways you can use ASK Fast services.\
+                            ASK Fast provides you with applications, tools, and APIs to help you\
+                            communicate with other people quicker and better. As you use our services,\
+                            we would like you to know that we treat your privacy seriously. We create the\
+                            following privacy policy to make you aware how we’re collecting and using information you may provide to us.\
+                            Among our fundamental principles:',
+            list: ['We do not sell your personal information, nor contact list (phone, email, social media, etc). We do not share or distribute your contact information unless specifically stated so.', 'We don’t ask you for personal information unless we need it.', 'We don’t store personal information on our servers unless required for a specific organizational effort, such as delivering a message to congress, connect you via phone to your representatives, deliver a petition or in order to communicate with you about an upcoming effort.'],
+            subtitle2: 'The collection of personal information',
+            content2: 'ASK Fast collects information to provide better services to all of our users. In most cases, this may request personal and contact information from you, like names, e-mail addresses, or telephone numbers, in order to start communication services from ASK Fast.',
+            subtitle3: 'Information Sharing',
+            content3: 'ASK Fast is not in the business of selling your information. You own your data and retain the rights, title, and interest in the data you store in ASK Fast services.\
+                                    We consider this information to be a vital part of our relationship with you. Therefore, we will never share the information you provided to ASK Fast services with third parties without your agreement.',
+            subtitle4: 'Privacy Policy Changes',
+            content4: 'Although most changes are likely to be minor, ASK Fast may change its Privacy Policy from time to time, and at ASK Fast’s sole discretion. We will try our best to alert you about changes on privacy policy. However, in case we can not reach you by the means of contact you provide to us, we encourage you to frequently check this page for any changes. Your continued use of this service after any change in this Privacy Policy will constitute your acceptance of such change.'
           }
         }
       },
@@ -882,6 +900,24 @@
                 cta: '(NL) Open Application'
               }
             }
+          },
+          legal: {
+            title: '(NL)ASK Fast Privacy Policy',
+            subtitle: '(NL)We respect your privacy',
+            content: '(NL) There are many different ways you can use ASK Fast services.\
+                  ASK Fast provides you with applications, tools, and APIs to help you\
+                  communicate with other people quicker and better. As you use our services,\
+                  we would like you to know that we treat your privacy seriously. We create the\
+                  following privacy policy to make you aware how we’re collecting and using information you may provide to us.\
+                  Among our fundamental principles:',
+            list: ['(NL) We do not sell your personal information, nor contact list (phone, email, social media, etc). We do not share or distribute your contact information unless specifically stated so.', '(NL) We don’t ask you for personal information unless we need it.', '(NL) We don’t store personal information on our servers unless required for a specific organizational effort, such as delivering a message to congress, connect you via phone to your representatives, deliver a petition or in order to communicate with you about an upcoming effort.'],
+            subtitle: '(NL) The collection of personal information',
+            content: '(NL) ASK Fast collects information to provide better services to all of our users. In most cases, this may request personal and contact information from you, like names, e-mail addresses, or telephone numbers, in order to start communication services from ASK Fast.',
+            subtitle: '(NL) Information Sharing',
+            content: ' (NL)ASK Fast is not in the business of selling your information. You own your data and retain the rights, title, and interest in the data you store in ASK Fast services.\
+                  We consider this information to be a vital part of our relationship with you. Therefore, we will never share the information you provided to ASK Fast services with third parties without your agreement.',
+            subtitle: '(NL) Privacy Policy Changes',
+            content: '(NL) Although most changes are likely to be minor, ASK Fast may change its Privacy Policy from time to time, and at ASK Fast’s sole discretion. We will try our best to alert you about changes on privacy policy. However, in case we can not reach you by the means of contact you provide to us, we encourage you to frequently check this page for any changes. Your continued use of this service after any change in this Privacy Policy will constitute your acceptance of such change.'
           }
         }
       }

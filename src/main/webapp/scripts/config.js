@@ -3,15 +3,16 @@
     app: {
       version: '@@version',
       released: '@@released',
-      title: 'DevCen',
+      title: 'ASK-Fast: Cloud Communication Service',
       defaults: {
         language: 'en'
       },
       app: {
         languages: ['en', 'nl'],
         nav: {
-          main: ['developers', 'business', 'dialogs', 'about'],
+          main: ['developers', 'business', 'dialogs', 'prices', 'about'],
           user: ['register', 'login'],
+          footer: ['legal', 'contact'],
           subs: {
             developers: ['faststart', 'devmods'],
             business: ['solutions', 'benefits'],
