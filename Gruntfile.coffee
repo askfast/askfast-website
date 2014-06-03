@@ -41,7 +41,16 @@ module.exports = (grunt) ->
           src: 'views/*.jade'
           ext: '.html'
         ]
-
+      askfast:
+        options:
+          pretty: true
+        files: [
+          expand: true
+          cwd: '<%= paths.app %>'
+          dest: '.tmp'
+          src: 'askfast/*.jade'
+          ext: '.html'
+        ]
     watch:
       jade:
         files: ['<%= paths.app %>/{,*/}*.jade']
@@ -246,6 +255,7 @@ module.exports = (grunt) ->
           src: [
             '*.html'
             'views/*.html'
+            'askfast/*.html'
           ]
           dest: '<%= paths.dist %>'
         ]
