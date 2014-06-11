@@ -15,12 +15,22 @@ block main-nav
 
 
 
-block user-nav
+block _user-nav
   ul.nav.navbar-nav.navbar-right
     li(ng-repeat='item in config.app.nav.user',
     ng-class="(location.path == item) && 'active'")
       a(ng-href="{{'#' + item + (item == 'register' && '#step-1' || '')}}")
         | {{ui.globals.nav.user[item]}}
+
+
+block user-nav
+  ul.nav.navbar-nav.navbar-right
+    li
+      a(href="http://dev.ask-fast.com/", target='_blank')
+        | DEV. CENTER
+    li
+      a(href="http://docs.askfast.apiary.io/", target='_blank')
+        | API DOCS
 
 
 
@@ -54,7 +64,7 @@ block navbar
         block brand
       .collapse.navbar-collapse
         block main-nav
-        // block user-nav
+        block user-nav
 
 
 
