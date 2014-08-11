@@ -43,7 +43,7 @@ define(
                 "params": {
                   "adapterID": "2dbe5b60-154a-11e3-b728-00007f000001",
                   "addressMap": {
-                    "abektes@ask-cs.com": "Contact Inquiry"
+                    "info@ask-fast.com": "Contact Inquiry"
                   },
                   "url": "http://askfastmarket1.appspot.com/resource/question/comment?message=" +
                     encodeURIComponent(data.message),
