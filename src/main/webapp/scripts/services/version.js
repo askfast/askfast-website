@@ -1,1 +1,1 @@
-define(["services/services","config"],function(e,t){e.value("version",t.app.version)});
+define(["services/services","config"],function(e,t){"use strict";e.value("version",t.app.version)});
