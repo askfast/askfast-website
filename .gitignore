@@ -1,14 +1,6 @@
-.DS_Store
 node_modules
-npm-debug.log
 .tmp
 .sass-cache
+app/vendors
+test/vendors
 .idea
-.settings/
-src/META-INF/
-src/log4j.properties
-war/WEB-INF/classes/
-libpeerconnection.log
-.classpath
-.project
-target

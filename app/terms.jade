@@ -1,0 +1,205 @@
+doctype
+html.no-js
+  head
+    meta(charset='UTF-8')
+    title ASK Community Systems
+    meta(name='author', content='ASK Community Systems')
+    meta(name='keywords', content='impressum, regelungen, informationen, platform, standby, teamup')
+    meta(name='description', content='Unsere impressum')
+    meta(name='Resource-type', content='Document')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    meta(content='ASK Community Systems', property='og:title')
+    meta(content='image', property='og:type')
+    meta(content='https://ask-cs.nl/', property='og:url')
+    meta(content='', property='og:image')
+    link(href='/images/favicon.ico', rel='Shortcut Icon')
+
+
+
+    // --------CSS------
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='vendors/animate.css/animate.css')
+    // endbower
+    // endbuild
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+
+    //  --------JS (ALSO @ END)------
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='vendors/jQuery/dist/jquery.js')
+    script(src='vendors/angular/angular.js')
+    // endbower
+    // endbuild
+
+
+    // build:js scripts/jobs.js
+    script(src='scripts/imagesloaded.js')
+    script(src='scripts/skrollr.js')
+    script(src='scripts/_main.js')
+    // endbuild
+
+
+    style(type='text/css')
+      | html, body {background-color: #fff;}
+
+  body.terms(ng-app='AskWeb')
+
+
+    // build:js({app,.tmp}) scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild
+
+
+
+
+    //--------HEADER------
+    #menu.mainMenu
+      #dropdownMenu.mobileView.hide
+        ul
+          li
+            a(href='platform.html') {{ui.menu.platform}}
+          li
+            a#menuProducts(href='index.html#products') {{ui.menu.products}}
+          li
+            a(href='about.html') {{ui.menu.company}}
+          li
+            a(href='cases.html') {{ui.menu.cases}}
+      .container
+        .row
+          .col-xs-5.desktopView
+            ul
+              li
+                a(href='platform.html') {{ui.menu.platform}}
+              li
+                a#menuProducts(href='index.html#products') {{ui.menu.products}}
+          #mainLogo
+            .logoContainer
+              a(href='index.html')
+          .col-xs-5.col-xs-offset-2.desktopView
+            ul
+              li
+                a(href='about.html') {{ui.menu.company}}
+              li
+                a(href='cases.html') {{ui.menu.cases}}
+          #dropdownToggle.mobileView
+
+
+
+    //--------COOKIE MESSAGE------
+    #cookieMessage
+      #closeCookie
+      p
+        | {{ui.general.cookieMessage}}
+        a(href='docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
+        | .
+
+
+    //--------TERMS & CONDITIONS------
+    #jobHeader
+    #content
+      .container
+        .terms
+          .col-sm-6
+            .row
+              .col-md-12.col-sm-12.col-xs-12
+                h2 {{ui.terms.title}}
+                h4 {{ui.terms.germanOffice.title}}
+                p.intro {{ui.terms.germanOffice.intro}}
+                ul
+                  li(style='font-weight: bold; margin-bottom: 8px;') {{ui.terms.germanOffice.address.title}}
+                  li {{ui.terms.germanOffice.address.name}}
+                  li {{ui.terms.germanOffice.address.street}}
+                  li {{ui.terms.germanOffice.address.zipcode}}
+                  li {{ui.terms.germanOffice.address.phone}}
+                  li {{ui.terms.germanOffice.address.fax}}
+                  li {{ui.terms.germanOffice.address.email}}
+                br
+                br
+                ul
+                  li(style='font-weight: bold; margin-bottom: 8px;') {{ui.terms.germanOffice.director.title}}
+                  li {{ui.terms.germanOffice.director.name}}
+                  li {{ui.terms.germanOffice.director.register}}
+                  li {{ui.terms.germanOffice.director.number}}
+                p {{ui.terms.germanOffice.director.description01}}
+                p {{ui.terms.germanOffice.director.description02}}
+          .col-sm-6(style='margin-top: 44px;')
+            .row
+              .col-md-12.col-sm-12.col-xs-12
+                h4 {{ui.terms.privacyStatement.title}}
+                p {{ui.terms.privacyStatement.description01}}
+                p {{ui.terms.privacyStatement.description02}}
+                p {{ui.terms.privacyStatement.description03}}
+                h4 {{ui.terms.disclaimer.title}}
+                p {{ui.terms.disclaimer.description01}}
+
+
+
+
+
+
+    //--------FOOTER------
+    #footer
+      ul.languageToggle
+        li
+          a
+      ul#languageMenu.hide
+        li
+          a(ng-click="changeLang('de')", class="{{(lang == 'de') && 'active'}}") DE
+        li
+          a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
+        li
+          a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
+      ul.contactDetails
+        li {{ui.contact.address}}
+        li.hideXs {{ui.contact.zipcode}}
+        li {{ui.contact.city}}
+        li.hideXs
+          | {{ui.contact.phone}}
+          li
+            a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
+      ul.contactDetails.extraAddress.hideXs.hideSm
+        li {{ui.contactExtra.address}}
+        li.hideXs {{ui.contactExtra.zipcode}}
+        li {{ui.contactExtra.city}}
+        li.hideXs
+          | {{ui.contactExtra.phone}}
+          li
+            a(href='mailto:{{ui.contactExtra.email}}') {{ui.contactExtra.email}}
+      ul.socialMedia.hideXs
+        li.facebook
+          a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')
+        li.twitter
+          a(href='https://twitter.com/askcs', target='blank')
+        li.linkedin
+          a(href='https://www.linkedin.com/company/ask-community-systems', target='blank')
+        li.googleplus
+          a(href='https://plus.google.com/100201535227830552056', target='blank')
+
+
+    // __build:js({app,.tmp}) scripts/main.js
+    // script(src='scripts/main.js')
+    // __endbuild
+
+
+                //  --------JS------
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='vendors/jQuery/dist/jquery.js')
+    script(src='vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
+    script(src='vendors/angular/angular.js')
+    // endbower
+    // endbuild
+    script(src='scripts/main.js')
+    // build:js scripts/cases.js
+    script(src='scripts/imagesloaded.js')
+    script(src='scripts/skrollr.js')
+    script(src='scripts/_main.js')
+    //script(src='scripts/cases.js')
+    // endbuild
+
+
+

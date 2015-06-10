@@ -1,0 +1,122 @@
+doctype
+html.no-js
+  head
+    meta(charset='UTF-8')
+    title ASK Community Systems
+    meta(name='author', content='ASK Community Systems')
+    meta(name='Resource-type', content='Document')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    meta(content='ASK Community Systems', property='og:title')
+    meta(content='image', property='og:type')
+    meta(content='https://ask-cs.nl/', property='og:url')
+    meta(content='', property='og:image')
+    link(href='/images/favicon.ico', rel='Shortcut Icon')
+
+    // --------CSS------
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+    script(src='vendors/modernizr/modernizr.js')
+
+
+  body.notFound(ng-app='AskWeb')
+    //--------HEADER------
+    #menu.mainMenu
+      #dropdownMenu.mobileView.hide
+        ul
+          li
+            a(href='platform.html') {{ui.menu.platform}}
+          li
+            a#menuProducts(href='index.html#products') {{ui.menu.products}}
+          li
+            a(href='about.html') {{ui.menu.company}}
+          li
+            a(href='cases.html') {{ui.menu.cases}}
+      .container
+        .row
+          .col-xs-5.desktopView
+            ul
+              li
+                a(href='platform.html') {{ui.menu.platform}}
+              li
+                a#menuProducts(href='index.html#products') {{ui.menu.products}}
+          #mainLogo
+            .logoContainer
+              a(href='index.html')
+          .col-xs-5.col-xs-offset-2.desktopView
+            ul
+              li
+                a(href='about.html') {{ui.menu.company}}
+              li
+                a(href='cases.html') {{ui.menu.cases}}
+          #dropdownToggle.mobileView
+
+
+
+    //--------MAIN------
+    #content
+      .container.smallDeviceContainer
+        .row
+          .col-xs-12.content
+            h1 {{ui.notFound.title}}
+            p {{ui.notFound.description01}}
+
+
+
+    //--------FOOTER------
+    #footer
+      ul.languageToggle
+        li
+          a
+      ul#languageMenu.hide
+        li
+          a(ng-click="changeLang('de')", class="{{(lang == 'de') && 'active'}}") DE
+        li
+          a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
+        li
+          a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
+      ul.contactDetails
+        li {{ui.contact.address}}
+        li.hideXs {{ui.contact.zipcode}}
+        li {{ui.contact.city}}
+        li.hideXs
+          | {{ui.contact.phone}}
+          li
+            a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
+      ul.contactDetails.extraAddress.hideXs.hideSm
+        li {{ui.contactExtra.address}}
+        li.hideXs {{ui.contactExtra.zipcode}}
+        li {{ui.contactExtra.city}}
+        li.hideXs
+          | {{ui.contactExtra.phone}}
+          li
+            a(href='mailto:{{ui.contactExtra.email}}') {{ui.contactExtra.email}}
+      ul.socialMedia.hideXs
+        li.facebook
+          a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')
+        li.twitter
+          a(href='https://twitter.com/askcs', target='blank')
+        li.linkedin
+          a(href='https://www.linkedin.com/company/ask-community-systems', target='blank')
+        li.googleplus
+          a(href='https://plus.google.com/100201535227830552056', target='blank')
+
+
+
+
+
+    //--------JS------
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='vendors/jQuery/dist/jquery.js')
+    script(src='vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
+    script(src='vendors/angular/angular.js')
+    // endbower
+    // endbuild
+    script(src='scripts/main.js')
+    // build:js scripts/index.js
+    script(src='vendors/jquery.slimscroll/jquery.slimscroll.js')
+    script(src='vendors/fullPage.js/jquery.fullPage.js')
+    script(src='vendors/jquery-ui/ui/jquery-ui.js')
+    // endbuild

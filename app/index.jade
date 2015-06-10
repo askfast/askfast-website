@@ -1,146 +1,353 @@
-extends layout
-
-
-block brand
-  a.navbar-brand(href='#home',
-  ng-click='collapseMenu()') ASK-Fast
-
-
-
-block main-nav
-  ul.nav.navbar-nav
-    li(ng-repeat='item in config.app.nav.main',
-    ng-class="(location.path == item) && 'active'")
-      a(ng-click='setMainView(item)') {{ui.globals.nav.main[item]}}
-
-
-
-block _user-nav
-  ul.nav.navbar-nav.navbar-right
-    li(ng-repeat='item in config.app.nav.user',
-    ng-class="(location.path == item) && 'active'")
-      a(ng-href="{{'#' + item + (item == 'register' && '#step-1' || '')}}")
-        | {{ui.globals.nav.user[item]}}
-
-
-block user-nav
-  ul.nav.navbar-nav.navbar-right
-    li
-      a(href="https://portal.ask-fast.com/", target='_blank')
-        | PORTAL
-    li
-      a(href="http://docs.askfast.apiary.io/", target='_blank')
-        | API DOCS
+doctype
+html.no-js
+  head
+    meta(charset='UTF-8')
+    title ASK-Fast
+    meta(name='author', content='ASK-Fast')
+    meta(name='keywords', content='ask platform, cloudbased, apps, communicatie, cloud, last minute, planning, live, realtime, standby, teamup')
+    meta(name='description', content='ASK Platform biedt makkelijke app ontwikkeling in de cloud voor last minute oplossingen')
+    meta(name='Resource-type', content='Document')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    meta(content='ASK-Fast', property='og:title')
+    meta(content='image', property='og:type')
+    meta(content='https://ask-fast.nl/', property='og:url')
+    meta(content='', property='og:image')
+    link(href='/images/favicon.ico', rel='Shortcut Icon')
 
 
 
-block languages-nav
-  ul.sub-header-menu.pull-right
-    li(ng-repeat='item in config.app.languages',
-    ng-class="(app.language == item) && 'active'")
-      a(ng-click="setLanguage(item)") {{item.toUpperCase()}}
+    // --------CSS------
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='vendors/animate.css/animate.css')
+    // endbower
+    // endbuild
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+
+    script(src='vendors/modernizr/modernizr.js')
 
 
 
-block footer-nav
-  ul#footer-nav.list-inline
-    li(ng-repeat='item in config.app.nav.footer')
-      a(ng-href="{{'#' + item}}") {{ui.globals.nav.footer[item]}}
+  body(ng-app='AskWeb')
 
 
 
-block navbar
-  .navbar.navbar-inverse.navbar-fixed-top.ng-cloak(role='navigation',
-  ng-hide='isInternPage()')
-    .container
-      .navbar-header
-        button.navbar-toggle(type='button',
-        data-toggle='collapse',
-        data-target='.navbar-collapse')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        block brand
-      .collapse.navbar-collapse
-        block main-nav
-        block user-nav
+    //--------HEADER------
+    #menuBg(data-106-top='opacity: 1', data-bottom='opacity: 0;', data--10p-top='opacity: 0;', data--60p-top='opacity: 1;', data-anchor-target='body')
+    #menu.mainMenu
+      #dropdownMenu.mobileView.hide
+        ul
+          li
+            a(href='platform.html') {{ui.menu.useCases}}
+          li
+            a(href='about.html') {{ui.menu.pricing}}
+          li
+            a(href='cases.html') {{ui.menu.developers}}
+      .container
+        .row
+          #mainLogo
+            a(href='index.html')
+          .col-xs-12.desktopView
+
+            ul
+              li
+                a(href='platform.html') {{ui.menu.useCases}}
+              li
+                a(href='about.html') {{ui.menu.pricing}}
+              li
+                a(href='cases.html') {{ui.menu.developers}}
+              li.outlineMenu
+                a(href='https://portal.ask-fast.com') {{ui.menu.login}}
+              li.outlineMenu
+                a(href='https://portal.ask-fast.com/index.html#/register#step-1') {{ui.menu.tryForFree}}
+          #dropdownToggle.mobileView
+
+
+    //--------JOBSTOGGLE------
+    //#jobsToggle
+     h4 {{ui.jobs.title}}
+    #jobArea.hide
+      #closeJobs
+      .container
+        .row
+          .col-md-4.col-sm-6
+            h2 {{ui.jobs.title}}
+            ol
+              li
+                a(href='jobs.html#iosdev') {{ui.jobs.iosdev.title}}
+              li
+                a(href='jobs.html#androiddev') {{ui.jobs.androiddev.title}}
+              li
+                a(href='jobs.html#webdev') {{ui.jobs.webdev.title}}
+              li
+                a(href='jobs.html#businessconsultant') {{ui.jobs.businessConsultant.title}}
+            h4 {{ui.jobs.internshipTitle}}
+            ol
+              li
+                a(href='jobs.html#stage1') {{ui.jobs.internshipClouds.title}}
+              li
+                a(href='jobs.html#stage2') {{ui.jobs.internshipPersonalAlarm.title}}
+              li.hidden
+                a(href='jobs.html#stage3') {{ui.jobs.internshipP2000Alarm.title}}
+              li
+                a(href='jobs.html#stage4') {{ui.jobs.internshipLearningSoftwareAgent.title}}
+              li
+                a(href='jobs.html#stage5') {{ui.jobs.internshipTeamup.title}}
+          .workAt.col-md-8.col-sm-6.hidden-xs
+            h2.col-md-12 {{ui.jobs.workAt.title}}
+            p.col-md-6 {{ui.jobs.workAt.description01}}
+            p.col-md-6 {{ui.jobs.workAt.description02}}
 
 
 
-block footer
-  footer.ng-cloak(ng-hide='isInternPage()')
-    .container
-      .row
-        .col-md-4
-          block footer-nav
-        .col-md-4.footer-address
-          p Heemraadssingel 89, 3022 CA Rotterdam, info@ask-cs.com
-        .col-md-4
-          block brand
+
+
+    //--------COOKIE MESSAGE------
+    #cookieMessage
+      #closeCookie
+      p
+        | {{ui.general.cookieMessage}}
+        a(href='docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
+        | .
 
 
 
-block tweets
-  ul(ng-show='false')
-    li
-      a(href='') Virtual Phone numbers are available in Jordan
-    li
-      a(href='') Say Hi to our new office in Berlin
-    li
-      a(href='') Register for our webinar
+
+    //--------INTRO (NEW)------
+    #content
+      #home
+        #intro.fullbackground.section
+          .container
+            .row
+              .col-md-12.introText
+                h1 {{ui.home.intro.slogan}}
+            .row.communicationChannels.noGutter
+              .col-md-4
+                .col-md-4
+                  .comChannel.comChannel1
+                    img.comIcon(src='images/home/channels/phone.png', alt='Phone')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel1}}
+                .col-md-4
+                  .comChannel.comChannel2
+                    img.comIcon(src='images/home/channels/phone2.png', alt='Smartphone')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel2}}
+                .col-md-4
+                  .comChannel.comChannel3
+                    img.comIcon(src='images/home/channels/tablet.png', alt='Tablet')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel3}}
+              .col-md-4
+                .col-md-4
+                  .comChannel.comChannel4
+                    img.comIcon(src='images/home/channels/laptop.png', alt='PC')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel4}}
+                .col-md-4
+                  .comChannel.comChannel5
+                    img.comIcon(src='images/home/channels/twitter.png', alt='Twitter')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel5}}
+                .col-md-4
+                  .comChannel.comChannel6
+                    img.comIcon(src='images/home/channels/facebook.png', alt='Facebook')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel6}}
+              .col-md-4
+                .col-md-4
+                  .comChannel.comChannel7
+                    img.comIcon(src='images/home/channels/chat.png', alt='Chat')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel7}}
+                .col-md-4
+                  .comChannel.comChannel8
+                    img.comIcon(src='images/home/channels/mail.png', alt='Email')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel8}}
+                .col-md-4
+                  .comChannel.comChannel9
+                    img.comIcon(src='images/home/channels/phone.png', alt='Pager')
+                    .comStick
+                      .comLabel.hide {{ui.home.intro.comLabel9}}
+
+        #intro2
+          .container
+            .row
+              .col-md-8.col-md-offset-2
+                h2 {{ui.home.intro.title}}
+                p.introText {{ui.home.intro.introText}}
+            .row
+              .col-md-12
+                a(href='https://portal.ask-fast.com/index.html#/register#step-1')
+                  button.outline {{ui.general.tryForFree}}
+
+
+        #useCases
+          .container
+            .row.titleHeader
+              h4 {{ui.home.useCases.mainTitle}}
+            .row
+              .col-sm-4.useCase.useCase1
+                .icon
+                h3 {{ui.home.useCases.title01}}
+                p {{ui.home.useCases.description01}}
+              .col-sm-4.useCase.useCase2
+                .icon
+                h3 {{ui.home.useCases.title02}}
+                p {{ui.home.useCases.description02}}
+              .col-sm-4.useCase.useCase3
+                .icon
+                h3 {{ui.home.useCases.title03}}
+                p {{ui.home.useCases.description03}}
+            .row
+              .col-md-12
+                button.outline {{ui.general.readMore}}
+
+
+        #benefits
+          .container
+            .row.titleHeader
+              h4 {{ui.home.benefits.mainTitle}}
+            .row
+              .col-sm-6.benefits.benefits1
+                .media
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.home.benefits.title01}}
+                    p {{ui.home.benefits.description01}}
+              .col-sm-6.benefits.benefits2
+                .media
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.home.benefits.title02}}
+                    p {{ui.home.benefits.description02}}
+            .row
+              .col-sm-6.benefits.benefits3
+                .media
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.home.benefits.title03}}
+                    p {{ui.home.benefits.description03}}
+              .col-sm-6.benefits.benefits4
+                .media
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.home.benefits.title04}}
+                    p {{ui.home.benefits.description04}}
+            .row
+              .col-sm-6.benefits.benefits5
+                .media
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.home.benefits.title05}}
+                    p {{ui.home.benefits.description05}}
+              .col-sm-6.benefits.benefits6
+                .media
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.home.benefits.title06}}
+                    p {{ui.home.benefits.description06}}
+
+
+        #clients
+          .container
+            .row.titleHeader
+              h4 {{ui.home.clients.mainTitle}}
+            .row
+              .col-md-3.col-sm-6
+                .clientLogo.tnt
+                  a(href="#")
+                    img.hoverShow(src="images/home/tnt02.png")
+                    img.hoverHide(src="images/home/tntGray.png")
+              .col-md-3.col-sm-6
+                .clientLogo.amstelring
+                  a(href="#")
+                    img.hoverShow(src="images/home/amstelring.png")
+                    img.hoverHide(src="images/home/amstelringGray.png")
+              .col-md-3.col-sm-6
+                .clientLogo.vitens
+                  a(href="#")
+                    img.hoverShow(src="images/home/vitens02.png")
+                    img.hoverHide(src="images/home/vitensGray.png")
+              .col-md-3.col-sm-6
+                .clientLogo.rb
+                  a(href="#")
+                    img.hoverShow(src="images/home/reddingsbrigade.png")
+                    img.hoverHide(src="images/home/reddingsbrigadeGray.png")
+
+        #reminder
+          .container
+            .row.titleHeader
+            .row
+              .col-md-12
+                a(href='https://portal.ask-fast.com/index.html#/register#step-1')
+                  button.outline {{ui.general.tryForFree}}
 
 
 
-block sub-header-menu
-  .col-md-10
-    #tweets(ng-hide='config.app.nav.subs[location.path]')
-      block tweets
-    #sub-header-menu(ng-show='config.app.nav.subs[location.path]')
-      ul.sub-header-menu
-        li(ng-repeat='item in config.app.nav.subs[location.path]',
-        ng-class="(subView[item]) && 'active'")
-          a(ng-click="setSubView(item)") {{ui.globals.nav.subs[location.path][item]}}
+    //--------FOOTER------
+    #footer
+      ul.languageToggle
+        li
+          a
+      ul#languageMenu.hide
+        li
+          a(ng-click="changeLang('de')", class="{{(lang == 'de') && 'active'}}") DE
+        li
+          a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
+        li
+          a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
+      ul.contactDetails
+        li {{ui.contact.address}}
+        li.hideXs {{ui.contact.zipcode}}
+        li {{ui.contact.city}}
+        li.hideXs
+          | {{ui.contact.phone}}
+          li
+            a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
+      ul.contactDetails.extraAddress.hideXs.hideSm
+        li {{ui.contactExtra.address}}
+        li.hideXs {{ui.contactExtra.zipcode}}
+        li {{ui.contactExtra.city}}
+        li.hideXs
+          | {{ui.contactExtra.phone}}
+          li
+            a(href='mailto:{{ui.contactExtra.email}}') {{ui.contactExtra.email}}
+      ul.socialMedia.hide
+        li.facebook
+          a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')
+        li.twitter
+          a(href='https://twitter.com/askcs', target='blank')
+        li.linkedin
+          a(href='https://www.linkedin.com/company/ask-community-systems', target='blank')
+        li.googleplus
+          a(href='https://plus.google.com/100201535227830552056', target='blank')
 
 
 
-block languages
-  #languages.col-md-2
-    block languages-nav
+    //--------JS------
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='vendors/jQuery/dist/jquery.js')
+    script(src='vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
+    script(src='vendors/angular/angular.js')
+    // endbower
+    // endbuild
 
+    script(src='scripts/main.js')
 
-
-block icons
-  link(rel='apple-touch-icon-precomposed', sizes='144x144',
-  href='icons/apple-touch-icon-144-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='114x114',
-  href='icons/apple-touch-icon-114-precomposed.png')
-  link(rel='apple-touch-icon-precomposed', sizes='72x72',
-  href='icons/apple-touch-icon-72-precomposed.png')
-  link(rel='apple-touch-icon-precomposed',
-  href='icons/apple-touch-icon-57-precomposed.png')
-  link(rel='shortcut icon', href='/favicon.ico')
-
-
-
-block iestuff
-  //if lt IE 7
-    p.chromeframe
-      | You are using an outdated browser.
-      a(href='http://browsehappy.com/') Upgrade your browser today
-      | or
-      a(href='http://www.google.com/chromeframe/?redirect=true') install Google Chrome Frame
-      | to better experience this site.
-  //if lt IE 9
-    script(src='vendors/es5-shim/es5-shim.js')
-    script(src='vendors/json3/lib/json3.min.js')
-
-
-
-//block analytics
-//  // Google Analytics: change UA-XXXXX-X to be your site's ID.
-//  script
-//    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-//    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-//    g.src='//www.google-analytics.com/ga.js';
-//    s.parentNode.insertBefore(g,s)}(document,'script'));
+    // build:js scripts/index.js
+    script(src='scripts/imagesloaded.js')
+    script(src='scripts/skrollr.js')
+    script(src='scripts/_main.js')
+    script(src='scripts/index.js')
+    // endbuild

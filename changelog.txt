@@ -1,0 +1,15 @@
+AskWebsite
+https://github.com/askcs/askwebsite.git
+
+24 october 2014, version 1.1.1
+Adress changed on map
+
+6 october 2014, version 1.1.0
+Address changed
+
+15 august 2014, version 1.0.1
+Hotfix: Some file got corrupted in the merge
+
+15 august 2014, version 1.0.0
+Initial version
+
