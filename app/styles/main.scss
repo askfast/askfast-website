@@ -705,30 +705,35 @@ button.outline {
   #mainLogo {
     height: auto;
     position: absolute;
-    width: 200px;
+    width: 188px;
     padding: 16px 15px;
     a {
       outline: none;
       background: url('../images/AFlogo.png') no-repeat;
-      height: 110px;
+      height: 37px;
       display: block;
+    }
+    span {
+      background: url("../images/payOff.png") no-repeat;
+      display: block;
+      height: 13px;
     }
   }
   li {
     display: inline-block;
     a {
-      //text-decoration: none;
+      text-decoration: none;
       color: #fff;
       padding: 22px 18px;
       display: block;
       outline: none;
     }
     a.active {
-      //color: $pink;
+      color: lighten($pink, 45%);
     }
   }
   li:hover a {
-    color: #000;
+    color: lighten($pink, 45%);
   }
   li.outlineMenu a{
     margin-left: 10px;
@@ -736,6 +741,9 @@ button.outline {
     background: none;
     padding: 4px 10px;
     @include border-radius(4px);
+  }
+  li.outlineMenu a:hover{
+    border: 1px solid lighten($pink, 45%);
   }
   #dropdownToggle {
     position: absolute;
@@ -958,19 +966,23 @@ button.outline {
       bottom: 0;
       display: block;
       position: absolute;
-      left:50%;
+      left: 50%;
       margin-left: -24px;
+      .comIcon{
+        //position: absolute;
+        //
+        //left:50%;
+      }
       .comStick {
         border-left: 4px solid #ffffff;
         margin: 0 auto;
         width: 1px;
-        .comLabel {
-          text-align: center;
-          bottom: 30px;
-          height: 20px;
-          background-color: #ffffff;
-          position: absolute;
-        }
+      }
+      .comLabel {
+        padding: 4px 6px;
+        bottom: 20px;
+        background-color: #ffffff;
+        position:absolute;
       }
     }
     .comChannel1{
@@ -982,16 +994,13 @@ button.outline {
       }
     }
     .comChannel2{
-      img {
-        margin-bottom: -6px;
-      }
       .comStick{
-        height: 60px;
+        height: 80px;
       }
     }
     .comChannel3{
       .comStick{
-        height: 70px;
+        height: 60px;
       }
     }
     .comChannel4{
@@ -1007,7 +1016,7 @@ button.outline {
         margin-bottom: -7px;
       }
       .comStick{
-        height: 80px;
+        height: 100px;
       }
     }
     .comChannel6{
@@ -1020,7 +1029,7 @@ button.outline {
         margin-bottom: -12px;
       }
       .comStick{
-        height: 70px;
+        height: 60px;
       }
     }
     .comChannel8{
@@ -1028,12 +1037,12 @@ button.outline {
         margin-bottom: -6px;
       }
       .comStick{
-        height: 60px;
+        height: 90px;
       }
     }
     .comChannel9{
       img {
-        margin-bottom: -5px;
+        margin-bottom: -7px;
       }
       .comStick{
         height: 50px;
