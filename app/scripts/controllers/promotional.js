@@ -63,6 +63,42 @@ define(
 
           $scope.sendContact = function (contact)
           {
+            function IsEmail(email) {
+              var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+              return regex.test(email);
+            }
+
+            //Contact form
+            function sendMail(contact){
+
+              var errorColor = "#a83533";
+              var errorFontColor = "white";
+              var rightColor = "white";
+              var rightFontColor = "#433c2d";
+
+              var sendMailURL = "mail/sendMail.php";
+              sendMailURL += "?contactName="+contact.name + " " + contact.surname +
+              "&contactEmail="+contact.email+
+              "&contactSubject=" +contact.subject+
+              "&message="+contact.message;
+
+              $.ajax({
+                url: sendMailURL
+              }).done(function( data ) {
+                console.log(data);
+                //alert("Bericht is verzonden!");
+
+                $scope.contact.sent = true;
+              }).fail(function( error){
+                console.log(error);
+                //alert("Bericht is verzonden!");
+              });
+            }
+            sendMail(contact);
+          };
+
+          /*$scope.sendContact = function (contact)
+          {
             AskFast.contact(contact)
               .then(function (result)
               {
@@ -70,7 +106,7 @@ define(
 
                 $scope.contact.sent = true;
               });
-          };
+          };*/
         }
       ]
     );

@@ -185,7 +185,7 @@ module.exports = (grunt) ->
       server:
         options:
           debugInfo: false
-  
+
     rev:
       dist:
         files:
@@ -226,7 +226,7 @@ module.exports = (grunt) ->
         ]
 
     cssmin: {}
-  
+
     htmlmin:
       dist:
         options: {}
@@ -262,6 +262,7 @@ module.exports = (grunt) ->
             'vendors/**/*'
             'images/{,*/}*.{gif,webp}'
             'fonts/*'
+            'mail/*'
           ]
         ,
           expand: true
