@@ -30,7 +30,7 @@ html.no-js
 
 
 
-  body(ng-app='AskWeb')
+  body(ng-app='AskFast')
 
 
 
@@ -55,11 +55,11 @@ html.no-js
 
             ul
               li
-                a(href='platform.html') {{ui.menu.useCases}}
+                a(href='usecases.html') {{ui.menu.useCases}}
               li
-                a(href='about.html') {{ui.menu.pricing}}
+                a(href='pricing.html') {{ui.menu.pricing}}
               li
-                a(href='cases.html') {{ui.menu.developers}}
+                a(href='developers.html') {{ui.menu.developers}}
               li.outlineMenu
                 a(href='https://portal.ask-fast.com') {{ui.menu.login}}
               li.outlineMenu
@@ -67,47 +67,9 @@ html.no-js
           #dropdownToggle.mobileView
 
 
-    //--------JOBSTOGGLE------
-    //#jobsToggle
-     h4 {{ui.jobs.title}}
-    #jobArea.hide
-      #closeJobs
-      .container
-        .row
-          .col-md-4.col-sm-6
-            h2 {{ui.jobs.title}}
-            ol
-              li
-                a(href='jobs.html#iosdev') {{ui.jobs.iosdev.title}}
-              li
-                a(href='jobs.html#androiddev') {{ui.jobs.androiddev.title}}
-              li
-                a(href='jobs.html#webdev') {{ui.jobs.webdev.title}}
-              li
-                a(href='jobs.html#businessconsultant') {{ui.jobs.businessConsultant.title}}
-            h4 {{ui.jobs.internshipTitle}}
-            ol
-              li
-                a(href='jobs.html#stage1') {{ui.jobs.internshipClouds.title}}
-              li
-                a(href='jobs.html#stage2') {{ui.jobs.internshipPersonalAlarm.title}}
-              li.hidden
-                a(href='jobs.html#stage3') {{ui.jobs.internshipP2000Alarm.title}}
-              li
-                a(href='jobs.html#stage4') {{ui.jobs.internshipLearningSoftwareAgent.title}}
-              li
-                a(href='jobs.html#stage5') {{ui.jobs.internshipTeamup.title}}
-          .workAt.col-md-8.col-sm-6.hidden-xs
-            h2.col-md-12 {{ui.jobs.workAt.title}}
-            p.col-md-6 {{ui.jobs.workAt.description01}}
-            p.col-md-6 {{ui.jobs.workAt.description02}}
-
-
-
-
 
     //--------COOKIE MESSAGE------
-    #cookieMessage
+    #cookieMessage.hide
       #closeCookie
       p
         | {{ui.general.cookieMessage}}
@@ -116,11 +78,10 @@ html.no-js
 
 
 
-
-    //--------INTRO (NEW)------
+    //--------INTRO------
     #content
       #home
-        #intro.fullbackground.section
+        #intro.fullbackground
           .container
             .row
               .col-md-12.introText
@@ -302,8 +263,6 @@ html.no-js
         li
           a
       ul#languageMenu.hide
-        li
-          a(ng-click="changeLang('de')", class="{{(lang == 'de') && 'active'}}") DE
         li
           a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
         li
