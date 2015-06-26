@@ -1,0 +1,221 @@
+doctype
+html.no-js
+  head
+    meta(charset='UTF-8')
+    title ASK-Fast
+    meta(name='author', content='ASK-Fast')
+    meta(name='keywords', content='ask-fast')
+    meta(name='description', content='ASK-Fast')
+    meta(name='Resource-type', content='Document')
+    meta(content='width=device-width, initial-scale=1', name='viewport')
+    meta(content='ASK-Fast', property='og:title')
+    meta(content='image', property='og:type')
+    meta(content='https://ask-fast.nl/', property='og:url')
+    meta(content='', property='og:image')
+    link(href='..//images/favicon.ico', rel='Shortcut Icon')
+
+
+
+    // --------CSS------
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='../vendors/animate.css/animate.css')
+    // endbower
+    // endbuild
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='../styles/main.css')
+    // endbuild
+
+    script(src='../vendors/modernizr/modernizr.js')
+
+
+
+  body(ng-app='AskFast')
+
+
+
+    //--------HEADER------
+    #menuBg(data-106-top='opacity: 1', data-bottom='opacity: 0;', data--10p-top='opacity: 0;', data--60p-top='opacity: 1;', data-anchor-target='body')
+    #menu.mainMenu
+      #dropdownMenu.mobileView.hide
+        ul
+          li
+            a(href='../usecases/index.html') {{ui.menu.useCases}}
+          li
+            a(href='../pricing.html') {{ui.menu.pricing}}
+          li
+            a(href='../developers.html') {{ui.menu.developers}}
+      .container
+        .row
+          .col-sm-2
+            #mainLogo
+              a(href='../index.html')
+              span.payOff(data-106-top='opacity: 0', data-bottom='opacity: 1;', data--10p-top='opacity: 1;', data--30p-top='opacity: 0;', data-anchor-target='body')
+          .col-xs-10.desktopView
+            ul
+              li
+                a.active(href='../usecases/index.html') {{ui.menu.useCases}}
+              li
+                a(href='../pricing.html') {{ui.menu.pricing}}
+              li
+                a(href='../developers.html') {{ui.menu.developers}}
+              li.outlineMenu
+                a(href='https://portal.ask-fast.com') {{ui.menu.login}}
+              li.outlineMenu
+                a(href='https://portal.ask-fast.com/index.html#/register#step-1') {{ui.menu.tryForFree}}
+          #dropdownToggle.mobileView
+
+
+
+    //--------COOKIE MESSAGE------
+    #cookieMessage.hide
+      #closeCookie
+      p
+        | {{ui.general.cookieMessage}}
+        a(href='../docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
+        | .
+
+
+
+    //--------INTRO------
+    #content
+      #useCasesPage
+        #intro.fullbackground
+          #colorOverlay
+          .container
+            .row
+              .col-md-12.introText
+                h1.subPageTitle {{ui.useCases.intro.title}}
+            //.row
+            //  .col-md-6.col-md-offset-3
+            //    h4.introText {{ui.home.intro.introText}}
+
+
+        #casesOverview
+          .container
+            .row
+              .col-sm-4.useCase.useCase1
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case01.title}}
+                    p {{ui.useCases.case01.overviewDescription}}
+              .col-sm-4.useCase.useCase2
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case02.title}}
+                    p {{ui.useCases.case02.overviewDescription}}
+              .col-sm-4.useCase.useCase3
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case03.title}}
+                    p {{ui.useCases.case03.overviewDescription}}
+            .row
+              .col-sm-4.useCase.useCase4
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case04.title}}
+                    p {{ui.useCases.case04.overviewDescription}}
+              .col-sm-4.useCase.useCase5
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case05.title}}
+                    p {{ui.useCases.case05.overviewDescription}}
+              .col-sm-4.useCase.useCase6
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case06.title}}
+                    p {{ui.useCases.case06.overviewDescription}}
+            .row
+              .col-sm-4.useCase.useCase7
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case07.title}}
+                    p {{ui.useCases.case07.overviewDescription}}
+              .col-sm-4.useCase.useCase8
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case08.title}}
+                    p {{ui.useCases.case08.overviewDescription}}
+              .col-sm-4.useCase.useCase9
+                .media.thumbnail
+                  .media-left.media-middle
+                    .icon
+                  .media-body
+                    h3 {{ui.useCases.case09.title}}
+                    p {{ui.useCases.case09.overviewDescription}}
+
+
+
+
+
+    //--------FOOTER------
+    #footer
+      ul.languageToggle
+        li
+          a
+      ul#languageMenu.hide
+        li
+          a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
+        li
+          a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
+      ul.contactDetails
+        li {{ui.contact.address}}
+        li.hideXs {{ui.contact.zipcode}}
+        li {{ui.contact.city}}
+        li.hideXs
+          | {{ui.contact.phone}}
+          li
+            a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
+      ul.contactDetails.extraAddress.hideXs.hideSm
+        li {{ui.contactExtra.address}}
+        li.hideXs {{ui.contactExtra.zipcode}}
+        li {{ui.contactExtra.city}}
+        li.hideXs
+          | {{ui.contactExtra.phone}}
+          li
+            a(href='mailto:{{ui.contactExtra.email}}') {{ui.contactExtra.email}}
+      ul.socialMedia.hide
+        li.facebook
+          a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')
+        li.twitter
+          a(href='https://twitter.com/askcs', target='blank')
+        li.linkedin
+          a(href='https://www.linkedin.com/company/ask-community-systems', target='blank')
+        li.googleplus
+          a(href='https://plus.google.com/100201535227830552056', target='blank')
+
+
+
+    //--------JS------
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../vendors/jQuery/dist/jquery.js')
+    script(src='../vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
+    script(src='../vendors/angular/angular.js')
+    // endbower
+    // endbuild
+
+    script(src='../scripts/main.js')
+
+    // build:js ../scripts/usecases.js
+    script(src='../scripts/imagesloaded.js')
+    script(src='../scripts/skrollr.js')
+    script(src='../scripts/_main.js')
+    script(src='../ scripts/usecases.js')
+    // endbuild

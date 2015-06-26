@@ -102,6 +102,48 @@ var localization = {
       },
     },
 
+    useCases:{
+      intro: {
+        title: 'Use cases'
+      },
+      case01: {
+        title: 'Two-factor authentication',
+        overviewDescription: 'Protect your accounts by adding extra security to the login of your application.'
+      },
+      case02: {
+        title: 'ETA-Alerts',
+        overviewDescription: 'Inform your customers with the most accurate arrival time.'
+      },
+      case03: {
+        title: 'Team Telephone',
+        overviewDescription: 'Turn your own mobile phone into a team telephone with one click.'
+      },
+      case04: {
+        title: 'Click-to-Call',
+        overviewDescription: 'Connect to your website visitors efficiently and rapidly.'
+      },
+      case05: {
+        title: 'Push-to-Talk',
+        overviewDescription: 'Communicate instantly at the touch of a button.'
+      },
+      case06: {
+        title: 'Caller Authentication',
+        overviewDescription: 'Make sure your information does not end up in the wrong hands.'
+      },
+      case07: {
+        title: 'Broadcast',
+        overviewDescription: 'One message, multiple communication channels.'
+      },
+      case08: {
+        title: 'Decentrale',
+        overviewDescription: 'No more need for regular phones or telephone exchanges.'
+      },
+      case09: {
+        title: 'Your Solution',
+        overviewDescription: 'The ASK Fast API allows you to easily build your own application.'
+      },
+    },
+
 
     notFound: {
       title: '404',

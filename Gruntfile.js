@@ -83,7 +83,7 @@ module.exports = function (grunt)
               expand: true,
               cwd: '<%= config.app %>',
               dest: '.tmp',
-              src: '*.jade',
+              src: '{,*/}*.jade',
               ext: '.html'
             }
           ]

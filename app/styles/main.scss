@@ -57,16 +57,19 @@ $icon-font-path: "/vendors/bootstrap-sass/assets/fonts/bootstrap/";
 
 @import url("//fonts.googleapis.com/css?family=Ubuntu:700");
 @import url("//fonts.googleapis.com/css?family=Lato:700,400,400italic,700italic,300italic,300");
+@import url("//fonts.googleapis.com/css?family=Oswald");
+
+
+
+
 
 // Variables
 $pink: #e10b7d;
-$standby-color: #a93232;
-$teamup-color: #1dc8b6;
-$blank-color: #959595;
-$joinus-color: #fab25e;
-$yellow: #FACB6A;
-$green: #9fe384;
-$blue: #a5eaf5;
+$white: #ffffff;
+$soft-pink: #fadae8;
+$yellow: #efbb26;
+$green: #14a5a5;
+
 $light-grey: #e5e5e5;
 
 // Mixins
@@ -815,6 +818,11 @@ button.outline {
   width: 100%;
 }
 
+.subPageTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 100px;
+}
+
 #footer {
   bottom: 0;
   background: none repeat scroll 0 0 #000;
@@ -930,229 +938,360 @@ button.outline {
    HOME PAGE
    ========================================================================== */
 
-.titleHeader {
-  border-top: 1px solid $pink;
-  margin-bottom: 20px;
-  text-align: center;
-  h4 {
-    background-color: white;
-    color: $pink;
-    text-transform: uppercase;
-    position: relative;
-    padding: 10px;
-    top: -20px;
-    display: inline-block;
-  }
-}
-
-#intro {
-  height: 700px;
-  background-color: $pink;
-  background-image: url('../images/home/rotterdam.jpg');
-  position: relative;
-  .introText {
-    margin-top: 240px;
-    color: #ffffff;
-    text-shadow: black 3px 3px 3px;
-    h2 {
-      margin-bottom: 20px;
-    }
-  }
-  .communicationChannels {
-    position: absolute;
-    width: inherit;
-    bottom: 0;
-    .comChannel {
-      bottom: 0;
-      display: block;
-      position: absolute;
-      left: 50%;
-      margin-left: -24px;
-      .comIcon{
-        //position: absolute;
-        //
-        //left:50%;
-      }
-      .comStick {
-        border-left: 4px solid #ffffff;
-        margin: 0 auto;
-        width: 1px;
-      }
-      .comLabel {
-        padding: 4px 6px;
-        bottom: 20px;
-        background-color: #ffffff;
-        position:absolute;
-      }
-    }
-    .comChannel1{
-      img {
-        margin-bottom: -5px;
-      }
-      .comStick{
-        height: 50px;
-      }
-    }
-    .comChannel2{
-      .comStick{
-        height: 80px;
-      }
-    }
-    .comChannel3{
-      .comStick{
-        height: 60px;
-      }
-    }
-    .comChannel4{
-      img {
-        margin-bottom: -6px;
-      }
-      .comStick{
-        height: 50px;
-      }
-    }
-    .comChannel5{
-      img {
-        margin-bottom: -7px;
-      }
-      .comStick{
-        height: 100px;
-      }
-    }
-    .comChannel6{
-      .comStick{
-        height: 60px;
-      }
-    }
-    .comChannel7{
-      img {
-        margin-bottom: -12px;
-      }
-      .comStick{
-        height: 60px;
-      }
-    }
-    .comChannel8{
-      img {
-        margin-bottom: -6px;
-      }
-      .comStick{
-        height: 90px;
-      }
-    }
-    .comChannel9{
-      img {
-        margin-bottom: -7px;
-      }
-      .comStick{
-        height: 50px;
-      }
-    }
-  }
-}
-
-#intro2 {
-  text-align: center;
-  margin: 100px 0 0;
-  .introText {
-    font-size: 18px;
-    font-style: italic;
+#home {
+  .titleHeader {
+    border-top: 1px solid $pink;
     margin-bottom: 20px;
+    text-align: center;
+    h4 {
+      background-color: white;
+      color: $pink;
+      text-transform: uppercase;
+      position: relative;
+      padding: 10px;
+      top: -20px;
+      display: inline-block;
+    }
   }
-}
 
-#useCases {
-  text-align: center;
-  margin: 100px 0;
-  .useCase {
-    margin-bottom: 60px;
-    .icon {
-      width: 115px;
-      height: 100px;
-      background-color: $pink;
-      margin: 0 auto;
+  #intro {
+    height: 700px;
+    background-color: $pink;
+    background-image: url('../images/home/rotterdam.jpg');
+    position: relative;
+    .introText {
+      margin-top: 240px;
+      color: #ffffff;
+      text-shadow: black 3px 3px 3px;
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+    .communicationChannels {
+      position: absolute;
+      width: inherit;
+      bottom: 0;
+      .comChannel {
+        bottom: 0;
+        display: block;
+        position: absolute;
+        left: 50%;
+        margin-left: -24px;
+        .comIcon {
+          //position: absolute;
+          //
+          //left:50%;
+        }
+        .comStick {
+          border-left: 4px solid #ffffff;
+          margin: 0 auto;
+          width: 1px;
+        }
+        .comLabel {
+          padding: 4px 6px;
+          bottom: 20px;
+          background-color: #ffffff;
+          position: absolute;
+        }
+      }
+      .comChannel1 {
+        img {
+          margin-bottom: -5px;
+        }
+        .comStick {
+          height: 50px;
+        }
+      }
+      .comChannel2 {
+        .comStick {
+          height: 80px;
+        }
+      }
+      .comChannel3 {
+        .comStick {
+          height: 60px;
+        }
+      }
+      .comChannel4 {
+        img {
+          margin-bottom: -6px;
+        }
+        .comStick {
+          height: 50px;
+        }
+      }
+      .comChannel5 {
+        img {
+          margin-bottom: -7px;
+        }
+        .comStick {
+          height: 100px;
+        }
+      }
+      .comChannel6 {
+        .comStick {
+          height: 60px;
+        }
+      }
+      .comChannel7 {
+        img {
+          margin-bottom: -12px;
+        }
+        .comStick {
+          height: 60px;
+        }
+      }
+      .comChannel8 {
+        img {
+          margin-bottom: -6px;
+        }
+        .comStick {
+          height: 90px;
+        }
+      }
+      .comChannel9 {
+        img {
+          margin-bottom: -7px;
+        }
+        .comStick {
+          height: 50px;
+        }
+      }
+    }
+  }
+
+  #intro2 {
+    text-align: center;
+    margin: 100px 0 0;
+    .introText {
+      font-size: 18px;
+      font-style: italic;
       margin-bottom: 20px;
     }
   }
-  .useCase1 {
-    .icon {
-      background-color: transparent;
-      background-image: url('../images/home/iconEta.png');
-    }
-  }
-  .useCase2 {
-    .icon {
-      background-color: transparent;
-      background-image: url('../images/home/iconTeamTelephone.png');
-    }
-  }
-  .useCase3 {
-    .icon {
-      background-color: transparent;
-      background-image: url('../images/home/iconClickToCall.png');
-    }
-  }
-}
 
-#benefits {
-  margin: 40px 0;
-  text-align: left;
-  .benefits {
-    margin-bottom: 60px;
-    .icon {
-      width: 60px;
-      height: 60px;
-      background-color: $pink;
-      @include border-radius(50%);
-    }
-  }
-  .benefits1 .icon {
-    background-image: url('../images/home/iconReach.png');
-  }
-  .benefits2 .icon {
-    background-image: url('../images/home/iconPerformance.png');
-  }
-  .benefits3 .icon {
-    background-image: url('../images/home/iconAnalytics.png');
-  }
-  .benefits4 .icon {
-    background-image: url('../images/home/iconInnovation.png');
-  }
-  .benefits5 .icon {
-    background-image: url('../images/home/iconSecurity.png');
-  }
-  .benefits6 .icon {
-    background-image: url('../images/home/iconCustomization.png');
-  }
-}
-
-#clients {
-  .clientLogo {
-    margin: 0 auto;
+  #useCases {
     text-align: center;
-    max-width: 80%;
-    a {
-      display: block;
-      img {
-        width: 100%;
+    margin: 100px 0;
+    .useCase {
+      margin-bottom: 60px;
+      .icon {
+        width: 115px;
+        height: 100px;
+        background-color: $pink;
+        margin: 0 auto;
+        margin-bottom: 20px;
       }
-      .hoverShow {
-        display: none;
+    }
+    .useCase1 {
+      .icon {
+        background-color: transparent;
+        background-image: url('../images/home/iconEta.png');
+      }
+    }
+    .useCase2 {
+      .icon {
+        background-color: transparent;
+        background-image: url('../images/home/iconTeamTelephone.png');
+      }
+    }
+    .useCase3 {
+      .icon {
+        background-color: transparent;
+        background-image: url('../images/home/iconClickToCall.png');
       }
     }
   }
-  .clientLogo:hover .hoverHide {
-    display: none;
+
+  #benefits {
+    margin: 40px 0;
+    text-align: left;
+    .benefits {
+      margin-bottom: 60px;
+      .icon {
+        width: 60px;
+        height: 60px;
+        background-color: $pink;
+        @include border-radius(50%);
+      }
+    }
+    .benefits1 .icon {
+      background-image: url('../images/home/iconReach.png');
+    }
+    .benefits2 .icon {
+      background-image: url('../images/home/iconPerformance.png');
+    }
+    .benefits3 .icon {
+      background-image: url('../images/home/iconAnalytics.png');
+    }
+    .benefits4 .icon {
+      background-image: url('../images/home/iconInnovation.png');
+    }
+    .benefits5 .icon {
+      background-image: url('../images/home/iconSecurity.png');
+    }
+    .benefits6 .icon {
+      background-image: url('../images/home/iconCustomization.png');
+    }
   }
 
-  .clientLogo:hover .hoverShow {
-    display: block;
+  #clients {
+    .clientLogo {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 80%;
+      a {
+        display: block;
+        img {
+          width: 100%;
+        }
+        .hoverShow {
+          display: none;
+        }
+      }
+    }
+    .clientLogo:hover .hoverHide {
+      display: none;
+    }
+
+    .clientLogo:hover .hoverShow {
+      display: block;
+    }
+  }
+
+  #reminder {
+    margin: 100px 0;
   }
 }
 
-#reminder {
-  margin: 100px 0;
+
+
+
+
+/* ==========================================================================
+   USE CASES PAGE
+   ========================================================================== */
+
+#useCasesPage {
+  #colorOverlay {
+    background: linear-gradient(to bottom right, #333, $pink);
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  #intro {
+    height: 400px;
+    //background-color: $pink;
+    background-image: url('../images/useCases/header.jpg');
+    position: relative;
+    .introText {
+      margin-top: 240px;
+      color: #ffffff;
+      text-shadow: black 3px 3px 3px;
+    }
+  }
+
+  #casesOverview {
+    padding: 100px 0 60px;
+    text-align: left;
+    background-color: $light-grey;
+    .useCase {
+      .thumbnail{
+        padding: 0;
+        margin-bottom: 40px;
+        @include box-shadow(1px 1px 2px  rgba(200,200,200,1));
+        .media-left {
+          height: 100%;
+          background-color: $pink;
+          padding-right: 0;
+        }
+        .icon {
+          width: 60px;
+          height: 60px;
+          margin: 20px;
+        }
+        .media-body {
+          padding: 10px;
+        }
+      }
+
+    }
+    .useCase1 {
+      .media-left {
+        background-color: $green;
+        .icon {
+          background-image: url('../images/useCases/01twoFactorAuthentication.png');
+        }
+      }
+    }
+    .useCase2 {
+      .media-left {
+        background-color: $yellow;
+        .icon {
+          background-image: url('../images/useCases/02etaAlertsIcon.png');
+        }
+      }
+    }
+    .useCase3 {
+      .media-left {
+        background-color: $pink;
+        .icon {
+          background-image: url('../images/useCases/03teamTelephoneIcon.png');
+        }
+      }
+    }
+    .useCase4 {
+      .media-left {
+        background-color: $yellow;
+        .icon {
+          background-image: url('../images/useCases/04clickToCallIcon.png');
+        }
+      }
+    }
+    .useCase5 {
+      .media-left {
+        background-color: $pink;
+        .icon {
+          background-image: url('../images/useCases/05pushToTalkIcon.png');
+        }
+      }
+    }
+    .useCase6 {
+      .media-left {
+        background-color: $green;
+        .icon {
+          background-image: url('../images/useCases/06callerAuthenticationIcon.png');
+        }
+      }
+    }
+    .useCase7 {
+      .media-left {
+        background-color: $pink;
+        .icon {
+          background-image: url('../images/useCases/07broadcastIcon.png');
+        }
+      }
+    }
+    .useCase8 {
+      .media-left {
+        background-color: $green;
+        .icon {
+          background-image: url('../images/useCases/08hostedTelephonyIcon.png');
+        }
+      }
+    }
+    .useCase9 {
+      .media-left {
+        background-color: $yellow;
+        .icon {
+          background-image: url('../images/useCases/09yourSolutionIcon.png');
+        }
+      }
+    }
+  }
 }
+
 
 /* ==========================================================================
    COMPANY AND CASES PAGES
@@ -1207,7 +1346,7 @@ button.outline {
 
 .caseKnrmText .bcg, .caseKnrm .textField span {
   background: none;
-  background-color: $blue;
+  background-color: $pink;
 }
 
 .about1 .bcg {
@@ -1255,7 +1394,7 @@ button.outline {
   .platform1 {
   }
   .platform2 {
-    background-color: $blue;
+    background-color: $pink;
     img {
       max-width: 140px;
     }
@@ -1267,7 +1406,7 @@ button.outline {
     }
   }
   .platform5 {
-    background-color: $blue;
+    background-color: $pink;
   }
   .platform7 {
     background-color: $yellow;
@@ -1391,7 +1530,7 @@ body.jobs {
           padding-bottom: 10px;
         }
         .seeking {
-          background-color: $blue;
+          background-color: $pink;
           margin-top: 10px;
         }
         p:nth-child(2n) {
