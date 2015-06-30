@@ -106,42 +106,140 @@ var localization = {
       intro: {
         title: 'Use cases'
       },
+      whatTitle:'What does it do?',
+      benefitsTitle:'Benefits',
+      howUseTitle:'How can they use it?',
+      howWorkTitle :'How does it work?',
+      stepTitle1: 'Step 1',
+      stepTitle2: 'Step 2',
+      stepTitle3: 'Step 3',
+      stepTitle4: 'Step 4',
       case01: {
-        title: 'Two-factor authentication',
-        overviewDescription: 'Protect your accounts by adding extra security to the login of your application.'
+        title: 'Two-factor Authentication',
+        overviewDescription: 'Protect your accounts by adding extra security to the login of your application.',
+        whatDescription: 'People often underestimate how easy it is to steal passwords. By adding another layer of security, your accounts are better protected from unauthorized users. During the login process an SMS or automated call will be sent to your personal phone number with an extra verification pincode. This way unwanted users will not be able to access your accounts, even if they have your password.',
+        benefit01: 'Account protection',
+        benefit02: 'No new hardware required ',
+        benefit03: 'Can be used for password reset too',
+        howUseDescription: 'A lot of IT organizations offer its customer cloud storage space. Due to the nature of its business, security is one of the most important components. With the help of ASK Fast, organisations can set up a two-factor authentication code that can be sent to their customers easily and quickly. When a customer wants access his cloud storage, he may be asked for an extra security code if he is logging in from an unknown computer. This code is sent to his personal mobile phone, and once the computer is verified using the code, he will have access to his account.',
+        customerQuote: '“A person who never made a mistake never tried anything new.”',
+        howWorkStep1: 'Generate a pin code that fulfills your security demands.',
+        howWorkStep2: 'ASK Fast makes sure the message gets delivered.',
+        howWorkStep3: 'Confirm the user has input the code into your login workflow.',
+        howWorkStep4: 'If there has been no authentication, a new pin code can be delivered.'
       },
       case02: {
         title: 'ETA-Alerts',
-        overviewDescription: 'Inform your customers with the most accurate arrival time.'
+        overviewDescription: 'Inform your customers with the most accurate arrival time.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case03: {
         title: 'Team Telephone',
-        overviewDescription: 'Turn your own mobile phone into a team telephone with one click.'
+        overviewDescription: 'Turn your own mobile phone into a team telephone with one click.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case04: {
         title: 'Click-to-Call',
-        overviewDescription: 'Connect to your website visitors efficiently and rapidly.'
+        overviewDescription: 'Connect to your website visitors efficiently and rapidly.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case05: {
         title: 'Push-to-Talk',
-        overviewDescription: 'Communicate instantly at the touch of a button.'
+        overviewDescription: 'Communicate instantly at the touch of a button.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case06: {
         title: 'Caller Authentication',
-        overviewDescription: 'Make sure your information does not end up in the wrong hands.'
+        overviewDescription: 'Make sure your information does not end up in the wrong hands.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case07: {
         title: 'Broadcast',
-        overviewDescription: 'One message, multiple communication channels.'
+        overviewDescription: 'One message, multiple communication channels.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case08: {
         title: 'Decentrale',
-        overviewDescription: 'No more need for regular phones or telephone exchanges.'
+        overviewDescription: 'No more need for regular phones or telephone exchanges.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
       },
       case09: {
         title: 'Your Solution',
-        overviewDescription: 'The ASK Fast API allows you to easily build your own application.'
-      },
+        overviewDescription: 'The ASK Fast API allows you to easily build your own application.',
+        whatDescription: '',
+        benefit01: '',
+        benefit02: '',
+        benefit03: '',
+        howUseDescription: '',
+        customerQuote: '',
+        howWorkStep1: '',
+        howWorkStep2: '',
+        howWorkStep3: '',
+        howWorkStep4: ''
+      }
     },
 
 

@@ -67,98 +67,65 @@ html.no-js
 
 
 
-    //--------COOKIE MESSAGE------
-    #cookieMessage.hide
-      #closeCookie
-      p
-        | {{ui.general.cookieMessage}}
-        a(href='../docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
-        | .
 
-
-
-    //--------INTRO------
+    //--------CONTENT------
     #content
-      #useCasesPage
+      #useCasesPage.twoFactorAuth
+
         #intro.fullbackground
           #colorOverlay
           .container
             .row
+              .useCaseIcon.caseIcon01
+            .row
               .col-md-12.introText
-                h1.subPageTitle {{ui.useCases.intro.title}}
-            //.row
-            //  .col-md-6.col-md-offset-3
-            //    h4.introText {{ui.home.intro.introText}}
+                h1.subPageTitle {{ui.useCases.case01.title}}
 
-
-        #casesOverview
+        #what
           .container
             .row
-              .col-sm-4.useCase.useCase1
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case01.title}}
-                    p {{ui.useCases.case01.overviewDescription}}
-              .col-sm-4.useCase.useCase2
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case02.title}}
-                    p {{ui.useCases.case02.overviewDescription}}
-              .col-sm-4.useCase.useCase3
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case03.title}}
-                    p {{ui.useCases.case03.overviewDescription}}
+              .col-md-8.col-md-offset-2
+                h3 {{ui.useCases.whatTitle}}
+                p {{ui.useCases.case01.whatDescription}}
+
+        #benefits
+          .container
+            .row.titleHeader
             .row
-              .col-sm-4.useCase.useCase4
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case04.title}}
-                    p {{ui.useCases.case04.overviewDescription}}
-              .col-sm-4.useCase.useCase5
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case05.title}}
-                    p {{ui.useCases.case05.overviewDescription}}
-              .col-sm-4.useCase.useCase6
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case06.title}}
-                    p {{ui.useCases.case06.overviewDescription}}
+              .col-sm-4.benefit.benefit1
+                .icon
+                h4 {{ui.useCases.case01.benefit01}}
+              .col-sm-4.benefit.benefit2
+                .icon
+                h4 {{ui.useCases.case01.benefit02}}
+              .col-sm-4.benefit.benefit3
+                .icon
+                h4 {{ui.useCases.case01.benefit03}}
+
+        #howUse
+          .container
+            .row.titleHeader
             .row
-              .col-sm-4.useCase.useCase7
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case07.title}}
-                    p {{ui.useCases.case07.overviewDescription}}
-              .col-sm-4.useCase.useCase8
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case08.title}}
-                    p {{ui.useCases.case08.overviewDescription}}
-              .col-sm-4.useCase.useCase9
-                .media.thumbnail
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.useCases.case09.title}}
-                    p {{ui.useCases.case09.overviewDescription}}
+              .col-md-8.col-md-offset-2
+                h3 {{ui.useCases.howUseTitle}}
+                p {{ui.useCases.case01.howUseDescription}}
+
+        #howWork
+          .container
+            .row.titleHeader
+            .row
+              .col-md-3
+                h3 {{ui.useCases.stepTitle1}}
+                p {{ui.useCases.case01.howWorkStep1}}
+              .col-md-3
+                h3 {{ui.useCases.stepTitle2}}
+                p {{ui.useCases.case01.howWorkStep2}}
+              .col-md-3
+                h3 {{ui.useCases.stepTitle3}}
+                p {{ui.useCases.case01.howWorkStep3}}
+              .col-md-3
+                h3 {{ui.useCases.stepTitle4}}
+                p {{ui.useCases.case01.howWorkStep4}}
 
 
 
