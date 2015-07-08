@@ -81,9 +81,10 @@ html.no-js
               .col-md-12.introText
                 h1.subPageTitle {{ui.useCases.case01.title}}
 
+        .zigZagBorder
         #what
           .container
-            .row
+            .row.contentBlock
               .col-md-8.col-md-offset-2
                 h3 {{ui.useCases.whatTitle}}
                 p {{ui.useCases.case01.whatDescription}}
@@ -91,7 +92,7 @@ html.no-js
         #benefits
           .container
             .row.titleHeader
-            .row
+            .row.contentBlock
               .col-sm-4.benefit.benefit1
                 .icon
                 h4 {{ui.useCases.case01.benefit01}}
@@ -102,28 +103,40 @@ html.no-js
                 .icon
                 h4 {{ui.useCases.case01.benefit03}}
 
-        #howUse
+        #howUse.hide
           .container
             .row.titleHeader
-            .row
+            .row.contentBlock
               .col-md-8.col-md-offset-2
                 h3 {{ui.useCases.howUseTitle}}
                 p {{ui.useCases.case01.howUseDescription}}
 
+        #customerQuote
+          .container
+            .row.titleHeader
+            .row.contentBlock
+              .col-md-8.col-md-offset-2
+                p.quote {{ui.useCases.case01.customerQuote}}
+
         #howWork
           .container
             .row.titleHeader
-            .row
+            .row.contentBlock
               .col-md-3
+                //#hexagon
+                .icon
                 h3 {{ui.useCases.stepTitle1}}
                 p {{ui.useCases.case01.howWorkStep1}}
               .col-md-3
+                .icon
                 h3 {{ui.useCases.stepTitle2}}
                 p {{ui.useCases.case01.howWorkStep2}}
               .col-md-3
+                .icon
                 h3 {{ui.useCases.stepTitle3}}
                 p {{ui.useCases.case01.howWorkStep3}}
               .col-md-3
+                .icon
                 h3 {{ui.useCases.stepTitle4}}
                 p {{ui.useCases.case01.howWorkStep4}}
 

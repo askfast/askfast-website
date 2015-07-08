@@ -57,7 +57,7 @@ $icon-font-path: "/vendors/bootstrap-sass/assets/fonts/bootstrap/";
 
 @import url("//fonts.googleapis.com/css?family=Ubuntu:700");
 @import url("//fonts.googleapis.com/css?family=Lato:700,400,400italic,700italic,300italic,300");
-@import url("//fonts.googleapis.com/css?family=Oswald");
+@import url("http://fonts.googleapis.com/css?family=Oswald");
 
 
 
@@ -66,11 +66,13 @@ $icon-font-path: "/vendors/bootstrap-sass/assets/fonts/bootstrap/";
 // Variables
 $pink: #e10b7d;
 $white: #ffffff;
+$black: #000000;
 $soft-pink: #fadae8;
 $yellow: #efbb26;
 $green: #14a5a5;
-
 $light-grey: #e5e5e5;
+
+$marginBelow: 40px;
 
 // Mixins
 
@@ -617,25 +619,97 @@ button.outline {
       display: block;
       border-top: 1px solid #696969;
       a {
-        color: #fff;
+        color: $white;
       }
     }
   }
 }
 
+#content {
+  padding-bottom: 30px; /*fix for footer*/
+}
+
+#hexagon {
+  width: 55px;
+  height: 100px;
+  background: red;
+  position: relative;
+  background-image: url('../images/home/iconEta.png');
+}
+#hexagon:before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-right: 25px solid red;
+}
+#hexagon:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 55px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 25px solid red;
+}
+
+/*----------SHAPES-----------*/
+
+#hexagon2 {
+  width: 100px;
+  height: 55px;
+  background: red;
+  position: relative;
+}
+#hexagon2:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 25px solid red;
+}
+#hexagon2:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 25px solid red;
+}
+
+
+
+
 .titleHeader {
   border-top: 1px solid $pink;
-  margin-bottom: 20px;
-  text-align: center;
+  clear:both;
   h4 {
     background-color: white;
     color: $pink;
     text-transform: uppercase;
     position: relative;
-    padding: 10px;
-    top: -20px;
+    padding: 0 10px;
+    top: -10px;
     display: inline-block;
+    //height: 1px;
   }
+}
+
+.contentBlock {
+  padding: 100px 0;
 }
 
 #cookieMessage {
@@ -652,18 +726,18 @@ button.outline {
   p {
     text-align: left;
     font-size: 11px;
-    color: #fff;
+    color: $white;
     line-height: 14px;
   }
   a {
-    color: #fff;
+    color: $white;
     text-decoration: underline;
   }
 }
 
 #closeCookie:before {
   content: "x";
-  color: #fff;
+  color: $white;
   cursor: pointer;
   right: 2%;
   position: absolute;
@@ -681,9 +755,9 @@ button.outline {
 
 .subPageTitle {
   font-family: 'Oswald', sans-serif;
-  font-size: 80px;
+  font-size: 60px;
   text-shadow: none;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 #colorOverlay {
@@ -692,6 +766,25 @@ button.outline {
   width: 100%;
   height: 100%;
   position: absolute;
+}
+
+.zigZagBorder {
+  position: relative;
+  //padding: 8px 8px 32px 8px;
+  //background: #dddccf;
+}
+.zigZagBorder:after {
+  background: linear-gradient(-45deg, #ffffff 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
+  background-position: left-bottom;
+  background-repeat: repeat-x;
+  background-size: 18px 18px;
+  content: " ";
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 16px;
 }
 
 #footer {
@@ -812,13 +905,13 @@ button.outline {
 #home {
 
   #intro {
-    height: 700px;
+    height: 600px;
     background-color: $pink;
     background-image: url('../images/home/rotterdam02.jpg');
     position: relative;
     .introText {
       margin-top: 240px;
-      color: #ffffff;
+      color: $white;
       text-shadow: black 3px 3px 3px;
       h2 {
         margin-bottom: 20px;
@@ -918,20 +1011,16 @@ button.outline {
   }
 
   #intro2 {
-    text-align: center;
-    margin: 100px 0 0;
     .introText {
       font-size: 18px;
       font-style: italic;
-      margin-bottom: 20px;
+      margin-bottom: $marginBelow;
     }
   }
 
   #useCases {
-    text-align: center;
-    margin: 100px 0;
     .useCase {
-      margin-bottom: 60px;
+      margin-bottom: $marginBelow;
       .icon {
         width: 115px;
         height: 100px;
@@ -961,10 +1050,11 @@ button.outline {
   }
 
   #benefits {
-    margin: 40px 0;
-    text-align: left;
+    .contentBlock {
+      text-align: left;
+    }
     .benefits {
-      margin-bottom: 60px;
+      margin-bottom: $marginBelow;
       .icon {
         width: 60px;
         height: 60px;
@@ -995,7 +1085,6 @@ button.outline {
   #clients {
     .clientLogo {
       margin: 0 auto;
-      text-align: center;
       max-width: 80%;
       a {
         display: block;
@@ -1017,7 +1106,6 @@ button.outline {
   }
 
   #reminder {
-    margin: 100px 0;
   }
 }
 
@@ -1037,16 +1125,23 @@ button.outline {
     position: relative;
     .introText {
       margin-top: 40px;
-      color: #ffffff;
-      text-shadow: black 3px 3px 3px;
+      color: $white;
+      text-shadow: $black 3px 3px 3px;
     }
   }
 
   #casesOverview {
     padding: 100px 0 60px;
-    text-align: left;
     background-color: $light-grey;
+    .overviewIntro {
+      margin-bottom: 100px;
+    }
     .useCase {
+      text-align: left;
+      a {
+        color: $black;
+        text-decoration: none;
+      }
       .thumbnail{
         padding: 0;
         margin-bottom: 40px;
@@ -1069,7 +1164,6 @@ button.outline {
     }
     .useCase1 {
       .media-left {
-        background-color: $green;
         .icon {
           background-image: url('../images/useCases/01twoFactorAuthentication.png');
         }
@@ -1077,7 +1171,6 @@ button.outline {
     }
     .useCase2 {
       .media-left {
-        background-color: $yellow;
         .icon {
           background-image: url('../images/useCases/02etaAlertsIcon.png');
         }
@@ -1085,7 +1178,6 @@ button.outline {
     }
     .useCase3 {
       .media-left {
-        background-color: $pink;
         .icon {
           background-image: url('../images/useCases/03teamTelephoneIcon.png');
         }
@@ -1093,7 +1185,6 @@ button.outline {
     }
     .useCase4 {
       .media-left {
-        background-color: $yellow;
         .icon {
           background-image: url('../images/useCases/04clickToCallIcon.png');
         }
@@ -1101,7 +1192,6 @@ button.outline {
     }
     .useCase5 {
       .media-left {
-        background-color: $pink;
         .icon {
           background-image: url('../images/useCases/05pushToTalkIcon.png');
         }
@@ -1109,7 +1199,6 @@ button.outline {
     }
     .useCase6 {
       .media-left {
-        background-color: $green;
         .icon {
           background-image: url('../images/useCases/06callerAuthenticationIcon.png');
         }
@@ -1117,7 +1206,6 @@ button.outline {
     }
     .useCase7 {
       .media-left {
-        background-color: $pink;
         .icon {
           background-image: url('../images/useCases/07broadcastIcon.png');
         }
@@ -1125,7 +1213,6 @@ button.outline {
     }
     .useCase8 {
       .media-left {
-        background-color: $green;
         .icon {
           background-image: url('../images/useCases/08hostedTelephonyIcon.png');
         }
@@ -1133,7 +1220,6 @@ button.outline {
     }
     .useCase9 {
       .media-left {
-        background-color: $yellow;
         .icon {
           background-image: url('../images/useCases/09yourSolutionIcon.png');
         }
@@ -1154,36 +1240,40 @@ button.outline {
     }
   }
   #what {
-    padding: 100px 0;
   }
   
   #benefits {
-    padding: 0 0 60px;
-    .titleHeader {
-      margin-bottom: 60px;
+    h4 {
+      color: gray;
+      text-transform: uppercase;
     }
     .benefit {
       .icon {
         margin: 0 auto;
-        background-image: url('../images/useCases/iconCheckMark.png');
+        background-image: url('../images/useCases/iconCheckMark03.png');
         height: 60px;
         width: 60px;
       } 
     }
   }
 
-  #howUse {
-    padding-bottom: 100px;
-    .titleHeader {
-      margin-bottom: 100px;
+  #customerQuote {
+    p {
+      color: $pink;
+      font-size: 21px;
     }
+  }
+  #howUse {
   }
 
   #howWork {
-    .titleHeader {
-      margin-bottom: 100px;
+    .icon {
+      height: 100px;
+      width: 115px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      background-image: url('../images/home/iconEta.png');
     }
-    padding-bottom: 100px ;
   }
 }
 

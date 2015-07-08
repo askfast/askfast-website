@@ -80,6 +80,7 @@ html.no-js
     //--------INTRO------
     #content
       #home
+
         #intro.fullbackground
           #colorOverlay
           .container
@@ -138,119 +139,123 @@ html.no-js
 
         #intro2
           .container
-            .row
-              .col-md-8.col-md-offset-2
-                h2 {{ui.home.intro.title}}
-                p.introText {{ui.home.intro.introText}}
-            .row
-              .col-md-12
-                a(href='https://portal.ask-fast.com/index.html#/register#step-1')
-                  button.outline {{ui.general.tryForFree}}
+            .contentBlock
+              .row
+                .col-md-8.col-md-offset-2
+                  h2 {{ui.home.intro.title}}
+                  p.introText {{ui.home.intro.introText}}
+              .row
+                .col-md-12
+                  a(href='https://portal.ask-fast.com/index.html#/register#step-1')
+                    button.outline {{ui.general.tryForFree}}
 
 
         #useCases
           .container
             .row.titleHeader
               h4 {{ui.home.useCases.mainTitle}}
-            .row
-              .col-sm-4.useCase.useCase1
-                .icon
-                h3 {{ui.home.useCases.title01}}
-                p {{ui.home.useCases.description01}}
-              .col-sm-4.useCase.useCase2
-                .icon
-                h3 {{ui.home.useCases.title02}}
-                p {{ui.home.useCases.description02}}
-              .col-sm-4.useCase.useCase3
-                .icon
-                h3 {{ui.home.useCases.title03}}
-                p {{ui.home.useCases.description03}}
-            .row
-              .col-md-12
-                button.outline {{ui.general.readMore}}
+            .contentBlock
+              .row
+                .col-sm-4.useCase.useCase1
+                  .icon
+                  h3 {{ui.home.useCases.title01}}
+                  p {{ui.home.useCases.description01}}
+                .col-sm-4.useCase.useCase2
+                  .icon
+                  h3 {{ui.home.useCases.title02}}
+                  p {{ui.home.useCases.description02}}
+                .col-sm-4.useCase.useCase3
+                  .icon
+                  h3 {{ui.home.useCases.title03}}
+                  p {{ui.home.useCases.description03}}
+              .row
+                .col-md-12
+                  button.outline {{ui.general.readMore}}
 
 
         #benefits
           .container
             .row.titleHeader
               h4 {{ui.home.benefits.mainTitle}}
-            .row
-              .col-sm-6.benefits.benefits1
-                .media
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.home.benefits.title01}}
-                    p {{ui.home.benefits.description01}}
-              .col-sm-6.benefits.benefits2
-                .media
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.home.benefits.title02}}
-                    p {{ui.home.benefits.description02}}
-            .row
-              .col-sm-6.benefits.benefits3
-                .media
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.home.benefits.title03}}
-                    p {{ui.home.benefits.description03}}
-              .col-sm-6.benefits.benefits4
-                .media
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.home.benefits.title04}}
-                    p {{ui.home.benefits.description04}}
-            .row
-              .col-sm-6.benefits.benefits5
-                .media
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.home.benefits.title05}}
-                    p {{ui.home.benefits.description05}}
-              .col-sm-6.benefits.benefits6
-                .media
-                  .media-left.media-middle
-                    .icon
-                  .media-body
-                    h3 {{ui.home.benefits.title06}}
-                    p {{ui.home.benefits.description06}}
+            .contentBlock
+              .row
+                .col-sm-6.benefits.benefits1
+                  .media
+                    .media-left.media-middle
+                      .icon
+                    .media-body
+                      h3 {{ui.home.benefits.title01}}
+                      p {{ui.home.benefits.description01}}
+                .col-sm-6.benefits.benefits2
+                  .media
+                    .media-left.media-middle
+                      .icon
+                    .media-body
+                      h3 {{ui.home.benefits.title02}}
+                      p {{ui.home.benefits.description02}}
+              .row
+                .col-sm-6.benefits.benefits3
+                  .media
+                    .media-left.media-middle
+                      .icon
+                    .media-body
+                      h3 {{ui.home.benefits.title03}}
+                      p {{ui.home.benefits.description03}}
+                .col-sm-6.benefits.benefits4
+                  .media
+                    .media-left.media-middle
+                      .icon
+                    .media-body
+                      h3 {{ui.home.benefits.title04}}
+                      p {{ui.home.benefits.description04}}
+              .row
+                .col-sm-6.benefits.benefits5
+                  .media
+                    .media-left.media-middle
+                      .icon
+                    .media-body
+                      h3 {{ui.home.benefits.title05}}
+                      p {{ui.home.benefits.description05}}
+                .col-sm-6.benefits.benefits6
+                  .media
+                    .media-left.media-middle
+                      .icon
+                    .media-body
+                      h3 {{ui.home.benefits.title06}}
+                      p {{ui.home.benefits.description06}}
 
 
         #clients
           .container
             .row.titleHeader
               h4 {{ui.home.clients.mainTitle}}
-            .row
-              .col-md-3.col-sm-6
-                .clientLogo.tnt
-                  a(href="#")
-                    img.hoverShow(src="images/home/tnt02.png")
-                    img.hoverHide(src="images/home/tntGray.png")
-              .col-md-3.col-sm-6
-                .clientLogo.amstelring
-                  a(href="#")
-                    img.hoverShow(src="images/home/amstelring.png")
-                    img.hoverHide(src="images/home/amstelringGray.png")
-              .col-md-3.col-sm-6
-                .clientLogo.vitens
-                  a(href="#")
-                    img.hoverShow(src="images/home/vitens02.png")
-                    img.hoverHide(src="images/home/vitensGray.png")
-              .col-md-3.col-sm-6
-                .clientLogo.rb
-                  a(href="#")
-                    img.hoverShow(src="images/home/reddingsbrigade.png")
-                    img.hoverHide(src="images/home/reddingsbrigadeGray.png")
+            .contentBlock
+              .row
+                .col-md-3.col-sm-6
+                  .clientLogo.tnt
+                    a(href="#")
+                      img.hoverShow(src="images/home/tnt02.png")
+                      img.hoverHide(src="images/home/tntGray.png")
+                .col-md-3.col-sm-6
+                  .clientLogo.amstelring
+                    a(href="#")
+                      img.hoverShow(src="images/home/amstelring.png")
+                      img.hoverHide(src="images/home/amstelringGray.png")
+                .col-md-3.col-sm-6
+                  .clientLogo.vitens
+                    a(href="#")
+                      img.hoverShow(src="images/home/vitens02.png")
+                      img.hoverHide(src="images/home/vitensGray.png")
+                .col-md-3.col-sm-6
+                  .clientLogo.rb
+                    a(href="#")
+                      img.hoverShow(src="images/home/reddingsbrigade.png")
+                      img.hoverHide(src="images/home/reddingsbrigadeGray.png")
 
         #reminder
           .container
             .row.titleHeader
-            .row
+            .row.contentBlock
               .col-md-12
                 a(href='https://portal.ask-fast.com/index.html#/register#step-1')
                   button.outline {{ui.general.tryForFree}}

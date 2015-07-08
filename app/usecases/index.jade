@@ -77,15 +77,16 @@ html.no-js
 
 
 
-    //--------INTRO------
+    //--------CONTENT------
     #content
       #useCasesPage.useCasesOverview
+
         #intro.fullbackground
           #colorOverlay
           .container
             .row
               .col-md-12.introText
-                h1.subPageTitle {{ui.useCases.intro.title}}
+                h1.subPageTitle {{ui.useCases.title}}
             //.row
             //  .col-md-6.col-md-offset-3
             //    h4.introText {{ui.home.intro.introText}}
@@ -93,6 +94,10 @@ html.no-js
 
         #casesOverview
           .container
+            .row.overviewIntro
+              .col-md-8.col-md-offset-2
+                h2 {{ui.useCases.intro.title}}
+                p {{ui.useCases.intro.text}}
             .row
               .col-sm-4.useCase.useCase1
                 a(href='twofactorauthentication.html').media.thumbnail
