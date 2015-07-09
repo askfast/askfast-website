@@ -629,45 +629,65 @@ button.outline {
   padding-bottom: 30px; /*fix for footer*/
 }
 
-#hexagon {
-  width: 55px;
-  height: 100px;
-  background: red;
-  position: relative;
-  background-image: url('../images/home/iconEta.png');
-}
-#hexagon:before {
-  content: "";
-  position: absolute;
-  left: -25px;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-right: 25px solid red;
-}
-#hexagon:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  left: 55px;
-  width: 0;
-  height: 0;
-  border-top: 50px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-left: 25px solid red;
-}
+
 
 /*----------SHAPES-----------*/
 
-#hexagon2 {
+.hexContainer {
+  height: 100px;
+  width: 115px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  .icon {
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    width: 115px;
+    margin: 0 auto;
+    background: no-repeat center center;
+  }
+  .hexagon {
+    width: 59px;
+    height: 100px;
+    background-color: $pink;
+    position: relative;
+    margin: 0 auto;
+  }
+  .hexagon:before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 28px solid $pink;
+  }
+  .hexagon:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 59px;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 28px solid $pink;
+  }
+}
+
+
+
+
+
+.hexagon2 {
   width: 100px;
   height: 55px;
   background: red;
   position: relative;
 }
-#hexagon2:before {
+.hexagon2:before {
   content: "";
   position: absolute;
   top: -25px;
@@ -678,7 +698,7 @@ button.outline {
   border-right: 50px solid transparent;
   border-bottom: 25px solid red;
 }
-#hexagon2:after {
+.hexagon2:after {
   content: "";
   position: absolute;
   bottom: -25px;
@@ -1024,7 +1044,6 @@ button.outline {
       .icon {
         width: 115px;
         height: 100px;
-        background-color: $pink;
         margin: 0 auto;
         margin-bottom: 20px;
       }
@@ -1250,9 +1269,11 @@ button.outline {
     .benefit {
       .icon {
         margin: 0 auto;
-        background-image: url('../images/useCases/iconCheckMark03.png');
+        background: url('../images/useCases/checkMark.png') no-repeat center center;
         height: 60px;
         width: 60px;
+        background-color: $green;
+        @include border-radius(50%);
       } 
     }
   }
@@ -1268,11 +1289,7 @@ button.outline {
 
   #howWork {
     .icon {
-      height: 100px;
-      width: 115px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      background-image: url('../images/home/iconEta.png');
+
     }
   }
 }
@@ -1280,6 +1297,31 @@ button.outline {
 .useCasesOverview {
   #intro {
     background-image: url('../images/useCases/header.jpg');
+  }
+}
+
+.twoFactorAuth {
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/lock.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/key.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/keyPhone.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/code.png');
+      }
+    }
   }
 }
 

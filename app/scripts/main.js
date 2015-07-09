@@ -125,10 +125,10 @@ var localization = {
         benefit03: 'Can be used for password reset too',
         howUseDescription: 'A lot of IT organizations offer its customer cloud storage space. Due to the nature of its business, security is one of the most important components. With the help of ASK-Fast, organisations can set up a two-factor authentication code that can be sent to their customers easily and quickly. When a customer wants access his cloud storage, he may be asked for an extra security code if he is logging in from an unknown computer. This code is sent to his personal mobile phone, and once the computer is verified using the code, he will have access to his account.',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
-        howWorkStep1: 'Generate a pin code that fulfills your security demands.',
-        howWorkStep2: 'ASK-Fast makes sure the message gets delivered.',
-        howWorkStep3: 'Confirm the user has input the code into your login workflow.',
-        howWorkStep4: 'If there has been no authentication, a new pin code can be delivered.'
+        howWorkStep1: 'User wants to log into his/her account.',
+        howWorkStep2: 'ASK-Fast generates a pin code.',
+        howWorkStep3: 'ASK-Fast delivers a message containing the pin code to the user.',
+        howWorkStep4: 'The user enters the pin code and can continue his/her login process.'
       },
       case02: {
         title: 'ETA-Alerts',

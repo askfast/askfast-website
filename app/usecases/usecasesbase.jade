@@ -1,0 +1,132 @@
+doctype
+html.no-js
+  head
+    include ../includes/head
+
+    // --------CSS------
+    // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='../vendors/animate.css/animate.css')
+    // endbower
+    // endbuild
+    // build:css(.tmp) styles/main.css
+    link(rel='stylesheet', href='../styles/main.css')
+    // endbuild
+
+    script(src='../vendors/modernizr/modernizr.js')
+
+
+
+  body(ng-app='AskFast')
+
+
+
+    //--------HEADER------
+    include ../includes/header
+
+
+
+
+    //--------CONTENT------
+    #content
+      block useCaseClass
+      #useCasesPage(class='#{useCaseClass}')
+
+        #intro.fullbackground
+          #colorOverlay
+          .container
+            .row
+              .useCaseIcon.caseIcon01
+            .row
+              .col-md-12.introText
+                block title
+
+        .zigZagBorder
+        #what
+          .container
+            .row.contentBlock
+              .col-md-8.col-md-offset-2
+                block what
+
+        #benefits
+          .container
+            .row.titleHeader
+            .row.contentBlock
+              .col-sm-4.benefit.benefit1
+                .icon
+                block benefit1
+              .col-sm-4.benefit.benefit2
+                .icon
+                block benefit2
+              .col-sm-4.benefit.benefit3
+                .icon
+                block benefit3
+
+        #howUse.hide
+          .container
+            .row.titleHeader
+            .row.contentBlock
+              .col-md-8.col-md-offset-2
+                h3 {{ui.useCases.howUseTitle}}
+                p {{ui.useCases.case01.howUseDescription}}
+
+        #customerQuote
+          .container
+            .row.titleHeader
+            .row.contentBlock
+              .col-md-8.col-md-offset-2
+                block customerQuote
+
+        #howWork
+          .container
+            .row.titleHeader
+              h4 {{ui.useCases.howWorkTitle}}
+            .row.contentBlock
+              .col-md-3
+                .hexContainer.step1
+                  .icon
+                  .hexagon
+                block step1
+              .col-md-3
+                .hexContainer.step2
+                  .icon
+                  .hexagon
+                block step2
+              .col-md-3
+                .hexContainer.step3
+                  .icon
+                  .hexagon
+                block step3
+              .col-md-3
+                .hexContainer.step4
+                  .icon
+                  .hexagon
+                block step4
+
+
+
+
+
+    //--------FOOTER------
+    include ../includes/footer
+
+
+
+    //--------JS------
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../vendors/jQuery/dist/jquery.js')
+    script(src='../vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
+    script(src='../vendors/angular/angular.js')
+    // endbower
+    // endbuild
+
+    script(src='../scripts/main.js')
+
+    // build:js ../scripts/usecases.js
+    script(src='../scripts/imagesloaded.js')
+    script(src='../scripts/skrollr.js')
+    script(src='../scripts/_main.js')
+    script(src='../ scripts/usecases.js')
+
+    // endbuild
