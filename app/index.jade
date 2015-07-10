@@ -176,7 +176,8 @@ html.no-js
                   p {{ui.home.useCases.description03}}
               .row
                 .col-md-12
-                  button.outline {{ui.general.readMore}}
+                  a(href='usecases/')
+                    button.outline {{ui.general.readMore}}
 
 
         #benefits
@@ -258,13 +259,8 @@ html.no-js
                       img.hoverShow(src="images/home/reddingsbrigade.png")
                       img.hoverHide(src="images/home/reddingsbrigadeGray.png")
 
-        #reminder
-          .container
-            .row.titleHeader
-            .row.contentBlock
-              .col-md-12
-                a(href='https://portal.ask-fast.com/index.html#/register#step-1')
-                  button.outline {{ui.general.tryForFree}}
+        include includes/reminder
+
 
 
 

@@ -1137,7 +1137,7 @@ button.outline {
    ========================================================================== */
 
 #useCasesPage {
-
+  background-color: $light-grey;
   #intro {
     height: 400px;
     background-color: $pink;
@@ -1151,7 +1151,7 @@ button.outline {
 
   #casesOverview {
     padding: 100px 0 60px;
-    background-color: $light-grey;
+
     .overviewIntro {
       margin-bottom: 100px;
     }

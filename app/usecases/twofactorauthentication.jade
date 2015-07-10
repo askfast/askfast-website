@@ -1,209 +1,38 @@
-doctype
-html.no-js
-  head
-    meta(charset='UTF-8')
-    title ASK-Fast
-    meta(name='author', content='ASK-Fast')
-    meta(name='keywords', content='ask-fast')
-    meta(name='description', content='ASK-Fast')
-    meta(name='Resource-type', content='Document')
-    meta(content='width=device-width, initial-scale=1', name='viewport')
-    meta(content='ASK-Fast', property='og:title')
-    meta(content='image', property='og:type')
-    meta(content='https://ask-fast.nl/', property='og:url')
-    meta(content='', property='og:image')
-    link(href='..//images/favicon.ico', rel='Shortcut Icon')
+extends usecasesbase
+block useCaseClass
+  - var useCaseClass = 'twoFactorAuth'
 
+block title
+  h1.subPageTitle {{ui.useCases.case01.title}}
 
+block what
+  h3 {{ui.useCases.whatTitle}}
+  p {{ui.useCases.case01.whatDescription}}
 
-    // --------CSS------
-    // build:css styles/vendor.css
-    // bower:css
-    link(rel='stylesheet', href='../vendors/animate.css/animate.css')
-    // endbower
-    // endbuild
-    // build:css(.tmp) styles/main.css
-    link(rel='stylesheet', href='../styles/main.css')
-    // endbuild
+block benefit1
+  h4 {{ui.useCases.case01.benefit01}}
 
-    script(src='../vendors/modernizr/modernizr.js')
+block benefit2
+  h4 {{ui.useCases.case01.benefit02}}
 
+block benefit3
+  h4 {{ui.useCases.case01.benefit03}}
 
+block customerQuote
+  p.quote {{ui.useCases.case01.customerQuote}}
 
-  body(ng-app='AskFast')
+block step1
+  h3 {{ui.useCases.stepTitle1}}
+  p {{ui.useCases.case01.howWorkStep1}}
 
+block step2
+  h3 {{ui.useCases.stepTitle2}}
+  p {{ui.useCases.case01.howWorkStep2}}
 
+block step3
+  h3 {{ui.useCases.stepTitle3}}
+  p {{ui.useCases.case01.howWorkStep3}}
 
-    //--------HEADER------
-    #menuBg(data-106-top='opacity: 1', data-bottom='opacity: 0;', data--10p-top='opacity: 0;', data--60p-top='opacity: 1;', data-anchor-target='body')
-    #menu.mainMenu
-      #dropdownMenu.mobileView.hide
-        ul
-          li
-            a(href='../usecases/index.html') {{ui.menu.useCases}}
-          li
-            a(href='../pricing.html') {{ui.menu.pricing}}
-          li
-            a(href='../developers.html') {{ui.menu.developers}}
-      .container
-        .row
-          .col-sm-2
-            #mainLogo
-              a(href='../index.html')
-              span.payOff(data-106-top='opacity: 0', data-bottom='opacity: 1;', data--10p-top='opacity: 1;', data--30p-top='opacity: 0;', data-anchor-target='body')
-          .col-xs-10.desktopView
-            ul
-              li
-                a.active(href='../usecases/index.html') {{ui.menu.useCases}}
-              li
-                a(href='../pricing.html') {{ui.menu.pricing}}
-              li
-                a(href='../developers.html') {{ui.menu.developers}}
-              li.outlineMenu
-                a(href='https://portal.ask-fast.com') {{ui.menu.login}}
-              li.outlineMenu
-                a(href='https://portal.ask-fast.com/index.html#/register#step-1') {{ui.menu.tryForFree}}
-          #dropdownToggle.mobileView
-
-
-
-
-    //--------CONTENT------
-    #content
-      #useCasesPage.twoFactorAuth
-
-        #intro.fullbackground
-          #colorOverlay
-          .container
-            .row
-              .useCaseIcon.caseIcon01
-            .row
-              .col-md-12.introText
-                h1.subPageTitle {{ui.useCases.case01.title}}
-
-        .zigZagBorder
-        #what
-          .container
-            .row.contentBlock
-              .col-md-8.col-md-offset-2
-                h3 {{ui.useCases.whatTitle}}
-                p {{ui.useCases.case01.whatDescription}}
-
-        #benefits
-          .container
-            .row.titleHeader
-            .row.contentBlock
-              .col-sm-4.benefit.benefit1
-                .icon
-                h4 {{ui.useCases.case01.benefit01}}
-              .col-sm-4.benefit.benefit2
-                .icon
-                h4 {{ui.useCases.case01.benefit02}}
-              .col-sm-4.benefit.benefit3
-                .icon
-                h4 {{ui.useCases.case01.benefit03}}
-
-        #howUse.hide
-          .container
-            .row.titleHeader
-            .row.contentBlock
-              .col-md-8.col-md-offset-2
-                h3 {{ui.useCases.howUseTitle}}
-                p {{ui.useCases.case01.howUseDescription}}
-
-        #customerQuote
-          .container
-            .row.titleHeader
-            .row.contentBlock
-              .col-md-8.col-md-offset-2
-                p.quote {{ui.useCases.case01.customerQuote}}
-
-        #howWork
-          .container
-            .row.titleHeader
-              h4 {{ui.useCases.howWorkTitle}}
-            .row.contentBlock
-              .col-md-3
-                .hexContainer.step1
-                  .icon
-                  .hexagon
-                h3 {{ui.useCases.stepTitle1}}
-                p {{ui.useCases.case01.howWorkStep1}}
-              .col-md-3
-                .hexContainer.step2
-                  .icon
-                  .hexagon
-                h3 {{ui.useCases.stepTitle2}}
-                p {{ui.useCases.case01.howWorkStep2}}
-              .col-md-3
-                .hexContainer.step3
-                  .icon
-                  .hexagon
-                h3 {{ui.useCases.stepTitle3}}
-                p {{ui.useCases.case01.howWorkStep3}}
-              .col-md-3
-                .hexContainer.step4
-                  .icon
-                  .hexagon
-                h3 {{ui.useCases.stepTitle4}}
-                p {{ui.useCases.case01.howWorkStep4}}
-
-
-
-
-
-    //--------FOOTER------
-    #footer
-      ul.languageToggle
-        li
-          a
-      ul#languageMenu.hide
-        li
-          a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
-        li
-          a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
-      ul.contactDetails
-        li {{ui.contact.address}}
-        li.hideXs {{ui.contact.zipcode}}
-        li {{ui.contact.city}}
-        li.hideXs
-          | {{ui.contact.phone}}
-          li
-            a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
-      ul.contactDetails.extraAddress.hideXs.hideSm
-        li {{ui.contactExtra.address}}
-        li.hideXs {{ui.contactExtra.zipcode}}
-        li {{ui.contactExtra.city}}
-        li.hideXs
-          | {{ui.contactExtra.phone}}
-          li
-            a(href='mailto:{{ui.contactExtra.email}}') {{ui.contactExtra.email}}
-      ul.socialMedia.hide
-        li.facebook
-          a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')
-        li.twitter
-          a(href='https://twitter.com/askcs', target='blank')
-        li.linkedin
-          a(href='https://www.linkedin.com/company/ask-community-systems', target='blank')
-        li.googleplus
-          a(href='https://plus.google.com/100201535227830552056', target='blank')
-
-
-
-    //--------JS------
-    // build:js scripts/vendor.js
-    // bower:js
-    script(src='../vendors/jQuery/dist/jquery.js')
-    script(src='../vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
-    script(src='../vendors/angular/angular.js')
-    // endbower
-    // endbuild
-
-    script(src='../scripts/main.js')
-
-    // build:js ../scripts/usecases.js
-    script(src='../scripts/imagesloaded.js')
-    script(src='../scripts/skrollr.js')
-    script(src='../scripts/_main.js')
-    script(src='../ scripts/usecases.js')
-    // endbuild
+block step4
+  h3 {{ui.useCases.stepTitle4}}
+  p {{ui.useCases.case01.howWorkStep4}}

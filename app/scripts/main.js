@@ -39,6 +39,7 @@ var localization = {
     general: {
       tryForFree: 'Try for free',
       readMore: 'Read more',
+      contactUs: 'Contact us',
       cookieMessage: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren. Door deze website te gebruiken, accepteert u ons',
       cookieMessageLink: 'privacybeleid'
     },
