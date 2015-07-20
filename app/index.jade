@@ -1,69 +1,13 @@
 doctype
 html.no-js
   head
-    meta(charset='UTF-8')
-    title ASK-Fast
-    meta(name='author', content='ASK-Fast')
-    meta(name='keywords', content='ask-fast')
-    meta(name='description', content='ASK-Fast')
-    meta(name='Resource-type', content='Document')
-    meta(content='width=device-width, initial-scale=1', name='viewport')
-    meta(content='ASK-Fast', property='og:title')
-    meta(content='image', property='og:type')
-    meta(content='https://ask-fast.nl/', property='og:url')
-    meta(content='', property='og:image')
-    link(href='/images/favicon.ico', rel='Shortcut Icon')
-
-
-    // --------CSS------
-    // build:css styles/vendor.css
-    // bower:css
-    link(rel='stylesheet', href='vendors/animate.css/animate.css')
-    // endbower
-    // endbuild
-    // build:css(.tmp) styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
-    // endbuild
-
-    script(src='vendors/modernizr/modernizr.js')
-
-
-
+    include includes/headDirect
   body(ng-app='AskFast')
 
 
 
     //--------HEADER------
-    #menuBg(data-106-top='opacity: 1', data-bottom='opacity: 0;', data--10p-top='opacity: 0;', data--60p-top='opacity: 1;', data-anchor-target='body')
-    #menu.mainMenu
-      #dropdownMenu.mobileView.hide
-        ul
-          li
-            a(href='usecases/index.html') {{ui.menu.useCases}}
-          li
-            a(href='pricing.html') {{ui.menu.pricing}}
-          li
-            a(href='developers.html') {{ui.menu.developers}}
-      .container
-        .row
-          .col-sm-2
-            #mainLogo
-              a(href='index.html')
-              span.payOff(data-106-top='opacity: 0', data-bottom='opacity: 1;', data--10p-top='opacity: 1;', data--30p-top='opacity: 0;', data-anchor-target='body')
-          .col-xs-10.desktopView
-
-            ul
-              li
-                a(href='usecases/index.html') {{ui.menu.useCases}}
-              li
-                a(href='pricing.html') {{ui.menu.pricing}}
-              li
-                a(href='developers.html') {{ui.menu.developers}}
-              li.outlineMenu
-                a(href='https://portal.ask-fast.com') {{ui.menu.login}}
-              li.outlineMenu
-                a(href='https://portal.ask-fast.com/index.html#/register#step-1') {{ui.menu.tryForFree}}
-          #dropdownToggle.mobileView
+    include includes/header
 
 
 
@@ -137,6 +81,7 @@ html.no-js
                     .comStick
                     span.comLabel.hide {{ui.home.intro.comLabel9}}
 
+        .zigZagBorder
         #intro2
           .container
             .contentBlock

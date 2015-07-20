@@ -17,11 +17,14 @@
       .col-xs-10.desktopView
         ul
           li
-            a.active(href='../usecases/') {{ui.menu.useCases}}
+            block useCasesActive
+              a(href='../usecases/') {{ui.menu.useCases}}
           li
-            a(href='../pricing.html') {{ui.menu.pricing}}
+            block pricingActive
+              a(href='../pricing.html') {{ui.menu.pricing}}
           li
-            a(href='../developers.html') {{ui.menu.developers}}
+            block developersActive
+              a(href='../developers.html') {{ui.menu.developers}}
           li.outlineMenu
             a(href='https://portal.ask-fast.com') {{ui.menu.login}}
           li.outlineMenu

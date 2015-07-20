@@ -790,8 +790,6 @@ button.outline {
 
 .zigZagBorder {
   position: relative;
-  //padding: 8px 8px 32px 8px;
-  //background: #dddccf;
 }
 .zigZagBorder:after {
   background: linear-gradient(-45deg, #ffffff 8px, transparent 0), linear-gradient(45deg, #ffffff 8px, transparent 0);
@@ -1137,7 +1135,7 @@ button.outline {
    ========================================================================== */
 
 #useCasesPage {
-  background-color: $light-grey;
+
   #intro {
     height: 400px;
     background-color: $pink;
@@ -1151,7 +1149,6 @@ button.outline {
 
   #casesOverview {
     padding: 100px 0 60px;
-
     .overviewIntro {
       margin-bottom: 100px;
     }
@@ -1295,12 +1292,19 @@ button.outline {
 }
 
 .useCasesOverview {
+  background-color: $light-grey;
+  .zigZagBorder:after {
+    background-image: linear-gradient(-45deg, $light-grey 8px, transparent 0), linear-gradient(45deg, $light-grey 8px, transparent 0);
+  }
   #intro {
     background-image: url('../images/useCases/header.jpg');
   }
 }
 
 .twoFactorAuth {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
   #howWork {
     .step1 {
       .icon {
@@ -1323,6 +1327,200 @@ button.outline {
       }
     }
   }
+}
+
+.etaAlerts {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/mapMarker.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/timeCalculate.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/timePhone.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/messageCheck.png');
+      }
+    }
+  }
+}
+
+.teamTelephone {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/call.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/searchPeople.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/connection.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/nextPerson.png');
+      }
+    }
+  }
+}
+
+.clickToCall {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/website.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/search.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/call.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/connection.png');
+      }
+    }
+  }
+}
+
+.pushToTalk {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/clickToCall.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/search.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/call.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/connection.png');
+      }
+    }
+  }
+}
+
+.callerAuth {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/call.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/code.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/codeCheck.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/connection.png');
+      }
+    }
+  }
+}
+
+.broadcast {
+  #intro {
+    background-image: url('../images/useCases/header2.jpg');
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/flow.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/comChannels .png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/people.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/send.png');
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   PRICING PAGE
+   ========================================================================== */
+
+#pricingPage {
+  #intro {
+    height: 400px;
+    background-color: $pink;
+    background-image: url('../images/home/rotterdam02.jpg');
+    position: relative;
+    .introText {
+      margin-top: 240px;
+      color: $white;
+      text-shadow: black 3px 3px 3px;
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  table {
+    margin-bottom: $marginBelow;
+  }
+
 }
 
 

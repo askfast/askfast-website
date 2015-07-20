@@ -1,69 +1,13 @@
 doctype
 html.no-js
   head
-    meta(charset='UTF-8')
-    title ASK-Fast
-    meta(name='author', content='ASK-Fast')
-    meta(name='keywords', content='ask-fast')
-    meta(name='description', content='ASK-Fast')
-    meta(name='Resource-type', content='Document')
-    meta(content='width=device-width, initial-scale=1', name='viewport')
-    meta(content='ASK-Fast', property='og:title')
-    meta(content='image', property='og:type')
-    meta(content='https://ask-fast.nl/', property='og:url')
-    meta(content='', property='og:image')
-    link(href='..//images/favicon.ico', rel='Shortcut Icon')
-
-
-
-    // --------CSS------
-    // build:css styles/vendor.css
-    // bower:css
-    link(rel='stylesheet', href='../vendors/animate.css/animate.css')
-    // endbower
-    // endbuild
-    // build:css(.tmp) styles/main.css
-    link(rel='stylesheet', href='../styles/main.css')
-    // endbuild
-
-    script(src='../vendors/modernizr/modernizr.js')
-
-
-
+    include ../includes/headSub
   body(ng-app='AskFast')
 
 
 
     //--------HEADER------
-    #menuBg(data-106-top='opacity: 1', data-bottom='opacity: 0;', data--10p-top='opacity: 0;', data--60p-top='opacity: 1;', data-anchor-target='body')
-    #menu.mainMenu
-      #dropdownMenu.mobileView.hide
-        ul
-          li
-            a(href='../usecases/index.html') {{ui.menu.useCases}}
-          li
-            a(href='../pricing.html') {{ui.menu.pricing}}
-          li
-            a(href='../developers.html') {{ui.menu.developers}}
-      .container
-        .row
-          .col-sm-2
-            #mainLogo
-              a(href='../index.html')
-              span.payOff(data-106-top='opacity: 0', data-bottom='opacity: 1;', data--10p-top='opacity: 1;', data--30p-top='opacity: 0;', data-anchor-target='body')
-          .col-xs-10.desktopView
-            ul
-              li
-                a.active(href='../usecases/index.html') {{ui.menu.useCases}}
-              li
-                a(href='../pricing.html') {{ui.menu.pricing}}
-              li
-                a(href='../developers.html') {{ui.menu.developers}}
-              li.outlineMenu
-                a(href='https://portal.ask-fast.com') {{ui.menu.login}}
-              li.outlineMenu
-                a(href='https://portal.ask-fast.com/index.html#/register#step-1') {{ui.menu.tryForFree}}
-          #dropdownToggle.mobileView
+    include ../includes/headerUseCasesActive
 
 
 
@@ -91,7 +35,7 @@ html.no-js
             //  .col-md-6.col-md-offset-3
             //    h4.introText {{ui.home.intro.introText}}
 
-
+        .zigZagBorder
         #casesOverview
           .container
             .row.overviewIntro
@@ -107,14 +51,14 @@ html.no-js
                     h3 {{ui.useCases.case01.title}}
                     p {{ui.useCases.case01.overviewDescription}}
               .col-sm-4.useCase.useCase2
-                .media.thumbnail
+                a(href='etaalerts.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
                     h3 {{ui.useCases.case02.title}}
                     p {{ui.useCases.case02.overviewDescription}}
               .col-sm-4.useCase.useCase3
-                .media.thumbnail
+                a(href='teamtelephone.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
@@ -122,21 +66,21 @@ html.no-js
                     p {{ui.useCases.case03.overviewDescription}}
             .row
               .col-sm-4.useCase.useCase4
-                .media.thumbnail
+                a(href='clicktocall.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
                     h3 {{ui.useCases.case04.title}}
                     p {{ui.useCases.case04.overviewDescription}}
               .col-sm-4.useCase.useCase5
-                .media.thumbnail
+                a(href='pushtotalk.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
                     h3 {{ui.useCases.case05.title}}
                     p {{ui.useCases.case05.overviewDescription}}
               .col-sm-4.useCase.useCase6
-                .media.thumbnail
+                a(href='callerauthentication.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
@@ -144,21 +88,21 @@ html.no-js
                     p {{ui.useCases.case06.overviewDescription}}
             .row
               .col-sm-4.useCase.useCase7
-                .media.thumbnail
+                a(href='broadcast.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
                     h3 {{ui.useCases.case07.title}}
                     p {{ui.useCases.case07.overviewDescription}}
               .col-sm-4.useCase.useCase8
-                .media.thumbnail
+                a(href='decentrale.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
                     h3 {{ui.useCases.case08.title}}
                     p {{ui.useCases.case08.overviewDescription}}
               .col-sm-4.useCase.useCase9
-                .media.thumbnail
+                a(href='yoursolution.html').media.thumbnail
                   .media-left.media-middle
                     .icon
                   .media-body
