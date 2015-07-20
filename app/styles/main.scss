@@ -1103,22 +1103,19 @@ button.outline {
     .clientLogo {
       margin: 0 auto;
       max-width: 80%;
-      a {
-        display: block;
-        img {
-          width: 100%;
-        }
-        .hoverShow {
-          display: none;
-        }
+      img {
+        width: 100%;
+      }
+      .hoverShow {
+        //display: none;
       }
     }
     .clientLogo:hover .hoverHide {
-      display: none;
+      //display: none;
     }
 
     .clientLogo:hover .hoverShow {
-      display: block;
+      //display: block;
     }
   }
 
@@ -1176,7 +1173,18 @@ button.outline {
           padding: 10px;
         }
       }
-
+      .thumbnail.noLink {
+        background: none;
+        border: none;
+        @include box-shadow(none);
+        h3 {
+          //color: $green;
+        }
+        .media-left {
+          //@include border-radius(50%);
+          background-color: transparent;
+        }
+      }
     }
     .useCase1 {
       .media-left {
@@ -1237,7 +1245,7 @@ button.outline {
     .useCase9 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/09yourSolutionIcon.png');
+          background-image: url('../images/useCases/09yourSolutionIcon02.png');
         }
       }
     }
