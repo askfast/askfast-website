@@ -1,7 +1,9 @@
 {
   "name": "ask-html5",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.13.1"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.7.2",
