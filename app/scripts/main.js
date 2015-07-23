@@ -63,7 +63,7 @@ var localization = {
       intro: {
         slogan: 'Cloud API for automated communication',
         title: 'ASK-Fast',
-        introText: 'ASK-Fast allows you to send automated messages through a wide range of channels to almost any device. You can choose to integrate ASK-Fast into your own existing application or use ASK-Fast to develop a new solution which can be used by others too.',
+        introText: 'ASK-Fast is a cloud platform that fulfills your communicative needs. The platform is dialog-driven, meaning it allows automated two way communication. Every question may trigger a different response, which creates another designed flow of communication. You can choose to integrate ASK-Fast into your own existing application or use ASK-Fast to develop a new solution.',
         comLabel1: 'Phone',
         comLabel2: 'Smartphone',
         comLabel3: 'Tablet',
@@ -90,7 +90,7 @@ var localization = {
         title02: 'Performance Quality',
         description02: 'Constant performance and low latency for any sent message or voice call.',
         title03: 'Business Analytics',
-        description03: 'Monitor reactions as soons as a campaign starts, allowing you to measure the success of your communication.',
+        description03: 'Monitor reactions as soon as a campaign starts, allowing you to measure the success of your communication.',
         title04: 'Innovation',
         description04: 'Continuous search for innovative solutions and always open to new ideas.',
         title05: 'Security',
@@ -219,16 +219,16 @@ var localization = {
       case08: {
         title: 'Decentrale',
         overviewDescription: 'No more need for regular phones or telephone exchanges.',
-        whatDescription: '',
-        benefit01: '',
-        benefit02: '',
-        benefit03: '',
-        howUseDescription: '',
+        whatDescription: 'A telephone exchange usually requires heavy investment, regular maintenance and often causes technical problems too. The Decentrale is a virtual telephone exchange with all the functionalities of an advanced telephone exchange, but without all its technical difficulties.',
+        benefit01: 'Reduce costs',
+        benefit02: 'Increase mobility',
+        benefit03: 'Improve flexibility',
+        howUseDescription: 'Care organisations often receive loads of phone calls, ranging from patients to doctors. Larger organisations usually implement their own telephone exchange to facilitate these calls. They invest a lot of resources in purchasing and maintenance of their system. Smaller organisations might not use a telephone exchange at all if they don’t have the means to invest in such an advanced system. After integrating Decentrale by ASK-Fast both organisations are enjoying the benefits of a user-friendly, cost-effective and mobile system. Decentrale also provides information about waiting times and missed calls, in order to improve the reachability of the organisations.',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
-        howWorkStep1: '',
-        howWorkStep2: '',
-        howWorkStep3: '',
-        howWorkStep4: ''
+        howWorkStep1: 'An outside caller phones the Decentrale phone number.',
+        howWorkStep2: 'ASK-Fast dialog searches for the employee who is most capable of assisting the caller.',
+        howWorkStep3: 'The ASK-Fast API connects the outside caller to the employee.',
+        howWorkStep4: 'If the employee doesn\'t pick up, the call will be forwarded to the next worker.'
       },
       case09: {
         title: 'Your Solution',
@@ -247,7 +247,16 @@ var localization = {
     },
 
     pricing: {
-      title: 'Pricing'
+      title: 'Pricing',
+      country: {
+        title: 'Enter your country'
+      },
+      phone: 'Phone',
+      sms: 'SMS',
+      number: 'Number',
+      Inbound: 'Inbound',
+      Outbound: 'Outbound',
+      example: '- €10.000.000 0,09 / minute'
     },
 
 

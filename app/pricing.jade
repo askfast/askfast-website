@@ -36,42 +36,88 @@ html.no-js
             //    h4.introText {{ui.home.intro.introText}}
 
         .zigZagBorder
+        #countrySelect
+          .container.contentBlock
+            .row
+              .col-md-4
+                h4 Enter your country
+                input.form-control
+
+
+
+        #priceOverview2
+          .container
+            .row
+              .col-md-6
+                .titleHeader.phonePrice
+                  h4 {{ui.pricing.phone}}
+                  .row.item
+                    .col-md-12
+                      h5 {{ui.pricing.number}}
+                      p.price {{ui.pricing.example}}
+                  .row.item
+                    .col-md-12
+                      h5 {{ui.pricing.inbound}}
+                      p.price - €10.000.000
+                  .row.item
+                    .col-md-12
+                      h5 {{ui.pricing.outbound}}
+                      p.price € 1,-
+              .col-md-6
+                .titleHeader.phonePrice
+                  h4 SMS
+                  .row.item
+                    .col-md-12
+                      h5 Number
+                      p.price € 1,-
+                  .row.item
+                    .col-md-12
+                      h5 Number
+                      p.price € 1,-
+                  .row.item
+                    .col-md-12
+                      h5 Number
+                      p.price € 1,-
+
         #priceOverview
           .container.contentBlock
             .row
-              table.table.table-bordered.table-striped
-                caption
-                  h3 Telephone
-                thead
-                  th
-                  th Inbound
-                  th Outbound
-                tbody
-                  tr
-                    th Local
-                    th € 1,-
-                    th € 1,-
-                  tr
-                    th Mobile
-                    th € 1,-
-                    th € 1,-
+              .col-md-12
+                p Minimum cost per running instance of dialog 0.09 euro
+                table.table.table-bordered.table-striped
+                  caption
+                    h3 Telephone
+                  thead
+                    th
+                    th Inbound
+                    th Outbound
+                  tbody
+                    tr
+                      th Local
+                      th € 1,-
+                      th € 1,-
+                    tr
+                      th Mobile
+                      th € 1,-
+                      th € 1,-
             .row
-              table.table.table-bordered.table-striped
-                caption
-                  h3 SMS
-                thead
-                  th
-                  th Inbound
-                  th Outbound
-                tbody
-                  tr
-                    th SMS
-                    th € 1,-
-                    th € 1,-
-                  tr
-                    th Mobile
-                    th € 1,-
-                    th € 1,-
+              .col-md-12
+                table.table.table-bordered.table-striped
+                  caption
+                    h3 SMS
+                  thead
+                    th
+                    th Inbound
+                    th Outbound
+                  tbody
+                    tr
+                      th SMS
+                      th € 1,-
+                      th € 1,-
+                    tr
+                      th Mobile
+                      th € 1,-
+                      th € 1,-
 
 
 
@@ -85,7 +131,7 @@ html.no-js
                   button.outline {{ui.general.contactUs}}
               .col-md-6
                 a(href='')
-                  button.outline {{ui.general.contactUs}}
+                  button.outline {{ui.general.tryForFree}}
 
 
 
@@ -97,11 +143,14 @@ html.no-js
     //--------JS------
     // build:js scripts/vendor.js
     // bower:js
-    script(src='../vendors/jQuery/dist/jquery.js')
-    script(src='../vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
-    script(src='../vendors/angular/angular.js')
+
     // endbower
+    script(src='../vendors/jQuery/dist/jquery.js')
+    script(src='../vendors/bootstrap-sass/assets/javascripts/bootstrap.js')
+    script(src='../vendors/angular/angular.js')
     // endbuild
+
+
 
     script(src='../scripts/main.js')
 

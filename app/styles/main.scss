@@ -57,7 +57,8 @@ $icon-font-path: "/vendors/bootstrap-sass/assets/fonts/bootstrap/";
 
 @import url("//fonts.googleapis.com/css?family=Ubuntu:700");
 @import url("//fonts.googleapis.com/css?family=Lato:700,400,400italic,700italic,300italic,300");
-@import url("http://fonts.googleapis.com/css?family=Oswald");
+//@import url("http://fonts.googleapis.com/css?family=Oswald");
+
 
 
 
@@ -416,7 +417,7 @@ section {
 /*----------GENERAL-----------*/
 
 body {
-  font-family: 'Lato', sans-serif, arial, helvetica;
+  font-family: 'Oswald', sans-serif, arial, helvetica;
   color: #000000;
   text-align: center;
 }
@@ -558,7 +559,7 @@ button.outline {
     height: auto;
     position: absolute;
     width: 188px;
-    padding: 16px 15px;
+    padding: 16px 0;
     a {
       outline: none;
       background: url('../images/AFlogo.png') no-repeat;
@@ -715,7 +716,6 @@ button.outline {
 
 .titleHeader {
   border-top: 1px solid $pink;
-  clear:both;
   h4 {
     background-color: white;
     color: $pink;
@@ -774,10 +774,10 @@ button.outline {
 }
 
 .subPageTitle {
-  font-family: 'Oswald', sans-serif;
-  font-size: 60px;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 40px;
   text-shadow: none;
-  font-weight: 400;
+  //font-weight: 400;
 }
 
 #colorOverlay {
@@ -1131,17 +1131,16 @@ button.outline {
    USE CASES PAGE
    ========================================================================== */
 
-#useCasesPage {
 
+/*=====USE CASES OVERVIEW=====*/
+
+.useCasesOverview {
+  background-color: $light-grey;
+  .zigZagBorder:after {
+    background-image: linear-gradient(-45deg, $light-grey 8px, transparent 0), linear-gradient(45deg, $light-grey 8px, transparent 0);
+  }
   #intro {
-    height: 400px;
-    background-color: $pink;
-    position: relative;
-    .introText {
-      margin-top: 40px;
-      color: $white;
-      text-shadow: $black 3px 3px 3px;
-    }
+    background-image: url('../images/useCases/header.jpg');
   }
 
   #casesOverview {
@@ -1171,11 +1170,12 @@ button.outline {
         }
         .media-body {
           padding: 10px;
+          vertical-align: middle;
         }
       }
       .thumbnail.noLink {
         background: none;
-        border: none;
+        border: 1px solid $pink;
         @include box-shadow(none);
         h3 {
           //color: $green;
@@ -1189,83 +1189,95 @@ button.outline {
     .useCase1 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/01twoFactorAuthentication.png');
+          background-image: url('../images/useCases/twoFactorAuth60.png');
         }
       }
     }
     .useCase2 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/02etaAlertsIcon.png');
+          background-image: url('../images/useCases/etaAlerts60.png');
         }
       }
     }
     .useCase3 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/03teamTelephoneIcon.png');
+          background-image: url('../images/useCases/teamTelephone60.png');
         }
       }
     }
     .useCase4 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/04clickToCallIcon.png');
+          background-image: url('../images/useCases/clickToCall60.png');
         }
       }
     }
     .useCase5 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/05pushToTalkIcon.png');
+          background-image: url('../images/useCases/pushToTalk60.png');
         }
       }
     }
     .useCase6 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/06callerAuthenticationIcon.png');
+          background-image: url('../images/useCases/callerAuth60.png');
         }
       }
     }
     .useCase7 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/07broadcastIcon.png');
+          background-image: url('../images/useCases/broadcast60.png');
         }
       }
     }
     .useCase8 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/08hostedTelephonyIcon.png');
+          background-image: url('../images/useCases/hostedTelephony60.png');
         }
       }
     }
     .useCase9 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/09yourSolutionIcon02.png');
+          background-image: url('../images/useCases/yourSolutionPink60.png');
         }
       }
     }
   }
+}
+
+
+/*=====USE CASES OVERVIEW + DETAIL=====*/
+
+#useCasesPage {
 
   #intro {
+    height: 400px;
+    background-color: $pink;
+    position: relative;
+    .introText {
+      margin-top: 20px;
+      color: $white;
+      text-shadow: $black 3px 3px 3px;
+    }
     .useCaseIcon {
       margin: 0 auto;
-      height: 60px;
-      width: 60px;
+      height: 80px;
+      width: 80px;
       margin-top: 160px;
       position: relative;
     }
-    .caseIcon01 {
-      background-image: url('../images/useCases/01twoFactorAuthentication.png');
-    }
   }
-  #what {
-  }
-  
+
+
+  /*=====USE CASES DETAIL PAGES GENERAL=====*/
+
   #benefits {
     h4 {
       color: gray;
@@ -1289,29 +1301,18 @@ button.outline {
       font-size: 21px;
     }
   }
-  #howUse {
-  }
 
-  #howWork {
-    .icon {
-
-    }
-  }
 }
 
-.useCasesOverview {
-  background-color: $light-grey;
-  .zigZagBorder:after {
-    background-image: linear-gradient(-45deg, $light-grey 8px, transparent 0), linear-gradient(45deg, $light-grey 8px, transparent 0);
-  }
-  #intro {
-    background-image: url('../images/useCases/header.jpg');
-  }
-}
+
+/*=====USE CASES DETAIL PAGES SPECIFIC=====*/
 
 .twoFactorAuth {
   #intro {
     background-image: url('../images/useCases/header2.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/twoFactorAuth80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1339,7 +1340,10 @@ button.outline {
 
 .etaAlerts {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/useCases/header.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/etaAlerts80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1368,6 +1372,9 @@ button.outline {
 .teamTelephone {
   #intro {
     background-image: url('../images/useCases/header2.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/teamTelephone80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1396,6 +1403,9 @@ button.outline {
 .clickToCall {
   #intro {
     background-image: url('../images/useCases/header2.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/clickToCall80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1424,6 +1434,9 @@ button.outline {
 .pushToTalk {
   #intro {
     background-image: url('../images/useCases/header2.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/pushToTalk80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1452,6 +1465,9 @@ button.outline {
 .callerAuth {
   #intro {
     background-image: url('../images/useCases/header2.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/callerAuth80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1480,6 +1496,9 @@ button.outline {
 .broadcast {
   #intro {
     background-image: url('../images/useCases/header2.jpg');
+    .useCaseIcon {
+      background-image: url('../images/useCases/broadcast80.png');
+    }
   }
   #howWork {
     .step1 {
@@ -1489,7 +1508,7 @@ button.outline {
     }
     .step2 {
       .icon {
-        background-image: url('../images/useCases/howWork/comChannels .png');
+        background-image: url('../images/useCases/howWork/comChannels.png');
       }
     }
     .step3 {
@@ -1505,6 +1524,8 @@ button.outline {
   }
 }
 
+
+
 /* ==========================================================================
    PRICING PAGE
    ========================================================================== */
@@ -1513,7 +1534,7 @@ button.outline {
   #intro {
     height: 400px;
     background-color: $pink;
-    background-image: url('../images/home/rotterdam02.jpg');
+    background-image: url('../images/pricing/header.png');
     position: relative;
     .introText {
       margin-top: 240px;
@@ -1522,6 +1543,17 @@ button.outline {
       h2 {
         margin-bottom: 20px;
       }
+    }
+  }
+
+  #countrySelect{
+    position: relative;
+    text-align: left;
+  }
+
+  #priceOverview2 {
+    .item {
+      margin-top: 40px;
     }
   }
 
