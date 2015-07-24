@@ -417,7 +417,7 @@ section {
 /*----------GENERAL-----------*/
 
 body {
-  font-family: 'Oswald', sans-serif, arial, helvetica;
+  font-family: 'Roboto Condensed', sans-serif, arial, helvetica;
   color: #000000;
   text-align: center;
 }
@@ -1238,7 +1238,7 @@ button.outline {
     .useCase8 {
       .media-left {
         .icon {
-          background-image: url('../images/useCases/hostedTelephony60.png');
+          background-image: url('../images/useCases/decentrale60.png');
         }
       }
     }
@@ -1309,7 +1309,7 @@ button.outline {
 
 .twoFactorAuth {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/headers/twoFactorAuth.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/twoFactorAuth80.png');
     }
@@ -1340,7 +1340,7 @@ button.outline {
 
 .etaAlerts {
   #intro {
-    background-image: url('../images/useCases/header.jpg');
+    background-image: url('../images/headers/etaAlerts.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/etaAlerts80.png');
     }
@@ -1371,7 +1371,7 @@ button.outline {
 
 .teamTelephone {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/headers/teamTelephone.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/teamTelephone80.png');
     }
@@ -1402,7 +1402,7 @@ button.outline {
 
 .clickToCall {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/headers/clickToCall.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/clickToCall80.png');
     }
@@ -1433,7 +1433,7 @@ button.outline {
 
 .pushToTalk {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/headers/pushToTalk.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/pushToTalk80.png');
     }
@@ -1464,7 +1464,7 @@ button.outline {
 
 .callerAuth {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/headers/callerAuth.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/callerAuth80.png');
     }
@@ -1495,7 +1495,7 @@ button.outline {
 
 .broadcast {
   #intro {
-    background-image: url('../images/useCases/header2.jpg');
+    background-image: url('../images/headers/broadcast.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/broadcast80.png');
     }
@@ -1519,6 +1519,37 @@ button.outline {
     .step4 {
       .icon {
         background-image: url('../images/useCases/howWork/send.png');
+      }
+    }
+  }
+}
+
+.decentrale {
+  #intro {
+    background-image: url('../images/headers/decentrale.JPG');
+    .useCaseIcon {
+      background-image: url('../images/useCases/decentrale80.png');
+    }
+  }
+  #howWork {
+    .step1 {
+      .icon {
+        background-image: url('../images/useCases/howWork/call.png');
+      }
+    }
+    .step2 {
+      .icon {
+        background-image: url('../images/useCases/howWork/searchPeople.png');
+      }
+    }
+    .step3 {
+      .icon {
+        background-image: url('../images/useCases/howWork/connection.png');
+      }
+    }
+    .step4 {
+      .icon {
+        background-image: url('../images/useCases/howWork/nextPerson.png');
       }
     }
   }

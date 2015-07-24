@@ -254,9 +254,9 @@ var localization = {
       phone: 'Phone',
       sms: 'SMS',
       number: 'Number',
-      Inbound: 'Inbound',
-      Outbound: 'Outbound',
-      example: '- €10.000.000 0,09 / minute'
+      inbound: 'Inbound',
+      outbound: 'Outbound',
+      example: '€0,09 / minute'
     },
 
 
