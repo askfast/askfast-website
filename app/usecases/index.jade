@@ -2,6 +2,62 @@ doctype
 html.no-js
   head
     include ../includes/headSub
+    script.
+      function IsEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+      //return email === 'lvdinten@ask-cs.com'
+      }
+      //Contact form
+      function sendMail(){
+        var contactName = $.trim($("#contactName").val());
+        var contactEmail = $.trim($("#contactEmail").val());
+        var message = $.trim($("#message").val());
+        var errorColor = "#a83533";
+        var errorFontColor = "white";
+        var rightColor = "white";
+        var rightFontColor = "#433c2d";
+        var sendMailURL = "mail/sendMail.php";
+        sendMailURL += "?contactName="+contactName +
+                "&contactEmail="+contactEmail+
+                "&message="+message+" \\nASK-Fast website";
+        if(contactName == '' ){
+          alert("Vul alstublieft uw naam in.");
+          $("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
+          return ;
+        }else{
+          $("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
+        }
+        if(contactEmail == '' ){
+          alert("Vul alstublieft uw emailadres in.");
+          $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
+          return ;
+        }else{
+          if(!IsEmail(contactEmail)){
+            alert("Uw emailadres is ongeldig.");
+            $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
+            return;
+          }else{
+            $("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
+          }
+        }
+        if(message == '' ){
+          alert("Vul alstublieft een bericht in.");
+          $("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
+          return ;
+        }else{
+          $("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
+        }
+        $.ajax({
+          url: sendMailURL
+        }).done(function( data ) {
+          console.log(data);
+          alert("Bericht is verzonden!");
+        }).fail(function( error){
+          console.log(error);
+          alert("Bericht is verzonden!");
+        });
+      }
   body(ng-app='AskFast')
 
 
@@ -117,6 +173,31 @@ html.no-js
                 a(href='')
                   button.outline {{ui.general.contactUs}}
 
+        // Button trigger modal
+        button.outline.btn(type='button', data-toggle='modal', data-target='#contactForm')
+          | {{ui.general.contactUs}}
+        // Modal
+        #contactForm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='contactFormLabel')
+          .modal-dialog(role='document')
+            .modal-content
+              .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') ×
+                h4#contactFormLabel.modal-title {{ui.contactForm.title}}
+              .modal-body
+                #contact.row
+                  #contactform.col-md-4.col-sm-12.row
+                    #normalForm.col-md-12.col-sm-6
+                      h4 Contactformulier
+                      input#contactName.contactInput.col-xs-12(type='text', placeholder='Naam')
+                      input#contactEmail.contactInput.col-xs-12(type='text', placeholder='E-mailadres')
+                      textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='Bericht')
+                      button.btn.btn-lg.btn-cta.ng-binding.col-md-12(type='button', onclick='sendMail()') Verzenden
+
+              .modal-footer
+                button.btn.btn-default(type='button', data-dismiss='modal') Close
+                button.btn.btn-primary(type='button') Save changes
+
 
 
     //--------FOOTER------
@@ -128,7 +209,7 @@ html.no-js
     // build:js scripts/vendor.js
     // bower:js
     script(src='../vendors/jquery/dist/jquery.js')
-    script(src='../vendors/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js')
+    script(src='../vendors/bootstrap-sass/assets/javascripts/bootstrap.js')
     script(src='../vendors/angular/angular.js')
     // endbower
     // endbuild

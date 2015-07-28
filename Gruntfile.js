@@ -361,7 +361,8 @@ module.exports = function (grunt)
                 '{,*/}*.html',
                 '{,*/}*.xml',
                 'styles/fonts/{,*/}*.*',
-                'scripts/{,*/}*.*'
+                'scripts/{,*/}*.*',
+                'mail/*'
               ]
             },
             {

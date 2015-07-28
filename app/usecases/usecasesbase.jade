@@ -63,31 +63,32 @@ html.no-js
               .col-md-8.col-md-offset-2
                 block customerQuote
 
-        #howWork
-          .container
-            .row.titleHeader
-              h4 {{ui.useCases.howWorkTitle}}
-            .row.contentBlock
-              .col-md-3
-                .hexContainer.step1
-                  .icon
-                  .hexagon
-                block step1
-              .col-md-3
-                .hexContainer.step2
-                  .icon
-                  .hexagon
-                block step2
-              .col-md-3
-                .hexContainer.step3
-                  .icon
-                  .hexagon
-                block step3
-              .col-md-3
-                .hexContainer.step4
-                  .icon
-                  .hexagon
-                block step4
+        block howWork
+          #howWork
+            .container
+              .row.titleHeader
+                h4 {{ui.useCases.howWorkTitle}}
+              .row.contentBlock
+                .col-md-3
+                  .hexContainer.step1
+                    .icon
+                    .hexagon
+                  block step1
+                .col-md-3
+                  .hexContainer.step2
+                    .icon
+                    .hexagon
+                  block step2
+                .col-md-3
+                  .hexContainer.step3
+                    .icon
+                    .hexagon
+                  block step3
+                .col-md-3
+                  .hexContainer.step4
+                    .icon
+                    .hexagon
+                  block step4
 
         include ../includes/reminder
 

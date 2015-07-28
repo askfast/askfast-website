@@ -57,6 +57,9 @@ var localization = {
       phone: '  +31 (0)10 225 0130 | ',
       email: ' info@ask-fast.com '
     },
+    contactForm: {
+      title: 'Contact us'
+    },
 
 
     home: {
@@ -117,6 +120,7 @@ var localization = {
       stepTitle2: 'Step 2',
       stepTitle3: 'Step 3',
       stepTitle4: 'Step 4',
+      stepTitle5: 'Step 5',
       case01: {
         title: 'Two-factor Authentication',
         overviewDescription: 'Protect your accounts by adding extra security to the login of your application.',

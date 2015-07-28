@@ -417,7 +417,7 @@ section {
 /*----------GENERAL-----------*/
 
 body {
-  font-family: 'Roboto Condensed', sans-serif, arial, helvetica;
+  font-family: 'Open Sans', sans-serif, arial, helvetica;
   color: #000000;
   text-align: center;
 }
@@ -447,7 +447,8 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 h1 {
@@ -456,7 +457,6 @@ h1 {
 
 h2 {
   font-size: 28px;
-  font-weight: 700;
   color: $pink;
 }
 
@@ -469,7 +469,6 @@ h3 {
 
 h4 {
   font-size: 16px;
-  font-weight: bold;
   line-height: 20px;
   color: $pink;
 }
@@ -510,6 +509,25 @@ button.outline {
   text-transform: uppercase;
   font-weight: normal;
   @include border-radius(4px);
+}
+
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  width: 20%;
+  float: left;
 }
 
 
@@ -774,10 +792,10 @@ button.outline {
 }
 
 .subPageTitle {
-  font-family: 'Poiret One', sans-serif;
+  font-family: 'Jura', sans-serif;
   font-size: 40px;
   text-shadow: none;
-  //font-weight: 400;
+  font-weight: 300;
 }
 
 #colorOverlay {
@@ -1030,7 +1048,8 @@ button.outline {
 
   #intro2 {
     .introText {
-      font-size: 18px;
+      font-size: 17px;
+      line-height: 25px;
       font-style: italic;
       margin-bottom: $marginBelow;
     }
@@ -1297,6 +1316,8 @@ button.outline {
 
   #customerQuote {
     p {
+      font-family: 'Open Sans', sans-serif, arial, helvetica;;
+      font-style: italic;
       color: $pink;
       font-size: 21px;
     }
@@ -1519,6 +1540,11 @@ button.outline {
     .step4 {
       .icon {
         background-image: url('../images/useCases/howWork/send.png');
+      }
+    }
+    .step5 {
+      .icon {
+        background-image: url('../images/useCases/howWork/replyMessage.png');
       }
     }
   }
