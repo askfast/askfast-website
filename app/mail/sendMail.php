@@ -6,15 +6,13 @@ $contactSubject = isset($_REQUEST['contactSubject'])?$_REQUEST['contactSubject']
 $contactMessage = isset($_REQUEST['message'])?$_REQUEST['message']:"";
 */
 $contactEmail = "noreply <noreply@ask-fast.com>";
-$toEmail = "lvdinten@ask-cs.com";
-//$toEmail = "mma@ask-cs.com";
+$toEmail = "info@ask-fast.com";
 $isDebug = true;
 function sendMail() {
         global $toEmail;
         $header =
                 'From: webform@ask-fast.com'. "\r\n";
-                'Reply-To: tdejonge@ask-cs.com' . "\r\n";
-                'Return-Path: tdejonge@ask-cs.com' . "\r\n";
+                'Reply-To: info@ask-fast.com' . "\r\n";
         //risky custom data
         $query = explode('&', $_SERVER['QUERY_STRING'] );
         $message = "";

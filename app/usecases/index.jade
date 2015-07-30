@@ -13,10 +13,10 @@ html.no-js
         var contactName = $.trim($("#contactName").val());
         var contactEmail = $.trim($("#contactEmail").val());
         var message = $.trim($("#message").val());
-        var errorColor = "#a83533";
+        var errorColor = "#e10b7d";
         var errorFontColor = "white";
         var rightColor = "white";
-        var rightFontColor = "#433c2d";
+        var rightFontColor = "black";
         var sendMailURL = "../mail/sendMail.php";
         sendMailURL += "?contactName="+contactName +
                 "&contactEmail="+contactEmail+
@@ -165,17 +165,15 @@ html.no-js
                     h3 {{ui.useCases.case09.title}}
                     p {{ui.useCases.case09.overviewDescription}}
 
+        // Button trigger modal
         #contactUs
           .container
             .row.titleHeader
             .row.contentBlock
               .col-md-12
-                a(href='')
-                  button.outline {{ui.general.contactUs}}
-
-        // Button trigger modal
-        button.outline.btn(type='button', data-toggle='modal', data-target='#contactForm')
-          | {{ui.general.contactUs}}
+                button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+                  | {{ui.general.contactUs}}
+                
         // Modal
         #contactForm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='contactFormLabel')
           .modal-dialog(role='document')
@@ -183,20 +181,16 @@ html.no-js
               .modal-header
                 button.close(type='button', data-dismiss='modal', aria-label='Close')
                   span(aria-hidden='true') ×
-                h4#contactFormLabel.modal-title {{ui.contactForm.title}}
+                h3#contactFormLabel.modal-title {{ui.contactForm.title}}
               .modal-body
                 #contact.row
-                  #contactform.col-md-4.col-sm-12.row
-                    #normalForm.col-md-12.col-sm-6
-                      h4 Contactformulier
-                      input#contactName.contactInput.col-xs-12(type='text', placeholder='Naam')
-                      input#contactEmail.contactInput.col-xs-12(type='text', placeholder='E-mailadres')
-                      textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='Bericht')
-                      button.btn.btn-lg.btn-cta.ng-binding.col-md-12(type='button', onclick='sendMail()') Verzenden
-
+                  .col-md-12
+                    input#contactName.contactInput.col-xs-12(type='text', placeholder='Naam')
+                    input#contactEmail.contactInput.col-xs-12(type='text', placeholder='E-mailadres')
+                    textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='Bericht')
               .modal-footer
-                button.btn.btn-default(type='button', data-dismiss='modal') Close
-                button.btn.btn-primary(type='button') Save changes
+                button.btn.outline(type='button', data-dismiss='modal') Close
+                button.btn.filled.ng-binding(type='button', onclick='sendMail()') Verzenden
 
 
 
