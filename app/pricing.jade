@@ -45,81 +45,41 @@ html.no-js
 
 
 
-        #priceOverview2
+        #priceOverview
           .container
             .row
-              .col-md-6
+              .col-md-12
                 .titleHeader.phonePrice
                   h4 {{ui.pricing.phone}}
-                  .row.item
-                    .col-md-12
+                  .row.contentBlock
+                    .col-md-4.item
                       h5 {{ui.pricing.number}}
                       h3.price {{ui.pricing.example}}
-                  .row.item
-                    .col-md-12
+                    .col-md-4.item
                       h5 {{ui.pricing.inbound}}
                       h3.price {{ui.pricing.example}}
-                  .row.item
-                    .col-md-12
+                    .col-md-4.item
                       h5 {{ui.pricing.outbound}}
                       h3.price {{ui.pricing.example}}
-              .col-md-6
-                .titleHeader.phonePrice
-                  h4 SMS
-                  .row.item
-                    .col-md-12
-                      h5 Number
-                      p.price € 1,-
-                  .row.item
-                    .col-md-12
-                      h5 Number
-                      p.price € 1,-
-                  .row.item
-                    .col-md-12
-                      h5 Number
-                      p.price € 1,-
-
-        #priceOverview
-          .container.contentBlock
-            .row
+                        span {{ui.pricing.startup}}
+                      h3.price {{ui.pricing.example}}
+                        span {{ui.pricing.landline}}
+                      h3.price {{ui.pricing.example}}
+                        span {{ui.pricing.mobile}}
               .col-md-12
-                p Minimum cost per running instance of dialog 0.09 euro
-                table.table.table-bordered.table-striped
-                  caption
-                    h3 Telephone
-                  thead
-                    th
-                    th Inbound
-                    th Outbound
-                  tbody
-                    tr
-                      th Local
-                      th € 1,-
-                      th € 1,-
-                    tr
-                      th Mobile
-                      th € 1,-
-                      th € 1,-
-            .row
-              .col-md-12
-                table.table.table-bordered.table-striped
-                  caption
-                    h3 SMS
-                  thead
-                    th
-                    th Inbound
-                    th Outbound
-                  tbody
-                    tr
-                      th SMS
-                      th € 1,-
-                      th € 1,-
-                    tr
-                      th Mobile
-                      th € 1,-
-                      th € 1,-
+                .titleHeader.smsPrice
+                  h4 {{ui.pricing.sms}}
+                  .row.contentBlock
+                    .col-md-4.item
+                      h5 {{ui.pricing.number}}
+                      h3.price {{ui.pricing.example}}
 
-
+                    .col-md-4.item
+                      h5 {{ui.pricing.inbound}}
+                      h3.price {{ui.pricing.example}}
+                    .col-md-4.item
+                      h5 {{ui.pricing.outbound}}
+                      h3.price {{ui.pricing.example}}
 
 
         #contactUs

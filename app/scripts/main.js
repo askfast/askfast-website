@@ -260,6 +260,9 @@ var localization = {
       number: 'Number',
       inbound: 'Inbound',
       outbound: 'Outbound',
+      startup: 'Startup',
+      landline: 'Landline',
+      mobile: 'Mobile',
       example: '€0,09 / minute'
     },
 

@@ -1636,9 +1636,20 @@ button.filled {
     text-align: left;
   }
 
-  #priceOverview2 {
+  #priceOverview {
+    h5 {
+      color: $pink;
+      text-transform: uppercase;
+    }
+    h3 {
+      color: $black;
+      text-transform: none ;
+      span {
+        margin-left: 10px;
+      }
+    }
     .item {
-      margin-top: 40px;
+      //margin-top: 40px;
     }
   }
 
