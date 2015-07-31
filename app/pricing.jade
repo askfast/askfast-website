@@ -41,7 +41,9 @@ html.no-js
             .row
               .col-md-4
                 h4 Enter your country
-                input.form-control
+                select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
+                  option(value='')
+                    | {{ui.pricing.noSelection}}
 
 
 
@@ -54,17 +56,17 @@ html.no-js
                   .row.contentBlock
                     .col-md-4.item
                       h5 {{ui.pricing.number}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price {{pricing.call.number | currency : '&euro;'}}
                     .col-md-4.item
                       h5 {{ui.pricing.inbound}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price &euro;{{pricing.call.mobile.inbound.price}} / {{pricing.call.mobile.inbound.unit}}
                     .col-md-4.item
                       h5 {{ui.pricing.outbound}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price &euro;{{pricing.call.startup}}
                         span {{ui.pricing.startup}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price &euro;{{pricing.call.fixed.outbound.price}} / {{pricing.call.fixed.outbound.unit}}
                         span {{ui.pricing.landline}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price &euro;{{pricing.call.mobile.outbound.price}} / {{pricing.call.mobile.outbound.unit}}
                         span {{ui.pricing.mobile}}
               .col-md-12
                 .titleHeader.smsPrice
@@ -72,14 +74,14 @@ html.no-js
                   .row.contentBlock
                     .col-md-4.item
                       h5 {{ui.pricing.number}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price {{pricing.sms.number | currency : '&euro;'}}
 
                     .col-md-4.item
                       h5 {{ui.pricing.inbound}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price FREE
                     .col-md-4.item
                       h5 {{ui.pricing.outbound}}
-                      h3.price {{ui.pricing.example}}
+                      h3.price &euro;{{pricing.sms.outbound.price}}
 
 
         #contactUs

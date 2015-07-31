@@ -263,7 +263,8 @@ var localization = {
       startup: 'Startup',
       landline: 'Landline',
       mobile: 'Mobile',
-      example: '€0,09 / minute'
+      example: 'ï¿½0,09 / minute',
+      noSelection: 'No country selected'
     },
 
 
@@ -307,10 +308,11 @@ var localization = {
 
 };
 
+/* global angular */
 
 angular.module('AskFast', []).
   constant('locals', localization).
-  run(['$rootScope', 'locals', function ($rootScope, locals) {
+  run(['$rootScope', '$location', '$http', 'locals', function ($rootScope, $location, $http, locals) {
 
 
     if (!localStorage.getItem('selectedLanguage')) {
@@ -366,6 +368,141 @@ angular.module('AskFast', []).
 
     angular.element('#menu .desktopView ul').css({'display': 'block'});
     // angular.element('#secondOne').css({'display': 'block'});
+
+    /*----------Pricing----------*/
+    // select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
+    //   option(value='')
+    //     | {{ui.pricing.noSelection}}
+    if (window.location.pathname === '/pricing.html') {
+      // get all prices
+      $http.get('http://sandbox.ask-fast.com/ddr/prices')
+      .success(function(data, status, headers, config){
+        $rootScope.pricingData = processPricingData(data);
+        $rootScope.pricing = $rootScope.pricingData['Netherlands'];
+      });
+    }
+
+    function processPricingData(pricingData){
+      var countryData = {};
+
+      var adapterPurchase = null;
+      var startUpCost = null;
+
+      var CATEGORIES = {
+        OUTBOUND: 'OUTGOING_COMMUNICATION_COST',
+        INBOUND: 'INCOMING_COMMUNICATION_COST',
+        SERVICE: 'SERVICE_COST',
+        ADAPTER: 'ADAPTER_PURCHASE',
+        SUBSCRIPTION: 'SUBSCRIPTION_COST',
+        STARTUP: 'START_UP_COST',
+        TTS: 'TTS_COST',
+        TTS_SERVICE: 'TTS_SERVICE_COST'
+      }
+
+      angular.forEach(pricingData, function(value){
+        if (value.country) {
+
+          countryData[value.country] = countryData[value.country] || {
+            call:{
+              fixed: {
+                outbound: {},
+                inbound: {}
+              },
+              mobile: {
+                outbound: {},
+                inbound: {}
+              },
+            },
+            sms:{
+              outbound: {},
+              inbound: {},
+            }
+          };
+
+          if (value.adapterType === 'CALL') {
+
+            if (value.category === CATEGORIES.OUTBOUND) {
+
+              if (value.phoneNumberType === 'FIXED_LINE') {
+
+                countryData[value.country].call.fixed.outbound.price = value.price;
+                countryData[value.country].call.fixed.outbound.unit = value.unitType.toLowerCase();
+
+              } else {
+
+                countryData[value.country].call.mobile.outbound.price = value.price;
+                countryData[value.country].call.mobile.outbound.unit = value.unitType.toLowerCase();
+              }
+
+            } else if (value.category === CATEGORIES.INBOUND) {
+
+              if (value.phoneNumberType === 'FIXED_LINE') {
+
+                countryData[value.country].call.fixed.inbound.price = value.price;
+                countryData[value.country].call.fixed.inbound.unit = value.unitType.toLowerCase();
+
+              } else if (value.phoneNumberType === 'MOBILE') {
+
+                countryData[value.country].call.mobile.inbound.price = value.price;
+                countryData[value.country].call.mobile.inbound.unit = value.unitType.toLowerCase();
+
+              } else if (value.phoneNumberType === 'ALL') {
+
+                countryData[value.country].call.fixed.inbound.price = value.price;
+                countryData[value.country].call.mobile.inbound.price = value.price;
+                countryData[value.country].call.fixed.inbound.unit = value.unitType.toLowerCase();
+                countryData[value.country].call.mobile.inbound.unit = value.unitType.toLowerCase();
+
+              }
+
+            }
+
+          } else if (value.adapterType === 'SMS') {
+
+            if (value.category === CATEGORIES.OUTBOUND) {
+
+              countryData[value.country].sms.outbound.price = value.price;
+              countryData[value.country].sms.outbound.unit = value.unitType.toLowerCase();
+
+            } else if (value.category === CATEGORIES.INBOUND) {
+
+              countryData[value.country].sms.inbound.price = value.price;
+              countryData[value.country].sms.inbound.unit = value.unitType.toLowerCase();
+
+            }
+
+          }
+        // end if value.country
+        } else {
+          if (value.category === CATEGORIES.ADAPTER)  {
+
+            if (adapterPurchase) {
+              console.warn('adapterPurchase already has a value: ' + adapterPurchase + ', proposed value: ' + value.price);
+            } else {
+              adapterPurchase = value.price;
+            }
+
+          } else if (value.category === CATEGORIES.STARTUP && value.adapterType === 'CALL') {
+
+            if (startUpCost) {
+              console.warn('startUpCost already has a value: ' + startUpCost + ', proposed value: ' + value.price);
+            } else {
+              startUpCost = value.price;
+            }
+
+          }
+        }
+      });
+
+      angular.forEach(countryData, function(value){
+        value.call.startup = startUpCost;
+        value.call.number = adapterPurchase;
+        value.sms.number = adapterPurchase;
+      });
+
+      return countryData;
+
+    } // end processPricingData
 
   }]);
 
