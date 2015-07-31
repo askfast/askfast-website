@@ -79,12 +79,12 @@ var localization = {
       },
       useCases: {
         mainTitle: 'Use Cases',
-        title01: 'ETA Alerts',
-        description01: 'Update your client with the most accurate arrival time, directly integrated with GPS and order tracking system.',
-        title02: 'Team Telephone',
-        description02: 'Turn your own mobile phone into a team telephone with one click, and never miss a phone call from a client.',
-        title03: 'Click-to-call',
-        description03: 'Site visitors can leave their phone number and a call will be setup between your sales department and the visitor.',
+        title01: 'Two-factor Authentication',
+        description01: 'Protect your accounts from unwanted users by adding extra security to the login of your application.',
+        title02: 'ETA Alerts',
+        description02: 'Update your client with the most accurate arrival time, directly integrated with GPS and order tracking system.',
+        title03: 'Team Telephone',
+        description03: 'Turn your own mobile phone into a team telephone with one click, and never miss a phone call from a client.',
         },
       benefits: {
         mainTitle: 'Why ASK-Fast?',
