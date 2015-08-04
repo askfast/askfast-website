@@ -1,0 +1,17 @@
+// Modal
+#contactForm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='contactFormLabel')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h3#contactFormLabel.modal-title {{ui.contactForm.title}}
+      .modal-body
+        #contact.row
+          .col-md-12
+            input#contactName.contactInput.col-xs-12(type='text', placeholder='Naam')
+            input#contactEmail.contactInput.col-xs-12(type='text', placeholder='E-mailadres')
+            textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='Bericht')
+      .modal-footer
+        button.btn.outline(type='button', data-dismiss='modal') Sluiten
+        button.btn.filled.ng-binding(type='button', onclick='sendMail()') Verzenden

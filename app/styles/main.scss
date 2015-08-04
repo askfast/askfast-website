@@ -55,9 +55,6 @@ $icon-font-path: "/vendors/bootstrap-sass/assets/fonts/bootstrap/";
 
 // endbower
 
-@import url("//fonts.googleapis.com/css?family=Ubuntu:700");
-@import url("//fonts.googleapis.com/css?family=Lato:700,400,400italic,700italic,300italic,300");
-//@import url("http://fonts.googleapis.com/css?family=Oswald");
 
 
 
@@ -556,7 +553,7 @@ button.filled {
 }
 
 #menu {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 12px;
@@ -860,7 +857,7 @@ button.filled {
   position: fixed;
   width: 100%;
   z-index: 9;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 10px;
   .languageToggle {
@@ -1298,6 +1295,27 @@ button.filled {
     }
   }
 }
+
+/*.subContainer {
+  width: 0;
+  height: 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  overflow: hidden;
+}
+.subContainer:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top:-500px;
+  margin-left: -500px;
+
+  border-top: 500px solid transparent;
+  border-bottom: 500px solid transparent;
+  border-left: 500px solid #4679BD;
+}*/
 
 .subContainer {
   margin-top: 140px;

@@ -2,6 +2,8 @@ doctype
 html.no-js
   head
     include includes/headDirect
+    include includes/contactFormScript
+
   body(ng-app='AskFast')
 
 
@@ -37,10 +39,10 @@ html.no-js
 
         .zigZagBorder
         #countrySelect
-          .container.contentBlock
-            .row
-              .col-md-4
-                h4 Enter your country
+          .container
+            .row.contentBlock
+              .col-md-4.col-md-offset-4
+                h4 {{ui.pricing.country.title}}
                 select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
                   option(value='')
                     | {{ui.pricing.noSelection}}
@@ -83,17 +85,25 @@ html.no-js
                       h5 {{ui.pricing.outbound}}
                       h3.price &euro;{{pricing.sms.outbound.price}}
 
+        #extraInfo
+          .container
+            .row.contentBlock
+              .col-md-12
+                p {{ui.pricing.minPrice}}
 
         #contactUs
           .container
             .row.titleHeader
             .row.contentBlock
               .col-md-6
-                a(href='')
-                  button.outline {{ui.general.contactUs}}
+                button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+                  | {{ui.general.contactUs}}
+
               .col-md-6
                 a(href='')
                   button.outline {{ui.general.tryForFree}}
+
+        include includes/contactForm
 
 
 

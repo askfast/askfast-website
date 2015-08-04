@@ -2,62 +2,8 @@ doctype
 html.no-js
   head
     include ../includes/headSub
-    script.
-      function IsEmail(email) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return regex.test(email);
-      //return email === 'lvdinten@ask-cs.com'
-      }
-      //Contact form
-      function sendMail(){
-        var contactName = $.trim($("#contactName").val());
-        var contactEmail = $.trim($("#contactEmail").val());
-        var message = $.trim($("#message").val());
-        var errorColor = "#e10b7d";
-        var errorFontColor = "white";
-        var rightColor = "white";
-        var rightFontColor = "black";
-        var sendMailURL = "../mail/sendMail.php";
-        sendMailURL += "?contactName="+contactName +
-                "&contactEmail="+contactEmail+
-                "&message="+message+" \\nASK-Fast website";
-        if(contactName == '' ){
-          alert("Vul alstublieft uw naam in.");
-          $("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
-          return ;
-        }else{
-          $("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
-        }
-        if(contactEmail == '' ){
-          alert("Vul alstublieft uw emailadres in.");
-          $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-          return ;
-        }else{
-          if(!IsEmail(contactEmail)){
-            alert("Uw emailadres is ongeldig.");
-            $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
-            return;
-          }else{
-            $("#contactEmail").css("background-color" ,rightColor).css("color" ,rightFontColor);
-          }
-        }
-        if(message == '' ){
-          alert("Vul alstublieft een bericht in.");
-          $("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
-          return ;
-        }else{
-          $("#message").css("background-color" ,rightColor).css("color" ,rightFontColor);
-        }
-        $.ajax({
-          url: sendMailURL
-        }).done(function( data ) {
-          console.log(data);
-          alert("Bericht is verzonden!");
-        }).fail(function( error){
-          console.log(error);
-          alert("Bericht is verzonden!");
-        });
-      }
+    include ../includes/contactFormScript
+
   body(ng-app='AskFast')
 
 
@@ -174,23 +120,7 @@ html.no-js
                 button.outline(type='button', data-toggle='modal', data-target='#contactForm')
                   | {{ui.general.contactUs}}
 
-        // Modal
-        #contactForm.modal.fade(tabindex='-1', role='dialog', aria-labelledby='contactFormLabel')
-          .modal-dialog(role='document')
-            .modal-content
-              .modal-header
-                button.close(type='button', data-dismiss='modal', aria-label='Close')
-                  span(aria-hidden='true') ×
-                h3#contactFormLabel.modal-title {{ui.contactForm.title}}
-              .modal-body
-                #contact.row
-                  .col-md-12
-                    input#contactName.contactInput.col-xs-12(type='text', placeholder='Naam')
-                    input#contactEmail.contactInput.col-xs-12(type='text', placeholder='E-mailadres')
-                    textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='Bericht')
-              .modal-footer
-                button.btn.outline(type='button', data-dismiss='modal') Close
-                button.btn.filled.ng-binding(type='button', onclick='sendMail()') Verzenden
+        include ../includes/contactForm
 
 
 
