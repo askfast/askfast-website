@@ -31,8 +31,15 @@ html.no-js
             .row
               .col-md-12.introText
                 .subContainer
-                  h1.subPageTitle {{ui.home.intro.slogan}}
-                .triangle-right
+                  .hexagonExtended
+                    .part1
+                      .slash.fSlash
+                      .slash.bSlash
+                    .part2
+                      h1.subPageTitle {{ui.home.intro.slogan}}
+                    .part3
+                      .slash.bSlash
+                      .slash.fSlash
             .row.communicationChannels.noGutter
               .col-md-4
                 .col-md-4
@@ -83,7 +90,7 @@ html.no-js
                     .comStick
                     span.comLabel.hide {{ui.home.intro.comLabel9}}
 
-        .zigZagBorder
+        //.zigZagBorder
         #intro2
           .container
             .contentBlock

@@ -17,16 +17,24 @@ html.no-js
     #content
       block useCaseClass
       #useCasesPage(class='#{useCaseClass}')
-
-        #intro.fullbackground
-          #colorOverlay
-          .container
-            .row
-              .col-md-12
-                .subContainer
-                  .useCaseIcon
-                  .introText
-                    block title
+        .useCasesDetailPage
+          #intro.fullbackground
+            #colorOverlay
+            .container
+              .row
+                .col-md-12
+                  .subContainer
+                    .hexagonExtended
+                      .part1
+                        .slash.fSlash
+                        .slash.bSlash
+                      .part2
+                        .useCaseIcon
+                        .introText
+                          block title
+                      .part3
+                        .slash.bSlash
+                        .slash.fSlash
 
         //.zigZagBorder
         #what

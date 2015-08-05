@@ -738,6 +738,34 @@ button.filled {
 }
 
 
+.hexagonExtended {
+  display: inline-flex;
+  .part1, .part2, .part3  {
+    align-items: stretch;
+  }
+  .part1 {
+    margin-right: 12px;
+  }
+  .part2 {
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    padding: 20px;
+  }
+  .part3 {
+    margin-left: 12px;
+  }
+  .slash {
+    height: 50%;
+    border-right: 1px solid $white;
+  }
+  .bSlash {
+    @include transform(skewX(30deg));
+  }
+  .fSlash {
+    @include transform(skewX(-30deg));
+  }
+}
+
 
 
 .titleHeader {
@@ -1296,32 +1324,9 @@ button.filled {
   }
 }
 
-/*.subContainer {
-  width: 0;
-  height: 0;
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 5%;
-  overflow: hidden;
-}
-.subContainer:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  margin-top:-500px;
-  margin-left: -500px;
-
-  border-top: 500px solid transparent;
-  border-bottom: 500px solid transparent;
-  border-left: 500px solid #4679BD;
-}*/
 
 .subContainer {
   margin-top: 140px;
-  border: 1px solid $white;
-  display: inline-block;
-  padding: 20px;
 }
 
 /*=====USE CASES OVERVIEW + DETAIL=====*/
@@ -1339,7 +1344,6 @@ button.filled {
       position: relative;
     }
     .introText {
-      margin-top: 14px;
       color: $white;
       text-shadow: $black 3px 3px 3px;
     }
@@ -1347,6 +1351,19 @@ button.filled {
 
 
   /*=====USE CASES DETAIL PAGES GENERAL=====*/
+
+  .useCasesDetailPage{
+    #intro {
+      .hexagonExtended {
+        .part1 {
+          margin-right: 25px;
+        }
+        .part3 {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
 
   #benefits {
     h4 {
@@ -1645,7 +1662,6 @@ button.filled {
     background-image: url('../images/pricing/header.png');
     position: relative;
     .introText {
-      margin-top: 240px;
       color: $white;
       text-shadow: black 3px 3px 3px;
       h2 {
