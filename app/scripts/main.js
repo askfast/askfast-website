@@ -12,9 +12,12 @@
   a.src = g;
   m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', 'UA-49063927-1', 'ask-cs.com');
+ga('create', 'UA-66075857-1', 'ask-cs.com');
 ga('send', 'pageview');
 
+
+
+/*COOKIE MESSAGE HIDE*/
 
 var isShown = localStorage.getItem('cookieMessageShown');
 
