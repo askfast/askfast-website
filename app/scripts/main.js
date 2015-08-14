@@ -31,6 +31,8 @@ $("#closeCookie").click(function () {
 });
 
 
+
+
 var localization = {
 
 
@@ -266,6 +268,11 @@ var localization = {
       mobile: 'Mobiel',
       noSelection: 'Geen land geselecteerd',
       minPrice: 'Minimum cost per running instance of dialog is € 0,09'
+    },
+
+    /*---DEVELOPERS---*/
+    developers: {
+      title: 'Developers'
     }
 
   },
@@ -718,4 +725,11 @@ $("#dropdownToggle").click(function () {
   } else {
     $('#dropdownMenu').removeClass('hide').addClass('show');
   }
+});
+
+
+//menuList
+$('body').scrollspy({
+  target: '.bs-docs-sidebar',
+  offset: 100
 });

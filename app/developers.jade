@@ -1,0 +1,124 @@
+doctype
+html.no-js
+  head
+    include includes/headDirect
+    include includes/contactFormScript
+
+  body(ng-app='AskFast')
+
+
+
+    //--------HEADER------
+    include includes/headerDeveloperActive
+
+
+
+    //--------COOKIE MESSAGE------
+    #cookieMessage.hide
+      #closeCookie
+      p
+        | {{ui.general.cookieMessage}}
+        a(href='../docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
+        | .
+
+
+
+    //--------CONTENT------
+    #content
+      #developersPage
+
+        #intro.fullbackground
+          #colorOverlay
+          .container
+            .row
+              .col-md-12.introText
+                .subContainer
+                  .hexagonExtended
+                    .part1
+                      .slash.fSlash
+                      .slash.bSlash
+                    .part2
+                      h1.subPageTitle {{ui.developers.title}}
+                    .part3
+                      .slash.bSlash
+                      .slash.fSlash
+
+
+        #mainPart
+          .container-fluid
+            .row
+              // Nav Bar
+              nav.col-md-3.bs-docs-sidebar
+                ul#sidebar.nav.nav-stacked(data-spy="affix", data-offset-top='400', data-offset-bottom="100")
+                  li
+                    a(href='#GroupA') Group A
+                    ul.nav.nav-stacked
+                      li
+                        a(href='#GroupASub1') Sub-Group 1
+                      li
+                        a(href='#GroupASub2') Sub-Group 2
+                  li
+                    a(href='#GroupB') Group B
+                    ul.nav.nav-stacked
+                      li
+                        a(href='#GroupBSub1') Sub-Group 1
+                      li
+                        a(href='#GroupBSub2') Sub-Group 2
+                  li
+                    a(href='#GroupC') Group C
+                    ul.nav.nav-stacked
+                      li
+                        a(href='#GroupCSub1') Sub-Group 1
+                      li
+                        a(href='#GroupCSub2') Sub-Group 2
+              // Main Content
+              .col-xs-9
+                section#GroupA.group
+                  h3 Group A
+                  #GroupASub1.subgroup
+                    h4 Group A Sub 1
+                  #GroupASub2.subgroup
+                    h4 Group A Sub 2
+                section#GroupB.group
+                  h3 Group B
+                  #GroupBSub1.subgroup
+                    h4 Group B Sub 1
+                  #GroupBSub2.subgroup
+                    h4 Group B Sub 2
+                section#GroupC.group
+                  h3 Group C
+                  #GroupCSub1.subgroup
+                    h4 Group C Sub 1
+                  #GroupCSub2.subgroup
+                    h4 Group C Sub 2
+
+
+        #extraInfo
+          .container
+            .row.contentBlock
+              .col-md-12
+                p {{ui.pricing.minPrice}}
+
+        #contactUs
+          .container
+            .row.titleHeader
+            .row.contentBlock
+              .col-md-6
+                button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+                  | {{ui.general.contactUs}}
+
+              .col-md-6
+                a(href='https://portal.ask-fast.com/index.html#/register#step-1')
+                  button.outline {{ui.general.tryForFree}}
+
+        include includes/contactForm
+
+
+
+    //--------FOOTER------
+    include includes/footer
+
+
+
+    //--------JS------
+    include includes/scriptLinks
