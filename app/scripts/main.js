@@ -104,7 +104,7 @@ var localization = {
         title03: 'Analytisch Vermogen',
         description03: 'Reacties monitoren zodra een campagne wordt gestart, zodat u direct kan zien of het succesvol is. ',
         title04: 'Innovatief',
-        description04: 'Voortdurend streven naar nieuwe ideeën en oplossingen.',
+        description04: 'Voortdurend streven naar nieuwe ideeÃ«n en oplossingen.',
         title05: 'Veiligheid',
         description05: 'Altijd de nieuwste beveiligingstechniek.',
         title06: 'Custom',
@@ -120,7 +120,7 @@ var localization = {
       title: 'Use cases',
       intro: {
         title: 'Mogelijkheden van ASK-Fast',
-        text: 'Bekijk de oplossingen van ASK-Fast.',
+        text: 'Bekijk de oplossingen van ASK-Fast.'
       },
       whatTitle:'Wat doet het?',
       benefitsTitle:'Voordelen:',
@@ -175,7 +175,7 @@ var localization = {
       },
       case04: {
         title: 'Call-me-back',
-        overviewDescription: 'Maak snel en efficiënt contact met uw website bezoekers.',
+        overviewDescription: 'Maak snel en efficiÃ«nt contact met uw website bezoekers.',
         whatDescription: 'Met Call-me-back kunnen bezoekers van uw website hun telefoonnummer achterlaten. Zodra uw medewerker beschikbaar is, zet ASK-Fast automatisch een telefoongesprek op.',
         benefit01: 'Meer leads converteren.',
         benefit02: 'Meer betrokken bij klanten.',
@@ -193,7 +193,7 @@ var localization = {
         whatDescription: 'Door het gebruik van Push-to-Talk communiceert u direct met uw medewerkers en teams, omdat u geen nummer hoeft te draaien. Met een druk op de knop staat u direct in verbinding met een medewerker of team.',
         benefit01: 'Verlaag communicatiekosten',
         benefit02: 'Verminder responstijden',
-        benefit03: 'Verbeter team coördinatie en efficiëntie.',
+        benefit03: 'Verbeter team coÃ¶rdinatie en efficiÃ«ntie.',
         howUseDescription: '',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'De beller drukt op de knop om een gesprek met het team te starten.',
@@ -212,12 +212,12 @@ var localization = {
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'Gebruiker belt een telefoonnummer.',
         howWorkStep2: 'De beller wordt gevraagd om zijn/haar pincode.',
-        howWorkStep3: 'De ASK-Fast API verifiëert de pincode.',
+        howWorkStep3: 'De ASK-Fast API verifiÃ«ert de pincode.',
         howWorkStep4: 'De beller krijgt autorisatie en wordt doorverbonden met de juiste afdeling.'
       },
       case07: {
         title: 'Broadcast',
-        overviewDescription: 'Verspreid één bericht via meerdere communicatiekanalen.',
+        overviewDescription: 'Verspreid Ã©Ã©n bericht via meerdere communicatiekanalen.',
         whatDescription: 'Tegenwoordig zijn er zoveel communicatiekanalen dat het moeilijk is om vast te stellen welk kanaal het meest effectief is. Daarom wilt u ze het liefst allemaal gebruiken. Met Broadcast kan dat ook, van SMS tot Twitter tot pager.',
         benefit01: 'Meer reikwijdte.',
         benefit02: 'Hogere effectiviteit.',
@@ -265,7 +265,7 @@ var localization = {
       landline: 'Vast',
       mobile: 'Mobiel',
       noSelection: 'Geen land geselecteerd',
-      minPrice: 'Minimum cost per running instance of dialog is € 0,09'
+      minPrice: 'Minimum cost per running instance of dialog is â‚¬ 0,09'
     }
 
   },
@@ -472,7 +472,7 @@ var localization = {
         benefit01: 'Reduce costs',
         benefit02: 'Increase mobility',
         benefit03: 'Improve flexibility',
-        howUseDescription: 'Care organisations often receive loads of phone calls, ranging from patients to doctors. Larger organisations usually implement their own telephone exchange to facilitate these calls. They invest a lot of resources in purchasing and maintenance of their system. Smaller organisations might not use a telephone exchange at all if they don’t have the means to invest in such an advanced system. After integrating Decentrale by ASK-Fast both organisations are enjoying the benefits of a user-friendly, cost-effective and mobile system. Decentrale also provides information about waiting times and missed calls, in order to improve the reachability of the organisations.',
+        howUseDescription: 'Care organisations often receive loads of phone calls, ranging from patients to doctors. Larger organisations usually implement their own telephone exchange to facilitate these calls. They invest a lot of resources in purchasing and maintenance of their system. Smaller organisations might not use a telephone exchange at all if they donâ€™t have the means to invest in such an advanced system. After integrating Decentrale by ASK-Fast both organisations are enjoying the benefits of a user-friendly, cost-effective and mobile system. Decentrale also provides information about waiting times and missed calls, in order to improve the reachability of the organisations.',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'An outside caller phones the Decentrale phone number.',
         howWorkStep2: 'ASK-Fast dialog searches for the employee who is most capable of assisting the caller.',
@@ -500,7 +500,7 @@ var localization = {
       landline: 'Landline',
       mobile: 'Mobile',
       noSelection: 'No country selected',
-      minPrice: 'Minimum cost per running instance of dialog is € 0,09'
+      minPrice: 'Minimum cost per running instance of dialog is â‚¬ 0,09'
     }
   }
 

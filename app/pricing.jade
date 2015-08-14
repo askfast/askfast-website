@@ -52,7 +52,6 @@ html.no-js
                 h4 {{ui.pricing.country.title}}
                 select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
                   option(value='')
-                    | {{ui.pricing.noSelection}}
 
 
 
@@ -75,8 +74,10 @@ html.no-js
                         span {{ui.pricing.startup}}
                       h3.price &euro;{{pricing.call.fixed.outbound.price}} / {{pricing.call.fixed.outbound.unit}}
                         span {{ui.pricing.landline}}
-                      h3.price &euro;{{pricing.call.mobile.outbound.price}} / {{pricing.call.mobile.outbound.unit}}
+                      h3
                         span {{ui.pricing.mobile}}
+                        .price &euro;{{pricing.call.mobile.outbound.price}} / {{pricing.call.mobile.outbound.unit}}
+
               .col-md-12
                 .titleHeader.smsPrice
                   h4 {{ui.pricing.sms}}

@@ -56,7 +56,8 @@ $icon-font-path: "/vendors/bootstrap-sass/assets/fonts/bootstrap/";
 // endbower
 
 
-
+@import url("//fonts.googleapis.com/css?family=Open Sans");
+@import url("//fonts.googleapis.com/css?family=Lato:700,400,400italic,700italic,300italic,300");
 
 
 
@@ -1659,7 +1660,7 @@ button.filled {
   #intro {
     height: 400px;
     background-color: $pink;
-    background-image: url('../images/pricing/header.png');
+    background-image: url('../images/headers/pricing.JPG');
     position: relative;
     .introText {
       color: $white;
