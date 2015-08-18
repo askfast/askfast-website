@@ -561,13 +561,20 @@ var localization = {
 angular.module('AskFast', []).
   constant('locals', localization).
   config(function($locationProvider){$locationProvider.html5Mode(true);}).
-  run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', function ($rootScope, $location, $http, locals, $anchorScroll) {
+  run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window) {
 
     $rootScope.anchorScroll = function (){$anchorScroll();};
 
     if (!localStorage.getItem('selectedLanguage')) {
       localStorage.setItem('selectedLanguage', 'nl');
     }
+
+    $rootScope.$watch(function () { return $location.path(); }, function (newVal, oldVal) {
+      if (newVal === oldVal){
+        return;
+      }
+      $window.location.href = newVal;
+    });
 
     $rootScope.showLangMenu = false;
 
