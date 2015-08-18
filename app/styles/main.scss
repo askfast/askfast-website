@@ -1721,17 +1721,13 @@ button.filled {
     }
   }
   .group {
-    background: yellow;
-    width: 200px;
     height: 500px;
   }
   .group .subgroup {
-    background: orange;
-    width: 150px;
     height: 200px;
   }
   .fixed {
-    position: fixed;
+    //position: fixed;
   }
 
   /* sidebar */
@@ -1791,7 +1787,9 @@ button.filled {
   }
 }
 
-
+#sidebar.affix {
+  top: 80px;
+}
 
 
 

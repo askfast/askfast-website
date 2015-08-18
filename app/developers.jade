@@ -4,7 +4,7 @@ html.no-js
     include includes/headDirect
     include includes/contactFormScript
 
-  body(ng-app='AskFast')
+  body(ng-app='AskFast', data-spy='scroll', data-target='.scrollspy')
 
 
 
@@ -48,33 +48,53 @@ html.no-js
           .container-fluid
             .row
               // Nav Bar
-              nav.col-md-3.bs-docs-sidebar
-                ul#sidebar.nav.nav-stacked(data-spy="affix", data-offset-top='400', data-offset-bottom="100")
+              nav.col-md-2.bs-docs-sidebar.scrollspy
+                ul#sidebar.nav.nav-stacked(data-spy="affix")
                   li
-                    a(href='#GroupA') Group A
+                    a(href='#getStart' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
                     ul.nav.nav-stacked
                       li
-                        a(href='#GroupASub1') Sub-Group 1
+                        a(href='#GroupASub1' ng-click="anchorScroll()") {{ui.developers.getStart.intro.title}}
                       li
-                        a(href='#GroupASub2') Sub-Group 2
+                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.firstCall.title}}
+                      li
+                        a(href='#GroupASub1' ng-click="anchorScroll()") {{ui.developers.getStart.firstSms.title}}
+                      li
+                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.environment.title}}
+                      li
+                        a(href='#GroupASub1' ng-click="anchorScroll()") {{ui.developers.getStart.firstDialog.title}}
+                      li
+                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.useDialog.title}}
+                      li
+                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.complexDialog.title}}
                   li
-                    a(href='#GroupB') Group B
+                    a(href='#docs' ng-click="anchorScroll()") {{ui.developers.docs.title}}
                     ul.nav.nav-stacked
                       li
-                        a(href='#GroupBSub1') Sub-Group 1
+                        a(href='#GroupBSub1' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
                       li
-                        a(href='#GroupBSub2') Sub-Group 2
+                        a(href='#GroupBSub2' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
                   li
-                    a(href='#GroupC') Group C
+                    a(href='#examples' ng-click="anchorScroll()") {{ui.developers.examples.title}}
                     ul.nav.nav-stacked
                       li
-                        a(href='#GroupCSub1') Sub-Group 1
+                        a(href='#GroupCSub1' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
                       li
-                        a(href='#GroupCSub2') Sub-Group 2
+                        a(href='#GroupCSub2' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
               // Main Content
-              .col-xs-9
-                section#GroupA.group
-                  h3 Group A
+              .col-md-10
+                section#getStart.group
+                  .titleHeader.phonePrice
+                    h4 {{ui.pricing.phone}}
+                      .contentBlock
+                        .col-md-4.col-md-offset-4
+                        h4 {{ui.pricing.country.title}}
+                        h3#getStartIntro {{ui.developers.getStart.title}}
+                        p {{ui.developers.getStart.intro.description01}}
+                        p {{ui.developers.getStart.intro.needs}}
+                        ul
+                          li {{ui.developers.getStart.intro.need01}}
+
                   #GroupASub1.subgroup
                     h4 Group A Sub 1
                   #GroupASub2.subgroup

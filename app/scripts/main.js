@@ -44,6 +44,7 @@ var localization = {
     general: {
       tryForFree: 'Probeer nu',
       readMore: 'Lees meer',
+      here: 'hier',
       contactUs: 'Contact us',
       cookieMessage: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren. Door deze website te gebruiken, accepteert u ons',
       cookieMessageLink: 'privacybeleid'
@@ -272,7 +273,42 @@ var localization = {
 
     /*---DEVELOPERS---*/
     developers: {
-      title: 'Developers'
+      title: 'Developers',
+      getStart: {
+        title: 'Getting Started',
+        intro: {
+          title: 'Introduction',
+          description01: 'This tutorial shows you how you can start building your first dialog with ASK-Fast.',
+          needs: 'This tutorial assumes that you have:',
+          need01: 'A (free) ASK-Fast account',
+          noAccount01: 'If you don’t have an ASK-Fast account yet, click',
+          noAccount02: 'to register.'
+        },
+        firstCall: {
+          title: 'Make your first call (outbound)'
+        },
+        firstSms: {
+          title: 'Send your first sms (outbound)'
+        },
+        environment: {
+          title: 'Setup Environment'
+        },
+        firstDialog: {
+          title: 'Create your first dialog'
+        },
+        useDialog: {
+          title: 'Use the created dialog (outbound)'
+        },
+        complexDialog: {
+          title: 'A more complex dialog'
+        }
+      },
+      docs: {
+        title: 'Documentation'
+      },
+      examples: {
+        title: 'Examples'
+      }
     }
 
   },
@@ -284,6 +320,7 @@ var localization = {
     general: {
       tryForFree: 'Try now',
       readMore: 'Read more',
+      here: 'here',
       contactUs: 'Contact us',
       cookieMessage: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren. Door deze website te gebruiken, accepteert u ons',
       cookieMessageLink: 'privacybeleid'
@@ -523,8 +560,10 @@ var localization = {
 
 angular.module('AskFast', []).
   constant('locals', localization).
-  run(['$rootScope', '$location', '$http', 'locals', function ($rootScope, $location, $http, locals) {
+  config(function($locationProvider){$locationProvider.html5Mode(true);}).
+  run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', function ($rootScope, $location, $http, locals, $anchorScroll) {
 
+    $rootScope.anchorScroll = function (){$anchorScroll();};
 
     if (!localStorage.getItem('selectedLanguage')) {
       localStorage.setItem('selectedLanguage', 'nl');
@@ -733,3 +772,10 @@ $('body').scrollspy({
   target: '.bs-docs-sidebar',
   offset: 100
 });
+
+$("#sidebar").affix({
+  offset: {
+    top: 330
+  }
+});
+
