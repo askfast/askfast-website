@@ -70,6 +70,7 @@ $soft-pink: #fadae8;
 $yellow: #efbb26;
 $green: #14a5a5;
 $light-grey: #e5e5e5;
+$gray: #A0A0A0;
 
 $marginBelow: 40px;
 
@@ -1706,7 +1707,35 @@ button.filled {
    Developers PAGE
    ========================================================================== */
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
 #developersPage {
+  #mainPart2 {
+    text-align: left;
+    .subPart {
+      margin-bottom: 40px;
+    }
+    .titleHeader {
+      text-align: center;
+    }
+    ul {
+      margin-left: 16px;
+      list-style-type: disc;
+    }
+    .link {
+      padding: 0 4px;
+    }
+    .borderLink {
+      border: 1px solid;
+      padding: 10px; 
+    }
+  }
+
   #intro {
     height: 400px;
     background-color: $pink;
@@ -1719,6 +1748,9 @@ button.filled {
         margin-bottom: 20px;
       }
     }
+  }
+  #getStart {
+    margin-top: 100px;
   }
   .group {
     height: 500px;
@@ -1740,7 +1772,7 @@ button.filled {
 
   /* all links */
   .bs-docs-sidebar .nav>li>a {
-    color: #999;
+    color: $gray;
     border-left: 2px solid transparent;
     padding: 4px 20px;
     font-size: 13px;
@@ -1759,10 +1791,10 @@ button.filled {
   .bs-docs-sidebar .nav>.active>a,
   .bs-docs-sidebar .nav>li>a:hover,
   .bs-docs-sidebar .nav>li>a:focus {
-    color: #563d7c;
+    color: $pink;
     text-decoration: none;
     background-color: transparent;
-    border-left-color: #563d7c;
+    border-left-color: $pink;
   }
   /* all active links */
   .bs-docs-sidebar .nav>.active>a,

@@ -54,19 +54,19 @@ html.no-js
                     a(href='#getStart' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
                     ul.nav.nav-stacked
                       li
-                        a(href='#GroupASub1' ng-click="anchorScroll()") {{ui.developers.getStart.intro.title}}
+                        a(href='#getStartIntro' ng-click="anchorScroll()") {{ui.developers.getStart.intro.title}}
                       li
-                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.firstCall.title}}
+                        a(href='#firstCall' ng-click="anchorScroll()") {{ui.developers.getStart.firstCall.title}}
                       li
-                        a(href='#GroupASub1' ng-click="anchorScroll()") {{ui.developers.getStart.firstSms.title}}
+                        a(href='#firstSms' ng-click="anchorScroll()") {{ui.developers.getStart.firstSms.title}}
                       li
-                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.environment.title}}
+                        a(href='#environment' ng-click="anchorScroll()") {{ui.developers.getStart.environment.title}}
                       li
-                        a(href='#GroupASub1' ng-click="anchorScroll()") {{ui.developers.getStart.firstDialog.title}}
+                        a(href='#firstDialog' ng-click="anchorScroll()") {{ui.developers.getStart.firstDialog.title}}
                       li
-                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.useDialog.title}}
+                        a(href='#useDialog' ng-click="anchorScroll()") {{ui.developers.getStart.useDialog.title}}
                       li
-                        a(href='#GroupASub2' ng-click="anchorScroll()") {{ui.developers.getStart.complexDialog.title}}
+                        a(href='#complexDialog' ng-click="anchorScroll()") {{ui.developers.getStart.complexDialog.title}}
                   li
                     a(href='#docs' ng-click="anchorScroll()") {{ui.developers.docs.title}}
                     ul.nav.nav-stacked
@@ -82,23 +82,37 @@ html.no-js
                       li
                         a(href='#GroupCSub2' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
               // Main Content
-              .col-md-10
-                section#getStart.group
+              #mainPart2.col-md-10
+                #getStart.anchor
+                section.group
                   .titleHeader.phonePrice
-                    h4 {{ui.pricing.phone}}
-                      .contentBlock
-                        .col-md-4.col-md-offset-4
-                        h4 {{ui.pricing.country.title}}
-                        h3#getStartIntro {{ui.developers.getStart.title}}
+                    h4 {{ui.developers.getStart.title}}
+                  .contentBlock
+                    .row.subPart
+                      .col-md-12
+                        #getStartIntro.anchor
+                        h4 {{ui.developers.getStart.intro.title}}
                         p {{ui.developers.getStart.intro.description01}}
                         p {{ui.developers.getStart.intro.needs}}
                         ul
                           li {{ui.developers.getStart.intro.need01}}
+                        p {{ui.developers.getStart.intro.noAccount01}}
+                          span.link
+                            a(href='https://portal.ask-fast.com/index.html#/register#step-1', target='blank') {{ui.general.here}}
+                          span {{ui.developers.getStart.intro.noAccount02}}
+                    .row.subPart
+                      .col-md-12
+                        #firstCall.anchor
+                        h4 {{ui.developers.getStart.firstCall.title}}
+                        p {{ui.developers.getStart.firstCall.step0101}}
+                          span.link
+                            a(href='https://portal.ask-fast.com/index.html#/register#step-1', target='blank') {{ui.developers.getStart.firstCall.portal}}
+                          span {{ui.developers.getStart.firstCall.step0102}}
+                        p {{ui.developers.getStart.firstCall.step02}}
+                        a.borderLink(href='http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast', target='blank') {{ui.developers.getStart.firstCall.step02url}}
 
-                  #GroupASub1.subgroup
-                    h4 Group A Sub 1
-                  #GroupASub2.subgroup
-                    h4 Group A Sub 2
+                  #firstSms.subgroup
+                    h4 firstSms
                 section#GroupB.group
                   h3 Group B
                   #GroupBSub1.subgroup

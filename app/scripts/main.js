@@ -285,7 +285,12 @@ var localization = {
           noAccount02: 'to register.'
         },
         firstCall: {
-          title: 'Make your first call (outbound)'
+          title: 'Make your first call (outbound)',
+          step0101: 'Login to the',
+          portal: 'portal',
+          step0102: 'and add our first Dialog App. Click Configuration -> Add Dialog',
+          step02: 'Pick a name for your dialog and fill the following example url:',
+          step02url: 'http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast'
         },
         firstSms: {
           title: 'Send your first sms (outbound)'
