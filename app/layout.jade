@@ -4,12 +4,13 @@ html.no-js
     include includes/headDirect
     include includes/contactFormScript
 
-  body(ng-app='AskFast', data-spy='scroll', data-target='.scrollspy')
+  body(ng-app='AskFast', data-spy='scroll', data-target='.scrollspy').ng-cloak
 
 
 
     //--------HEADER------
-    include includes/header
+    .ng-cloak
+      include includes/header
 
 
 
@@ -24,12 +25,13 @@ html.no-js
 
 
     //--------CONTENT------
-    div(ng-view, autoscroll)
+    div(ng-view, autoscroll).ng-cloak
       block content
 
 
     //--------FOOTER------
-    include includes/footer
+    .ng-cloak
+      include includes/footer
 
 
 
