@@ -31,6 +31,8 @@ $("#closeCookie").click(function () {
 });
 
 
+
+
 var localization = {
 
 
@@ -42,6 +44,7 @@ var localization = {
     general: {
       tryForFree: 'Probeer nu',
       readMore: 'Lees meer',
+      here: 'hier',
       contactUs: 'Contact us',
       cookieMessage: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren. Door deze website te gebruiken, accepteert u ons',
       cookieMessageLink: 'privacybeleid'
@@ -104,7 +107,7 @@ var localization = {
         title03: 'Analytisch Vermogen',
         description03: 'Reacties monitoren zodra een campagne wordt gestart, zodat u direct kan zien of het succesvol is. ',
         title04: 'Innovatief',
-        description04: 'Voortdurend streven naar nieuwe idee�n en oplossingen.',
+        description04: 'Voortdurend streven naar nieuwe ideeën en oplossingen.',
         title05: 'Veiligheid',
         description05: 'Altijd de nieuwste beveiligingstechniek.',
         title06: 'Custom',
@@ -120,7 +123,7 @@ var localization = {
       title: 'Use cases',
       intro: {
         title: 'Mogelijkheden van ASK-Fast',
-        text: 'Bekijk de oplossingen van ASK-Fast.',
+        text: 'Bekijk de oplossingen van ASK-Fast.'
       },
       whatTitle:'Wat doet het?',
       benefitsTitle:'Voordelen:',
@@ -175,7 +178,7 @@ var localization = {
       },
       case04: {
         title: 'Call-me-back',
-        overviewDescription: 'Maak snel en effici�nt contact met uw website bezoekers.',
+        overviewDescription: 'Maak snel en efficiënt contact met uw website bezoekers.',
         whatDescription: 'Met Call-me-back kunnen bezoekers van uw website hun telefoonnummer achterlaten. Zodra uw medewerker beschikbaar is, zet ASK-Fast automatisch een telefoongesprek op.',
         benefit01: 'Meer leads converteren.',
         benefit02: 'Meer betrokken bij klanten.',
@@ -193,7 +196,7 @@ var localization = {
         whatDescription: 'Door het gebruik van Push-to-Talk communiceert u direct met uw medewerkers en teams, omdat u geen nummer hoeft te draaien. Met een druk op de knop staat u direct in verbinding met een medewerker of team.',
         benefit01: 'Verlaag communicatiekosten',
         benefit02: 'Verminder responstijden',
-        benefit03: 'Verbeter team co�rdinatie en effici�ntie.',
+        benefit03: 'Verbeter team coördinatie en efficiëntie.',
         howUseDescription: '',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'De beller drukt op de knop om een gesprek met het team te starten.',
@@ -212,12 +215,12 @@ var localization = {
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'Gebruiker belt een telefoonnummer.',
         howWorkStep2: 'De beller wordt gevraagd om zijn/haar pincode.',
-        howWorkStep3: 'De ASK-Fast API verifi�ert de pincode.',
+        howWorkStep3: 'De ASK-Fast API verifiëert de pincode.',
         howWorkStep4: 'De beller krijgt autorisatie en wordt doorverbonden met de juiste afdeling.'
       },
       case07: {
         title: 'Broadcast',
-        overviewDescription: 'Verspreid ��n bericht via meerdere communicatiekanalen.',
+        overviewDescription: 'Verspreid één bericht via meerdere communicatiekanalen.',
         whatDescription: 'Tegenwoordig zijn er zoveel communicatiekanalen dat het moeilijk is om vast te stellen welk kanaal het meest effectief is. Daarom wilt u ze het liefst allemaal gebruiken. Met Broadcast kan dat ook, van SMS tot Twitter tot pager.',
         benefit01: 'Meer reikwijdte.',
         benefit02: 'Hogere effectiviteit.',
@@ -265,7 +268,90 @@ var localization = {
       landline: 'Vast',
       mobile: 'Mobiel',
       noSelection: 'Geen land geselecteerd',
-      minPrice: 'Minimum cost per running instance of dialog is � 0,09'
+      minPrice: 'Minimum cost per running instance of dialog is € 0,09'
+    },
+
+    /*---DEVELOPERS---*/
+    developers: {
+      title: 'Developers',
+      getStart: {
+        title: 'Getting Started',
+        intro: {
+          title: 'Introduction',
+          description01: 'This tutorial shows you how you can start building your first dialog with ASK-Fast.',
+          needs: 'This tutorial assumes that you have:',
+          need01: 'A (free) ASK-Fast account',
+          noAccount01: 'If you don’t have an ASK-Fast account yet, click',
+          noAccount02: 'to register.'
+        },
+        firstCall: {
+          title: 'Make your first call (outbound)',
+          step0101: 'Login to the',
+          portal: 'portal',
+          step0102: 'and add our first Dialog App. Click Configuration -> Add Dialog',
+          step02: 'Pick a name for your dialog and fill the following example url:',
+          step02url: 'http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast',
+          step03: 'Return to the dashboard by clicking Dashboard',
+          step04: 'Fill in your phone number in the to address box in the Start Phone Call section and select the just created Dialog App. If you now hit Start call you will receive a phone call from ASK-Fast.'
+        },
+        firstSms: {
+          title: 'Send your first sms (outbound)',
+          step01: 'For sending an sms we can use the same Dialog App. If you fill you phone number in the Send SMS section and click Send SMS, you will receive a SMS.'
+        },
+        environment: {
+          title: 'Setup Environment',
+          java: {
+            title: 'JAVA',
+            step01: 'Install Java 6 or higher',
+            step02: 'Install',
+            step02Link: 'MAVEN 3'
+          },
+          step01: 'In the previous two section we have used an example Dialog. Now we will be showing how to build your own Dialog. Normally you will need to host this Dialog on a public server, but for this tutorial we will use ngrok. ngrok is a reverse proxy which will allow you to make your ASK-Fast Dialog publicly accessible without hosting it on a server.',
+          step02: 'Please download and install ngrok by clicking',
+          step03: 'Once you’ve installed ngrok you can continue with creating your first dialog.'
+
+        },
+        firstDialog: {
+          title: 'Create your first dialog',
+          java: {
+            step01: 'First go ahead and create a maven project with your favorite IDE. You can choose your own artifactId and groupId. For this example we choose as an artifactId: askfast-example-java and a groupId: com.askfast. Make sure the packaging of your project created a war file. Once you’ve created the maven project, we will need to add the libraries we will be using. We will using the jetty maven plugin to run the webserver and we the ask-fast library to create the dialog. So create add the following dependency and plugin.',
+            step02: 'Create a servlet with the following code:',
+            step03: 'Last we need to add the web.xml file to load the servlet when the server starts. Add the following web.xml file in the webapp/WEB-INF/web.xml directory.',
+            step04: 'Now we can run the server with the following command in your shell:',
+            step05: 'mvn jetty:run',
+            step06: 'When server start you should be able to see the dialog json on the following address: '
+          }
+        },
+        useDialog: {
+          title: 'Use the created dialog (outbound)',
+          step01:'Now we want make this dialog public accessible. This is where we use ngrok. If you open a new shell and run ngrok on port 8080, then it will return a url where it should be publicly accessible: \n ngrok 8080',
+          step02:'It return you something like:',
+          step03:'I you go to the forwarded url, it should show the create dialog.',
+          step04:'If we go back to the portal and select the created dialog from the ‘My First Call’ section. You can find it under Configuration -> Dialog.',
+          step05:'If you change the url to ngrok url and click on Update details:',
+          step06:'If you now start a call like we did in first section with the same Dialog App. You should now receive a phone and hear the text: “Hello world”.'
+        },
+        complexDialog: {
+          title: 'A more complex dialog',
+          java: {
+            step01: 'We are now going to modify the example to a more complex dialog. First we define some static variables were which we will use to start our dialog:',
+            step02: 'In the servlet we want create a three endpoints. These endpoints will enable use to start a call to a few people, collect statistics and enable ASK-Fast to load the questions. Let’s start with the last one. So we want to create an endpoint where are the question will be loaded from. Let’s name this endpoint /question, so all the question will be loaded bij askfast from ',
+            step03: 'In order to do that we have parse the path. Once we parsed the path into an array we can check if the first path part matches question:',
+            step04: 'Already so now that we have our question endpoint we can start creating the dialog. In this example we will create a voting system where can people can vote if they your newly created website. So for each question we will create a new part in the url. The first part will be ‘start’ or empty. In this question we will create a closed question we’re will ask the user to press 1 if they the website and to press 2 if they don’t. We will store the votes in memory in a simple hashmap.',
+            step05: 'In the answer of the first question we will link to the second question where we also parse the result. The path for the second question will be ‘thankyou’. There we add the votes per incoming phone number and play a message according to the given answer.',
+            step06: 'For this example we are also going to start the phones call from our servlet. So for this we will create a new endpoint call startcall and the endpoint is expecting one query parameters called addresses. The addresses can contain multiple addresses comma separated:',
+            step07: 'To initiate the call we need to give the full url, so we extract the host from the request object with a getHost function:',
+            step08: 'Finally we want to be able to get the results from our call action. So we create another endpoint which will return the results. It will simply loop over all the given answers and it will count all the yes’ and all the no’s.',
+            step09: 'To view the complete example you can go to:'
+          }
+        }
+      },
+      docs: {
+        title: 'Documentation'
+      },
+      examples: {
+        title: 'Examples'
+      }
     }
 
   },
@@ -277,6 +363,7 @@ var localization = {
     general: {
       tryForFree: 'Try now',
       readMore: 'Read more',
+      here: 'here',
       contactUs: 'Contact us',
       cookieMessage: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren. Door deze website te gebruiken, accepteert u ons',
       cookieMessageLink: 'privacybeleid'
@@ -472,7 +559,7 @@ var localization = {
         benefit01: 'Reduce costs',
         benefit02: 'Increase mobility',
         benefit03: 'Improve flexibility',
-        howUseDescription: 'Care organisations often receive loads of phone calls, ranging from patients to doctors. Larger organisations usually implement their own telephone exchange to facilitate these calls. They invest a lot of resources in purchasing and maintenance of their system. Smaller organisations might not use a telephone exchange at all if they don�t have the means to invest in such an advanced system. After integrating Decentrale by ASK-Fast both organisations are enjoying the benefits of a user-friendly, cost-effective and mobile system. Decentrale also provides information about waiting times and missed calls, in order to improve the reachability of the organisations.',
+        howUseDescription: 'Care organisations often receive loads of phone calls, ranging from patients to doctors. Larger organisations usually implement their own telephone exchange to facilitate these calls. They invest a lot of resources in purchasing and maintenance of their system. Smaller organisations might not use a telephone exchange at all if they don’t have the means to invest in such an advanced system. After integrating Decentrale by ASK-Fast both organisations are enjoying the benefits of a user-friendly, cost-effective and mobile system. Decentrale also provides information about waiting times and missed calls, in order to improve the reachability of the organisations.',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'An outside caller phones the Decentrale phone number.',
         howWorkStep2: 'ASK-Fast dialog searches for the employee who is most capable of assisting the caller.',
@@ -500,7 +587,7 @@ var localization = {
       landline: 'Landline',
       mobile: 'Mobile',
       noSelection: 'No country selected',
-      minPrice: 'Minimum cost per running instance of dialog is � 0,09'
+      minPrice: 'Minimum cost per running instance of dialog is € 0,09'
     }
   }
 
@@ -514,10 +601,38 @@ var localization = {
 
 /* global angular */
 
-angular.module('AskFast', []).
-  constant('locals', localization).
-  run(['$rootScope', '$location', '$http', 'locals', function ($rootScope, $location, $http, locals) {
+angular.module('AskFast', ['ngRoute'])
+  .constant('locals', localization)
+  .config(['$locationProvider', function($locationProvider) {$locationProvider.html5Mode(true);} ])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+    .when('/', {
+      redirectTo: '/index.html'
+    })
+    .when('/index.html', {
+      templateUrl: '/templates/index.html'
+    })
+    .when('/pricing.html', {
+      controller: 'PricingController',
+      templateUrl: '/templates/pricing.html'
+    })
+    .when('/developers.html', {
+      controller: 'DevelopersController',
+      templateUrl: '/templates/developers.html'
+    })
+    .when('/usecases/', {
+      templateUrl: '/templates/usecases/index.html'
+    })
+    .when('/usecases/:subsection', {
+      templateUrl: function(params) {
+        return '/templates/usecases/' + params.subsection;
+      }
+    })
+    .otherwise('/index.html');
+  }])
+  .run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window) {
 
+    $rootScope.anchorScroll = function (){$anchorScroll();};
 
     if (!localStorage.getItem('selectedLanguage')) {
       localStorage.setItem('selectedLanguage', 'nl');
@@ -552,6 +667,13 @@ angular.module('AskFast', []).
 
     $rootScope.changeLang(localStorage.getItem('selectedLanguage'));
 
+    $rootScope.isLinkActive = function isLinkActive(route) {
+      if ($location.path().match(route)) {
+          return true;
+      }
+      return false;
+    }
+
     $(".languageToggle li a").click(function () {
       if (toggled) {
         toggleOut();
@@ -573,18 +695,28 @@ angular.module('AskFast', []).
     angular.element('#menu .desktopView ul').css({'display': 'block'});
     // angular.element('#secondOne').css({'display': 'block'});
 
-    /*----------Pricing----------*/
-    // select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
-    //   option(value='')
-    //     | {{ui.pricing.noSelection}}
-    if (window.location.pathname === '/pricing.html') {
-      // get all prices
-      $http.get('http://sandbox.ask-fast.com/ddr/prices')
-      .success(function(data, status, headers, config){
-        $rootScope.pricingData = processPricingData(data);
-        $rootScope.pricing = $rootScope.pricingData['Netherlands'];
-      });
-    }
+  }])
+  .controller('DevelopersController', [function(){
+    //menuList
+    $('body').scrollspy({
+      target: '.bs-docs-sidebar',
+      offset: 100
+    });
+
+    $("#sidebar").affix({
+      offset: {
+        top: 330
+      }
+    });
+
+  }])
+  .controller('PricingController', ['$http', '$rootScope', function($http, $rootScope){
+
+    $http.get('http://sandbox.ask-fast.com/ddr/prices')
+    .success(function(data, status, headers, config){
+      $rootScope.pricingData = processPricingData(data);
+      $rootScope.pricing = $rootScope.pricingData['Netherlands'];
+    });
 
     function processPricingData(pricingData){
       var countryData = {};

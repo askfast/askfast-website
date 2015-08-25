@@ -16,3 +16,4 @@ $(".comChannel").mouseenter(function() {
 $(".comChannel").mouseleave(function() {
   $('.comLabel', this).removeClass('flipInY').addClass('animated flipOutY');
 });
+
