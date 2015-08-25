@@ -57,7 +57,7 @@ module.exports = function (grunt)
           tasks: ['newer:copy:styles', 'autoprefixer']
         },
         jade: {
-          files: ['<%= config.app %>/{,*/}*.jade'],
+          files: ['<%= config.app %>/{,**/}*.jade'],
           tasks: ['jade']
         },
         livereload: {
@@ -83,7 +83,7 @@ module.exports = function (grunt)
               expand: true,
               cwd: '<%= config.app %>',
               dest: '.tmp',
-              src: '{,*/}*.jade',
+              src: '{,**/}*.jade',
               ext: '.html'
             }
           ]
@@ -312,7 +312,7 @@ module.exports = function (grunt)
             {
               expand: true,
               cwd: '.tmp',
-              src: '{,*/}*.html',
+              src: '{,**/}*.html',
               dest: '<%= config.dist %>'
             }
           ]
