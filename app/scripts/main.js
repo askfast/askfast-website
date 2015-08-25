@@ -290,22 +290,60 @@ var localization = {
           portal: 'portal',
           step0102: 'and add our first Dialog App. Click Configuration -> Add Dialog',
           step02: 'Pick a name for your dialog and fill the following example url:',
-          step02url: 'http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast'
+          step02url: 'http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast',
+          step03: 'Return to the dashboard by clicking Dashboard',
+          step04: 'Fill in your phone number in the to address box in the Start Phone Call section and select the just created Dialog App. If you now hit Start call you will receive a phone call from ASK-Fast.'
         },
         firstSms: {
-          title: 'Send your first sms (outbound)'
+          title: 'Send your first sms (outbound)',
+          step01: 'For sending an sms we can use the same Dialog App. If you fill you phone number in the Send SMS section and click Send SMS, you will receive a SMS.'
         },
         environment: {
-          title: 'Setup Environment'
+          title: 'Setup Environment',
+          java: {
+            title: 'JAVA',
+            step01: 'Install Java 6 or higher',
+            step02: 'Install',
+            step02Link: 'MAVEN 3'
+          },
+          step01: 'In the previous two section we have used an example Dialog. Now we will be showing how to build your own Dialog. Normally you will need to host this Dialog on a public server, but for this tutorial we will use ngrok. ngrok is a reverse proxy which will allow you to make your ASK-Fast Dialog publicly accessible without hosting it on a server.',
+          step02: 'Please download and install ngrok by clicking',
+          step03: 'Once you’ve installed ngrok you can continue with creating your first dialog.'
+
         },
         firstDialog: {
-          title: 'Create your first dialog'
+          title: 'Create your first dialog',
+          java: {
+            step01: 'First go ahead and create a maven project with your favorite IDE. You can choose your own artifactId and groupId. For this example we choose as an artifactId: askfast-example-java and a groupId: com.askfast. Make sure the packaging of your project created a war file. Once you’ve created the maven project, we will need to add the libraries we will be using. We will using the jetty maven plugin to run the webserver and we the ask-fast library to create the dialog. So create add the following dependency and plugin.',
+            step02: 'Create a servlet with the following code:',
+            step03: 'Last we need to add the web.xml file to load the servlet when the server starts. Add the following web.xml file in the webapp/WEB-INF/web.xml directory.',
+            step04: 'Now we can run the server with the following command in your shell:',
+            step05: 'mvn jetty:run',
+            step06: 'When server start you should be able to see the dialog json on the following address: '
+          }
         },
         useDialog: {
-          title: 'Use the created dialog (outbound)'
+          title: 'Use the created dialog (outbound)',
+          step01:'Now we want make this dialog public accessible. This is where we use ngrok. If you open a new shell and run ngrok on port 8080, then it will return a url where it should be publicly accessible: \n ngrok 8080',
+          step02:'It return you something like:',
+          step03:'I you go to the forwarded url, it should show the create dialog.',
+          step04:'If we go back to the portal and select the created dialog from the ‘My First Call’ section. You can find it under Configuration -> Dialog.',
+          step05:'If you change the url to ngrok url and click on Update details:',
+          step06:'If you now start a call like we did in first section with the same Dialog App. You should now receive a phone and hear the text: “Hello world”.'
         },
         complexDialog: {
-          title: 'A more complex dialog'
+          title: 'A more complex dialog',
+          java: {
+            step01: 'We are now going to modify the example to a more complex dialog. First we define some static variables were which we will use to start our dialog:',
+            step02: 'In the servlet we want create a three endpoints. These endpoints will enable use to start a call to a few people, collect statistics and enable ASK-Fast to load the questions. Let’s start with the last one. So we want to create an endpoint where are the question will be loaded from. Let’s name this endpoint /question, so all the question will be loaded bij askfast from ',
+            step03: 'In order to do that we have parse the path. Once we parsed the path into an array we can check if the first path part matches question:',
+            step04: 'Already so now that we have our question endpoint we can start creating the dialog. In this example we will create a voting system where can people can vote if they your newly created website. So for each question we will create a new part in the url. The first part will be ‘start’ or empty. In this question we will create a closed question we’re will ask the user to press 1 if they the website and to press 2 if they don’t. We will store the votes in memory in a simple hashmap.',
+            step05: 'In the answer of the first question we will link to the second question where we also parse the result. The path for the second question will be ‘thankyou’. There we add the votes per incoming phone number and play a message according to the given answer.',
+            step06: 'For this example we are also going to start the phones call from our servlet. So for this we will create a new endpoint call startcall and the endpoint is expecting one query parameters called addresses. The addresses can contain multiple addresses comma separated:',
+            step07: 'To initiate the call we need to give the full url, so we extract the host from the request object with a getHost function:',
+            step08: 'Finally we want to be able to get the results from our call action. So we create another endpoint which will return the results. It will simply loop over all the given answers and it will count all the yes’ and all the no’s.',
+            step09: 'To view the complete example you can go to:'
+          }
         }
       },
       docs: {
@@ -565,7 +603,7 @@ var localization = {
 
 angular.module('AskFast', []).
   constant('locals', localization).
-  config(function($locationProvider){$locationProvider.html5Mode(true);}).
+  config(function($locationProvider){$locationProvider.html5Mode(false);}).
   run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window) {
 
     $rootScope.anchorScroll = function (){$anchorScroll();};
