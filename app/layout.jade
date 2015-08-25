@@ -1,0 +1,37 @@
+doctype
+html.no-js
+  head
+    include includes/headDirect
+    include includes/contactFormScript
+
+  body(ng-app='AskFast', data-spy='scroll', data-target='.scrollspy')
+
+
+
+    //--------HEADER------
+    include includes/header
+
+
+
+    //--------COOKIE MESSAGE------
+    #cookieMessage.hide
+      #closeCookie
+      p
+        | {{ui.general.cookieMessage}}
+        a(href='../docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
+        | .
+
+
+
+    //--------CONTENT------
+    div(ng-view, autoscroll)
+      block content
+
+
+    //--------FOOTER------
+    include includes/footer
+
+
+
+    //--------JS------
+    include includes/scriptLinks

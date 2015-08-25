@@ -1,0 +1,88 @@
+//--------CONTENT------
+#content
+  #pricingPage
+
+    #intro.fullbackground
+      #colorOverlay
+      .container
+        .row
+          .col-md-12.introText
+            .subContainer
+              .hexagonExtended
+                .part1
+                  .slash.fSlash
+                  .slash.bSlash
+                .part2
+                  h1.subPageTitle {{ui.pricing.title}}
+                .part3
+                  .slash.bSlash
+                  .slash.fSlash
+
+
+    //.zigZagBorder
+    #countrySelect
+      .container
+        .row.contentBlock
+          .col-md-4.col-md-offset-4
+            h4 {{ui.pricing.country.title}}
+            select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
+              option(value='')
+
+
+
+    #priceOverview
+      .container
+        .row
+          .col-md-12
+
+              .row.contentBlock
+                .col-md-4.item
+                  h5 {{ui.pricing.number}}
+                  h3.price {{pricing.call.number | currency : '&euro;'}}
+                .col-md-4.item
+                  h5 {{ui.pricing.inbound}}
+                  h3.price &euro;{{pricing.call.mobile.inbound.price}} / {{pricing.call.mobile.inbound.unit}}
+                .col-md-4.item
+                  h5 {{ui.pricing.outbound}}
+                  h3.price &euro;{{pricing.call.startup}}
+                    span {{ui.pricing.startup}}
+                  h3.price &euro;{{pricing.call.fixed.outbound.price}} / {{pricing.call.fixed.outbound.unit}}
+                    span {{ui.pricing.landline}}
+                  h3
+                    span {{ui.pricing.mobile}}
+                    .price &euro;{{pricing.call.mobile.outbound.price}} / {{pricing.call.mobile.outbound.unit}}
+
+          .col-md-12
+            .titleHeader.smsPrice
+              h4 {{ui.pricing.sms}}
+              .row.contentBlock
+                .col-md-4.item
+                  h5 {{ui.pricing.number}}
+                  h3.price {{pricing.sms.number | currency : '&euro;'}}
+
+                .col-md-4.item
+                  h5 {{ui.pricing.inbound}}
+                  h3.price FREE
+                .col-md-4.item
+                  h5 {{ui.pricing.outbound}}
+                  h3.price &euro;{{pricing.sms.outbound.price}}
+
+    #extraInfo
+      .container
+        .row.contentBlock
+          .col-md-12
+            p {{ui.pricing.minPrice}}
+
+    #contactUs
+      .container
+        .row.titleHeader
+        .row.contentBlock
+          .col-md-6
+            button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+              | {{ui.general.contactUs}}
+
+          .col-md-6
+            a(href='https://portal.ask-fast.com/index.html#/register#step-1')
+              button.outline {{ui.general.tryForFree}}
+
+    include ../includes/contactForm

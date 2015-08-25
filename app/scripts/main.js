@@ -601,23 +601,42 @@ var localization = {
 
 /* global angular */
 
-angular.module('AskFast', []).
-  constant('locals', localization).
-  config(function($locationProvider){$locationProvider.html5Mode(false);}).
-  run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window) {
+angular.module('AskFast', ['ngRoute'])
+  .constant('locals', localization)
+  .config(['$locationProvider', function($locationProvider) {$locationProvider.html5Mode(true);} ])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+    .when('/', {
+      redirectTo: '/index.html'
+    })
+    .when('/index.html', {
+      templateUrl: '/templates/index.html'
+    })
+    .when('/pricing.html', {
+      controller: 'PricingController',
+      templateUrl: '/templates/pricing.html'
+    })
+    .when('/developers.html', {
+      controller: 'DevelopersController',
+      templateUrl: '/templates/developers.html'
+    })
+    .when('/usecases/', {
+      templateUrl: '/templates/usecases/index.html'
+    })
+    .when('/usecases/:subsection', {
+      templateUrl: function(params) {
+        return '/templates/usecases/' + params.subsection;
+      }
+    })
+    .otherwise('/index.html');
+  }])
+  .run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window) {
 
     $rootScope.anchorScroll = function (){$anchorScroll();};
 
     if (!localStorage.getItem('selectedLanguage')) {
       localStorage.setItem('selectedLanguage', 'nl');
     }
-
-    $rootScope.$watch(function () { return $location.path(); }, function (newVal, oldVal) {
-      if (newVal === oldVal){
-        return;
-      }
-      $window.location.href = newVal;
-    });
 
     $rootScope.showLangMenu = false;
 
@@ -648,6 +667,13 @@ angular.module('AskFast', []).
 
     $rootScope.changeLang(localStorage.getItem('selectedLanguage'));
 
+    $rootScope.isLinkActive = function isLinkActive(route) {
+      if ($location.path().match(route)) {
+          return true;
+      }
+      return false;
+    }
+
     $(".languageToggle li a").click(function () {
       if (toggled) {
         toggleOut();
@@ -669,18 +695,28 @@ angular.module('AskFast', []).
     angular.element('#menu .desktopView ul').css({'display': 'block'});
     // angular.element('#secondOne').css({'display': 'block'});
 
-    /*----------Pricing----------*/
-    // select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
-    //   option(value='')
-    //     | {{ui.pricing.noSelection}}
-    if (window.location.pathname === '/pricing.html') {
-      // get all prices
-      $http.get('http://sandbox.ask-fast.com/ddr/prices')
-      .success(function(data, status, headers, config){
-        $rootScope.pricingData = processPricingData(data);
-        $rootScope.pricing = $rootScope.pricingData['Netherlands'];
-      });
-    }
+  }])
+  .controller('DevelopersController', [function(){
+    //menuList
+    $('body').scrollspy({
+      target: '.bs-docs-sidebar',
+      offset: 100
+    });
+
+    $("#sidebar").affix({
+      offset: {
+        top: 330
+      }
+    });
+
+  }])
+  .controller('PricingController', ['$http', '$rootScope', function($http, $rootScope){
+
+    $http.get('http://sandbox.ask-fast.com/ddr/prices')
+    .success(function(data, status, headers, config){
+      $rootScope.pricingData = processPricingData(data);
+      $rootScope.pricing = $rootScope.pricingData['Netherlands'];
+    });
 
     function processPricingData(pricingData){
       var countryData = {};
@@ -815,17 +851,3 @@ $("#dropdownToggle").click(function () {
     $('#dropdownMenu').removeClass('hide').addClass('show');
   }
 });
-
-
-//menuList
-$('body').scrollspy({
-  target: '.bs-docs-sidebar',
-  offset: 100
-});
-
-$("#sidebar").affix({
-  offset: {
-    top: 330
-  }
-});
-
