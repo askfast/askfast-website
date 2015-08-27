@@ -416,7 +416,7 @@ var localization = {
         title02: 'ETA Alerts',
         description02: 'Update your client with the most accurate arrival time, directly integrated with GPS and order tracking system.',
         title03: 'Team Telephone',
-        description03: 'Turn your own mobile phone into a team telephone with one click, and never miss a phone call from a client.',
+        description03: 'Turn your own mobile phone into a team telephone with one click, and never miss a phone call from a client.'
       },
       benefits: {
         mainTitle: 'Why ASK-Fast?',
@@ -443,7 +443,7 @@ var localization = {
       title: 'Use cases',
       intro: {
         title: 'Opportunities of ASK-Fast',
-        text: 'Explore the possibilities ASK-Fast offers your business',
+        text: 'Explore the possibilities ASK-Fast offers your business'
       },
       whatTitle:'What does it do?',
       benefitsTitle:'Benefits',
@@ -612,6 +612,7 @@ angular.module('AskFast', ['ngRoute'])
       redirectTo: '/index.html'
     })
     .when('/index.html', {
+      controller: 'IndexController',
       templateUrl: '/templates/index.html'
     })
     .when('/pricing.html', {
@@ -709,6 +710,32 @@ angular.module('AskFast', ['ngRoute'])
       offset: {
         top: 330
       }
+    });
+
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+
+  }])
+  .controller('IndexController', [function(){
+    //menuList
+    //Animate communication channels
+    $(".comIcon").hover(function() {
+        $(this).addClass('animated pulse');
+      },
+      function(){
+        var self = this;
+        setTimeout(function() {
+          $(self).removeClass('pulse');
+        },600);
+      });
+
+    $(".comChannel").mouseenter(function() {
+      $('.comLabel', this).removeClass('hide flipOutY').addClass('animated flipInY');
+    });
+
+    $(".comChannel").mouseleave(function() {
+      $('.comLabel', this).removeClass('flipInY').addClass('animated flipOutY');
     });
 
   }])
