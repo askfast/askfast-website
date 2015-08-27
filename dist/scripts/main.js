@@ -264,11 +264,12 @@ var localization = {
       number: 'Nummer',
       inbound: 'Inkomend',
       outbound: 'Uitgaand',
-      startup: 'Opstartkosten',
-      landline: 'Vast',
-      mobile: 'Mobiel',
+      startup: 'Opstartkosten:',
+      landline: 'Vast:',
+      mobile: 'Mobiel:',
+      free: 'GRATIS',
       noSelection: 'Geen land geselecteerd',
-      minPrice: 'Minimum cost per running instance of dialog is € 0,09'
+      minPrice: '*Minimale kosten per actieve instantie van een dialoog zijn € 0,09'
     },
 
     /*---DEVELOPERS---*/
@@ -583,11 +584,12 @@ var localization = {
       number: 'Number',
       inbound: 'Inbound',
       outbound: 'Outbound',
-      startup: 'Startup',
-      landline: 'Landline',
-      mobile: 'Mobile',
+      startup: 'Startup:',
+      landline: 'Landline:',
+      mobile: 'Mobile:',
+      free: 'FREE',
       noSelection: 'No country selected',
-      minPrice: 'Minimum cost per running instance of dialog is € 0,09'
+      minPrice: '*Minimum cost per running instance of dialog is € 0,09'
     }
   }
 
