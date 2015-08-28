@@ -21,67 +21,67 @@
                     .slash.bSlash
                     .slash.fSlash
 
-    //.zigZagBorder
-    #what
-      .container
-        .row.contentBlock
-          .col-md-8.col-md-offset-2
-            block what
+      //.zigZagBorder
+      #what
+        .container
+          .row.contentBlock
+            .col-md-8.col-md-offset-2
+              block what
 
-    #benefits
-      .container
-        .row.titleHeader
-        .row.contentBlock
-          .col-sm-4.benefit.benefit1
-            .icon
-            block benefit1
-          .col-sm-4.benefit.benefit2
-            .icon
-            block benefit2
-          .col-sm-4.benefit.benefit3
-            .icon
-            block benefit3
-
-    #howUse.hide
-      .container
-        .row.titleHeader
-        .row.contentBlock
-          .col-md-8.col-md-offset-2
-            h3 {{ui.useCases.howUseTitle}}
-            p {{ui.useCases.case01.howUseDescription}}
-
-    #customerQuote.hide
-      .container
-        .row.titleHeader
-        .row.contentBlock
-          .col-md-8.col-md-offset-2
-            block customerQuote
-
-    block howWork
-      #howWork
+      #benefits
         .container
           .row.titleHeader
-            h4 {{ui.useCases.howWorkTitle}}
           .row.contentBlock
-            .col-md-3
-              .hexContainer.step1
-                .icon
-                .hexagon
-              block step1
-            .col-md-3
-              .hexContainer.step2
-                .icon
-                .hexagon
-              block step2
-            .col-md-3
-              .hexContainer.step3
-                .icon
-                .hexagon
-              block step3
-            .col-md-3
-              .hexContainer.step4
-                .icon
-                .hexagon
-              block step4
+            .col-sm-4.benefit.benefit1
+              .icon
+              block benefit1
+            .col-sm-4.benefit.benefit2
+              .icon
+              block benefit2
+            .col-sm-4.benefit.benefit3
+              .icon
+              block benefit3
+
+      #howUse.hide
+        .container
+          .row.titleHeader
+          .row.contentBlock
+            .col-md-8.col-md-offset-2
+              h3 {{ui.useCases.howUseTitle}}
+              p {{ui.useCases.case01.howUseDescription}}
+
+      #customerQuote.hide
+        .container
+          .row.titleHeader
+          .row.contentBlock
+            .col-md-8.col-md-offset-2
+              block customerQuote
+
+      block howWork
+        #howWork
+          .container
+            .row.titleHeader
+              h4 {{ui.useCases.howWorkTitle}}
+            .row.contentBlock
+              .col-sm-3
+                .hexContainer.step1
+                  .icon
+                  .hexagon
+                block step1
+              .col-sm-3
+                .hexContainer.step2
+                  .icon
+                  .hexagon
+                block step2
+              .col-sm-3
+                .hexContainer.step3
+                  .icon
+                  .hexagon
+                block step3
+              .col-sm-3
+                .hexContainer.step4
+                  .icon
+                  .hexagon
+                block step4
 
     include ../../includes/reminder
