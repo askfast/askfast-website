@@ -697,12 +697,19 @@ button.filled {
 
 
 .hexagonExtended {
+  //display: inline-block;
+  //width: 100%;
   display: inline-flex;
+  position: relative;
+  margin-top: 140px;
   .part1, .part2, .part3  {
-    align-items: stretch;
+    //align-items: stretch;
+    display: inline-block;
   }
   .part1 {
-    margin-right: 12px;
+    margin-left: -12px;
+    position: absolute;
+    height: 100%;
   }
   .part2 {
     border-top: 1px solid $white;
@@ -711,6 +718,8 @@ button.filled {
   }
   .part3 {
     margin-left: 12px;
+    position: absolute;
+    height: 100%;
   }
   .slash {
     height: 50%;
@@ -1130,12 +1139,14 @@ button.filled {
     }
   }
 
+
   #clients {
     .clientLogo {
       margin: 0 auto;
       max-width: 80%;
       img {
-        width: 100%;
+        max-height: 100px;
+        max-width: 100%;
       }
       .hoverShow {
         //display: none;
@@ -1166,6 +1177,16 @@ button.filled {
 /*=====USE CASES OVERVIEW=====*/
 
 .useCasesOverview {
+  .vierkantje {
+    width: 400px;
+    height: 300px;
+    background-image: linear-gradient(135deg, transparent 10px, #c00 0px), linear-gradient(225deg, transparent 10px, #c00 0px), linear-gradient(315deg, transparent 10px, #c00 0px), linear-gradient(45deg, transparent 10px, #c00 0px);
+    background-origin: padding-box, padding-box, padding-box, padding-box;
+    background-position: left top, right top, right bottom, left bottom;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+
+  }
   background-color: $light-grey;
   .zigZagBorder:after {
     background-image: linear-gradient(-45deg, $light-grey 8px, transparent 0), linear-gradient(45deg, $light-grey 8px, transparent 0);
@@ -1285,7 +1306,7 @@ button.filled {
 
 
 .subContainer {
-  margin-top: 140px;
+  //margin-top: 140px;
 }
 
 /*=====USE CASES OVERVIEW + DETAIL=====*/
@@ -1315,10 +1336,10 @@ button.filled {
     #intro {
       .hexagonExtended {
         .part1 {
-          margin-right: 25px;
+          margin-left: -23px;
         }
         .part3 {
-          margin-left: 25px;
+          margin-left: 23px;
         }
       }
     }
@@ -1724,13 +1745,7 @@ button.filled {
   #getStart {
     margin-top: 100px;
   }
-  .group {
-  }
-  .group .subgroup {
-  }
-  .fixed {
-    //position: fixed;
-  }
+
 
   /* sidebar */
   .bs-docs-sidebar {
@@ -1805,94 +1820,18 @@ button.filled {
   .mobileView {
     display: none;
   }
-  .bcg {
-    background-attachment: fixed;
-  }
-
-  #case01, .casePostnl .bcg {
-    background-image: url('../images/cases/postnl.jpg');
-  }
-  #case02, .caseOlympia .bcg {
-    background-image: url('../images/cases/olympia.jpg');
-  }
-  #case03, .caseBz .bcg {
-    background-image: url('../images/cases/buurtzorg.jpg');
-  }
-  #case04, .caseKnrm .bcg {
-    background-image: url('../images/cases/knrm.jpg');
-  }
-  #jobHeader {
-    background-image: url('../images/jobs/ask.jpg');
-    height: 600px;
-  }
-  #platformHeader {
-    background-image: url('../images/platform/platformPhoto01.jpg');
-    height: 500px;
-  }
-  #platformPhoto02 {
-    background-image: url('../images/platform/platformPhoto02.jpg');
-    height: 500px;
-  }
-
 }
 
 /*----------MAX WIDTH 1199-----------*/
 
 @media (max-width: 1199px) {
-  .aboutContent {
-    margin-bottom: 0;
-  }
 
-  #mapContainer {
-    position: static;
-    height: 80%;
-    #map {
-      height: 100%;
-    }
-  }
-
-  #platform {
-    .platform5 {
-      img {
-        padding-top: 20px;
-      }
-    }
-  }
 
 }
 
 /*----------MIN WIDTH 992 | MAX WIDTH 1199-----------*/
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
-  .homeSlide .bcg {
-    min-height: 600px;
-  }
-
-  #case01, .casePostnl .bcg {
-    background-image: url('../images/cases/postnl.jpg');
-  }
-  #case02, .caseOlympia .bcg {
-    background-image: url('../images/cases/olympia.jpg');
-  }
-  #case03, .caseBz .bcg {
-    background-image: url('../images/cases/buurtzorg.jpg');
-  }
-  #case04, .caseKnrm .bcg {
-    background-image: url('../images/cases/knrm.jpg');
-  }
-  #jobHeader {
-    background-image: url('../images/jobs/ask.jpg');
-    height: 600px;
-  }
-  #platformHeader {
-    background-image: url('../images/platform/platformPhoto01.jpg');
-    height: 500px;
-  }
-  #platformPhoto02 {
-    background-image: url('../images/platform/platformPhoto02.jpg');
-    height: 500px;
-  }
 
   .mobileView {
     display: none;
@@ -1903,9 +1842,7 @@ button.filled {
 /*----------MAX WIDTH 991-----------*/
 
 @media (max-width: 991px) {
-  .textField h2 span {
-    margin: -56px 0 0 0;
-  }
+
 }
 
 /*----------MIN WIDTH 768 | MAX WIDTH 991-----------*/
@@ -1913,39 +1850,6 @@ button.filled {
 @media (min-width: 768px) and (max-width: 991px) {
   .hideSm {
     display: none !important;
-  }
-
-  .smallDeviceContainer {
-    padding: 50px 15px !important;
-  }
-
-  .homeSlide .bcg {
-    min-height: 500px;
-  }
-
-  #case01, .casePostnl .bcg {
-    background-image: url('../images/cases/postnlSm.jpg');
-  }
-  #case02, .caseOlympia .bcg {
-    background-image: url('../images/cases/olympiaSm.jpg');
-  }
-  #case03, .caseBz .bcg {
-    background-image: url('../images/cases/buurtzorgSm.jpg');
-  }
-  #case04, .caseKnrm .bcg {
-    background-image: url('../images/cases/knrmSm.jpg');
-  }
-  #jobHeader {
-    background-image: url('../images/jobs/askSm.jpg');
-    height: 600px;
-  }
-  #platformHeader {
-    background-image: url('../images/platform/platformPhoto01Sm.jpg');
-    height: 500px;
-  }
-  #platformPhoto02 {
-    background-image: url('../images/platform/platformPhoto02Sm.jpg');
-    height: 500px;
   }
 
   .mobileView {
@@ -1988,146 +1892,6 @@ button.filled {
       height: 57px;
       width: 80px;
       margin-left: -40px;
-    }
-  }
-
-  .arrowDownPosition {
-    bottom: 10%;
-    .arrowDown {
-      padding-top: 1px;
-      width: 100px;
-      height: 34px;
-      h4 {
-        font-size: 8px;
-      }
-    }
-  }
-
-  .platform {
-    p {
-      font-size: 12px;
-      line-height: 13px;
-      padding-top: 0px;
-    }
-  }
-
-  .slide2 .scenarioImg .absoluteElements span img {
-    top: 60px;
-  }
-
-  #case01, .casePostnl .bcg {
-    background-image: url('../images/cases/postnlXs.jpg');
-  }
-  #case02, .caseOlympia .bcg {
-    background-image: url('../images/cases/olympiaXs.jpg');
-  }
-  #case03, .caseBz .bcg {
-    background-image: url('../images/cases/buurtzorgXs.jpg');
-  }
-  #case04, .caseKnrm .bcg {
-    background-image: url('../images/cases/knrmXs.jpg');
-  }
-
-  #platform {
-    padding-top: 0;
-    .platform3 {
-      h2 {
-        padding-top: 20px;
-      }
-    }
-  }
-
-  #jobHeader {
-    background-image: url('../images/jobs/askXs.jpg');
-    height: 250px;
-  }
-  #platformHeader {
-    background-image: url('../images/platform/platformPhoto01Xs.jpg');
-    height: 200px;
-  }
-  #platformPhoto02 {
-    background-image: url('../images/platform/platformPhoto02Xs.jpg');
-    height: 200px;
-  }
-
-  #jobsToggle {
-    margin: 14px 0 0 -74px;
-    padding: 3px 0;
-    /*    z-index: 52;*/
-    h4 {
-      font-size: 9px;
-    }
-  }
-
-  #jobArea {
-    top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .jobs .job {
-    border-bottom: 1px solid $pink;
-    padding-bottom: 50px;
-  }
-
-  .controlArrow {
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    background-size: 100%;
-  }
-
-  #fullPage-nav span, .fullPage-slidesNav span {
-    height: 6px;
-    width: 6px;
-  }
-
-  .smallDeviceContainer {
-    padding: 50px 15px !important;
-  }
-  .textFieldContainer {
-    margin: auto 15px;
-  }
-  .textField .row {
-    padding: 0 15px;
-  }
-  #content .textField .fact {
-    border-left: none;
-    border-top: 1px solid $pink;
-    padding: 20px 0;
-  }
-
-  .products {
-    p {
-      font-size: 12px;
-      line-height: 13px;
-      padding: 10px 7% 0 7%;
-    }
-    .container {
-      margin: 80px 0;
-    }
-    img {
-      bottom: 10%;
-      left: 50%;
-      margin: 0 auto 0 -10%;
-      width: 20%;
-      position: absolute;
-      text-align: center;
-    }
-    .standBy, .teamUp, .joinUs, .blank {
-      height: 100%;
-    }
-  }
-
-  .top {
-    height: 40%;
-    position: relative;
-  }
-
-  .case .textField {
-    margin-top: -40%;
-    p {
-      display: none;
     }
   }
 

@@ -269,7 +269,7 @@ var localization = {
       mobile: 'Mobiel:',
       free: 'GRATIS',
       noSelection: 'Geen land geselecteerd',
-      minPrice: '*Minimale kosten per actieve instantie van een dialoog zijn € 0,09'
+      minPrice: '*Minimale kosten per dialoog zijn €0,09'
     },
 
     /*---DEVELOPERS---*/
@@ -624,6 +624,7 @@ angular.module('AskFast', ['ngRoute'])
       templateUrl: '/templates/developers.html'
     })
     .when('/usecases/', {
+      controller: 'UseCasesController',
       templateUrl: '/templates/usecases/index.html'
     })
     .when('/usecases/:subsection', {
@@ -699,26 +700,8 @@ angular.module('AskFast', ['ngRoute'])
     // angular.element('#secondOne').css({'display': 'block'});
 
   }])
-  .controller('DevelopersController', [function(){
-    //menuList
-    $('body').scrollspy({
-      target: '.bs-docs-sidebar',
-      offset: 100
-    });
 
-    $("#sidebar").affix({
-      offset: {
-        top: 330
-      }
-    });
-
-    $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
-    });
-
-  }])
   .controller('IndexController', [function(){
-    //menuList
     //Animate communication channels
     $(".comIcon").hover(function() {
         $(this).addClass('animated pulse');
@@ -736,6 +719,19 @@ angular.module('AskFast', ['ngRoute'])
 
     $(".comChannel").mouseleave(function() {
       $('.comLabel', this).removeClass('flipInY').addClass('animated flipOutY');
+    });
+
+  }])
+  .controller('UseCasesController', [function(){
+    //Use Cases Index descriptions
+    $(".useCase").mouseenter(function() {
+      $(".description", this).removeClass('hide fadeOutDown').addClass('animated fadeInUp');
+    });
+
+    $(".useCase").mouseleave(function() {
+      $(".description", this).removeClass('fadeInUp').addClass('animated fadeOutDown').delay(400).queue(function(){
+        $(this).addClass('hide').dequeue();
+      });
     });
 
   }])
@@ -869,7 +865,27 @@ angular.module('AskFast', ['ngRoute'])
 
     } // end processPricingData
 
+  }])
+  .controller('DevelopersController', [function(){
+    //menuList
+    $('body').scrollspy({
+      target: '.bs-docs-sidebar',
+      offset: 100
+    });
+
+    $("#sidebar").affix({
+      offset: {
+        top: 330
+      }
+    });
+
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+
   }]);
+
+
 
 
 //menu toggle mobile
