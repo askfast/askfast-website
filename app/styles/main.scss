@@ -499,7 +499,7 @@ button.filled {
 
 /*----------HEADER-----------*/
 
-#menuBg {
+#skrollr-body {
   background: $pink;
   height: 60px;
   position: fixed;
@@ -508,6 +508,7 @@ button.filled {
   z-index: 114;
   width: 100%;
   opacity: 0;
+  @include box-shadow(0 -1px 4px  rgba(100,100,100,1));
 }
 
 #menu {
@@ -547,13 +548,14 @@ button.filled {
     a {
       outline: none;
       background: url('../images/AFlogo.png') no-repeat;
-      height: 37px;
+      height: 28px;
       display: block;
     }
-    span {
+    span.payOff {
       background: url("../images/payOff.png") no-repeat;
       display: block;
       height: 13px;
+      margin-top: 10px;
     }
   }
   li {
@@ -996,9 +998,11 @@ button.filled {
         }
         .comLabel {
           padding: 4px 6px;
-          bottom: 20px;
+          bottom: 10px;
           background-color: #ffffff;
+          color: $pink;
           position: absolute;
+          font-style: italic;
         }
       }
       .comChannel1 {
@@ -1825,7 +1829,16 @@ button.filled {
 /*----------MAX WIDTH 1199-----------*/
 
 @media (max-width: 1199px) {
-
+  #skrollr-body {
+    opacity: 1 !important;
+  }
+  #menu {
+    #mainLogo {
+      .payOff {
+        display: none;
+      }
+    }
+  }
 
 }
 
@@ -1836,6 +1849,8 @@ button.filled {
   .mobileView {
     display: none;
   }
+
+
 
 }
 
@@ -1878,6 +1893,9 @@ button.filled {
   .anchor {
     top: -60px;
   }
+  #skrollr-body {
+    height: 44px;
+  }
   #menu {
     font-size: 10px;
     height: 40px;
@@ -1889,7 +1907,7 @@ button.filled {
     #mainLogo .logoContainer a {
       outline: none;
       background: url('../images/logoHeaderSmall.png') no-repeat;
-      height: 57px;
+      height: 28px;
       width: 80px;
       margin-left: -40px;
     }

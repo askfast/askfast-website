@@ -22,7 +22,7 @@
       .container-fluid
         .row
           // Nav Bar
-          nav.col-md-2.bs-docs-sidebar.scrollspy
+          nav.col-lg-2.col-md-3.bs-docs-sidebar.scrollspy.hidden-xs.hidden-sm
             ul#sidebar.nav.nav-stacked(data-spy="affix")
               li
                 a(href='#getStart' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
@@ -56,10 +56,10 @@
                   li
                     a(href='#GroupCSub2' ng-click="anchorScroll()") {{ui.developers.getStart.title}}
           // Main Content
-          #mainPart2.col-md-10
+          #mainPart2.col-lg-10.col-md-9
             #getStart.anchor
-            section.group
-              .titleHeader.phonePrice
+            div
+              .titleHeader
                 h4 {{ui.developers.getStart.title}}
               .contentBlock
                 .row.subPart

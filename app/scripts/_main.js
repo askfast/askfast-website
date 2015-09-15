@@ -9,7 +9,7 @@
  */
 
 function detectmob() {
-    if(window.innerWidth <= 992 || $('html').hasClass('touch')) {
+    if(window.innerWidth <= 40 || $('html').hasClass('touch')) {
         return true;
     } else {
         return false;
