@@ -714,11 +714,11 @@ angular.module('AskFast', ['ngRoute'])
       });
 
     $(".comChannel").mouseenter(function() {
-      $('.comLabel', this).removeClass('hide flipOutY').addClass('animated flipInY');
+      $('.comLabel', this).removeClass('hide fadeOutDown').addClass('animated fadeInUp');
     });
 
     $(".comChannel").mouseleave(function() {
-      $('.comLabel', this).removeClass('flipInY').addClass('animated flipOutY');
+      $('.comLabel', this).removeClass('fadeInUp').addClass('animated fadeOutDown');
     });
 
   }])
@@ -867,7 +867,7 @@ angular.module('AskFast', ['ngRoute'])
 
   }])
   .controller('DevelopersController', [function(){
-    //menuList
+    //side menuList Developer
     $('body').scrollspy({
       target: '.bs-docs-sidebar',
       offset: 100
@@ -879,6 +879,7 @@ angular.module('AskFast', ['ngRoute'])
       }
     });
 
+    //highlight code
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     });
