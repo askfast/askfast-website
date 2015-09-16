@@ -77,8 +77,8 @@
               p.introText {{ui.home.intro.introText}}
           .row
             .col-md-12
-              a(href='https://portal.ask-fast.com/index.html#/register#step-1')
-                button.outline {{ui.general.tryForFree}}
+              button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+                | {{ui.general.contactUs}}
 
     #useCases
       .container
@@ -171,15 +171,23 @@
           .row
             .col-md-3.col-sm-6
               .clientLogo.tnt
-                img.hoverShow(src="/images/home/tnt02.png")
+                img.hoverShow(src="/images/home/tnt.png")
             .col-md-3.col-sm-6
               .clientLogo.amstelring
                 img.hoverShow(src="/images/home/amstelring.png")
             .col-md-3.col-sm-6
-              .clientLogo.vitens
-                img.hoverShow(src="/images/home/vitens02.png")
+              .clientLogo.buurtzorg
+                img.hoverShow(src="/images/home/buurtzorg.png")
             .col-md-3.col-sm-6
               .clientLogo.rb
                 img.hoverShow(src="/images/home/reddingsbrigade.png")
 
-    include ../includes/reminder
+    #contactUs
+      .container
+        .row.titleHeader
+        .row.contentBlock
+          .col-md-12
+            button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+              | {{ui.general.contactUs}}
+    include ../includes/contactForm
+

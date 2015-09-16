@@ -84,4 +84,11 @@
                   .hexagon
                 block step4
 
-    include ../../includes/reminder
+    #contactUs
+      .container
+        .row.titleHeader
+        .row.contentBlock
+          .col-md-12
+            button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+              | {{ui.general.contactUs}}
+    include ../../includes/contactForm

@@ -1712,9 +1712,10 @@ button.filled {
     .titleHeader {
       text-align: center;
     }
-    img{
+    .devImage {
       display: block;
       margin: 10px 0;
+      max-width: 100%;
     }
     ul {
       margin-left: 16px;

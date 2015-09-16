@@ -75,16 +75,11 @@
           .col-md-12
             p {{ui.pricing.minPrice}}
 
+
     #contactUs
       .container
-        //.row.titleHeader
         .row.contentBlock
-          .col-sm-6
+          .col-md-12
             button.outline(type='button', data-toggle='modal', data-target='#contactForm')
               | {{ui.general.contactUs}}
-
-          .col-sm-6
-            a(href='https://portal.ask-fast.com/index.html#/register#step-1')
-              button.outline {{ui.general.tryForFree}}
-
     include ../includes/contactForm
