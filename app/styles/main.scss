@@ -1813,6 +1813,23 @@ button.filled {
 }
 
 
+/* ==========================================================================
+   TOUCH DEVICES ONLY
+   ========================================================================== */
+
+.touch{
+  #skrollr-body {
+    opacity: 1;
+  }
+  #menu {
+    #mainLogo {
+      span.payOff {
+        display: none;
+      }
+    }
+  }
+}
+
 
 /* ==========================================================================
    MEDIA QUERIES
@@ -1829,16 +1846,8 @@ button.filled {
 /*----------MAX WIDTH 1199-----------*/
 
 @media (max-width: 1199px) {
-  #skrollr-body {
-    opacity: 1 !important;
-  }
-  #menu {
-    #mainLogo {
-      .payOff {
-        display: none;
-      }
-    }
-  }
+
+
 
 }
 
@@ -1873,6 +1882,7 @@ button.filled {
 
 }
 
+
 /*----------MAX WIDTH 767-----------*/
 
 @media (max-width: 767px) {
@@ -1899,36 +1909,35 @@ button.filled {
   #menu {
     font-size: 10px;
     height: 40px;
+
     li a {
       padding: 14px 20px;
       display: block;
       outline: none;
     }
-    #mainLogo .logoContainer a {
-      outline: none;
-      background: url('../images/logoHeaderSmall.png') no-repeat;
-      height: 28px;
-      width: 80px;
-      margin-left: -40px;
+    #mainLogo {
+      padding: 12px 0;
+      a {
+        outline: none;
+        background: url('../images/AFlogoSmall.png') no-repeat;
+        height: 20px;
+        width: 112px;
+      }
     }
   }
-
 }
+
 
 /*----------ONLY SCREEN | RATIO 2-----------*/
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   #menu {
-    .container {
-      #mainLogo {
-        .logoContainer {
-          a {
-            background: url('../images/logoHeader@2x.png') no-repeat;
-            background-size: 140px 110px;
-            height: 110px;
-            width: 140px;
-          }
-        }
+    #mainLogo {
+      a {
+        background: url('../images/AFlogo@2x.png') no-repeat;
+        background-size: 159px 28px;
+        height: 28px;
+        width: 159px;
       }
     }
   }
@@ -1938,16 +1947,12 @@ button.filled {
 
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   #menu {
-    .container {
-      #mainLogo {
-        .logoContainer {
-          a {
-            background: url('../images/logoHeaderSmall@2x.png') no-repeat;
-            background-size: 80px 57px;
-            height: 57px;
-            width: 80px;
-          }
-        }
+    #mainLogo {
+      a {
+        background: url('../images/AFlogoSmall@2x.png') no-repeat;
+        background-size: 112px 20px;
+        height: 20px;
+        width: 112px;
       }
     }
   }
