@@ -18,7 +18,7 @@ $black: #000000;
 $soft-pink: #fadae8;
 $yellow: #efbb26;
 $green: #14a5a5;
-$light-grey: #e5e5e5;
+$light-gray: #e5e5e5;
 $gray: #A0A0A0;
 
 $marginBelow: 40px;
@@ -827,7 +827,7 @@ button.filled {
 
 #contactForm {
   .modal-content {
-    background-color: $light-grey;
+    background-color: $light-gray;
     .modal-body {
       padding: 0 15px;
     }
@@ -1178,19 +1178,10 @@ button.filled {
 /*=====USE CASES OVERVIEW=====*/
 
 .useCasesOverview {
-  .vierkantje {
-    width: 400px;
-    height: 300px;
-    background-image: linear-gradient(135deg, transparent 10px, #c00 0px), linear-gradient(225deg, transparent 10px, #c00 0px), linear-gradient(315deg, transparent 10px, #c00 0px), linear-gradient(45deg, transparent 10px, #c00 0px);
-    background-origin: padding-box, padding-box, padding-box, padding-box;
-    background-position: left top, right top, right bottom, left bottom;
-    background-repeat: no-repeat;
-    background-size: 50% 50%;
 
-  }
-  background-color: $light-grey;
+  background-color: $light-gray;
   .zigZagBorder:after {
-    background-image: linear-gradient(-45deg, $light-grey 8px, transparent 0), linear-gradient(45deg, $light-grey 8px, transparent 0);
+    background-image: linear-gradient(-45deg, $light-gray 8px, transparent 0), linear-gradient(45deg, $light-gray 8px, transparent 0);
   }
   #intro {
     background-image: url('../images/headers/useCases.jpg');
@@ -1713,6 +1704,7 @@ button.filled {
       display: block;
       margin: 10px 0;
       max-width: 100%;
+      border: 1px solid $light-gray;
     }
     ul {
       margin-left: 16px;
