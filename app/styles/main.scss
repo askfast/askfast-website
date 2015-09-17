@@ -699,17 +699,14 @@ button.filled {
 
 
 .hexagonExtended {
-  //display: inline-block;
-  //width: 100%;
   display: inline-flex;
   position: relative;
   margin-top: 140px;
   .part1, .part2, .part3  {
-    //align-items: stretch;
     display: inline-block;
   }
   .part1 {
-    margin-left: -12px;
+    margin-left: -13px;
     position: absolute;
     height: 100%;
   }
@@ -1340,10 +1337,10 @@ button.filled {
     #intro {
       .hexagonExtended {
         .part1 {
-          margin-left: -23px;
+          margin-left: -25px;
         }
         .part3 {
-          margin-left: 23px;
+          margin-left: 24px;
         }
       }
     }
@@ -1873,9 +1870,6 @@ button.filled {
 /*----------MIN WIDTH 768 | MAX WIDTH 991-----------*/
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .hideSm {
-    display: none !important;
-  }
 
   .mobileView {
     display: none;
@@ -1887,15 +1881,11 @@ button.filled {
 /*----------MAX WIDTH 767-----------*/
 
 @media (max-width: 767px) {
-  .hideXs {
-    display: none !important;
-  }
-  h1 {
+
+  h1.subPageTitle {
     font-size: 24px;
   }
-  h2 {
-    font-size: 20px;
-  }
+
 
   .desktopView {
     display: none;
@@ -1907,6 +1897,7 @@ button.filled {
   #skrollr-body {
     height: 44px;
   }
+
   #menu {
     font-size: 10px;
     height: 40px;
@@ -1926,6 +1917,49 @@ button.filled {
       }
     }
   }
+
+  #home {
+    #intro {
+      height: 340px;
+      .hexagonExtended{
+        margin-top: 0px;
+        .part1 {
+          margin-left: -18px;
+        }
+        .part3 {
+          margin-left: 17px;
+        }
+      }
+      .communicationChannels{
+        width: 100%;
+        .comChannel {
+          bottom: -38px;
+        }
+      }
+    }
+  }
+
+  #useCasesPage {
+    #intro {
+      height: 300px;
+      .hexagonExtended {
+        margin-top: 100px;
+      }
+    }
+    .useCasesDetailPage{
+      #intro {
+        .hexagonExtended {
+          .part1 {
+            margin-left: -22px;
+          }
+          .part3 {
+            margin-left: 21px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 
@@ -1952,8 +1986,6 @@ button.filled {
       a {
         background: url('../images/AFlogoSmall@2x.png') no-repeat;
         background-size: 112px 20px;
-        height: 20px;
-        width: 112px;
       }
     }
   }

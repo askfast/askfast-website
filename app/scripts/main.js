@@ -44,10 +44,10 @@ var localization = {
     general: {
       tryForFree: 'Probeer nu',
       readMore: 'Lees meer',
-      here: 'hier',
-      contactUs: 'Contact us',
+      here: 'here',
+      contactUs: 'Contact',
       cookieMessage: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren. Door deze website te gebruiken, accepteert u ons',
-      cookieMessageLink: 'privacybeleid'
+      cookieMessageLink: 'privacybeleid',
     },
     notFound: {
       title: '404',
@@ -70,7 +70,12 @@ var localization = {
       email: ' info@ask-fast.com '
     },
     contactForm: {
-      title: 'Contact us'
+      title: 'Contact',
+      name: 'Naam',
+      emailAddress: 'Emailadres',
+      message: 'Bericht',
+      cancel: 'Annuleren',
+      send: 'Verzenden'
     },
 
     /*---HOME---*/
@@ -390,7 +395,12 @@ var localization = {
       email: ' info@ask-fast.com '
     },
     contactForm: {
-      title: 'Contact us'
+      title: 'Contact us',
+      name: 'Name',
+      emailAddress: 'Email address',
+      message: 'Message',
+      cancel: 'Cancel',
+      send: 'Send'
     },
 
     /*---HOME---*/

@@ -9,9 +9,9 @@
       .modal-body
         #contact.row
           .col-md-12
-            input#contactName.contactInput.col-xs-12(type='text', placeholder='Naam')
-            input#contactEmail.contactInput.col-xs-12(type='text', placeholder='E-mailadres')
-            textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='Bericht')
+            input#contactName.contactInput.col-xs-12(type='text', placeholder='{{ui.contactForm.name}}')
+            input#contactEmail.contactInput.col-xs-12(type='text', placeholder='{{ui.contactForm.emailAddress}}')
+            textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='{{ui.contactForm.message}}')
       .modal-footer
-        button.btn.outline(type='button', data-dismiss='modal') Sluiten
-        button.btn.filled.ng-binding(type='button', onclick='sendMail()') Verzenden
+        button.btn.outline(type='button', data-dismiss='modal') {{ui.contactForm.cancel}}
+        button.btn.filled.ng-binding(type='button', onclick='sendMail()') {{ui.contactForm.send}}
