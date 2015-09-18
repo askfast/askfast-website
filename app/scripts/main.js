@@ -74,8 +74,6 @@ angular.module('AskFast', ['ngRoute'])
       localStorage.setItem('selectedLanguage', 'nl');
     }
 
-    $rootScope.test = 123;
-
     $rootScope.showLangMenu = false;
 
     $rootScope.languages = ['en', 'nl'];
