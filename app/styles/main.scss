@@ -1706,6 +1706,12 @@ button.filled {
       max-width: 100%;
       border: 1px solid $light-gray;
     }
+    pre {
+      margin-bottom: 30px;
+      code {
+        margin: 0;
+      }
+    }
     ul {
       margin-left: 16px;
       list-style-type: disc;
@@ -1910,6 +1916,26 @@ button.filled {
     }
   }
 
+
+  #useCasesPage, #pricingPage, #developersPage {
+    #intro {
+      height: 220px;
+      .hexagonExtended {
+        margin-top: 100px;
+        .part1 {
+          margin-left: -10px;
+        }
+        .part3 {
+          margin-left: 9px;
+        }
+      }
+    }
+  }
+
+  .contentBlock {
+    padding: 40px 0 60px;
+  }
+
   #home {
     #intro {
       height: 340px;
@@ -1929,23 +1955,26 @@ button.filled {
         }
       }
     }
+    #useCases {
+      p {
+        padding-bottom: 5px;
+      }
+    }
+    #clients {
+      .clientLogo {
+        max-width: 100%;
+      }
+    }
   }
 
   #useCasesPage {
-    #intro {
-      height: 300px;
-      .hexagonExtended {
-        margin-top: 100px;
-      }
-    }
     .useCasesDetailPage{
       #intro {
         .hexagonExtended {
-          .part1 {
-            margin-left: -22px;
-          }
-          .part3 {
-            margin-left: 21px;
+          margin-top: 80px;
+          .part2{
+            border: none;
+            padding: 0;
           }
         }
       }

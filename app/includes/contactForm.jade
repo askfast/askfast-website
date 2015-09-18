@@ -9,9 +9,15 @@
       .modal-body
         #contact.row
           .col-md-12
-            input#contactName.contactInput.col-xs-12(type='text', placeholder='{{ui.contactForm.name}}')
-            input#contactEmail.contactInput.col-xs-12(type='text', placeholder='{{ui.contactForm.emailAddress}}')
-            textarea#message.contactTextarea.col-xs-12(rows='8', placeholder='{{ui.contactForm.message}}')
+            input#contactName.contactInput.col-xs-12(type='text',
+              placeholder='{{ui.contactForm.name}}',
+              ng-model='contactForm.name')
+            input#contactEmail.contactInput.col-xs-12(type='text',
+              placeholder='{{ui.contactForm.emailAddress}}',
+              ng-model='contactForm.emailAddress')
+            textarea#message.contactTextarea.col-xs-12(rows='8',
+              placeholder='{{ui.contactForm.message}}',
+              ng-model='contactForm.message')
       .modal-footer
         button.btn.outline(type='button', data-dismiss='modal') {{ui.contactForm.cancel}}
-        button.btn.filled.ng-binding(type='button', onclick='sendMail()') {{ui.contactForm.send}}
+        button.btn.filled.ng-binding(type='button', ng-click='sendMail(contactForm)') {{ui.contactForm.send}}

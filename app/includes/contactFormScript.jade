@@ -14,23 +14,24 @@ script.
     var rightColor = "white";
     var rightFontColor = "black";
     var sendMailURL = "../mail/sendMail.php";
+
     sendMailURL += "?contactName="+contactName +
             "&contactEmail="+contactEmail+
             "&message="+message+" \\nASK-Fast website";
     if(contactName == '' ){
-      alert("Vul alstublieft uw naam in.");
+      alert("slkdfskdlfj");
       $("#contactName").css("background-color" ,errorColor).css("color" ,errorFontColor);
       return ;
     }else{
       $("#contactName").css("background-color" ,rightColor).css("color" ,rightFontColor);
     }
     if(contactEmail == '' ){
-      alert("Vul alstublieft uw emailadres in.");
+      alert("");
       $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
       return ;
     }else{
       if(!IsEmail(contactEmail)){
-        alert("Uw emailadres is ongeldig.");
+        alert("");
         $("#contactEmail").css("background-color" ,errorColor).css("color" ,errorFontColor);
         return;
       }else{
@@ -38,7 +39,7 @@ script.
       }
     }
     if(message == '' ){
-      alert("Vul alstublieft een bericht in.");
+      alert("");
       $("#message").css("background-color" ,errorColor).css("color" ,errorFontColor);
       return ;
     }else{
@@ -48,9 +49,9 @@ script.
       url: sendMailURL
     }).done(function( data ) {
       console.log(data);
-      alert("Bericht is verzonden!");
+      alert("");
     }).fail(function( error){
       console.log(error);
-      alert("Bericht is verzonden!");
+      alert("");
     });
   }
