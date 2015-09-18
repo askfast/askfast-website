@@ -3,11 +3,11 @@
   #dropdownMenu.mobileView.hide
     ul
       li
-        a(href='../usecases/') {{ui.menu.useCases}}
+        a(ng-class="{active: isLinkActive('/usecases')}", href='../usecases/') {{ui.menu.useCases}}
       li
-        a(href='../pricing.html') {{ui.menu.pricing}}
+        a(ng-class="{active: isLinkActive('/pricing.html')}", href='../pricing.html') {{ui.menu.pricing}}
       li
-        a(href='../developers.html') {{ui.menu.developers}}
+        a(ng-class="{active: isLinkActive('/developers.html')}", href='../developers.html') {{ui.menu.developers}}
   .container
     .row
       .col-sm-2

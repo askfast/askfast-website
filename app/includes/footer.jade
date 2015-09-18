@@ -11,20 +11,12 @@
       a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
   ul.contactDetails
     li {{ui.contact.address}}
-    li.hideXs {{ui.contact.zipcode}}
+    li.hidden-xs {{ui.contact.zipcode}}
     li {{ui.contact.city}}
-    li.hideXs
+    li.hidden-xs
       | {{ui.contact.phone}}
       li
         a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
-  ul.contactDetails.extraAddress.hideXs.hideSm
-    li {{ui.contactExtra.address}}
-    li.hideXs {{ui.contactExtra.zipcode}}
-    li {{ui.contactExtra.city}}
-    li.hideXs
-      | {{ui.contactExtra.phone}}
-      li
-        a(href='mailto:{{ui.contactExtra.email}}') {{ui.contactExtra.email}}
   ul.socialMedia.hide
     li.facebook
       a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')

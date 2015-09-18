@@ -596,17 +596,21 @@ button.filled {
 
 #dropdownMenu {
   width: 100%;
-  background-color: #000;
+  background-color: $black;
+  opacity: 0.7;
   position: fixed;
-  top: 40px;
+  top: 44px;
   z-index: 130;
   ul {
     margin-top: 0px;
     li {
-      display: block;
-      border-top: 1px solid #696969;
+      //display: block;
+      //border-top: 1px solid #696969;
       a {
         color: $white;
+      }
+      a.active {
+        color: $pink;
       }
     }
   }
@@ -844,7 +848,7 @@ button.filled {
 
 #footer {
   bottom: 0;
-  background: none repeat scroll 0 0 #000;
+  background: none repeat scroll 0 0 $pink;
   color: #fff;
   display: block;
   height: 30px;
@@ -860,16 +864,18 @@ button.filled {
     background-color: $pink;
     bottom: -3px;
     width: 32px;
+    a {
+      color: $white;
+    }
   }
   #languageMenu {
     position: fixed;
     background-color: $pink;
     bottom: 30px;
     a {
-      opacity: 0.6;
+      color: $soft-pink
     }
     a:hover {
-      opacity: 1;
       color: #fff;
     }
     a.active {
@@ -878,10 +884,11 @@ button.filled {
     }
   }
   .languageToggle a, #languageMenu a {
-    color: #fff;
     padding: 9px;
     display: block;
-    border-bottom: 1px solid #fff;
+    border-width: 0 1px 1px 0;
+    border-color: $white;
+    border-style: solid;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
@@ -1978,6 +1985,13 @@ button.filled {
           }
         }
       }
+    }
+  }
+
+  #footer {
+    .contactDetails {
+      float: right;
+      margin-right: 10px;
     }
   }
 

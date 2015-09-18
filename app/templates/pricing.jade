@@ -38,7 +38,7 @@
               .row.contentBlock
                 .col-sm-4.item
                   h5 {{ui.pricing.number}}
-                  h3.price {{pricing.call.number | currency : '&euro;'}}
+                  h3.price {{pricing.call.number | currency : '&euro;'}} / month
                 .col-sm-4.item
                   h5 {{ui.pricing.inbound}}*
                   h3.price &euro;{{pricing.call.mobile.inbound.price}} / {{pricing.call.mobile.inbound.unit}}
@@ -60,7 +60,7 @@
               .row.contentBlock
                 .col-sm-4.item
                   h5 {{ui.pricing.number}}
-                  h3.price {{pricing.sms.number | currency : '&euro;'}}
+                  h3.price {{pricing.sms.number | currency : '&euro;'}} / month
                 .col-sm-4.item
                   h5 {{ui.pricing.inbound}}*
                   h3.price {{ui.pricing.free}}
