@@ -1,9 +1,11 @@
 'use strict';
 
 //  Google Analytics: change UA-XXXXX-X to be your site's ID.
-(function (i, s, o, g, r, a, m) {
+(function (i, s, o, g, r, a, m)
+{
   i['GoogleAnalyticsObject'] = r;
-  i[r] = i[r] || function () {
+  i[r] = i[r] || function ()
+    {
       (i[r].q = i[r].q || []).push(arguments)
     }, i[r].l = 1 * new Date();
   a = s.createElement(o),
@@ -16,65 +18,72 @@ ga('create', 'UA-66075857-1', 'ask-fast.com');
 ga('send', 'pageview');
 
 
-
 /*COOKIE MESSAGE HIDE*/
 
 var isShown = localStorage.getItem('cookieMessageShown');
 
-if (!isShown) {
+if (!isShown)
+{
   $('#cookieMessage').show();
 }
 
-$("#closeCookie").click(function () {
+$("#closeCookie").click(function ()
+{
   $('#cookieMessage').hide();
   localStorage.setItem('cookieMessageShown', true);
 });
-
-
 
 
 /* global angular */
 
 angular.module('AskFast', ['ngRoute'])
   .constant('locals', localizationFiles)
-  .config(['$locationProvider', function($locationProvider) {$locationProvider.html5Mode(true);} ])
-  .config(['$routeProvider', function($routeProvider) {
-    $routeProvider
-    .when('/', {
-      redirectTo: '/index.html'
-    })
-    .when('/index.html', {
-      controller: 'IndexController',
-      templateUrl: '/templates/index.html'
-    })
-    .when('/pricing.html', {
-      controller: 'PricingController',
-      templateUrl: '/templates/pricing.html'
-    })
-    .when('/developers.html', {
-      controller: 'DevelopersController',
-      templateUrl: '/templates/developers.html'
-    })
-    .when('/usecases/', {
-      controller: 'UseCasesController',
-      templateUrl: '/templates/usecases/index.html'
-    })
-    .when('/usecases/:subsection', {
-      templateUrl: function(params) {
-        return '/templates/usecases/' + params.subsection;
-      }
-    })
-    .otherwise('/index.html');
+  .config(['$locationProvider', function ($locationProvider)
+  {
+    $locationProvider.html5Mode(true);
   }])
-  .run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window) {
+  .config(['$routeProvider', function ($routeProvider)
+  {
+    $routeProvider
+      .when('/', {
+        redirectTo: '/index.html'
+      })
+      .when('/index.html', {
+        controller: 'IndexController',
+        templateUrl: '/templates/index.html'
+      })
+      .when('/pricing.html', {
+        controller: 'PricingController',
+        templateUrl: '/templates/pricing.html'
+      })
+      .when('/developers.html', {
+        controller: 'DevelopersController',
+        templateUrl: '/templates/developers.html'
+      })
+      .when('/usecases/', {
+        controller: 'UseCasesController',
+        templateUrl: '/templates/usecases/index.html'
+      })
+      .when('/usecases/:subsection', {
+        templateUrl: function (params)
+        {
+          return '/templates/usecases/' + params.subsection;
+        }
+      })
+      .otherwise('/index.html');
+  }])
+  .run(['$rootScope', '$location', '$http', 'locals', '$anchorScroll', '$window', function ($rootScope, $location, $http, locals, $anchorScroll, $window)
+  {
 
-    $rootScope.anchorScroll = function (){$anchorScroll();};
+    $rootScope.anchorScroll = function ()
+    {
+      $anchorScroll();
+    };
 
-    if (!localStorage.getItem('selectedLanguage')) {
+    if (!localStorage.getItem('selectedLanguage'))
+    {
       localStorage.setItem('selectedLanguage', 'nl');
     }
-
-    $rootScope.test = 123;
 
     $rootScope.showLangMenu = false;
 
@@ -82,11 +91,13 @@ angular.module('AskFast', ['ngRoute'])
 
     var toggled = true;
 
-    $rootScope.changeLang = function (lang) {
+    $rootScope.changeLang = function (lang)
+    {
 
       $(".languageToggle li a").html(lang);
 
-      if ($rootScope.lang == lang) {
+      if ($rootScope.lang == lang)
+      {
         $('#languageMenu')
           .removeClass('rotateInDownLeft')
           .addClass('animated rotateOutUpLeft');
@@ -105,46 +116,102 @@ angular.module('AskFast', ['ngRoute'])
 
     $rootScope.changeLang(localStorage.getItem('selectedLanguage'));
 
-    $rootScope.isLinkActive = function isLinkActive(route) {
-      if ($location.path().match(route)) {
-          return true;
+    $rootScope.isLinkActive = function isLinkActive(route)
+    {
+      if ($location.path().match(route))
+      {
+        return true;
       }
       return false;
     }
 
-    $rootScope.sendMail=function(contactForm){
+    $rootScope.sendMail = function (contactForm)
+    {
+      var errorColor = "#e10b7d";
+      var errorFontColor = "white";
+      var rightColor = "white";
+      var rightFontColor = "black";
+      var sendMailURL = "../mail/sendMail.php";
+
       if (! contactForm)
       {
-        alert($rootScope.ui.contactForm.name + ' is leeg');
-      }
-      else if(contactForm.name)
-      {
-
-      }
-      else if(contactForm.name)
-      {
-
-      }
-      else if(contactForm.name)
-      {
-
+        alert($rootScope.ui.contactForm.fillInForm);
+        $("#contactForm input, #contactForm textarea")
+          .css("background-color" ,errorColor)
+          .css("color" ,errorFontColor);
       }
       else
       {
+        $("#contactForm input, #contactForm textarea")
+          .css("background-color" ,rightColor)
+          .css("color" ,rightFontColor);
 
+        if (! contactForm.name)
+        {
+          alert($rootScope.ui.contactForm.fillInName);
+          $("#contactName")
+            .css("background-color" ,errorColor)
+            .css("color" ,errorFontColor);
+        }
+        else
+        {
+          $("#contactName")
+            .css("background-color" ,rightColor)
+            .css("color" ,rightFontColor);
+        }
+
+        if (! contactForm.emailAddress)
+        {
+          alert($rootScope.ui.contactForm.fillInEmail);
+          $("#contactEmail")
+            .css("background-color" ,errorColor)
+            .css("color" ,errorFontColor);
+        }
+        else
+        {
+          $("#contactEmail")
+            .css("background-color" ,rightColor)
+            .css("color" ,rightFontColor);
+        }
+
+        if (! contactForm.message)
+        {
+          alert($rootScope.ui.contactForm.fillInMessage);
+          $("#message")
+            .css("background-color" ,errorColor)
+            .css("color" ,errorFontColor);
+        }
+        else
+        {
+          $("#message")
+            .css("background-color" ,rightColor)
+            .css("color" ,rightFontColor);
+        }
       }
 
-          //if (contactForm && ! contactForm.name){
-          //  alert('hoi');
-          //}
-
+      if(contactForm.name &&
+        contactForm.emailAddress &&
+        contactForm.message
+      )
+      {
+        $http.post(sendMailURL, contactForm)
+          .then(function(response) {
+            alert($rootScope.ui.contactForm.messageSent);
+          }, function(response) {
+            alert($rootScope.ui.contactForm.messageNotSent);
+          });
+      }
     };
 
 
-    $(".languageToggle li a").click(function () {
-      if (toggled) {
+    $(".languageToggle li a").click(function ()
+    {
+      if (toggled)
+      {
         toggleOut();
-      } else {
+      }
+      else
+      {
         $('#languageMenu')
           .removeClass('hide rotateOutUpLeft')
           .addClass('animated rotateInDownLeft');
@@ -153,7 +220,8 @@ angular.module('AskFast', ['ngRoute'])
       toggled = !toggled;
     });
 
-    function toggleOut() {
+    function toggleOut()
+    {
       $('#languageMenu')
         .removeClass('rotateInDownLeft')
         .addClass('animated rotateOutUpLeft');
@@ -164,51 +232,63 @@ angular.module('AskFast', ['ngRoute'])
 
   }])
 
-  .controller('IndexController', [function(){
+  .controller('IndexController', [function ()
+  {
     //Animate communication channels
-    $(".comIcon").hover(function() {
+    $(".comIcon").hover(function ()
+      {
         $(this).addClass('animated pulse');
       },
-      function(){
+      function ()
+      {
         var self = this;
-        setTimeout(function() {
+        setTimeout(function ()
+        {
           $(self).removeClass('pulse');
-        },600);
+        }, 600);
       });
 
-    $(".comChannel").mouseenter(function() {
+    $(".comChannel").mouseenter(function ()
+    {
       $('.comLabel', this).removeClass('hide fadeOutDown').addClass('animated fadeInUp');
     });
 
-    $(".comChannel").mouseleave(function() {
+    $(".comChannel").mouseleave(function ()
+    {
       $('.comLabel', this).removeClass('fadeInUp').addClass('animated fadeOutDown');
     });
 
   }])
-  .controller('UseCasesController', [function(){
+  .controller('UseCasesController', [function ()
+  {
     //Use Cases Index descriptions
-    $(".useCase").mouseenter(function() {
+    $(".useCase").mouseenter(function ()
+    {
       $(".description", this).removeClass('hide fadeOutDown').addClass('animated fadeInUp');
     });
 
-    $(".useCase").mouseleave(function() {
-      $(".description", this).removeClass('fadeInUp').addClass('animated fadeOutDown').delay(400).queue(function(){
+    $(".useCase").mouseleave(function ()
+    {
+      $(".description", this).removeClass('fadeInUp').addClass('animated fadeOutDown').delay(400).queue(function ()
+      {
         $(this).addClass('hide').dequeue();
       });
     });
 
 
-
   }])
-  .controller('PricingController', ['$http', '$rootScope', function($http, $rootScope){
+  .controller('PricingController', ['$http', '$rootScope', function ($http, $rootScope)
+  {
 
-    $http.get('http://api.ask-fast.com/ddr/prices')
-    .success(function(data, status, headers, config){
-      $rootScope.pricingData = processPricingData(data);
-      $rootScope.pricing = $rootScope.pricingData['Netherlands'];
-    });
+    $http.get('http://sandbox.ask-fast.com/ddr/prices')
+      .success(function (data, status, headers, config)
+      {
+        $rootScope.pricingData = processPricingData(data);
+        $rootScope.pricing = $rootScope.pricingData['Netherlands'];
+      });
 
-    function processPricingData(pricingData){
+    function processPricingData(pricingData)
+    {
       var countryData = {};
 
       var adapterPurchase = null;
@@ -225,54 +305,68 @@ angular.module('AskFast', ['ngRoute'])
         TTS_SERVICE: 'TTS_SERVICE_COST'
       }
 
-      angular.forEach(pricingData, function(value){
-        if (value.country) {
+      angular.forEach(pricingData, function (value)
+      {
+        if (value.country)
+        {
 
           countryData[value.country] = countryData[value.country] || {
-            call:{
-              fixed: {
-                outbound: {},
-                inbound: {}
+              call: {
+                fixed: {
+                  outbound: {},
+                  inbound: {}
+                },
+                mobile: {
+                  outbound: {},
+                  inbound: {}
+                },
               },
-              mobile: {
+              sms: {
                 outbound: {},
-                inbound: {}
-              },
-            },
-            sms:{
-              outbound: {},
-              inbound: {},
-            }
-          };
+                inbound: {},
+              }
+            };
 
-          if (value.adapterType === 'CALL') {
+          if (value.adapterType === 'CALL')
+          {
 
-            if (value.category === CATEGORIES.OUTBOUND) {
+            if (value.category === CATEGORIES.OUTBOUND)
+            {
 
-              if (value.phoneNumberType === 'FIXED_LINE') {
+              if (value.phoneNumberType === 'FIXED_LINE')
+              {
 
                 countryData[value.country].call.fixed.outbound.price = value.price;
                 countryData[value.country].call.fixed.outbound.unit = value.unitType.toLowerCase();
 
-              } else {
+              }
+              else
+              {
 
                 countryData[value.country].call.mobile.outbound.price = value.price;
                 countryData[value.country].call.mobile.outbound.unit = value.unitType.toLowerCase();
               }
 
-            } else if (value.category === CATEGORIES.INBOUND) {
+            }
+            else if (value.category === CATEGORIES.INBOUND)
+            {
 
-              if (value.phoneNumberType === 'FIXED_LINE') {
+              if (value.phoneNumberType === 'FIXED_LINE')
+              {
 
                 countryData[value.country].call.fixed.inbound.price = value.price;
                 countryData[value.country].call.fixed.inbound.unit = value.unitType.toLowerCase();
 
-              } else if (value.phoneNumberType === 'MOBILE') {
+              }
+              else if (value.phoneNumberType === 'MOBILE')
+              {
 
                 countryData[value.country].call.mobile.inbound.price = value.price;
                 countryData[value.country].call.mobile.inbound.unit = value.unitType.toLowerCase();
 
-              } else if (value.phoneNumberType === 'ALL') {
+              }
+              else if (value.phoneNumberType === 'ALL')
+              {
 
                 countryData[value.country].call.fixed.inbound.price = value.price;
                 countryData[value.country].call.mobile.inbound.price = value.price;
@@ -283,14 +377,19 @@ angular.module('AskFast', ['ngRoute'])
 
             }
 
-          } else if (value.adapterType === 'SMS') {
+          }
+          else if (value.adapterType === 'SMS')
+          {
 
-            if (value.category === CATEGORIES.OUTBOUND) {
+            if (value.category === CATEGORIES.OUTBOUND)
+            {
 
               countryData[value.country].sms.outbound.price = value.price;
               countryData[value.country].sms.outbound.unit = value.unitType.toLowerCase();
 
-            } else if (value.category === CATEGORIES.INBOUND) {
+            }
+            else if (value.category === CATEGORIES.INBOUND)
+            {
 
               countryData[value.country].sms.inbound.price = value.price;
               countryData[value.country].sms.inbound.unit = value.unitType.toLowerCase();
@@ -298,21 +397,32 @@ angular.module('AskFast', ['ngRoute'])
             }
 
           }
-        // end if value.country
-        } else {
-          if (value.category === CATEGORIES.ADAPTER)  {
+          // end if value.country
+        }
+        else
+        {
+          if (value.category === CATEGORIES.ADAPTER)
+          {
 
-            if (adapterPurchase) {
+            if (adapterPurchase)
+            {
               console.warn('adapterPurchase already has a value: ' + adapterPurchase + ', proposed value: ' + value.price);
-            } else {
+            }
+            else
+            {
               adapterPurchase = value.price;
             }
 
-          } else if (value.category === CATEGORIES.STARTUP && value.adapterType === 'CALL') {
+          }
+          else if (value.category === CATEGORIES.STARTUP && value.adapterType === 'CALL')
+          {
 
-            if (startUpCost) {
+            if (startUpCost)
+            {
               console.warn('startUpCost already has a value: ' + startUpCost + ', proposed value: ' + value.price);
-            } else {
+            }
+            else
+            {
               startUpCost = value.price;
             }
 
@@ -320,7 +430,8 @@ angular.module('AskFast', ['ngRoute'])
         }
       });
 
-      angular.forEach(countryData, function(value){
+      angular.forEach(countryData, function (value)
+      {
         value.call.startup = startUpCost;
         value.call.number = adapterPurchase;
         value.sms.number = adapterPurchase;
@@ -331,7 +442,8 @@ angular.module('AskFast', ['ngRoute'])
     } // end processPricingData
 
   }])
-  .controller('DevelopersController', [function(){
+  .controller('DevelopersController', [function ()
+  {
     //side menuList Developer
     $('body').scrollspy({
       target: '.bs-docs-sidebar',
@@ -345,24 +457,28 @@ angular.module('AskFast', ['ngRoute'])
     });
 
     //highlight code
-    $('pre code').each(function(i, block) {
+    $('pre code').each(function (i, block)
+    {
       hljs.highlightBlock(block);
     });
 
   }]);
 
 
-
-
 //menu toggle mobile
-$("#dropdownToggle").click(function () {
-  if ($('#dropdownMenu').hasClass('show')) {
+$("#dropdownToggle").click(function ()
+{
+  if ($('#dropdownMenu').hasClass('show'))
+  {
     $('#dropdownMenu').removeClass('show').addClass('hide');
-  } else {
+  }
+  else
+  {
     $('#dropdownMenu').removeClass('hide').addClass('show');
   }
 });
 
-$("#dropdownMenu li").click(function () {
-    $('#dropdownMenu').removeClass('show').addClass('hide');
+$("#dropdownMenu li").click(function ()
+{
+  $('#dropdownMenu').removeClass('show').addClass('hide');
 });

@@ -43,8 +43,7 @@ var localizationFiles = {
       send: 'Verzenden',
       fillInForm: 'Vul alstublieft het formulier in.',
       fillInName: 'Vul alstublieft uw naam in.',
-      fillInEmail: 'Vul alstublieft uw emailadres in.',
-      invalidEmail: 'Uw emailadres is ongeldig.',
+      fillInEmail: 'Vul alstublieft een valide emailadres in.',
       fillInMessage: 'Vul alstublieft een bericht in.',
       messageSent: 'Bericht is verzonden!',
       messageNotSent: 'Bericht is niet verzonden!'
@@ -375,7 +374,7 @@ var localizationFiles = {
       send: 'Send',
       fillInForm: 'Please fill in the contact form.',
       fillInName: 'Please fill in your name.',
-      fillInEmail: 'Please fill in your email address.',
+      fillInEmail: 'Please fill a valid email address.',
       invalidEmail: 'Invalid email address.',
       fillInMessage: 'Please write a message.',
       messageSent: 'Message is sent!',
