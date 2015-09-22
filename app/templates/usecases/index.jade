@@ -21,7 +21,7 @@
     //.zigZagBorder
     #casesOverview
       .container
-        .row.overviewIntro
+        .row.overviewIntro.contentBlock
           .col-md-8.col-md-offset-2
             h2 {{ui.useCases.intro.title}}
             p {{ui.useCases.intro.text}}
@@ -154,7 +154,7 @@
                 h3 {{ui.useCases.case08.title}}
                 p.description.hide {{ui.useCases.case08.overviewDescription}}
         .row.visible-sm-block
-          .col-sm-12.useCase.useCase9
+          .col-sm-offset-3.col-sm-6.useCase.useCase9
             .media.thumbnail.noLink
               .media-left.media-middle
                 .icon
@@ -165,7 +165,6 @@
     // Button trigger modal
     #contactUs
       .container
-        .row.titleHeader
         .row.contentBlock
           .col-md-12
             button.outline(type='button', data-toggle='modal', data-target='#contactForm')

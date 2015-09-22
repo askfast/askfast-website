@@ -478,7 +478,7 @@ $("#dropdownToggle").click(function ()
   }
 });
 
-$("#dropdownMenu li").click(function ()
+$("#dropdownMenu li,#mainLogo").click(function ()
 {
   $('#dropdownMenu').removeClass('show').addClass('hide');
 });

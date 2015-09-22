@@ -753,7 +753,7 @@ button.filled {
 }
 
 .contentBlock {
-  padding: 100px 0;
+  padding: 80px 0 100px;
 }
 
 #cookieMessage {
@@ -858,6 +858,7 @@ button.filled {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 10px;
+  @include box-shadow(0 0 3px  rgba(100,100,100,1));
   .languageToggle {
     position: fixed;
     display: block;
@@ -1195,9 +1196,7 @@ button.filled {
   }
 
   #casesOverview {
-    padding: 100px 0 60px;
     .overviewIntro {
-      margin-bottom: 100px;
     }
     .useCase {
       text-align: left;
@@ -1226,7 +1225,7 @@ button.filled {
       }
       .thumbnail.noLink {
         background: none;
-        border: 1px solid $pink;
+        border: none;
         @include box-shadow(none);
         h3 {
           //color: $green;
@@ -1369,6 +1368,7 @@ button.filled {
       font-size: 21px;
     }
   }
+
 
 }
 
@@ -1666,9 +1666,6 @@ button.filled {
         margin-left: 10px;
       }
     }
-    .item {
-      //margin-top: 40px;
-    }
     .price {
       margin-top: 10px;
     }
@@ -1841,9 +1838,7 @@ button.filled {
 /*----------MIN WIDTH 1200-----------*/
 
 @media (min-width: 1200px) {
-  .mobileView {
-    display: none;
-  }
+
 }
 
 /*----------MAX WIDTH 1199-----------*/
@@ -1858,11 +1853,6 @@ button.filled {
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
-  .mobileView {
-    display: none;
-  }
-
-
 
 }
 
@@ -1876,8 +1866,27 @@ button.filled {
 
 @media (min-width: 768px) and (max-width: 991px) {
 
+
+
+}
+
+/*----------MIN WIDTH 768-----------*/
+
+@media (min-width: 768px) {
+
   .mobileView {
     display: none;
+  }
+
+  #howWork {
+    .contentBlock{
+      .stepLine {
+        border-top: 3px dashed $pink;
+        position: relative;
+        top: 52px;
+        margin: 0 130px;
+      }
+    }
   }
 
 }
@@ -1890,7 +1899,6 @@ button.filled {
   h1.subPageTitle {
     font-size: 24px;
   }
-
 
   .desktopView {
     display: none;
@@ -1943,6 +1951,10 @@ button.filled {
     padding: 40px 0 60px;
   }
 
+  #priceOverview .item, .benefit, .step {
+    margin-bottom: 40px;
+  }
+
   #home {
     #intro {
       height: 340px;
@@ -1984,6 +1996,21 @@ button.filled {
             padding: 0;
           }
         }
+      }
+      #howWork {
+        .contentBlock{
+          .step {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #pricingPage {
+    #priceOverview{
+      .item {
+
       }
     }
   }
