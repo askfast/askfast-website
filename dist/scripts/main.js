@@ -280,7 +280,7 @@ angular.module('AskFast', ['ngRoute'])
   .controller('PricingController', ['$http', '$rootScope', function ($http, $rootScope)
   {
 
-    $http.get('http://sandbox.ask-fast.com/ddr/prices')
+    $http.get('https://api.ask-fast.com/ddr/prices')
       .success(function (data, status, headers, config)
       {
         $rootScope.pricingData = processPricingData(data);
