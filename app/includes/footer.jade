@@ -1,0 +1,29 @@
+//includes.jade
+
+#footer
+  ul.languageToggle
+    li
+      a
+  ul#languageMenu.hide
+    li
+      a(ng-click="changeLang('nl')", class="{{(lang == 'nl') && 'active'}}") NL
+    li
+      a(ng-click="changeLang('en')", class="{{(lang == 'en') && 'active'}}") EN
+  ul.contactDetails
+    li {{ui.contact.address}}
+    li.hidden-xs {{ui.contact.zipcode}}
+    li {{ui.contact.city}}
+    li.hidden-xs
+      | {{ui.contact.phone}}
+      li
+        a(href='mailto:{{ui.contact.email}}') {{ui.contact.email}}
+  ul.socialMedia.hide
+    li.facebook
+      a(href='https://www.facebook.com/ASKCommunitySystems', target='blank')
+    li.twitter
+      a(href='https://twitter.com/askcs', target='blank')
+    li.linkedin
+      a(href='https://www.linkedin.com/company/ask-community-systems', target='blank')
+    li.googleplus
+      a(href='https://plus.google.com/100201535227830552056', target='blank')
+

@@ -1,0 +1,30 @@
+doctype
+html
+  head
+    include includes/headDirect
+
+
+  body.notFound(ng-app='AskWeb')
+    //--------HEADER------
+    include includes/header
+
+
+
+    //--------MAIN------
+    #content
+      .container.smallDeviceContainer
+        .row
+          .col-xs-12.content
+            h1 {{ui.notFound.title}}
+            p {{ui.notFound.description01}}
+
+
+
+    //--------FOOTER------
+    include includes/footer
+
+
+
+
+    //--------JS------
+    include includes/scriptLinks

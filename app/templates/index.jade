@@ -1,0 +1,193 @@
+//--------INTRO------
+#content
+  #home
+
+    #intro.fullbackground
+      #colorOverlay
+      .container
+        .row
+          .col-md-12.col-md-offset-0.col-xs-10.col-xs-offset-1.introText
+            .subContainer
+              .hexagonExtended
+                .part1
+                  .slash.fSlash
+                  .slash.bSlash
+                .part2
+                  h1.subPageTitle {{ui.home.intro.slogan}}
+                .part3
+                  .slash.bSlash
+                  .slash.fSlash
+        .row.communicationChannels.noGutter
+          .col-sm-4.col-xs-12
+            .col-xs-4
+              .comChannel.comChannel1
+                img.comIcon(src='/images/home/channels/phone.png', alt='Phone')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel1}}
+            .col-xs-4
+              .comChannel.comChannel2
+                img.comIcon(src='/images/home/channels/smartphone.png', alt='Smartphone')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel2}}
+            .col-xs-4
+              .comChannel.comChannel3
+                img.comIcon(src='/images/home/channels/tablet.png', alt='Tablet')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel3}}
+          .col-sm-4.hidden-xs
+            .col-sm-4
+              .comChannel.comChannel4
+                img.comIcon(src='/images/home/channels/laptop.png', alt='PC')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel4}}
+            .col-sm-4
+              .comChannel.comChannel5
+                img.comIcon(src='/images/home/channels/twitter.png', alt='Twitter')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel5}}
+            .col-sm-4
+              .comChannel.comChannel6
+                img.comIcon(src='/images/home/channels/facebook.png', alt='Facebook')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel6}}
+          .col-sm-4.hidden-xs
+            .col-sm-4
+              .comChannel.comChannel7
+                img.comIcon(src='/images/home/channels/chat.png', alt='Chat')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel7}}
+            .col-sm-4
+              .comChannel.comChannel8
+                img.comIcon(src='/images/home/channels/mail.png', alt='Email')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel8}}
+            .col-sm-4
+              .comChannel.comChannel9
+                img.comIcon(src='/images/home/channels/pager.png', alt='Pager')
+                .comStick
+                span.comLabel.hide {{ui.home.intro.comLabel9}}
+
+    //.zigZagBorder
+    #intro2
+      .container
+        .contentBlock
+          .row
+            .col-md-8.col-md-offset-2
+              h2 {{ui.home.intro.title}}
+              p.introText {{ui.home.intro.introText}}
+          .row
+            .col-md-12
+              button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+                | {{ui.general.contactUs}}
+
+    #useCases
+      .container
+        .row.titleHeader
+          h4 {{ui.home.useCases.mainTitle}}
+        .contentBlock
+          .row
+            .col-sm-4.useCase.useCase1
+              .hexContainer
+                .icon
+                .hexagon
+              h3 {{ui.home.useCases.title01}}
+              p {{ui.home.useCases.description01}}
+              a(href='usecases/twofactorauthentication.html') {{ui.general.readMore}}
+            .col-sm-4.useCase.useCase2
+              .hexContainer
+                .icon
+                .hexagon
+              h3 {{ui.home.useCases.title02}}
+              p {{ui.home.useCases.description02}}
+              a(href='usecases/etaalerts.html') {{ui.general.readMore}}
+            .col-sm-4.useCase.useCase3
+              .hexContainer
+                .icon
+                .hexagon
+              h3 {{ui.home.useCases.title03}}
+              p {{ui.home.useCases.description03}}
+              a(href='usecases/teamtelephone.html') {{ui.general.readMore}}
+          .row
+            .col-md-12
+              a(href='usecases/')
+                button.outline {{ui.general.readMore}}
+
+    #benefits
+      .container
+        .row.titleHeader
+          h4 {{ui.home.benefits.mainTitle}}
+        .contentBlock
+          .row
+            .col-sm-6.benefits.benefits1
+              .media
+                .media-left.media-middle
+                  .icon
+                .media-body
+                  h3 {{ui.home.benefits.title01}}
+                  p {{ui.home.benefits.description01}}
+            .col-sm-6.benefits.benefits2
+              .media
+                .media-left.media-middle
+                  .icon
+                .media-body
+                  h3 {{ui.home.benefits.title02}}
+                  p {{ui.home.benefits.description02}}
+          .row
+            .col-sm-6.benefits.benefits3
+              .media
+                .media-left.media-middle
+                  .icon
+                .media-body
+                  h3 {{ui.home.benefits.title03}}
+                  p {{ui.home.benefits.description03}}
+            .col-sm-6.benefits.benefits4
+              .media
+                .media-left.media-middle
+                  .icon
+                .media-body
+                  h3 {{ui.home.benefits.title04}}
+                  p {{ui.home.benefits.description04}}
+          .row
+            .col-sm-6.benefits.benefits5
+              .media
+                .media-left.media-middle
+                  .icon
+                .media-body
+                  h3 {{ui.home.benefits.title05}}
+                  p {{ui.home.benefits.description05}}
+            .col-sm-6.benefits.benefits6
+              .media
+                .media-left.media-middle
+                  .icon
+                .media-body
+                  h3 {{ui.home.benefits.title06}}
+                  p {{ui.home.benefits.description06}}
+
+    #clients
+      .container
+        .row.titleHeader
+          h4 {{ui.home.clients.mainTitle}}
+        .contentBlock
+          .row
+            .col-md-3.col-xs-6
+              .clientLogo.tnt
+                img.hoverShow(src="/images/home/tnt.png")
+            .col-md-3.col-xs-6
+              .clientLogo.amstelring
+                img.hoverShow(src="/images/home/amstelring.png")
+            .col-md-3.col-xs-6
+              .clientLogo.buurtzorg
+                img.hoverShow(src="/images/home/buurtzorg.png")
+            .col-md-3.col-xs-6
+              .clientLogo.rb
+                img.hoverShow(src="/images/home/reddingsbrigade.png")
+
+    #contactUs
+      .container
+        .row.titleHeader
+        .row.contentBlock
+          .col-md-12
+            button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+              | {{ui.general.contactUs}}
+    include ../includes/contactForm
+

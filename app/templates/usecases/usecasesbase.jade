@@ -1,0 +1,95 @@
+//--------CONTENT------
+#content
+  block useCaseClass
+  #useCasesPage(class='#{useCaseClass}')
+    .useCasesDetailPage
+      #intro.fullbackground
+        #colorOverlay
+        .container
+          .row
+            .col-md-12
+              .subContainer
+                .hexagonExtended
+                  .part1.hidden-xs
+                    .slash.fSlash
+                    .slash.bSlash
+                  .part2
+                    .useCaseIcon
+                    .introText
+                      block title
+                  .part3.hidden-xs
+                    .slash.bSlash
+                    .slash.fSlash
+
+      //.zigZagBorder
+      #what
+        .container
+          .row.contentBlock
+            .col-md-8.col-md-offset-2
+              block what
+
+      #benefits
+        .container
+          .row.titleHeader
+          .row.contentBlock
+            .col-sm-4.benefit.benefit1
+              .icon
+              block benefit1
+            .col-sm-4.benefit.benefit2
+              .icon
+              block benefit2
+            .col-sm-4.benefit.benefit3
+              .icon
+              block benefit3
+
+      #howUse.hide
+        .container
+          .row.titleHeader
+          .row.contentBlock
+            .col-md-8.col-md-offset-2
+              h3 {{ui.useCases.howUseTitle}}
+              p {{ui.useCases.case01.howUseDescription}}
+
+      #customerQuote.hide
+        .container
+          .row.titleHeader
+          .row.contentBlock
+            .col-md-8.col-md-offset-2
+              block customerQuote
+
+      block howWork
+        #howWork
+          .container
+            .row.titleHeader
+              h4 {{ui.useCases.howWorkTitle}}
+            .row.contentBlock
+              .stepLine
+              .col-sm-3.step
+                .hexContainer.step1
+                  .icon
+                  .hexagon
+                block step1
+              .col-sm-3.step
+                .hexContainer.step2
+                  .icon
+                  .hexagon
+                block step2
+              .col-sm-3.step
+                .hexContainer.step3
+                  .icon
+                  .hexagon
+                block step3
+              .col-sm-3.step
+                .hexContainer.step4
+                  .icon
+                  .hexagon
+                block step4
+
+    #contactUs
+      .container
+        .row.titleHeader
+        .row.contentBlock
+          .col-md-12
+            button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+              | {{ui.general.contactUs}}
+    include ../../includes/contactForm

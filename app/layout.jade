@@ -1,36 +1,38 @@
-!!! 5
-//if lt IE 7
-  html.no-js.lt-ie9.lt-ie8.lt-ie7
-//if IE 7
-  html.no-js.lt-ie9.lt-ie8
-//if IE 8
-  html.no-js.lt-ie9s
-// [if gt IE 8] <!
-html.no-js(lang='en')
-  // <![endif]
+doctype
+html
   head
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    title ASK-Fast Cloud Communication Service
-    meta(name='description', content='')
-    meta(name='viewport', content='width=device-width')
-    meta(name='signet:authors', content='Cengiz Ulusoy')
-    meta(name='signet:links', content='http://github.com/Cengizism, http://twitter.com/Cengizism')
-    block icons
-    // build:css({.tmp,app}) styles/main.css
-    link(rel='stylesheet', href='styles/main.css')
-    // endbuild
-  body
-    block iestuff
-    block navbar
-    #wrap.ng-cloak
-      .container-fluid
-        #sub-header(ng-hide='isInternPage()')
-          .row
-            block sub-header-menu
-            //block languages
-        div(ng-view='')
-    block footer
-    script(data-main='scripts/main', src='vendors/requirejs/require.js')
-    script(type='text/javascript',
-    src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDPfedUiOjX3Vh7V7IhukB1kg1aIzOoM88&sensor=false')
+    include includes/headDirect
+
+  body(ng-app='AskFast', data-spy='scroll', data-target='.scrollspy').ng-cloak
+
+
+
+    //--------HEADER------
+    .ng-cloak
+      include includes/header
+
+
+
+    //--------COOKIE MESSAGE------
+    #cookieMessage.hide
+      #closeCookie
+      p
+        | {{ui.general.cookieMessage}}
+        a(href='../docs/Privacy-Statement-ASK-Community-Systems.pdf', target='_blank')  {{ui.general.cookieMessageLink}}
+        | .
+
+
+
+    //--------CONTENT------
+    div(ng-view, autoscroll).ng-cloak
+      block content
+
+
+    //--------FOOTER------
+    .ng-cloak
+      include includes/footer
+
+
+
+    //--------JS------
+    include includes/scriptLinks

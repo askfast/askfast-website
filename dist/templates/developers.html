@@ -1,0 +1,195 @@
+<div id=content><div id=developersPage><div id=intro class=fullbackground><div id=colorOverlay></div><div class=container><div class=row><div class="col-md-12 introText"><div class=hexagonExtended><div class=part1><div class="slash fSlash"></div><div class="slash bSlash"></div></div><div class=part2><h1 class=subPageTitle>{{ui.developers.title}}</h1></div><div class=part3><div class="slash bSlash"></div><div class="slash fSlash"></div></div></div></div></div></div></div><div id=mainPart><div class=container-fluid><div class=row><!-- Nav Bar--><nav class="col-lg-3 col-md-3 bs-docs-sidebar scrollspy hidden-xs hidden-sm"><ul id=sidebar data-spy=affix class="nav nav-stacked"><li><a href=#getStart ng-click=anchorScroll()>{{ui.developers.getStart.title}}</a><ul class="nav nav-stacked"><li><a href=#getStartIntro ng-click=anchorScroll()>{{ui.developers.getStart.intro.title}}</a></li><li><a href=#firstCall ng-click=anchorScroll()>{{ui.developers.getStart.firstCall.title}}</a></li><li><a href=#firstSms ng-click=anchorScroll()>{{ui.developers.getStart.firstSms.title}}</a></li><li><a href=#environment ng-click=anchorScroll()>{{ui.developers.getStart.environment.title}}</a></li><li><a href=#firstDialog ng-click=anchorScroll()>{{ui.developers.getStart.firstDialog.title}}</a></li><li><a href=#useDialog ng-click=anchorScroll()>{{ui.developers.getStart.useDialog.title}}</a></li><li><a href=#complexDialog ng-click=anchorScroll()>{{ui.developers.getStart.complexDialog.title}}</a></li></ul></li><li class=hide><a href=#docs ng-click=anchorScroll()>{{ui.developers.docs.title}}</a><ul class="nav nav-stacked"><li><a href=#GroupBSub1 ng-click=anchorScroll()>{{ui.developers.getStart.title}}</a></li><li><a href=#GroupBSub2 ng-click=anchorScroll()>{{ui.developers.getStart.title}}</a></li></ul></li><li class=hide><a href=#examples ng-click=anchorScroll()>{{ui.developers.examples.title}}</a><ul class="nav nav-stacked"><li><a href=#GroupCSub1 ng-click=anchorScroll()>{{ui.developers.getStart.title}}</a></li><li><a href=#GroupCSub2 ng-click=anchorScroll()>{{ui.developers.getStart.title}}</a></li></ul></li></ul></nav><!-- Main Content--><div id=mainPart2 class="col-lg-9 col-md-9"><div id=getStart class=anchor></div><div><div class=titleHeader><h4>{{ui.developers.getStart.title}}</h4></div><div class=contentBlock><div class="row subPart"><div class=col-md-12><div id=getStartIntro class=anchor></div><h4>{{ui.developers.getStart.intro.title}}</h4><p>{{ui.developers.getStart.intro.description01}}</p><p>{{ui.developers.getStart.intro.needs}}</p><ul><li>{{ui.developers.getStart.intro.need01}}</li></ul><p>{{ui.developers.getStart.intro.noAccount01}}<span class=link><a href=//portal.ask-fast.com/index.html#/register#step-1 target=blank>{{ui.general.here}}</a></span><span>{{ui.developers.getStart.intro.noAccount02}}</span></p></div></div><div class="row subPart"><div class=col-md-12><div id=firstCall class=anchor></div><h4>{{ui.developers.getStart.firstCall.title}}</h4><p>{{ui.developers.getStart.firstCall.step0101}}<span class=link><a href=//portal.ask-fast.com target=blank>{{ui.developers.getStart.firstCall.portal}}</a></span><span>{{ui.developers.getStart.firstCall.step0102}}</span></p><p>{{ui.developers.getStart.firstCall.step02}}</p><a href="//api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast" target=blank class=borderLink>{{ui.developers.getStart.firstCall.step02url}}</a><img src=/images/developers/ssFirstCall1.png class=devImage><p>{{ui.developers.getStart.firstCall.step03}}</p><p>{{ui.developers.getStart.firstCall.step04}}</p><img src=/images/developers/ssFirstCall2.png class=devImage></div></div><div class="row subPart"><div class=col-md-12><div id=firstSms class=anchor></div><h4>{{ui.developers.getStart.firstSms.title}}</h4><p>{{ui.developers.getStart.firstSms.step01}}</p><img src=/images/developers/ssFirstSms1.png class=devImage></div></div><div class="row subPart"><div class=col-md-12><div id=environment class=anchor></div><h4>{{ui.developers.getStart.environment.title}}</h4><p>{{ui.developers.getStart.environment.java.step01}}</p><p>{{ui.developers.getStart.environment.java.step02}}<a href=//maven.apache.org/download.cgi target=blank class=link>{{ui.developers.getStart.environment.java.step02Link}}</a></p><p>{{ui.developers.getStart.environment.step01}}</p><p>{{ui.developers.getStart.environment.step02}}<a href=//ngrok.com/download target=blank class=link>{{ui.general.here}}</a></p><p>{{ui.developers.getStart.environment.step03}}</p></div></div><div class="row subPart"><div class=col-md-12><div id=firstDialog class=anchor></div><h4>{{ui.developers.getStart.firstDialog.title}}</h4><p>{{ui.developers.getStart.firstDialog.java.step01}}</p><pre><code class=xml>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+	&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+	&lt;groupId&gt;com.askfast&lt;/groupId&gt;
+	&lt;artifactId&gt;askfast-example-java&lt;/artifactId&gt;
+	&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+	&lt;packaging&gt;war&lt;/packaging&gt;
+
+	&lt;properties&gt;
+		&lt;jetty.version&gt;9.2.8.v20150217&lt;/jetty.version&gt;
+		&lt;askfast.version&gt;1.4.2&lt;/askfast.version&gt;
+	&lt;/properties&gt;
+
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.askfast.askfastapi&lt;/groupId&gt;
+			&lt;artifactId&gt;askfast-api-java&lt;/artifactId&gt;
+			&lt;version&gt;${askfast.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+	&lt;/dependencies&gt;
+
+	&lt;build&gt;
+		&lt;pluginManagement&gt;
+			&lt;plugins&gt;
+				&lt;plugin&gt;
+					&lt;groupId&gt;org.eclipse.jetty&lt;/groupId&gt;
+					&lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;
+					&lt;version&gt;${jetty.version}&lt;/version&gt;
+				&lt;/plugin&gt;
+			&lt;/plugins&gt;
+		&lt;/pluginManagement&gt;
+	&lt;/build&gt;
+&lt;/project&gt;</code></pre><p>{{ui.developers.getStart.firstDialog.java.step02}}</p><pre><code class=java>package com.askfast.example;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.askfast.askfastapi.AskFast;
+
+public class AskFastExampleServlet extends HttpServlet {
+
+	private static final long serialVersionUID = -1L;
+
+	@Override
+	protected void service( HttpServletRequest req, HttpServletResponse resp )
+	throws ServletException, IOException {
+		AskFast askfast = new AskFast( req );
+		askfast.say( &quot;Hello world&quot; );
+
+		resp.getWriter().print(askfast.render());
+	}
+}</code></pre><p>{{ui.developers.getStart.firstDialog.java.step03}}</p><pre><code class=xml>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; 
+	xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+	xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot;
+	id=&quot;WebApp_ID&quot; version=&quot;3.0&quot;&gt;
+
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;askfast&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;com.askfast.example.AskFastExampleServlet&lt;/servlet-class&gt;
+	&lt;/servlet&gt;
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;askfast&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre><p>{{ui.developers.getStart.firstDialog.java.step04}}</p><p>{{ui.developers.getStart.firstDialog.java.step05}}</p><p>{{ui.developers.getStart.firstDialog.java.step06}}</p><a href="//localhost:8080/">http://localhost:8080/</a></div></div><div class="row subPart"><div class=col-md-12><div id=useDialog class=anchor></div><h4>{{ui.developers.getStart.useDialog.title}}</h4><p>{{ui.developers.getStart.useDialog.step01}}</p><p>{{ui.developers.getStart.useDialog.step02}}</p><pre><code class=xml>
+                        <table>
+                          <tr>
+                            <td>Tunnel Status
+                            <td>online
+                          
+                          <tr>
+                            <td>Version
+                            <td>1.7/1.7
+                          
+                          <tr>
+                            <td>Forwarding
+                            <td>http://xxxxxx.ngrok.com -> 127.0.0.1:8080
+                          
+                          <tr>
+                            <td>Forwarding
+                            <td>https://xxxxxx.ngrok.com -> 127.0.0.1:8080
+                          
+                          <tr>
+                            <td>Web Interface
+                            <td>127.0.0.1:4040
+                          
+                          <tr>
+                            <td># Conn
+                            <td>0
+                          
+                          <tr>
+                            <td>Avg Conn Time
+                            <td>0.00ms
+                          
+                        </table></code></pre><p>{{ui.developers.getStart.useDialog.step03}}</p><p>{{ui.developers.getStart.useDialog.step04}}</p><p>{{ui.developers.getStart.useDialog.step05}}</p><img src=/images/developers/ssUseDialog1.png class=devImage><p>{{ui.developers.getStart.useDialog.step06}}</p></div></div><div class="row subPart"><div class=col-md-12><div id=complexDialog class=anchor></div><h4>{{ui.developers.getStart.complexDialog.title}}</h4><p>{{ui.developers.getStart.complexDialog.java.step01}}</p><pre><code class=java>private static final String accountId = &quot;&quot;;
+private static final String key = &quot;&quot;;</code></pre><p>{{ui.developers.getStart.complexDialog.java.step02}}<a href=//xxxxxxx.ngrok.com/question target=blank>http://xxxxxxx.ngrok.com/question</a></p><p>{{ui.developers.getStart.complexDialog.java.step03}}</p><pre><code class=java>// Remove the first backslash
+String path = req.getPathInfo().substring( 1 );
+// Split everything from the path and place it in the parts array
+String[] parts = path.split( &quot;\/&quot; );
+
+if(parts.length &gt; 0 ) {
+
+	// check if the first part of the path equals question
+	if(parts[0].equalsIgnoreCase( &quot;question&quot; ) ) {
+
+	}
+} else {
+	resp.sendError( HttpServletResponse.SC_NOT_FOUND );
+}</code></pre><p>{{ui.developers.getStart.complexDialog.java.step04}}</p><pre><code class=java>private static HashMap&lt;String, Boolean&gt; voteCount = new HashMap&lt;String, Boolean&gt;();</code></pre><p>{{ui.developers.getStart.complexDialog.java.step05}}</p><pre><code class=java>// Initialize the AskFast class, which we will use to build the dialog with
+AskFast askfast = new AskFast( req );
+
+if(parts.length == 1 || parts[1].equals(&quot;start&quot;)) {
+
+	askfast.ask( &quot;Do you like my website. Press 1 for yes and 2 for no&quot; );
+	askfast.addAnswer( &quot;&quot;, &quot;/question/thankyou?result=true&quot; );
+	askfast.addAnswer( &quot;&quot;, &quot;/question/thankyou?result=false&quot; );
+
+} else if(parts[1].equals( &quot;thankyou&quot; )) {
+
+	String requester = req.getParameter( &quot;requester&quot; );
+	String res = req.getParameter(&quot;result&quot;);
+	Boolean result = Boolean.parseBoolean( res );
+
+	voteCount.put( requester, result );
+
+	if(result) {
+		askfast.say( &quot;Thank you!&quot; );
+	} else {
+		askfast.say( &quot;That is to bad. I will try to improve it.&quot; );
+	}
+}
+
+// Since we are using english text, set the language to english
+askfast.setPreferredLanguage( Language.ENGLISH_GREATBRITAIN.getCode() );
+
+// Print the rendered dialog in the response
+resp.getWriter().print(askfast.render());</code></pre><p>{{ui.developers.getStart.complexDialog.java.step06}}</p><pre><code class=java>else if(parts[0].equalsIgnoreCase( &quot;startcall&quot; ) ) {
+
+	String addresses = req.getParameter( &quot;addresses&quot; );
+	if(addresses == null) {
+		resp.sendError( HttpServletResponse.SC_BAD_REQUEST, &quot;No address given&quot; );
+	}
+
+	String[] addressArray = addresses.split( &quot;,&quot; );
+	String host = getHost( req );
+	String url = host + &quot;/question&quot;;
+	AskFastRestClient client = new AskFastRestClient( accountId, key );
+	// Loop through all the given addresses
+	for(String address : addressArray) {
+		if(address != null &amp;&amp; !address.isEmpty()) {
+			try {
+				// Per address start the outbound call
+				client.startPhoneDialog( address, url );
+			} catch (Exception e) {
+				log.warning(&quot;Failed to start call: &quot; + e.getMessage());
+			}
+		}
+	}
+}</code></pre><p>{{ui.developers.getStart.complexDialog.java.step07}}</p><pre><code class=java>private String getHost( HttpServletRequest req ) {
+
+	int port = req.getServerPort();
+	// Remove the port number if is default http(s)
+	if ( ( req.getScheme().equals( &quot;http&quot; ) &amp;&amp; port == 80 ) ||
+			( req.getScheme().equals( &quot;https&quot; ) &amp;&amp; port == 443 ) ) {
+		port = -1;
+	}
+	String url = null;
+	try {
+		URL serverURL = new URL( req.getScheme(), req.getServerName(), port, &quot;&quot; );
+		url = serverURL.toString();
+	}
+	catch ( Exception e ) {
+	}
+	return url;
+}</code></pre><p>{{ui.developers.getStart.complexDialog.java.step08}}</p><pre><code class=java>else if(parts[0].equalsIgnoreCase( &quot;count&quot; ) ) {
+
+	int yesCount = 0;
+	int noCount = 0;
+
+	for(String key : voteCount.keySet()) {
+		if(voteCount.get(key)) {
+			yesCount++;
+		} else {
+			noCount++;
+		}
+	}
+
+		resp.getWriter().write( &quot;There are &quot; +yesCount + &quot; who liked your website. &quot; + noCount + &quot; did not.&quot; );
+	}
+}</code></pre><p>{{ui.developers.getStart.complexDialog.java.step09}}<a href=//github.com/askfast/askfast-example-java target=blank class=link>https://github.com/askfast/askfast-example-java</a>.</p></div></div></div></div></div></div></div></div></div></div>

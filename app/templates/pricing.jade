@@ -1,0 +1,85 @@
+//--------CONTENT------
+#content
+  #pricingPage
+
+    #intro.fullbackground
+      #colorOverlay
+      .container
+        .row
+          .col-md-12.introText
+            .subContainer
+              .hexagonExtended
+                .part1
+                  .slash.fSlash
+                  .slash.bSlash
+                .part2
+                  h1.subPageTitle {{ui.pricing.title}}
+                .part3
+                  .slash.bSlash
+                  .slash.fSlash
+
+
+    //.zigZagBorder
+    #countrySelect
+      .container
+        .row.contentBlock
+          .col-sm-4.col-sm-offset-4
+            h4 {{ui.pricing.country.title}}
+            select.form-control(ng-model='pricing', ng-options='country for (country, value) in pricingData')
+
+
+
+    #priceOverview
+      .container
+        .row
+          .col-md-12
+            .titleHeader.phonePrice
+              h4 {{ui.pricing.phone}}
+              .row.contentBlock
+                .col-sm-4.item
+                  h5 {{ui.pricing.number}}
+                  h3.price {{pricing.call.number | currency : '&euro;'}} / month
+                .col-sm-4.item
+                  h5 {{ui.pricing.inbound}}*
+                  h3.price &euro;{{pricing.call.mobile.inbound.price}} / {{pricing.call.mobile.inbound.unit}}
+                .col-sm-4.item
+                  h5 {{ui.pricing.outbound}}*
+                  h3.price
+                    span.priceLabel {{ui.pricing.startup}}
+                    span &euro;{{pricing.call.startup}}
+                  h3.price
+                    span.priceLabel {{ui.pricing.landline}}
+                    span &euro;{{pricing.call.fixed.outbound.price}} / {{pricing.call.fixed.outbound.unit}}
+                  h3.price
+                    span.priceLabel {{ui.pricing.mobile}}
+                    span &euro;{{pricing.call.mobile.outbound.price}} / {{pricing.call.mobile.outbound.unit}}
+
+          .col-md-12
+            .titleHeader.smsPrice
+              h4 {{ui.pricing.sms}}
+              .row.contentBlock
+                .col-sm-4.item
+                  h5 {{ui.pricing.number}}
+                  h3.price {{pricing.sms.number | currency : '&euro;'}} / month
+                .col-sm-4.item
+                  h5 {{ui.pricing.inbound}}*
+                  h3.price {{ui.pricing.free}}
+                .col-sm-4.item
+                  h5 {{ui.pricing.outbound}}*
+                  h3.price &euro;{{pricing.sms.outbound.price}}
+
+    #extraInfo
+      .container
+        .row.titleHeader
+        .row.contentBlock
+          .col-md-12
+            p {{ui.pricing.minPrice}}
+
+
+    #contactUs
+      .container
+        .row.contentBlock
+          .col-md-12
+            button.outline(type='button', data-toggle='modal', data-target='#contactForm')
+              | {{ui.general.contactUs}}
+    include ../includes/contactForm
