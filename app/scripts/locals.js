@@ -256,8 +256,8 @@ var localizationFiles = {
         intro: {
           title: 'Introduction',
           description01: 'This tutorial shows you how you can start building your first dialog with ASK-Fast.',
-          needs: 'This tutorial assumes that you have:',
-          need01: 'A (free) ASK-Fast account',
+          needs: 'This tutorial assumes that you have',
+          need01: 'a (free) ASK-Fast account.',
           noAccount01: 'If you don’t have an ASK-Fast account yet, click',
           noAccount02: 'to register.'
         },
@@ -588,8 +588,8 @@ var localizationFiles = {
         intro: {
           title: 'Introduction',
           description01: 'This tutorial shows you how you can start building your first dialog with ASK-Fast.',
-          needs: 'This tutorial assumes that you have:',
-          need01: 'A (free) ASK-Fast account',
+          needs: 'This tutorial assumes that you have',
+          need01: 'a (free) ASK-Fast account.',
           noAccount01: 'If you don’t have an ASK-Fast account yet, click',
           noAccount02: 'to register.'
         },
