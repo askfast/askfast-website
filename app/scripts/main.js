@@ -291,7 +291,8 @@ angular.module('AskFast', ['ngRoute'])
     {
       var countryData = {};
 
-      var adapterPurchase = null;
+      var smsAdapterPurchase = null;
+      var callAdapterPurchase = null;
       var startUpCost = null;
 
       var CATEGORIES = {
@@ -401,40 +402,52 @@ angular.module('AskFast', ['ngRoute'])
         }
         else
         {
-          if (value.category === CATEGORIES.ADAPTER)
-          {
-
-            if (adapterPurchase)
+            if (value.category === CATEGORIES.ADAPTER && value.adapterType === 'CALL')
             {
-              console.warn('adapterPurchase already has a value: ' + adapterPurchase + ', proposed value: ' + value.price);
-            }
-            else
-            {
-              adapterPurchase = value.price;
-            }
 
-          }
-          else if (value.category === CATEGORIES.STARTUP && value.adapterType === 'CALL')
-          {
+                if (callAdapterPurchase)
+                {
+                    console.warn('callAdapterPurchase already has a value: ' + callAdapterPurchase + ', proposed value: ' + value.price);
+                }
+                else
+                {
+                    callAdapterPurchase = value.price;
+                }
 
-            if (startUpCost)
-            {
-              console.warn('startUpCost already has a value: ' + startUpCost + ', proposed value: ' + value.price);
             }
-            else
+            else if (value.category === CATEGORIES.ADAPTER && value.adapterType === 'SMS')
             {
-              startUpCost = value.price;
-            }
 
-          }
+                if (smsAdapterPurchase)
+                {
+                    console.warn('smsAdapterPurchase already has a value: ' + smsAdapterPurchase + ', proposed value: ' + value.price);
+                }
+                else
+                {
+                    smsAdapterPurchase = value.price;
+                }
+
+            }
+            else if (value.category === CATEGORIES.STARTUP && value.adapterType === 'CALL')
+            {
+
+                if (startUpCost)
+                {
+                    console.warn('startUpCost already has a value: ' + startUpCost + ', proposed value: ' + value.price);
+                }
+                else
+                {
+                    startUpCost = value.price;
+                }
+
+            }
         }
       });
-
       angular.forEach(countryData, function (value)
       {
-        value.call.startup = startUpCost;
-        value.call.number = adapterPurchase;
-        value.sms.number = adapterPurchase;
+          value.call.startup = startUpCost;
+          value.call.number = callAdapterPurchase;
+          value.sms.number = smsAdapterPurchase;
       });
 
       return countryData;

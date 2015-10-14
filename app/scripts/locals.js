@@ -54,7 +54,7 @@ var localizationFiles = {
       intro: {
         slogan: 'Cloud API voor geautomatiseerde communicatie',
         title: 'ASK-Fast',
-        introText: 'ASK-Fast is een cloud-platform voor al uw communicatie. Het platform is gebouwd voor het automatiseren van communicatie met uw klanten en medewerkers. ASK-Fast is makkelijk te integreren in uw bestaande applicaties. Daarnaast kunt u op het platform ook uw eigen applicaties ontwikkelen.',
+        introText: 'ASK-Fast is een cloud-platform voor al uw communicatieve behoeftes. Het platform is gebaseerd op dialogen, waardoor automatisch interactieve communicatie kan plaatsvinden. Elke vraag kan een ander antwoord opleveren, waardoor er een andere communicatie flow ontstaat. U kunt ASK-Fast gebruiken in uw bestaande applicaties, maar u kunt het platform ook gebruiken om uw eigen applicaties te ontwikkelen.',
         comLabel1: 'Telefoon',
         comLabel2: 'Mobiel',
         comLabel3: 'Tablet',
@@ -113,7 +113,7 @@ var localizationFiles = {
       case01: {
         title: 'Two-factor Authentication',
         overviewDescription: 'Bescherm uw accounts met extra beveiliging tijdens de inlogprocedure.',
-        whatDescription: 'Tijdens het inloggen krijgt de gebruiker via SMS of telefoon een extra pincode voor verificatie. Op deze manier hebben ongewenste gebruikers geen toegang tot uw gegevens, zelfs als ze uw wachtwoord weten.',
+        whatDescription: 'Mensen onderschatten vaak hoe een makkelijk het is om wachtwoorden te stelen. Door een extra laag beveiliging toe te voegen zijn uw accounts beter beschermd tegen onbevoegde gebruikers. Tijdens het inloggen krijgt de gebruiker via SMS of telefoon een extra pincode voor verificatie. Op deze manier hebben ongewenste gebruikers geen toegang tot uw gegevens, zelfs als ze uw wachtwoord weten.',
         benefit01: 'Account bescherming',
         benefit02: 'Geen nieuwe hardware nodig',
         benefit03: 'Wachtwoord reset',
@@ -127,7 +127,7 @@ var localizationFiles = {
       case02: {
         title: 'ETA-Alerts',
         overviewDescription: 'Informeer uw klanten met de meest nauwkeurige aankomsttijd.',
-        whatDescription: 'Via SMS of telefoon krijgen uw klanten een bericht van ASK-Fast met precieze ETA tijdsloten en real-time aankomsttijden. Zo weten uw klant wanneer ze iets kunnen verwachten.',
+        whatDescription: 'Stel uw klanten tevreden met real-time aankomst berichten. Niemand houdt ervan om ergens voor een onbekende tijd op te wachten, of het nu gaat om een pakketje dat bezorgd moet worden, of een taxi die aan moet komen. Met ETA-Alerts van ASK-Fast krijgen uw klanten via SMS of telefoon een bericht met precieze ETA tijdsloten en real-time aankomsttijden. Zo weten uw klant wanneer ze iets kunnen verwachten.',
         benefit01: 'Uw klantenservice verbetert',
         benefit02: 'Werkt op iedere telefoon',
         benefit03: 'Onmiddellijke ontvangstbevestiging',
@@ -141,7 +141,7 @@ var localizationFiles = {
       case03: {
         title: 'TeamTelefoon',
         overviewDescription: 'Maak met een druk op de knop van uw eigen mobiel een teamtelefoon.',
-        whatDescription: 'Met de TeamTelefoon worden de mobiele nummers van de teamleden gekoppeld aan een speciaal teamtelefoon-nummer. Via de telefoon of computer kunnen teamleden hun bereikbaarheid aangeven. Klanten worden dan automatisch doorverbonden met een bereikbaar teamlid.',
+        whatDescription: 'Met de TeamTelefoon worden de mobiele nummers van de teamleden gekoppeld aan een speciaal teamtelefoon-nummer. Via de telefoon of computer kunnen teamleden hun bereikbaarheid aangeven. Klanten worden dan automatisch doorverbonden met het meest geschikte teamlid, gebaseerd op meerdere factoren als bereikbaarheid en locatie.',
         benefit01: 'Verbeterde team-bereikbaarheid',
         benefit02: 'Geen extra mobiel meer nodig',
         benefit03: 'Maximale flexibiliteit voor teamleden',
@@ -155,7 +155,7 @@ var localizationFiles = {
       case04: {
         title: 'Call-me-back',
         overviewDescription: 'Maak snel en efficiënt contact met uw website bezoekers.',
-        whatDescription: 'Met Call-me-back kunnen bezoekers van uw website hun telefoonnummer achterlaten. Zodra uw medewerker beschikbaar is, zet ASK-Fast automatisch een telefoongesprek op.',
+        whatDescription: 'Websites hebben vaak een gedeelte waar bezoekers hun contactgegevens achter kunnen laten, met het oog op meer lead-generatie. Als bezoekers dit invullen, kan het zijn dat ze onbereikbaar zijn op het moment dat u hen terug wilt bellen. Met Call-me-back kunnen bezoekers van uw website hun telefoonnummer achterlaten. Zodra uw medewerker beschikbaar is, zet ASK-Fast automatisch een telefoongesprek op.',
         benefit01: 'Meer leads converteren.',
         benefit02: 'Meer betrokken bij klanten.',
         benefit03: 'Hogere effectiviteit telefoongesprekken.',
@@ -169,7 +169,7 @@ var localizationFiles = {
       case05: {
         title: 'Push-to-Talk',
         overviewDescription: 'Communiceer direct met een druk op de knop.',
-        whatDescription: 'Door het gebruik van Push-to-Talk communiceert u direct met uw medewerkers en teams, omdat u geen nummer hoeft te draaien. Met een druk op de knop staat u direct in verbinding met een medewerker of team.',
+        whatDescription: 'Het succes van uw organisatie hangt grotendeels af van het vermogen om informatie te verspreiden en het productief houden van uw teams. Door het gebruik van Push-to-Talk communiceert u direct met uw medewerkers en teams, omdat u geen nummer hoeft te draaien. Met een druk op de knop staat u direct in verbinding met een medewerker of team.',
         benefit01: 'Verlaag communicatiekosten',
         benefit02: 'Verminder responstijden',
         benefit03: 'Verbeter team coördinatie en efficiëntie.',
@@ -197,7 +197,7 @@ var localizationFiles = {
       case07: {
         title: 'Broadcast',
         overviewDescription: 'Verspreid één bericht via meerdere communicatiekanalen.',
-        whatDescription: 'Tegenwoordig zijn er zoveel communicatiekanalen dat het moeilijk is om vast te stellen welk kanaal het meest effectief is. Daarom wilt u ze het liefst allemaal gebruiken. Met Broadcast kan dat ook, van SMS tot Twitter tot pager.',
+        whatDescription: 'Tegenwoordig zijn er zoveel communicatiekanalen dat het moeilijk is om vast te stellen welk kanaal het meest effectief is. Daarom wilt u ze het liefst allemaal gebruiken. Met Broadcast kan dat ook, van SMS tot Twitter tot pager. Op deze manier kunt u meer aandacht besteden aan het bericht dat u wilt communiceren en hoeft u zich geen zorgen te maken om hoe dit bericht verspreid wordt.',
         benefit01: 'Meer reikwijdte.',
         benefit02: 'Hogere effectiviteit.',
         benefit03: 'Rapportages beschikbaar voor analyse.',
@@ -256,8 +256,8 @@ var localizationFiles = {
         intro: {
           title: 'Introduction',
           description01: 'This tutorial shows you how you can start building your first dialog with ASK-Fast.',
-          needs: 'This tutorial assumes that you have:',
-          need01: 'A (free) ASK-Fast account',
+          needs: 'This tutorial assumes that you have',
+          need01: 'a (free) ASK-Fast account.',
           noAccount01: 'If you don’t have an ASK-Fast account yet, click',
           noAccount02: 'to register.'
         },
@@ -269,11 +269,11 @@ var localizationFiles = {
           step02: 'Pick a name for your dialog and fill the following example url:',
           step02url: 'http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast',
           step03: 'Return to the dashboard by clicking Dashboard',
-          step04: 'Fill in your phone number in the to address box in the Start Phone Call section and select the just created Dialog App. If you now hit Start call you will receive a phone call from ASK-Fast.'
+          step04: 'Fill in your phone number in the To address box in the Start Phone Call section and select the just created Dialog App. If you now hit Start call you will receive a phone call from ASK-Fast.'
         },
         firstSms: {
-          title: 'Send your first sms (outbound)',
-          step01: 'For sending an sms we can use the same Dialog App. If you fill you phone number in the Send SMS section and click Send SMS, you will receive a SMS.'
+          title: 'Send your first SMS (outbound)',
+          step01: 'For sending an SMS we can use the same Dialog App. If you fill in your phone number in the Send SMS section and click Send SMS, you will receive an SMS.'
         },
         environment: {
           title: 'Setup Environment',
@@ -283,40 +283,40 @@ var localizationFiles = {
             step02: 'Install',
             step02Link: 'MAVEN 3'
           },
-          step01: 'In the previous two section we have used an example Dialog. Now we will be showing how to build your own Dialog. Normally you will need to host this Dialog on a public server, but for this tutorial we will use ngrok. ngrok is a reverse proxy which will allow you to make your ASK-Fast Dialog publicly accessible without hosting it on a server.',
+          step01: 'In the previous two sections we have used an example Dialog. Now we will be showing how to build your own Dialog. Normally you will need to host this Dialog on a public server, but for this tutorial we will use ngrok. ngrok is a reverse proxy which will allow you to make your ASK-Fast Dialog publicly accessible without hosting it on a server.',
           step02: 'Please download and install ngrok by clicking',
-          step03: 'Once you’ve installed ngrok you can continue with creating your first dialog.'
+          step03: 'Once you’ve installed ngrok you can continue creating your first dialog.'
 
         },
         firstDialog: {
           title: 'Create your first dialog',
           java: {
-            step01: 'First go ahead and create a maven project with your favorite IDE. You can choose your own artifactId and groupId. For this example we choose as an artifactId: askfast-example-java and a groupId: com.askfast. Make sure the packaging of your project created a war file. Once you’ve created the maven project, we will need to add the libraries we will be using. We will using the jetty maven plugin to run the webserver and we the ask-fast library to create the dialog. So create add the following dependency and plugin.',
+            step01: 'First go ahead and create a maven project with your favorite IDE. You can choose your own artifactId and groupId. For this example we choose as an artifactId: askfast-example-java and a groupId: com.askfast. Make sure the packaging of your project created a war file. Once you’ve created the maven project, we will need to add the libraries we will be using. We will be using the jetty maven plugin to run the webserver and we will use the ASK-Fast library to create the dialog. So create and add the following dependency and plugin.',
             step02: 'Create a servlet with the following code:',
             step03: 'Last we need to add the web.xml file to load the servlet when the server starts. Add the following web.xml file in the webapp/WEB-INF/web.xml directory.',
             step04: 'Now we can run the server with the following command in your shell:',
             step05: 'mvn jetty:run',
-            step06: 'When server start you should be able to see the dialog json on the following address: '
+            step06: 'When the server starts you should be able to see the dialog json on the following address: '
           }
         },
         useDialog: {
           title: 'Use the created dialog (outbound)',
-          step01: 'Now we want make this dialog public accessible. This is where we use ngrok. If you open a new shell and run ngrok on port 8080, then it will return a url where it should be publicly accessible: \n ngrok 8080',
-          step02: 'It return you something like:',
-          step03: 'I you go to the forwarded url, it should show the create dialog.',
+          step01: 'Now we want to make this dialog publicly accessible. This is where we use ngrok. If you open a new shell and run ngrok on port 8080, then it will return a url where it should be publicly accessible: \n ngrok 8080',
+          step02: 'It returns something like:',
+          step03: 'If you go to the forwarded url, it should show the created dialog.',
           step04: 'If we go back to the portal and select the created dialog from the ‘My First Call’ section. You can find it under Configuration -> Dialog.',
           step05: 'If you change the url to ngrok url and click on Update details:',
-          step06: 'If you now start a call like we did in first section with the same Dialog App. You should now receive a phone and hear the text: “Hello world”.'
+          step06: 'If you start a call now, like we did in first section with the same Dialog App. You should now receive a phone call and hear the text: “Hello world”.'
         },
         complexDialog: {
           title: 'A more complex dialog',
           java: {
-            step01: 'We are now going to modify the example to a more complex dialog. First we define some static variables were which we will use to start our dialog:',
-            step02: 'In the servlet we want create a three endpoints. These endpoints will enable use to start a call to a few people, collect statistics and enable ASK-Fast to load the questions. Let’s start with the last one. So we want to create an endpoint where are the question will be loaded from. Let’s name this endpoint /question, so all the question will be loaded bij askfast from ',
-            step03: 'In order to do that we have parse the path. Once we parsed the path into an array we can check if the first path part matches question:',
-            step04: 'Already so now that we have our question endpoint we can start creating the dialog. In this example we will create a voting system where can people can vote if they your newly created website. So for each question we will create a new part in the url. The first part will be ‘start’ or empty. In this question we will create a closed question we’re will ask the user to press 1 if they the website and to press 2 if they don’t. We will store the votes in memory in a simple hashmap.',
-            step05: 'In the answer of the first question we will link to the second question where we also parse the result. The path for the second question will be ‘thankyou’. There we add the votes per incoming phone number and play a message according to the given answer.',
-            step06: 'For this example we are also going to start the phones call from our servlet. So for this we will create a new endpoint call startcall and the endpoint is expecting one query parameters called addresses. The addresses can contain multiple addresses comma separated:',
+            step01: 'We are now going to modify the example to a more complex dialog. First we must define some static variables which we will use to start our dialog:',
+            step02: 'In the servlet we want to create three endpoints. These endpoints will enable us to start a call to a few people, collect statistics and enable ASK-Fast to load the questions. Let’s start with the last one. So we want to create an endpoint where all the question will be loaded from. Let’s name this endpoint /question, so all the questions will be loaded by ASK-Fast from ',
+            step03: 'In order to do that, we have to parse the path. Once we parsed the path into an array we can check if the first path part matches question:',
+            step04: 'So now that we already have our question endpoints we can start creating the dialog. In this example we will create a voting system where people can vote if they like your newly created website. So for each question we will create a new part in the url. The first part will be ‘start’ or empty. In this question we will create a closed question where we will ask the receivers to press 1 if they like the website and to press 2 if they don’t. We will store the votes in memory in a simple hashmap.',
+            step05: 'In the answer of the first question we will link to the second question where we also parse the result. The path for the second question will be ‘thank you’. There we add the votes per incoming phone number and play a message according to the given answer.',
+            step06: 'For this example we are also going to start the phone call from our servlet. So for this we will create a new endpoint call startcall and the endpoint is expecting one query parameter called addresses. The addresses can contain multiple addresses comma separated:',
             step07: 'To initiate the call we need to give the full url, so we extract the host from the request object with a getHost function:',
             step08: 'Finally we want to be able to get the results from our call action. So we create another endpoint which will return the results. It will simply loop over all the given answers and it will count all the yes’ and all the no’s.',
             step09: 'To view the complete example you can go to:'
@@ -468,7 +468,7 @@ var localizationFiles = {
         howWorkStep1: 'Collect data from GPS or order tracking systems.',
         howWorkStep2: 'Calculate the ETA and prepare content for personalized message.',
         howWorkStep3: 'The ASK-Fast API delivers the SMS or Voice alert.',
-        howWorkStep4: 'A confirmation is sent when whether the message is received.'
+        howWorkStep4: 'A confirmation is sent when the message is received.'
       },
       case03: {
         title: 'Team Telephone',
@@ -480,7 +480,7 @@ var localizationFiles = {
         howUseDescription: '',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'An outside caller phones the team phone number.',
-        howWorkStep2: 'ASK-Fast dialog searches for the available team member(s).',
+        howWorkStep2: 'The ASK-Fast dialog searches for the available team member(s).',
         howWorkStep3: 'The ASK-Fast API connects the outside caller to a team member.',
         howWorkStep4: 'If a team member can\'t pick up, the call will be forwarded to the next available team member.'
       },
@@ -494,7 +494,7 @@ var localizationFiles = {
         howUseDescription: '',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'A website visitor enters his/her phone details on a webform.',
-        howWorkStep2: 'The dialog searches for the most suitable department.',
+        howWorkStep2: 'The ASK-Fast dialog searches for the most suitable department.',
         howWorkStep3: 'The ASK-Fast API calls an employee.',
         howWorkStep4: 'The employee is connected to the website visitor.'
       },
@@ -508,7 +508,7 @@ var localizationFiles = {
         howUseDescription: '',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'A team member presses the button and starts a conference.',
-        howWorkStep2: 'The dialog searches for all the members of the team. ',
+        howWorkStep2: 'The ASK-Fast dialog searches for all the members of the team. ',
         howWorkStep3: 'The ASK-Fast API phones every team member.',
         howWorkStep4: 'The caller is connected to the entire team.'
       },
@@ -529,7 +529,7 @@ var localizationFiles = {
       case07: {
         title: 'Broadcast',
         overviewDescription: 'One message, multiple communication channels.',
-        whatDescription: 'Nowadays there are so many different communication channels that is has become hard to identify which one is most effective. So why not use all of them? Broadcast is a unified messaging service that supports communication channels ranging from phone calls to Twitter and e-mails to beeps on a pager. This way you can focus more on what you communicate is and don\'t have to worry about how you communicate.',
+        whatDescription: 'Nowadays there are so many different communication channels that it has become hard to identify which one is most effective. So why not use all of them? Broadcast is a unified messaging service that supports communication channels ranging from phone calls to Twitter and e-mails to beeps on a pager. This way you can focus more on what you communicate and don\'t have to worry about how you communicate.',
         benefit01: 'Increase coverage rate',
         benefit02: 'Increase effectiveness',
         benefit03: 'Full reports available for analysis',
@@ -551,7 +551,7 @@ var localizationFiles = {
         howUseDescription: 'Care organisations often receive loads of phone calls, ranging from patients to doctors. Larger organisations usually implement their own telephone exchange to facilitate these calls. They invest a lot of resources in purchasing and maintenance of their system. Smaller organisations might not use a telephone exchange at all if they don’t have the means to invest in such an advanced system. After integrating Decentrale by ASK-Fast both organisations are enjoying the benefits of a user-friendly, cost-effective and mobile system. Decentrale also provides information about waiting times and missed calls, in order to improve the reachability of the organisations.',
         customerQuote: ' \'A person who never made a mistake never tried anything new.\'',
         howWorkStep1: 'An outside caller phones the Decentrale phone number.',
-        howWorkStep2: 'ASK-Fast dialog searches for the employee who is most capable of assisting the caller.',
+        howWorkStep2: 'The ASK-Fast dialog searches for the employee who is most capable of assisting the caller.',
         howWorkStep3: 'The ASK-Fast API connects the outside caller to the employee.',
         howWorkStep4: 'If the employee doesn\'t pick up, the call will be forwarded to the next worker.'
       },
@@ -588,8 +588,8 @@ var localizationFiles = {
         intro: {
           title: 'Introduction',
           description01: 'This tutorial shows you how you can start building your first dialog with ASK-Fast.',
-          needs: 'This tutorial assumes that you have:',
-          need01: 'A (free) ASK-Fast account',
+          needs: 'This tutorial assumes that you have',
+          need01: 'a (free) ASK-Fast account.',
           noAccount01: 'If you don’t have an ASK-Fast account yet, click',
           noAccount02: 'to register.'
         },
@@ -601,11 +601,11 @@ var localizationFiles = {
           step02: 'Pick a name for your dialog and fill the following example url:',
           step02url: 'http://api.ask-fast.com/question/comment?message=Hello%20from%20ask%20fast',
           step03: 'Return to the dashboard by clicking Dashboard',
-          step04: 'Fill in your phone number in the to address box in the Start Phone Call section and select the just created Dialog App. If you now hit Start call you will receive a phone call from ASK-Fast.'
+          step04: 'Fill in your phone number in the To address box in the Start Phone Call section and select the just created Dialog App. If you now hit Start call you will receive a phone call from ASK-Fast.'
         },
         firstSms: {
-          title: 'Send your first sms (outbound)',
-          step01: 'For sending an sms we can use the same Dialog App. If you fill you phone number in the Send SMS section and click Send SMS, you will receive a SMS.'
+          title: 'Send your first SMS (outbound)',
+          step01: 'For sending an SMS we can use the same Dialog App. If you fill in your phone number in the Send SMS section and click Send SMS, you will receive an SMS.'
         },
         environment: {
           title: 'Setup Environment',
@@ -615,40 +615,40 @@ var localizationFiles = {
             step02: 'Install',
             step02Link: 'MAVEN 3'
           },
-          step01: 'In the previous two section we have used an example Dialog. Now we will be showing how to build your own Dialog. Normally you will need to host this Dialog on a public server, but for this tutorial we will use ngrok. ngrok is a reverse proxy which will allow you to make your ASK-Fast Dialog publicly accessible without hosting it on a server.',
+          step01: 'In the previous two sections we have used an example Dialog. Now we will be showing how to build your own Dialog. Normally you will need to host this Dialog on a public server, but for this tutorial we will use ngrok. ngrok is a reverse proxy which will allow you to make your ASK-Fast Dialog publicly accessible without hosting it on a server.',
           step02: 'Please download and install ngrok by clicking',
-          step03: 'Once you’ve installed ngrok you can continue with creating your first dialog.'
+          step03: 'Once you’ve installed ngrok you can continue creating your first dialog.'
 
         },
         firstDialog: {
           title: 'Create your first dialog',
           java: {
-            step01: 'First go ahead and create a maven project with your favorite IDE. You can choose your own artifactId and groupId. For this example we choose as an artifactId: askfast-example-java and a groupId: com.askfast. Make sure the packaging of your project created a war file. Once you’ve created the maven project, we will need to add the libraries we will be using. We will using the jetty maven plugin to run the webserver and we the ask-fast library to create the dialog. So create add the following dependency and plugin.',
+            step01: 'First go ahead and create a maven project with your favorite IDE. You can choose your own artifactId and groupId. For this example we choose as an artifactId: askfast-example-java and a groupId: com.askfast. Make sure the packaging of your project created a war file. Once you’ve created the maven project, we will need to add the libraries we will be using. We will be using the jetty maven plugin to run the webserver and we will use the ASK-Fast library to create the dialog. So create and add the following dependency and plugin.',
             step02: 'Create a servlet with the following code:',
             step03: 'Last we need to add the web.xml file to load the servlet when the server starts. Add the following web.xml file in the webapp/WEB-INF/web.xml directory.',
             step04: 'Now we can run the server with the following command in your shell:',
             step05: 'mvn jetty:run',
-            step06: 'When server start you should be able to see the dialog json on the following address: '
+            step06: 'When the server starts you should be able to see the dialog json on the following address: '
           }
         },
         useDialog: {
           title: 'Use the created dialog (outbound)',
-          step01: 'Now we want make this dialog public accessible. This is where we use ngrok. If you open a new shell and run ngrok on port 8080, then it will return a url where it should be publicly accessible: \n ngrok 8080',
-          step02: 'It return you something like:',
-          step03: 'I you go to the forwarded url, it should show the create dialog.',
+          step01: 'Now we want to make this dialog publicly accessible. This is where we use ngrok. If you open a new shell and run ngrok on port 8080, then it will return a url where it should be publicly accessible: \n ngrok 8080',
+          step02: 'It returns something like:',
+          step03: 'If you go to the forwarded url, it should show the created dialog.',
           step04: 'If we go back to the portal and select the created dialog from the ‘My First Call’ section. You can find it under Configuration -> Dialog.',
           step05: 'If you change the url to ngrok url and click on Update details:',
-          step06: 'If you now start a call like we did in first section with the same Dialog App. You should now receive a phone and hear the text: “Hello world”.'
+          step06: 'If you start a call now, like we did in first section with the same Dialog App. You should now receive a phone call and hear the text: “Hello world”.'
         },
         complexDialog: {
           title: 'A more complex dialog',
           java: {
-            step01: 'We are now going to modify the example to a more complex dialog. First we define some static variables were which we will use to start our dialog:',
-            step02: 'In the servlet we want create a three endpoints. These endpoints will enable use to start a call to a few people, collect statistics and enable ASK-Fast to load the questions. Let’s start with the last one. So we want to create an endpoint where are the question will be loaded from. Let’s name this endpoint /question, so all the question will be loaded bij askfast from ',
-            step03: 'In order to do that we have parse the path. Once we parsed the path into an array we can check if the first path part matches question:',
-            step04: 'Already so now that we have our question endpoint we can start creating the dialog. In this example we will create a voting system where can people can vote if they your newly created website. So for each question we will create a new part in the url. The first part will be ‘start’ or empty. In this question we will create a closed question we’re will ask the user to press 1 if they the website and to press 2 if they don’t. We will store the votes in memory in a simple hashmap.',
-            step05: 'In the answer of the first question we will link to the second question where we also parse the result. The path for the second question will be ‘thankyou’. There we add the votes per incoming phone number and play a message according to the given answer.',
-            step06: 'For this example we are also going to start the phones call from our servlet. So for this we will create a new endpoint call startcall and the endpoint is expecting one query parameters called addresses. The addresses can contain multiple addresses comma separated:',
+            step01: 'We are now going to modify the example to a more complex dialog. First we must define some static variables which we will use to start our dialog:',
+            step02: 'In the servlet we want to create three endpoints. These endpoints will enable us to start a call to a few people, collect statistics and enable ASK-Fast to load the questions. Let’s start with the last one. So we want to create an endpoint where all the question will be loaded from. Let’s name this endpoint /question, so all the questions will be loaded by ASK-Fast from ',
+            step03: 'In order to do that, we have to parse the path. Once we parsed the path into an array we can check if the first path part matches question:',
+            step04: 'So now that we already have our question endpoints we can start creating the dialog. In this example we will create a voting system where people can vote if they like your newly created website. So for each question we will create a new part in the url. The first part will be ‘start’ or empty. In this question we will create a closed question where we will ask the receivers to press 1 if they like the website and to press 2 if they don’t. We will store the votes in memory in a simple hashmap.',
+            step05: 'In the answer of the first question we will link to the second question where we also parse the result. The path for the second question will be ‘thank you’. There we add the votes per incoming phone number and play a message according to the given answer.',
+            step06: 'For this example we are also going to start the phone call from our servlet. So for this we will create a new endpoint call startcall and the endpoint is expecting one query parameter called addresses. The addresses can contain multiple addresses comma separated:',
             step07: 'To initiate the call we need to give the full url, so we extract the host from the request object with a getHost function:',
             step08: 'Finally we want to be able to get the results from our call action. So we create another endpoint which will return the results. It will simply loop over all the given answers and it will count all the yes’ and all the no’s.',
             step09: 'To view the complete example you can go to:'

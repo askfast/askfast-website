@@ -713,11 +713,13 @@ button.filled {
     margin-left: -13px;
     position: absolute;
     height: 100%;
+    margin-right: 1px;
   }
   .part2 {
     border-top: 1px solid $white;
     border-bottom: 1px solid $white;
     padding: 20px;
+    margin: 0;
   }
   .part3 {
     margin-left: 12px;
@@ -802,6 +804,7 @@ button.filled {
   font-size: 40px;
   text-shadow: none;
   font-weight: 300;
+  display: inline;
 }
 
 #colorOverlay {
@@ -1938,7 +1941,9 @@ button.filled {
       .hexagonExtended {
         margin-top: 100px;
         .part1 {
-          margin-left: -10px;
+          //margin-left: -10px;
+          //margin-right: 0;
+          //width: 100%;
         }
         .part3 {
           margin-left: 9px;
@@ -1959,7 +1964,7 @@ button.filled {
     #intro {
       height: 340px;
       .hexagonExtended{
-        margin-top: 0px;
+        margin-top: 0;
         .part1 {
           margin-left: -18px;
         }
