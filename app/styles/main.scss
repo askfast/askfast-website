@@ -446,7 +446,7 @@ P:last-child {
 }
 
 .wordBreak {
-  word-break: break-word;
+  word-break: break-all;
   @include hyphens(auto);
 }
 
@@ -480,7 +480,7 @@ button.filled {
 
 .col-xs-5ths,
 .col-sm-5ths,
-.col-md-5ths,
+.col-XS-5ths,
 .col-lg-5ths {
   position: relative;
   min-height: 1px;
@@ -1194,9 +1194,7 @@ button.filled {
   .zigZagBorder:after {
     background-image: linear-gradient(-45deg, $light-gray 8px, transparent 0), linear-gradient(45deg, $light-gray 8px, transparent 0);
   }
-  #intro {
-    background-image: url('../images/headers/useCases.jpg');
-  }
+
 
   #casesOverview {
     .overviewIntro {
@@ -1380,7 +1378,6 @@ button.filled {
 
 .twoFactorAuth {
   #intro {
-    background-image: url('../images/headers/twoFactorAuth.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/twoFactorAuth80.png');
     }
@@ -1411,7 +1408,6 @@ button.filled {
 
 .etaAlerts {
   #intro {
-    background-image: url('../images/headers/etaAlerts.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/etaAlerts80.png');
     }
@@ -1442,7 +1438,6 @@ button.filled {
 
 .teamTelephone {
   #intro {
-    background-image: url('../images/headers/teamTelephone.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/teamTelephone80.png');
     }
@@ -1473,7 +1468,6 @@ button.filled {
 
 .clickToCall {
   #intro {
-    background-image: url('../images/headers/clickToCall.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/clickToCall80.png');
     }
@@ -1504,7 +1498,6 @@ button.filled {
 
 .pushToTalk {
   #intro {
-    background-image: url('../images/headers/pushToTalk.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/pushToTalk80.png');
     }
@@ -1535,7 +1528,6 @@ button.filled {
 
 .callerAuth {
   #intro {
-    background-image: url('../images/headers/callerAuth.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/callerAuth80.png');
     }
@@ -1566,7 +1558,6 @@ button.filled {
 
 .broadcast {
   #intro {
-    background-image: url('../images/headers/broadcast.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/broadcast80.png');
     }
@@ -1602,7 +1593,6 @@ button.filled {
 
 .decentrale {
   #intro {
-    background-image: url('../images/headers/decentrale.JPG');
     .useCaseIcon {
       background-image: url('../images/useCases/decentrale80.png');
     }
@@ -1641,7 +1631,6 @@ button.filled {
   #intro {
     height: 400px;
     background-color: $pink;
-    background-image: url('../images/headers/pricing.JPG');
     position: relative;
     .introText {
       color: $white;
@@ -1739,7 +1728,6 @@ button.filled {
   #intro {
     height: 400px;
     background-color: $pink;
-    background-image: url('../images/headers/developer.JPG');
     position: relative;
     .introText {
       color: $white;
@@ -1838,9 +1826,68 @@ button.filled {
    MEDIA QUERIES
    ========================================================================== */
 
-/*----------MIN WIDTH 1200-----------*/
+/*----------MIN WIDTH 1200 (LG)-----------*/
 
 @media (min-width: 1200px) {
+
+  .useCasesOverview {
+    #intro {
+      background-image: url('../images/headers/useCases.jpg');
+    }
+  }
+
+  .twoFactorAuth {
+    #intro {
+      background-image: url('../images/headers/twoFactorAuth.JPG');
+    }
+  }
+  .etaAlerts {
+    #intro {
+      background-image: url('../images/headers/etaAlerts.JPG');
+    }
+  }
+  .teamTelephone {
+    #intro {
+      background-image: url('../images/headers/teamTelephone.JPG');
+    }
+  }
+  .clickToCall {
+    #intro {
+      background-image: url('../images/headers/clickToCall.JPG');
+    }
+  }
+  .pushToTalk {
+    #intro {
+      background-image: url('../images/headers/pushToTalk.JPG');
+    }
+  }
+  .callerAuth {
+    #intro {
+      background-image: url('../images/headers/callerAuth.JPG');
+    }
+  }
+  .broadcast {
+    #intro {
+      background-image: url('../images/headers/broadcast.JPG');
+    }
+  }
+  .decentrale {
+    #intro {
+      background-image: url('../images/headers/decentrale.JPG');
+    }
+  }
+
+  #pricingPage {
+    #intro {
+      background-image: url('../images/headers/pricing.JPG');
+    }
+  }
+
+  #developersPage {
+    #intro {
+      background-image: url('../images/headers/developer.JPG');
+    }
+  }
 
 }
 
@@ -1852,10 +1899,68 @@ button.filled {
 
 }
 
-/*----------MIN WIDTH 992 | MAX WIDTH 1199-----------*/
+/*----------MIN WIDTH 992 | MAX WIDTH 1199 (MD)-----------*/
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
+  .useCasesOverview {
+    #intro {
+      background-image: url('../images/headers/useCasesMD.jpg');
+    }
+  }
+
+  .twoFactorAuth {
+    #intro {
+      background-image: url('../images/headers/twoFactorAuthMD.jpg');
+    }
+  }
+  .etaAlerts {
+    #intro {
+      background-image: url('../images/headers/etaAlertsMD.jpg');
+    }
+  }
+  .teamTelephone {
+    #intro {
+      background-image: url('../images/headers/teamTelephoneMD.jpg');
+    }
+  }
+  .clickToCall {
+    #intro {
+      background-image: url('../images/headers/clickToCallMD.jpg');
+    }
+  }
+  .pushToTalk {
+    #intro {
+      background-image: url('../images/headers/pushToTalkMD.jpg');
+    }
+  }
+  .callerAuth {
+    #intro {
+      background-image: url('../images/headers/callerAuthMD.jpg');
+    }
+  }
+  .broadcast {
+    #intro {
+      background-image: url('../images/headers/broadcastMD.jpg');
+    }
+  }
+  .decentrale {
+    #intro {
+      background-image: url('../images/headers/decentraleMD.jpg');
+    }
+  }
+
+  #pricingPage {
+    #intro {
+      background-image: url('../images/headers/pricingMD.JPG');
+    }
+  }
+
+  #developersPage {
+    #intro {
+      background-image: url('../images/headers/developerMD.JPG');
+    }
+  }
 
 }
 
@@ -1865,11 +1970,81 @@ button.filled {
 
 }
 
-/*----------MIN WIDTH 768 | MAX WIDTH 991-----------*/
+/*----------MIN WIDTH 768 | MAX WIDTH 991 (SM)-----------*/
 
 @media (min-width: 768px) and (max-width: 991px) {
 
+  #home {
+    #intro {
+      .hexagonExtended{
+        .part1 {
+          margin-left: -26px;
+        }
+        .part3 {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
 
+  .useCasesOverview {
+    #intro {
+      background-image: url('../images/headers/useCasesSM.jpg');
+    }
+  }
+
+  .twoFactorAuth {
+    #intro {
+      background-image: url('../images/headers/twoFactorAuthSM.jpg');
+    }
+  }
+  .etaAlerts {
+    #intro {
+      background-image: url('../images/headers/etaAlertsSM.jpg');
+    }
+  }
+  .teamTelephone {
+    #intro {
+      background-image: url('../images/headers/teamTelephoneSM.jpg');
+    }
+  }
+  .clickToCall {
+    #intro {
+      background-image: url('../images/headers/clickToCallSM.jpg');
+    }
+  }
+  .pushToTalk {
+    #intro {
+      background-image: url('../images/headers/pushToTalkSM.jpg');
+    }
+  }
+  .callerAuth {
+    #intro {
+      background-image: url('../images/headers/callerAuthSM.jpg');
+    }
+  }
+  .broadcast {
+    #intro {
+      background-image: url('../images/headers/broadcastSM.jpg');
+    }
+  }
+  .decentrale {
+    #intro {
+      background-image: url('../images/headers/decentraleSM.jpg');
+    }
+  }
+
+  #pricingPage {
+    #intro {
+      background-image: url('../images/headers/pricingSM.JPG');
+    }
+  }
+
+  #developersPage {
+    #intro {
+      background-image: url('../images/headers/developerSM.JPG');
+    }
+  }
 
 }
 
@@ -1895,7 +2070,7 @@ button.filled {
 }
 
 
-/*----------MAX WIDTH 767-----------*/
+/*----------MAX WIDTH 767 (XS)-----------*/
 
 @media (max-width: 767px) {
 
@@ -1934,24 +2109,6 @@ button.filled {
     }
   }
 
-
-  #useCasesPage, #pricingPage, #developersPage {
-    #intro {
-      height: 220px;
-      .hexagonExtended {
-        margin-top: 100px;
-        .part1 {
-          //margin-left: -10px;
-          //margin-right: 0;
-          //width: 100%;
-        }
-        .part3 {
-          margin-left: 9px;
-        }
-      }
-    }
-  }
-
   .contentBlock {
     padding: 40px 0 60px;
   }
@@ -1967,6 +2124,11 @@ button.filled {
         margin-top: 0;
         .part1 {
           margin-left: -18px;
+        }
+        .part2 {
+          .subPageTitle {
+            display: table-caption;
+          }
         }
         .part3 {
           margin-left: 17px;
@@ -1987,6 +2149,21 @@ button.filled {
     #clients {
       .clientLogo {
         max-width: 100%;
+      }
+    }
+  }
+
+  #useCasesPage, #pricingPage, #developersPage {
+    #intro {
+      height: 220px;
+      .hexagonExtended {
+        margin-top: 100px;
+        .part1 {
+          margin-left: -10px;
+        }
+        .part3 {
+          margin-left: 9px;
+        }
       }
     }
   }
@@ -2012,11 +2189,62 @@ button.filled {
     }
   }
 
-  #pricingPage {
-    #priceOverview{
-      .item {
+  .useCasesOverview {
+    #intro {
+      background-image: url('../images/headers/useCasesXS.jpg');
+    }
+  }
 
-      }
+  .twoFactorAuth {
+    #intro {
+      background-image: url('../images/headers/twoFactorAuthXS.jpg');
+    }
+  }
+  .etaAlerts {
+    #intro {
+      background-image: url('../images/headers/etaAlertsXS.jpg');
+    }
+  }
+  .teamTelephone {
+    #intro {
+      background-image: url('../images/headers/teamTelephoneXS.jpg');
+    }
+  }
+  .clickToCall {
+    #intro {
+      background-image: url('../images/headers/clickToCallXS.jpg');
+    }
+  }
+  .pushToTalk {
+    #intro {
+      background-image: url('../images/headers/pushToTalkXS.jpg');
+    }
+  }
+  .callerAuth {
+    #intro {
+      background-image: url('../images/headers/callerAuthXS.jpg');
+    }
+  }
+  .broadcast {
+    #intro {
+      background-image: url('../images/headers/broadcastXS.jpg');
+    }
+  }
+  .decentrale {
+    #intro {
+      background-image: url('../images/headers/decentraleXS.jpg');
+    }
+  }
+
+  #pricingPage {
+    #intro {
+      background-image: url('../images/headers/pricingXS.JPG');
+    }
+  }
+
+  #developersPage {
+    #intro {
+      background-image: url('../images/headers/developerXS.JPG');
     }
   }
 
