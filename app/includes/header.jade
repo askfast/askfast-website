@@ -10,18 +10,19 @@
         a(ng-class="{active: isLinkActive('/developers.html')}", href='../developers.html') {{ui.menu.developers}}
   .container
     .row
-      .col-sm-2
+      .col-md-2.col-sm-3
         #mainLogo
           a(href='../index.html')
           span.payOff(data-106-top='opacity: 0', data-bottom='opacity: 1;', data--10p-top='opacity: 1;', data--30p-top='opacity: 0;', data-anchor-target='body')
-      .col-xs-10.desktopView
-        ul
+      .col-md-10.col-sm-9.desktopView
+        ul.menuPart1
           li
               a(ng-class="{active: isLinkActive('/usecases')}", href='../usecases/') {{ui.menu.useCases}}
           li
               a(ng-class="{active: isLinkActive('/pricing.html')}", href='../pricing.html') {{ui.menu.pricing}}
           li
               a(ng-class="{active: isLinkActive('/developers.html')}", href='../developers.html') {{ui.menu.developers}}
+        ul.menuPart2
           li.outlineMenu
             a(href='https://portal.ask-fast.com') {{ui.menu.login}}
           li.outlineMenu

@@ -535,9 +535,14 @@ button.filled {
     }
   }
   .desktopView {
-    ul {
+    ul.menuPart1 {
+      display: none;
+      float: left;
+    }
+    ul.menuPart2 {
       display: none;
       float: right;
+      margin: 16px 0 10px;
     }
   }
   #mainLogo {
@@ -1350,11 +1355,14 @@ button.filled {
       text-transform: uppercase;
     }
     .benefit {
+      padding: 40px 0;
+      text-align: left;
       .icon {
-        margin: 0 auto;
+        float: left;
         background: url('../images/useCases/checkMark.png') no-repeat center center;
         height: 60px;
         width: 60px;
+        margin-right: 20px;
         background-color: $green;
         @include border-radius(50%);
       } 
