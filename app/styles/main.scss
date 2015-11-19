@@ -533,6 +533,23 @@ button.filled {
     div div:first-child ul {
       text-align: right;
     }
+    .menuPart1 {
+      .arrowUp {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 8px solid black;
+        margin-left: 38px;
+      }
+      .subMenu {
+        position: absolute;
+        background-color: black;
+        li {
+          display: block;
+        }
+      }
+    }
   }
   .desktopView {
     ul.menuPart1 {
@@ -1350,6 +1367,11 @@ button.filled {
   }
 
   #benefits {
+    .device {
+      img {
+        height: 500px;
+      }
+    }
     h4 {
       color: gray;
       text-transform: uppercase;
