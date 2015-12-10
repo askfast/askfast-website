@@ -1,6 +1,9 @@
 AskWebsite
 https://github.com/askcs/askwebsite.git
 
+10 December 2015, version 2.0.2
+- fix: fixed email sending via contact form
+
 22 september 2015, version 2.0.0
 New site
 
