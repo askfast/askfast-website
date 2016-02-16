@@ -12,15 +12,16 @@ function sendMail() {
 
 	$inputJSON = @file_get_contents('php://input');
 	$form = json_decode( $inputJSON, TRUE );
-	$message = $form["message"];
+	$message = 'contactName = ' . $form["name"] . "\r\n".
+                        'contactEmail = ' . $form["emailAddress"] . "\r\n".
+                        'contactMessage = ' . $form["message"] . "\r\n"; 
 	global $toEmail;
         $header =
                 'From: webform@ask-fast.com' . "\r\n" .
                 'Reply-To: ' . $form["emailAddress"] . "\r\n";
-	error_log("header data.. " . $header, 0);
         //risky custom data
         $query = explode('&', $_SERVER['QUERY_STRING'] );
-        if( $message == '' ) {
+        if( $form["message"] == '' ) {
 		error_log("No message found for email, exiting..", 0);
 		return "FALSE";
 	}
@@ -34,7 +35,7 @@ function sendMail() {
                 //mail("hvrooijen@ask-cs.com",  'sendMail form', $message, $header );
         }
         //$ret = mail($toEmail,'contact-formulier',$message ); //,$header);
-        $ret = mail($toEmail, 'Contact request from: ' . $form["emailAddress"], $message, $header );
+        $ret = mail($toEmail, 'sendMail from', $message, $header );
 	$handle = fopen( 'mail.log', 'ab');
         fwrite( $handle, $message."\n".$header );
         fwrite( "\n\n" );
